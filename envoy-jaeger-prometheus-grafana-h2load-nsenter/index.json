@@ -5,7 +5,7 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - Start Envoy",
+        "title": "Step 1 - Build and start Envoy",
         "text": "step-start.md"
       },
       {
@@ -17,7 +17,7 @@
         "text": "step2.md"
       },
       {
-        "title": "Step 4 - Generating Traffic",
+        "title": "Step 4 - Generating Traffic by h2load",
         "text": "step3.md"
       },
       {
