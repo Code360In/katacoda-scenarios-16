@@ -14,4 +14,5 @@ The following scenario demonstrates how to:
 
 - Deploy Kubernetes dashboard.
 
+- Deploy kube-prometheus-stack 
 
