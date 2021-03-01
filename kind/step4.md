@@ -22,3 +22,12 @@ kubectl create namespace mon
 ``` 
 helm upgrade --install  mon prometheus-community/kube-prometheus-stack  --set grafana.image.tag="7.4.1-ubuntu" --set prometheus.image.tag="v2.25.0-rc.0" --set defaultRules.rules.time=false -n mon
 ```{{execute}}
+
+
+Verify Pods runnimg:
+``` 
+kubectl get pods -n mon
+kubectl get sv -n mon
+kubectl get deployments -n mon
+kubectl get daemonset -n mon
+```{{execute}}
