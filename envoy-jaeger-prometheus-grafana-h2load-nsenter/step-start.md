@@ -43,20 +43,27 @@ docker-compose pull
 docker-compose ps
 ```{{execute}}
 
-Check if the nodes are running with this command:
-
-```curl 172.18.0.3:80; curl 172.18.0.4:80```{{execute}}
 
 You should get an answer similar to
 
 ```
-<h1>A healthy request was processed by host: dfe3613cc3da</h1>
-<h1>A healthy request was processed by host: 6db2061eb74a</h1>
+
+ Name                              Command                State                     Ports
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+jaeger-native-tracing_front-envoy_1   /start-front.sh                Up      10000/tcp, 0.0.0.0:8000->8000/tcp
+jaeger-native-tracing_jaeger_1        /go/bin/all-in-one-linux - ... Up      14250/tcp, 14268/tcp, 0.0.0.0:16686->16686/tcp, 5775/udp, 5778/tcp, 6831/udp, 6832/udp
+jaeger-native-tracing_service1_1      /start-service.sh              Up      10000/tcp
+jaeger-native-tracing_service2_1      /start-service.sh              Up      10000/tcp
+
 ```
 
-And you can request through envoy
 
-```curl localhost:80```{{execute}}
+You can now send a request to service1 via the front-envoy as follows:
+
+```curl -v localhost:8000/trace/1```{{execute}}
+
+
+
 
 Envoy is answering the request and balancing between the two nodes with a `ROUND_ROBIN` strategy according to our configuration.
 
