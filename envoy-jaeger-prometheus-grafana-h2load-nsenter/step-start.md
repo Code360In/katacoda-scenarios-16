@@ -2,6 +2,14 @@ An initial envoy configuration file has been created at
 `envoy.yaml`{{open}}
 
 
+
+Clone Envoy:
+
+```
+git clone https://github.com/envoyproxy/envoy.git
+```{{execute}}
+
+
 To build this sandbox example:
 
 ```
