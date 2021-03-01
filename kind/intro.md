@@ -4,13 +4,13 @@ The following scenario demonstrates how to:
 
 
 
-- Install Kind
+- Install Kind.
 
-- Create kubernetes cluster
+- Create kubernetes cluster.
 
-- Install kubectl
+- Install kubectl.
 
-- Install helm
+- Install helm.
 
 - Deploy Kubernetes dashboard.
 
