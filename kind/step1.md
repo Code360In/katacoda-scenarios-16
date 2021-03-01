@@ -22,16 +22,14 @@ mv ./kind /sbin/kind
 
 
 Creating a Cluster:
-
 ```
 kind create cluster --name tx-cluster-k8s
 ```{{execute}}
 
-
+Verify:
 ```
 kind get clusters
 ```{{execute}}
-
 
 
 
@@ -41,12 +39,12 @@ Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/):
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```{{execute}}
 
-
+Change to executable:
 ```       
 chmod +x ./kubectl
 ```{{execute}}
 
-
+Move to /sbin
 ```       
 mv ./kubectl /sbin/kubectl
 ```{{execute}}
@@ -84,7 +82,6 @@ chmod 700 get_helm.sh
 ```{{execute}}
 
 Verify:
-
 ```       
-helmn ls```{{execute}}
+helm ls```{{execute}}
 
