@@ -1,13 +1,11 @@
 
 Clone Envoy:
-
 ```
 git clone https://github.com/envoyproxy/envoy.git
 ```{{execute}}
 
 
 To build this sandbox example:
-
 ```
 pwd;ls
 cd envoy/examples/jaeger-native-tracing
@@ -24,6 +22,7 @@ docker-compose up --build -d
 ```
 docker-compose ps
 ```{{execute}}
+
 
 You should get an answer similar to:
 <pre class="file">
