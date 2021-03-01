@@ -20,7 +20,7 @@
     "hideintro": true,
     "showdashboard": true,
     "dashboards": [
-      {"name": "Dashboard", "port": 8443},
+      {"name": "Dashboard", "port": 8443}
     ],
     "uilayout": "terminal"
   },
