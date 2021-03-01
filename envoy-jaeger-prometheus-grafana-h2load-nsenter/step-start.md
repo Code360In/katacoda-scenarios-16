@@ -3,32 +3,15 @@ An initial envoy configuration file has been created at
 
 In this file, it is defined that the server will run with a listener using all network interfaces in port 10000.
 
-```
-- name: listener_0
-  address:
-    socket_address: { address: 0.0.0.0, port_value: 10000 }
-```
-
-Also this configuration defines two nodes in `targetCluster`
-
-```
-hosts: [
-  { socket_address: { address: 172.18.0.3, port_value: 80 }},
-  { socket_address: { address: 172.18.0.4, port_value: 80 }}
-]```
-
 Start the envoy proxy with the defined configuration using this command:
 
+
+
+To build this sandbox example:
+
 ```
-git clone https://github.com/envoyproxy/envoy.git 
-
-```{{execute}}
-
-
-
-To build this sandbox example, and start the example apps run the following commands:
-```
-pwd
+pwd;ls
+cd envoy/examples/jaeger-native-tracing
 ```{{execute}}
 
 ```
