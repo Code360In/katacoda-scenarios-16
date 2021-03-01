@@ -4,7 +4,7 @@
 kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 
 
-# Install kind on Linux:
+# Install kind:
 
 ```
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.10.0/kind-linux-amd64
