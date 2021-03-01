@@ -24,7 +24,7 @@
     "hideintro": true,
     "showdashboard": true,
     "dashboards": [
-      {"name": "Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/"}
+      {"name": "Dashboard", "port": 8080}
     ],
     "uilayout": "terminal"
   },

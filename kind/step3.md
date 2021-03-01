@@ -16,7 +16,7 @@ helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
 
 Deploy a Helm Release named "dashboard" using the kubernetes-dashboard chart
 ``` 
-helm install dashboard kubernetes-dashboard/kubernetes-dashboard -n dashboard
+helm install dashboard kubernetes-dashboard/kubernetes-dashboard -n dashboard --set=service.externalPort=8080,resources.limits.cpu=200m
 ```{{execute}}
 
 
@@ -45,5 +45,4 @@ helm get -a
 ```{{execute}}
 
 
-Acess the kubernetes dashboard, go to the dashboard:
-https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com
+Acess the kubernetes dashboard, go to the dashboard.
