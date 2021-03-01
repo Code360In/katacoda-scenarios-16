@@ -58,6 +58,16 @@ kubectl cluster-info --context tx-cluster-k8s
 ```{{execute}}
 
 
+Display nodes:
+```       
+kubectl get nodes
+```{{execute}}
+
+Display Pods:
+```       
+kubectl get pods -A
+```{{execute}}
+
 
 Install [helm](https://helm.sh/docs/intro/install/):
 
@@ -72,3 +82,9 @@ chmod 700 get_helm.sh
 ```       
 ./get_helm.sh
 ```{{execute}}
+
+Verify:
+
+```       
+helmn ls```{{execute}}
+
