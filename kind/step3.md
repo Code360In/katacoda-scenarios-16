@@ -38,5 +38,12 @@ Show the token needed to log in to the dashboard:
 kubectl get secret $(kubectl get serviceaccount me -n kube-system -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" -n kube-system | base64 --decode; echo
 ```{{execute}}
 
+
+Show all values from helm package:
+``` 
+helm get -a
+```{{execute}}
+
+
 Acess the kubernetes dashboard, go to the dashboard:
 https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com

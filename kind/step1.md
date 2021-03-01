@@ -21,7 +21,7 @@ mv ./kind /sbin/kind
 ```{{execute}}
 
 
-# Creating a Cluster:
+# Creating a Kubernetes Cluster:
 ```
 kind create cluster --name tx-cluster-k8s
 ```{{execute}}
