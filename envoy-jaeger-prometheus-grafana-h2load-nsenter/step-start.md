@@ -1,11 +1,6 @@
 An initial envoy configuration file has been created at
 `envoy.yaml`{{open}}
 
-In this file, it is defined that the server will run with a listener using all network interfaces in port 10000.
-
-Start the envoy proxy with the defined configuration using this command:
-
-
 
 To build this sandbox example:
 
