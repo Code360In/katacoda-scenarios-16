@@ -39,10 +39,4 @@ kubectl get secret $(kubectl get serviceaccount me -n kube-system -o jsonpath="{
 ```{{execute}}
 
 
-Show all values from helm package:
-``` 
-helm get -a
-```{{execute}}
-
-
 Acess the kubernetes dashboard, go to the dashboard.
