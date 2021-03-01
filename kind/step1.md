@@ -27,7 +27,7 @@ Creating a Cluster:
 
 
 ```
-kind create cluster --name kind-2
+kind create cluster --name tx-cluster-k8s
 ```{{execute}}
 
 
@@ -59,7 +59,7 @@ mv ./kubectl /sbin/kubectl
 Verify context:
 
 ```       
-kubectl cluster-info --context kind-2
+kubectl cluster-info --context tx-cluster-k8s
 ```{{execute}}
 
 
