@@ -1,7 +1,3 @@
-An initial envoy configuration file has been created at
-`envoy.yaml`{{open}}
-
-
 
 Clone Envoy:
 
