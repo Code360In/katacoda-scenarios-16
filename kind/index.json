@@ -1,6 +1,8 @@
 {
   "title": "Kind Kubernetes",
   "description": "Using Kind to install Kubernetes",
+  "difficulty": "intermediate",
+  "time": "60 minutes",
   "details": {
     "steps": [
       {
