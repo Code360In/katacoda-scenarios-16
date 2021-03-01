@@ -1,38 +1,60 @@
 
-Install Kubernetes dashboard [dashboard](https://helm.sh/docs/intro/install/):
 
-Create a namespace:
-``` 
-kubectl create namespace dashboard
+# Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/):
+
+```       
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```{{execute}}
+
+Change to executable:
+```       
+chmod +x ./kubectl
+```{{execute}}
+
+Move to /sbin
+```       
+mv ./kubectl /sbin/kubectl
 ```{{execute}}
 
 
-Add kubernetes-dashboard repository
-``` 
-helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
+Verify cluster:
+```       
+kubectl cluster-info
 ```{{execute}}
 
-Deploy a Helm Release named "dashboard" using the kubernetes-dashboard chart
-``` 
-helm install dashboard kubernetes-dashboard/kubernetes-dashboard -n dashboard
+Display nodes:
+```       
+kubectl get nodes
+```{{execute}}
+
+Display Pods:
+```       
+kubectl get pods -A
 ```{{execute}}
 
 
+ <pre class="file">
+ Pod status running
+ Nodes with status ready
+ </pre>
 
-Create a new account that can be used to authenticate to the dashboard:
-``` 
-kubectl create serviceaccount me -n kube-system
+
+# Install [helm](https://helm.sh/docs/intro/install/):
+
+```       
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
 ```{{execute}}
 
- 
-Make that new account have the right permissions:
-``` 
-kubectl create clusterrolebinding me -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:me
+```       
+chmod 700 get_helm.sh
 ```{{execute}}
- 
 
-Show the token needed to log in to the dashboard:
-``` 
-kubectl get secret $(kubectl get serviceaccount me -n kube-system -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" -n kube-system | base64 --decode; echo
+```       
+./get_helm.sh
 ```{{execute}}
+
+Verify:
+```       
+helm ls```{{execute}}
+
 

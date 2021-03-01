@@ -10,6 +10,10 @@
       {
         "title": "Step 2",
         "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
       }
     ],
     "finish": {
@@ -20,7 +24,7 @@
     "hideintro": true,
     "showdashboard": true,
     "dashboards": [
-      {"name": "Dashboard", "port": 8443}
+      {"name": "Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/"}
     ],
     "uilayout": "terminal"
   },
