@@ -1,6 +1,6 @@
 {
-  "title": "Ubuntu 20.04 Instance",
-  "description": "General purpose environment",
+  "title": "Kind Kubernetes",
+  "description": "Using Kind to install Kubernetes",
   "details": {
     "steps": [
       {
