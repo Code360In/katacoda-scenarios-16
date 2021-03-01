@@ -1,9 +1,7 @@
-Start using the Ubuntu environment for your content by setting the `imageid` to `ubuntu:2004`.
+Congratulations. You have successfully:
 
-For example:
+- Configured Envoy to expose statistics in Prometheus
+- Learned how to use Graphana to build dashboards with Envoy statistics
+- Made the configuration to send traces to Jaeger
 
-<pre class="file">
-"backend": {
-  "imageid": "ubuntu:2004"
-}
-</pre>
+Continue completing Katacoda scenarios to learn more about the potential of [Envoy](https://www.envoyproxy.io/).

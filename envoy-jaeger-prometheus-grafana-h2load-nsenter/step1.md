@@ -1,4 +1,26 @@
-The Katacoda Ubuntu Environment is a flexible single node environment. Users are connected to the environment as `root`. This provides them with full flexibility to install additional packages, explore the internals of Linux and experiment with new ideas.
+Prometheus is an open-source monitoring solution that can be integrated with Envoy's own stats.
 
-The environment also comes with Docker, meaning additional containers can be pulled and access as and when required.
+Now, let's see the prometheus configuration:
 
+`prometheus.yml`{{open}}
+
+We can see that the prometheus config is using a job named  `envoy`.
+
+```
+scrape_configs:
+  - job_name: 'envoy'
+    metrics_path: /stats/prometheus
+```
+
+Start prometheus with command:
+
+```
+docker run -d -p 9090:9090 \
+    -v /root/envoy/prometheus.yml:/etc/prometheus/prometheus.yml \
+    --name prometheus-server \
+    prom/prometheus
+```{{execute}}
+
+You can access to the prometheus dashboard using this link:
+
+https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targets
