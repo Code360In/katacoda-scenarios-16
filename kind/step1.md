@@ -22,10 +22,19 @@ mv ./kind /sbin/kind
 ```{{execute}}
 
 
-Creating a Cluster
+Creating a Cluster:
 
+
+```
 kind create cluster --name kind-2
+```{{execute}}
 
+
+```
 kind get clusters
+```{{execute}}
 
+
+```       
 kubectl cluster-info --context kind-2
+```{{execute}}
