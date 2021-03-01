@@ -1,6 +1,11 @@
 [Envoy](https://www.envoyproxy.io/) is easily integrated with open source projects in order to have metrics and distributed tracing.
 
+
 The following scenario demonstrates how to:
+
+https://www.envoyproxy.io/docs/envoy/latest/start/sandboxes/jaeger_native_tracing.html?highlight=jaeger
+
+- 
 
 - Expose Envoy's statistics in [Prometheus](https://prometheus.io/).  
 
@@ -14,6 +19,3 @@ The following scenario demonstrates how to:
 
 - Use nsenter tcpdump to verify UDP msg to Jaeger
 
-
-
-https://www.envoyproxy.io/docs/envoy/latest/start/sandboxes/jaeger_native_tracing.html?highlight=jaeger
