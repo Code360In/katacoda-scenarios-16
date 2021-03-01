@@ -4,8 +4,6 @@
 kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 
 
-Quick Start
-
 Install on Linux:
 
 ```
@@ -25,7 +23,6 @@ mv ./kind /sbin/kind
 
 Creating a Cluster:
 
-
 ```
 kind create cluster --name tx-cluster-k8s
 ```{{execute}}
@@ -38,7 +35,7 @@ kind get clusters
 
 
 
-Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/):
 
 ```       
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
@@ -55,9 +52,7 @@ mv ./kubectl /sbin/kubectl
 ```{{execute}}
 
 
-
 Verify context:
-
 ```       
 kubectl cluster-info --context tx-cluster-k8s
 ```{{execute}}
@@ -65,7 +60,6 @@ kubectl cluster-info --context tx-cluster-k8s
 
 
 Install [helm](https://helm.sh/docs/intro/install/):
-
 
 ```       
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
