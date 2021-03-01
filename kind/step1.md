@@ -52,9 +52,9 @@ mv ./kubectl /sbin/kubectl
 ```{{execute}}
 
 
-Verify context:
+Verify cluster:
 ```       
-kubectl cluster-info --context tx-cluster-k8s
+kubectl cluster-info
 ```{{execute}}
 
 
