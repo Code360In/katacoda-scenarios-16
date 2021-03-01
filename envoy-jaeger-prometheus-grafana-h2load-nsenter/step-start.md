@@ -20,17 +20,27 @@ hosts: [
 Start the envoy proxy with the defined configuration using this command:
 
 ```
-docker run --name=proxy -d \
-  -p 80:10000 \
-  -p 9901:9901 \
-  -v $(pwd)/envoy/:/etc/envoy \
-  envoyproxy/envoy:latest
+git clone https://github.com/envoyproxy/envoy.git 
+
 ```{{execute}}
 
-And then start two healthy http servers using this command:
+
+
+To build this sandbox example, and start the example apps run the following commands:
 ```
-docker run -d katacoda/docker-http-server:healthy;
-docker run -d katacoda/docker-http-server:healthy;
+pwd
+```{{execute}}
+
+```
+docker-compose pull
+```{{execute}}
+
+```
+ docker-compose up --build -d
+```{{execute}}
+
+```
+docker-compose ps
 ```{{execute}}
 
 Check if the nodes are running with this command:
