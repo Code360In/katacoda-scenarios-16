@@ -1,6 +1,12 @@
 
 Install Kubernetes dashboard [dashboard](https://helm.sh/docs/intro/install/):
 
+Create a namespace:
+``` 
+kubectl create namespace dashboard
+```{{execute}}
+
+
 Add kubernetes-dashboard repository
 ``` 
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
@@ -8,7 +14,6 @@ helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
 
 Deploy a Helm Release named "dashboard" using the kubernetes-dashboard chart
 ``` 
-kubectl create namespace dashboard
 helm install dashboard kubernetes-dashboard/kubernetes-dashboard -n dashboard
 ```{{execute}}
 
