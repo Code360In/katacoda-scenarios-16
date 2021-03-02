@@ -62,8 +62,9 @@ helm upgrade --install mon prometheus-community/kube-prometheus-stack -n mon \
 Verify Pods running:
 ``` 
 kubectl get pods -n mon
-kubectl get sv -n mon
+kubectl get svc -n mon
 kubectl get deployments -n mon
 kubectl get daemonset -n mon
+kubectl get statefulset -n mon
 ```{{execute}}
 
