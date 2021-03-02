@@ -1,6 +1,8 @@
 {
   "title": "OpenTelemetry",
   "description": "metrics trace logs",
+  "difficulty": "intermediate",
+  "time": "5 minutes",
   "details": {
     "steps": [
       {
