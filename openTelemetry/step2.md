@@ -15,13 +15,13 @@ The first step to create a dashboard is to have a datasource. Let's define a dat
 
 The URL for phometheus should be:
 
-`http://172.18.0.5:9090`{{copy}}
+`https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com`{{copy}}
 
 For all the other fields you can use the default values
 
-![](/envoyproxy/scenarios/implementing-metrics-tracing/assets/prometheus-data-source.png)
 
 Test and save your datasource.
+
 
 ## Build a dashboard
 
@@ -34,6 +34,4 @@ Let's use this existing dashboard. Copy the ID, and use the option `Import`.
 
 Select **Prometheus** as the data source and Import.
 
-
-https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/graph
 
