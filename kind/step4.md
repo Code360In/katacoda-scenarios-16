@@ -58,6 +58,9 @@ helm upgrade --install mon prometheus-community/kube-prometheus-stack -n mon \
 --set defaultRules.rules.time=false
 ```{{execute}}
 
+helm upgrade --install mon prometheus-community/kube-prometheus-stack -n mon \
+--set defaultRules.rules.time=false
+
 
 Verify Pods running:
 ``` 
@@ -80,11 +83,6 @@ kubectl create namespace ingress-controller
 
 # install
 
-helm install haproxy -n ingress-controller ./kubernetes-ingress/ \
-   --set controller.ingressClass=haproxy \
-   --set controller.kind=DaemonSet \
-   --set controller.logging.level=debug
-
 
 helm install haproxy -n ingress-controller haproxytech/kubernetes-ingress \
    --set controller.ingressClass=haproxy \
@@ -93,7 +91,7 @@ helm install haproxy -n ingress-controller haproxytech/kubernetes-ingress \
    
 
 
-
+cat <<EOF | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -119,3 +117,7 @@ spec:
             name: mon-kube-prometheus-stack-prometheus
             port:
               number: 9090
+EOF
+
+
+kubectl get ingress -A

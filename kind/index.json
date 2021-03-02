@@ -20,6 +20,10 @@
       {
         "title": "Step 4",
         "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
       }
     ],
     "intro": {
@@ -34,7 +38,9 @@
     "hideintro": false,
     "showdashboard": true,
     "dashboards": [
-      {"name": "Dashboard", "port": 8080}
+      {"name": "Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-443-[[KATACODA_HOST]].environments.katacoda.com/dashboard"},
+      {"name": "Prometheus", "href": "https://[[HOST_SUBDOMAIN]]-443-[[KATACODA_HOST]].environments.katacoda.com/prometheus"},
+      {"name": "Grafana", "href": "https://[[HOST_SUBDOMAIN]]-443-[[KATACODA_HOST]].environments.katacoda.com/grafana"}
     ],
     "uilayout": "terminal"
   },
