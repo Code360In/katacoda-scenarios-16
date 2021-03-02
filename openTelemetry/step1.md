@@ -6,13 +6,29 @@
 </pre>
 
 
+Getting Started
+
+Get code:
+
+
+```
+git clone git@github.com:open-telemetry/opentelemetry-collector.git; \
+```{{execute}}
+
+
+Go to Demo:
+```
+cd opentelemetry-collector/examples/demo; \
+```{{execute}}
+
+Build all images and create container:
+```
+docker-compose up -d
+```{{execute}}
+
+
 <pre class="file">
 </pre>
-
-Install Otel:
-```
-docker run -d otel/opentelemetry-collector
-```{{execute}}
 
 
 Verify:
