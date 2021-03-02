@@ -30,7 +30,7 @@ curl localhost:9100/metrics
 
 
 
-## Build a dashboard for Node Exporter:
+## Verify Metric:
 
 metric: node_cpu
 
