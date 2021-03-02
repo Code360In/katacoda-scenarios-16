@@ -2,7 +2,7 @@
 
 Go to Demo:
 ```
-cd /root/opentelemetry-collector/examples/demo;
+cd /root/opentelemetry-collector/examples/demo/
 ```{{execute}}
 
 Build all images and create container:
