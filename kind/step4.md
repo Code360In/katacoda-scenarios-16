@@ -53,8 +53,6 @@ kubectl create namespace mon
 Run helm:
 ``` 
 helm upgrade --install mon prometheus-community/kube-prometheus-stack -n mon \
---set grafana.service.type=NodePort --set grafana.service.nodePort=30080 \
---set prometheus.service.type=NodePort --set prometheus.service.nodePort=30090 \
 --set defaultRules.rules.time=false
 ```{{execute}}
 
@@ -71,3 +69,16 @@ kubectl get daemonset -n mon
 kubectl get statefulset -n mon
 ```{{execute}}
 
+
+port-forward prometheus/grafana:
+``` 
+kubectl -n mon port-forward service/mon-kube-prometheus-stack-prometheus  9090:9090  --address 0.0.0.0 &
+kubectl -n mon port-forward service/mon-grafana 3000:80  --address 0.0.0.0 &
+kubectl get pods -A
+```{{execute}}
+
+
+Decode secret username/password:
+``` 
+kubectl -n mon get secret/mon-grafana -o go-template='{{range $k,$v := .data}}{{printf "%s: " $k}}{{if not $v}}{{$v}}{{else}}{{$v | base64decode}}{{end}}{{"\n"}}{{end}}'
+```{{execute}}

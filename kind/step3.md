@@ -41,9 +41,11 @@ kubectl get secret $(kubectl get serviceaccount me -n kube-system -o jsonpath="{
 
 ``` 
 export POD_NAME=$(kubectl get pods -n dashboard -l "app.kubernetes.io/name=kubernetes-dashboard,app.kubernetes.io/instance=dashboard" -o jsonpath="{.items[0].metadata.name}")
-kubectl -n dashboard port-forward $POD_NAME 8443:8443  --address 0.0.0.0 & 
 ```{{execute}}
 
+``` 
+kubectl -n dashboard port-forward $POD_NAME 8443:8443  --address 0.0.0.0 &
+```{{execute}}
 
 
 Acess the kubernetes dashboard, go to the dashboard.
