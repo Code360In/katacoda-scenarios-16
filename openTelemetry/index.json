@@ -30,7 +30,8 @@
     "dashboards": [
       {"name": "Prometheus", "port": 9090},
       {"name": "Grafana", "port": 3000},
-      {"name": "Jaeger Tracing", "port": 16686}
+      {"name": "Jaeger Tracing", "port": 16686},
+      {"name": "Metrics", "href": "https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com/metrics"}
     ],
     "uilayout": "editor-terminal",
     "uieditorpath": "/root/opentelemetry-collector/examples/"
