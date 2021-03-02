@@ -26,3 +26,15 @@ If you're interested in seeing the raw metrics, they can be viewed with
 curl localhost:9100/metrics
 ```{{execute}}
 
+
+
+## Build a dashboard for Node Exporter:
+
+In order to build a dashboard you can build one from scratch or you can use an existing one, for example:
+https://grafana.com/grafana/dashboards/1860
+
+Let's use this existing dashboard. Copy the ID, and use the option `Import`.
+
+`1860`{{copy}}
+
+Select **Prometheus** as the data source and Import.
