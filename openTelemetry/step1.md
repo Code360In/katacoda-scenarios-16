@@ -2,8 +2,7 @@
 
 
 
-[OpenTelemetry](https://opentelemetry.io/) <pre class="file">is a collection of tools, APIs, and SDKs. You use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software's performance and behavior.
-</pre>
+[OpenTelemetry](https://opentelemetry.io/) is a collection of tools, APIs, and SDKs. You use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software's performance and behavior.
 
 
 Getting Started
@@ -27,8 +26,6 @@ docker-compose up -d
 ```{{execute}}
 
 
-<pre class="file">
-</pre>
 
 
 Verify:
@@ -36,3 +33,7 @@ Verify:
 docker ps -a
 ```{{execute}}
 
+
+<pre class="file">
+.
+</pre>
