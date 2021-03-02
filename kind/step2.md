@@ -2,6 +2,7 @@
 
 # Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/):
 
+
 ```       
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```{{execute}}
@@ -40,6 +41,7 @@ kubectl get pods -A
 
 
 # Install [helm](https://helm.sh/docs/intro/install/):
+
 
 ```       
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
