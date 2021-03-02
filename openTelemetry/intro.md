@@ -16,9 +16,9 @@ The following scenario demonstrates how to:
 
 - Deploy Prometheus metrics
 
-- Deploy Jaeger trace
+- Deploy Jaeger trace/logs
 
-- Deploy Tempo trace
+- Deploy Tempo trace/logs
 
 - Load
 
