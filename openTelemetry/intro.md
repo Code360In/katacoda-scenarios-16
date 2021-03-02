@@ -14,6 +14,10 @@ The following scenario demonstrates how to:
 
 - Deploy Grafana
 
+- Deploy Prometheus metrics
+
+- Deploy Jaeger trace
+
 - Deploy Tempo
 
 - Load
