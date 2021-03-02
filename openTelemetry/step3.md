@@ -24,5 +24,5 @@ Let's use this existing dashboard. Copy the ID, and use the option `Import`.
 
 Select **Prometheus** as the data source and Import.
 
-
-```tempo{envoy_cluster_name="targetCluster"}```{{copy}}
+## Grafana Expore Tempo by traceid
+![](/va/scenarios/opentelemetry/assets/tempo.png)
