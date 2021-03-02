@@ -1,5 +1,5 @@
 
-Deploy [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
+# Deploy [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
 
  <pre class="file">
 Installs the kube-prometheus stack, a collection of Kubernetes manifests, Grafana dashboards, and Prometheus rules combined with documentation and scripts to provide easy to operate end-to-end Kubernetes cluster monitoring with Prometheus using the Prometheus Operator.
@@ -71,53 +71,3 @@ kubectl get daemonset -n mon
 kubectl get statefulset -n mon
 ```{{execute}}
 
-
-helm repo add haproxytech https://haproxytech.github.io/helm-charts
-helm repo update
-
-helm pull haproxytech/kubernetes-ingress
-
-# create namespace
-kubectl create namespace ingress-controller
-
-
-# install
-
-
-helm install haproxy -n ingress-controller haproxytech/kubernetes-ingress \
-   --set controller.ingressClass=haproxy \
-   --set controller.kind=DaemonSet \
-   --set controller.logging.level=debug
-   
-
-
-cat <<EOF | kubectl apply -f -
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: mon-kube-prometheus-stack-prometheus
-  namespace: mon
-  annotations:
-    haproxy.org/ingress.class: "haproxy"
-
-
-spec:
-  tls:
-    - hosts:
-        - prometheus
-
-  rules:
-  - host: prometheus
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: mon-kube-prometheus-stack-prometheus
-            port:
-              number: 9090
-EOF
-
-
-kubectl get ingress -A

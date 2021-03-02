@@ -1,5 +1,5 @@
 
-Install Kubernetes dashboard [dashboard](https://helm.sh/docs/intro/install/):
+# Install Kubernetes dashboard [dashboard](https://helm.sh/docs/intro/install/):
 
 [Helm package](https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard)
 
