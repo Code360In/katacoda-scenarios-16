@@ -18,7 +18,7 @@ The following scenario demonstrates how to:
 
 - Deploy Jaeger trace
 
-- Deploy Tempo
+- Deploy Tempo trace
 
 - Load
 
