@@ -8,3 +8,15 @@
 
 <pre class="file">
 </pre>
+
+Install Otel:
+```
+docker run -d otel/opentelemetry-collector
+```{{execute}}
+
+
+Verify:
+```
+docker ps -a
+```{{execute}}
+
