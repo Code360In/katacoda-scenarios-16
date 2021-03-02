@@ -10,7 +10,7 @@ git clone https://github.com/open-telemetry/opentelemetry-collector.git
 
 go to demo dir:
 ```
-cd opentelemetry-collector/examples/demo;
+cd /root/opentelemetry-collector/examples/demo;
 ```{{execute}}
 
 Build all images and create container:
