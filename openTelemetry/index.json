@@ -18,11 +18,11 @@
       {
         "title": "Step 4 Start Node Exporter",
         "text": "step4.md"
-      }
+      },
       {
         "title": "Step 5 Start Load",
         "text": "step5.md"
-      },
+      }
     ],
     "intro": {
       "courseData": "env-init.sh",
