@@ -7,6 +7,10 @@ Get code:
 git clone https://github.com/open-telemetry/opentelemetry-collector.git
 ```{{execute}}
 
+Copy Prometheus config file:
+```
+cd /root/prometheus.yaml /root/opentelemetry-collector/examples/demo/
+```{{execute}}
 
 go to demo dir:
 ```
