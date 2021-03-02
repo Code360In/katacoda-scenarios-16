@@ -1,5 +1,5 @@
 
-# Deploy Ha-Proxy
+# Deploy [HaProxy](https://github.com/haproxytech/kubernetes-ingress)
 
 
 ``` 
@@ -16,9 +16,11 @@ kubectl create namespace ingress-controller
 
 Run helm ha-proxy:
 ``` 
-helm install haproxy -n ingress-controller haproxytech/kubernetes-ingress \
+helm upgrade --install haproxy -n ingress-controller haproxytech/kubernetes-ingress \
    --set controller.ingressClass=haproxy \
    --set controller.kind=DaemonSet \
+   --set controller.service.type=NodePort \
+   --set controller.service.httpsPort.nodePort=31313 \
    --set controller.logging.level=debug
 ```{{execute}}
    
