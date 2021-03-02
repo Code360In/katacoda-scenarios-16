@@ -1,3 +1,5 @@
+# Deploy Grafana
+
 Now, let's run grafana with this command:
 
 `docker run --name=grafana -d -p 3000:3000 grafana/grafana`{{execute T1}}
