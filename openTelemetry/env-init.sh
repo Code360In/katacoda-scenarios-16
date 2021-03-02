@@ -1,2 +1,2 @@
 #!/bin/bash
-uname -a
+git clone https://github.com/open-telemetry/opentelemetry-collector.git
