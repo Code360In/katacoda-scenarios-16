@@ -8,7 +8,7 @@ git clone https://github.com/open-telemetry/opentelemetry-collector.git
 ```{{execute}}
 
 
-Go to Demo:
+go to demo dir:
 ```
 cd opentelemetry-collector/examples/demo;
 ```{{execute}}
