@@ -12,6 +12,14 @@
       {
         "title": "Step 2",
         "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
       }
     ],
     "intro": {
@@ -25,9 +33,15 @@
   "environment": {
     "hideintro": false,
     "showdashboard": true,
+    "dashboards": [
+      {"name": "Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Prometheus", "href": "https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Grafana", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com"}
+    ],
     "uilayout": "terminal"
   },
   "backend": {
+    "port": 443,
     "imageid": "ubuntu:2004"
   }
 }

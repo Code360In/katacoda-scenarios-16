@@ -10,3 +10,10 @@ The following scenario demonstrates how to:
 - Install kubectl.
 
 - Install helm.
+
+- Deploy Kubernetes dashboard.
+
+- Deploy kube-prometheus-stack 
+  (Promethes-Operator,kube-state-metrics,node-exporter,Prometheus,Grafana,Alertmanager)
+
+- Deploy haproxy ingress-controller.
