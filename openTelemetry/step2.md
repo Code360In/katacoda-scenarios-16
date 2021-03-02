@@ -1,4 +1,5 @@
-# Deploy Grafana
+
+# Task
 
 Now, let's run grafana with this command:
 

@@ -1,6 +1,7 @@
-# start Load
 
-Now, we should generate traffic performing requests to the envoy proxy.
+# Task
+
+Now, we should generate traffic performing requests to the application.
 
 Install h2load to generate http2 traffic:
 

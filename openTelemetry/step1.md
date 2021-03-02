@@ -1,5 +1,5 @@
-# Deploys a load generator, agent and gateway as well as Jaeger, Zipkin and Prometheus back-ends. 
 
+# Task
 
 Get code:
 
