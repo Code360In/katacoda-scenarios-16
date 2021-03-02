@@ -1,6 +1,6 @@
 {
-  "title": "Ubuntu 20.04 Instance",
-  "description": "General purpose environment",
+  "title": "OpenTelemetry",
+  "description": "metrics trace logs",
   "details": {
     "steps": [
       {
