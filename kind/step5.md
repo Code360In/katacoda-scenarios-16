@@ -56,5 +56,7 @@ EOF
 ```{{execute}}
 
 
+Verify:
+``` 
 kubectl get ingress -A
 ```{{execute}}
