@@ -34,7 +34,8 @@ rules:
     time: true
  </pre>
 
- 
+
+Add helm package:
 ``` 
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 ```{{execute}}
@@ -49,6 +50,7 @@ Create namespace mon:
 kubectl create namespace mon
 ```{{execute}}
 
+Run helm:
 ``` 
 helm upgrade --install mon prometheus-community/kube-prometheus-stack -n mon \
 --set grafana.service.type=NodePort --set grafana.service.nodePort=30080 \
@@ -57,7 +59,7 @@ helm upgrade --install mon prometheus-community/kube-prometheus-stack -n mon \
 ```{{execute}}
 
 
-Verify Pods runnimg:
+Verify Pods running:
 ``` 
 kubectl get pods -n mon
 kubectl get sv -n mon
