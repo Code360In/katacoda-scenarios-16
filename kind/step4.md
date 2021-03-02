@@ -20,7 +20,10 @@ kubectl create namespace mon
 ```{{execute}}
 
 ``` 
-helm upgrade --install  mon prometheus-community/kube-prometheus-stack  --set grafana.image.tag="7.4.1-ubuntu" --set prometheus.image.tag="v2.25.0-rc.0" --set defaultRules.rules.time=false -n mon
+helm upgrade --install mon prometheus-community/kube-prometheus-stack -n mon \
+--set grafana.service.type=NodePort --set grafana.service.nodePort=30080 \
+--set prometheus.service.type=NodePort --set prometheus.service.nodePort=30090 \
+--set defaultRules.rules.time=false
 ```{{execute}}
 
 
@@ -31,3 +34,32 @@ kubectl get sv -n mon
 kubectl get deployments -n mon
 kubectl get daemonset -n mon
 ```{{execute}}
+
+
+<pre class="file">
+rules:
+    alertmanager: true
+    etcd: true
+    general: true
+    k8s: true
+    kubeApiserver: true
+    kubeApiserverAvailability: true
+    kubeApiserverError: true
+    kubeApiserverSlos: true
+    kubelet: true
+    kubePrometheusGeneral: true
+    kubePrometheusNodeAlerting: true
+    kubePrometheusNodeRecording: true
+    kubernetesAbsent: true
+    kubernetesApps: true
+    kubernetesResources: true
+    kubernetesStorage: true
+    kubernetesSystem: true
+    kubeScheduler: true
+    kubeStateMetrics: true
+    network: true
+    node: true
+    prometheus: true
+    prometheusOperator: true
+    time: true
+ </pre>
