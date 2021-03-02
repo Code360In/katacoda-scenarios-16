@@ -11,13 +11,13 @@ Get code:
 
 
 ```
-git clone git@github.com:open-telemetry/opentelemetry-collector.git; \
+git clone https://github.com/open-telemetry/opentelemetry-collector.git
 ```{{execute}}
 
 
 Go to Demo:
 ```
-cd opentelemetry-collector/examples/demo; \
+cd opentelemetry-collector/examples/demo;
 ```{{execute}}
 
 Build all images and create container:
