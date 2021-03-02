@@ -8,6 +8,10 @@
         "text": "step1.md"
       }
     ],
+    "intro": {
+      "courseData": "env-init.sh",
+      "text": "intro.md"
+    },
     "finish": {
       "text": "finish.md"
     }
