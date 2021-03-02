@@ -8,4 +8,11 @@
 The following scenario demonstrates how to:
 
 
-- Install otel.
+- Deploy OpeneTelemetry
+
+- Deploy Grafana
+
+- Deploy Tempo
+
+- Load
+
