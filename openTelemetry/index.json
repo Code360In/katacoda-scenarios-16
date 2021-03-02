@@ -33,7 +33,7 @@
     },
     "assets": {
       "host01": [
-          {"file": "prometheus.yml", "target": "/root/"}
+          {"file": "prometheus.yaml", "target": "/root/"}
       ]
   }
   },
