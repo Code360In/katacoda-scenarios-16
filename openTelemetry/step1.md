@@ -13,7 +13,7 @@ go to demo dir:
 cd /root/opentelemetry-collector/examples/demo;
 ```{{execute}}
 
-Build all images and create container:
+Build all images and Deploy containers:
 ```
 docker-compose up -d
 ```{{execute}}
