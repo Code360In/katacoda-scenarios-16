@@ -32,11 +32,6 @@ curl localhost:9100/metrics
 
 ## Build a dashboard for Node Exporter:
 
-In order to build a dashboard you can build one from scratch or you can use an existing one, for example:
-https://grafana.com/grafana/dashboards/1860
+metric: node_cpu
 
-Let's use this existing dashboard. Copy the ID, and use the option `Import`.
-
-`1860`{{copy}}
-
-Select **Prometheus** as the data source and Import.
+https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/graph
