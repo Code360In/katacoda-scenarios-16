@@ -62,5 +62,5 @@ helm ls```{{execute}}
 
 Remove sh file:
 ```       
-get_helm.sh
+rm get_helm.sh
 ```{{execute}}
