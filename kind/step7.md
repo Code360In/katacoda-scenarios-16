@@ -12,10 +12,10 @@ https://raw.githubusercontent.com/jaegertracing/jaeger-kubernetes/master/all-in-
 
 ``` 
 cat <<EOF | kubectl apply -f -
-- apiVersion: v1
+apiVersion: v1
 kind: List
 items:
-- apiVersion: extensions/v1beta1
+- apiVersion: v1
   kind: Deployment
   metadata:
     name: jaeger
