@@ -38,18 +38,4 @@ Select **Prometheus** as the data source and Import.
 
 [View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/d/000000003/envoy-proxy?refresh=5s&orgId=1&var-cluster=targetCluster&var-hosts=All)
 
-## Change Traffic
 
-`while true; do curl localhost; sleep .1; done`{{execute interrupt T2}}
-
-Should see a big spike in the traffic on the dashboard.
-
-## Generate Errors
-
-`curl 172.18.0.3/unhealthy; curl 172.18.0.4/unhealthy;`{{execute}}
-
-Within Prometheus, you will also see a increase in the number of 500 error messages.
-
-https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/graph
-
-`envoy_cluster_external_upstream_rq{envoy_cluster_name="targetCluster"}`{{copy}}
