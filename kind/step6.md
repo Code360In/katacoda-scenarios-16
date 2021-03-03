@@ -21,7 +21,7 @@ helm repo update
 ``` 
 helm upgrade --install prometheus-adapter prometheus-community/prometheus-adapter -n mon \
 --set prometheus-url="http://mon-kube-prometheus-stack-prometheus:9090"
-``` 
+```{{execute}}
 
 
 Verify Pods running:
