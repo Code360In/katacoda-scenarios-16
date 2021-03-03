@@ -20,3 +20,7 @@ The following scenario demonstrates how to:
 
 - Deploy [Loki](https://grafana.com/oss/loki/) by Helm.
 
+- Deploy Prometheus-adapter
+
+- Deploy OpenTelemetry/Jaeger
+
