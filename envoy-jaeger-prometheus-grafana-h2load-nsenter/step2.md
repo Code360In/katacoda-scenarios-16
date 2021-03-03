@@ -7,7 +7,7 @@ tracing:
   http:
     name: envoy.zipkin
     config:
-      collector_cluster: 172.18.0.6
+      collector_cluster: [[HOST_IP]]
       collector_endpoint: "/api/v1/spans"
       shared_span_context: false
 </pre>
