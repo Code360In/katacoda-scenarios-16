@@ -1,160 +1,26 @@
 ### OpenTelemetry/Jaeger
 
 https://opentelemetry.io/
-
+https://github.com/open-telemetry/opentelemetry-helm-charts
+https://github.com/open-telemetry/opentelemetry-helm-charts/tree/main/charts/opentelemetry-collector
 
 ``` 
 kubectl create namespace otel
 ```{{execute}}
 
 
-https://raw.githubusercontent.com/jaegertracing/jaeger-kubernetes/master/all-in-one/jaeger-all-in-one-template.yml
+
+Add OpenTelemetry Helm repository:
+``` 
+helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
+```{{execute}}
+
+
+To install the chart with the release name my-opentelemetry-collector, run the following command:
 
 ``` 
-cat <<EOF | kubectl apply -f -
-apiVersion: v1
-kind: List
-items:
-- apiVersion: v1
-  kind: Deployment
-  metadata:
-    name: jaeger
-    labels:
-      app: jaeger
-      app.kubernetes.io/name: jaeger
-      app.kubernetes.io/component: all-in-one
-  spec:
-    replicas: 1
-    strategy:
-      type: Recreate
-    template:
-      metadata:
-        labels:
-          app: jaeger
-          app.kubernetes.io/name: jaeger
-          app.kubernetes.io/component: all-in-one
-        annotations:
-          prometheus.io/scrape: "true"
-          prometheus.io/port: "16686"
-      spec:
-          containers:
-          -   env:
-              - name: COLLECTOR_ZIPKIN_HTTP_PORT
-                value: "9411"
-              image: jaegertracing/all-in-one
-              name: jaeger
-              ports:
-                - containerPort: 5775
-                  protocol: UDP
-                - containerPort: 6831
-                  protocol: UDP
-                - containerPort: 6832
-                  protocol: UDP
-                - containerPort: 5778
-                  protocol: TCP
-                - containerPort: 16686
-                  protocol: TCP
-                - containerPort: 9411
-                  protocol: TCP
-              readinessProbe:
-                httpGet:
-                  path: "/"
-                  port: 14269
-                initialDelaySeconds: 5
-- apiVersion: v1
-  kind: Service
-  metadata:
-    name: jaeger-query
-    labels:
-      app: jaeger
-      app.kubernetes.io/name: jaeger
-      app.kubernetes.io/component: query
-  spec:
-    ports:
-      - name: query-http
-        port: 80
-        protocol: TCP
-        targetPort: 16686
-    selector:
-      app.kubernetes.io/name: jaeger
-      app.kubernetes.io/component: all-in-one
-    type: ClusterIP
-- apiVersion: v1
-  kind: Service
-  metadata:
-    name: jaeger-collector
-    labels:
-      app: jaeger
-      app.kubernetes.io/name: jaeger
-      app.kubernetes.io/component: collector
-  spec:
-    ports:
-    - name: jaeger-collector-tchannel
-      port: 14267
-      protocol: TCP
-      targetPort: 14267
-    - name: jaeger-collector-http
-      port: 14268
-      protocol: TCP
-      targetPort: 14268
-    - name: jaeger-collector-zipkin
-      port: 9411
-      protocol: TCP
-      targetPort: 9411
-    selector:
-      app.kubernetes.io/name: jaeger
-      app.kubernetes.io/component: all-in-one
-    type: ClusterIP
-- apiVersion: v1
-  kind: Service
-  metadata:
-    name: jaeger-agent
-    labels:
-      app: jaeger
-      app.kubernetes.io/name: jaeger
-      app.kubernetes.io/component: agent
-  spec:
-    ports:
-    - name: agent-zipkin-thrift
-      port: 5775
-      protocol: UDP
-      targetPort: 5775
-    - name: agent-compact
-      port: 6831
-      protocol: UDP
-      targetPort: 6831
-    - name: agent-binary
-      port: 6832
-      protocol: UDP
-      targetPort: 6832
-    - name: agent-configs
-      port: 5778
-      protocol: TCP
-      targetPort: 5778
-    clusterIP: None
-    selector:
-      app.kubernetes.io/name: jaeger
-      app.kubernetes.io/component: all-in-one
-- apiVersion: v1
-  kind: Service
-  metadata:
-    name: zipkin
-    labels:
-      app: jaeger
-      app.kubernetes.io/name: jaeger
-      app.kubernetes.io/component: zipkin
-  spec:
-    ports:
-    - name: jaeger-collector-zipkin
-      port: 9411
-      protocol: TCP
-      targetPort: 9411
-    clusterIP: None
-    selector:
-      app.kubernetes.io/name: jaeger
-      app.kubernetes.io/component: all-in-one
-
-EOF
+helm upgrade --install  -n otel  opentelemetry-collector open-telemetry/opentelemetry-collector --set standaloneCollector.enabled=true \
+--set standaloneCollector.service.type=ClusterIP
 ```{{execute}}
 
 
@@ -164,7 +30,6 @@ kubectl get pods -n otel
 kubectl get svc -n otel
 kubectl get deployments -n otel
 kubectl get daemonset -n otel
-kubectl get statefulset -n otel
 ```{{execute}}
 
 
