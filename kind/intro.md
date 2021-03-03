@@ -5,16 +5,16 @@ The following scenario demonstrates how to:
 
 - Install Kind.
 
-- Create kubernetes cluster.
+- Create [Kubernetes](https://kubernetes.io/)  cluster.
 
-- Install kubectl.
+- Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
-- Install helm.
+- Install (https://helm.sh/docs/intro/install/).
 
-- Deploy Kubernetes dashboard.
+- Deploy Kubernetes [dashboard](https://helm.sh/docs/intro/install/).
 
-- Deploy kube-prometheus-stack 
+- Deploy [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
   (Promethes-Operator,kube-state-metrics,node-exporter,Prometheus,Grafana,Alertmanager)
 
-- Deploy Loki.
+- Deploy [Loki](https://grafana.com/oss/loki/)
 
