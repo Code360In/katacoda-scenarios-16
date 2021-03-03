@@ -23,3 +23,10 @@ kubectl get deployments -n otel
 kubectl get daemonset -n otel
 kubectl get statefulset -n otel
 ```{{execute}}
+
+
+Access Jaeger Gui:
+
+https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com
+
+
