@@ -36,4 +36,5 @@ For all the other fields you can use the default values
 Test and save your datasource.
 
 
+# Explore Logs.
 
