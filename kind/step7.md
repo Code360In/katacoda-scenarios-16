@@ -19,8 +19,14 @@ helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm
 To install the chart with the release name my-opentelemetry-collector, run the following command:
 
 ``` 
-helm upgrade --install  -n otel  opentelemetry-collector open-telemetry/opentelemetry-collector --set standaloneCollector.enabled=true \
---set standaloneCollector.service.type=ClusterIP
+helm upgrade --install  -n otel  opentelemetry-collector open-telemetry/opentelemetry-collector --set standaloneCollector.enabled=false
+```{{execute}}
+
+
+
+Patch Service from  LoadBalancer to ClusterIP:
+``` 
+kubectl patch svc jaeger-query -n otel --type='json' -p '[{"op":"replace","path":"/spec/type","value":"ClusterIP"}]'
 ```{{execute}}
 
 
