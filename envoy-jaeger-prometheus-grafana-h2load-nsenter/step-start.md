@@ -1,6 +1,7 @@
 
 Clone Envoy:
 ```
+rm /root/envoy
 git clone https://github.com/envoyproxy/envoy.git
 ```{{execute}}
 
