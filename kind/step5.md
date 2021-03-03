@@ -36,5 +36,32 @@ For all the other fields you can use the default values
 Test and save your datasource.
 
 
-# Explore Logs.
+# Grafana Explore choose Loki.
 
+Select pod/namespace/job/app/....
+
+search for:
+
+<pre class="file">
+{pod=~".*"} |~  "lines"
+{pod=~".*"} |~  "fail
+{pod=~".*"} |~  "fault" 
+{pod=~".*"} |~  "err"
+{pod=~".*"} |~  "effects"
+{pod=~".*"} |~  "panic"
+{pod=~".*"} |~  "except"
+{pod=~".*"} |~  "crash"
+{pod=~".*"} |~  "kill"
+{pod=~".*"} |~  "load"
+{pod=~".*"} |~  "broken"
+{pod=~".*"} |~  "down"
+{pod=~".*"} |~  "mistakes"
+{pod=~".*"} |~  "anomalies"
+{pod=~".*"} |~  "bugs"
+{pod=~".*"} |~  "glitches"
+{pod=~".*"} |~  "critical"
+{pod=~".*"} |~  "major"
+{pod=~".*"} |~  "alert"
+{pod=~".*"} |~  "warn"
+{pod=~".*"} |~  "info"
+</pre>
