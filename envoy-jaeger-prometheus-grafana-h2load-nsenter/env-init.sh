@@ -1,3 +1,3 @@
 #!/bin/bash
 docker run -d katacoda/docker-http-server:healthy
-rm -r -f envoy/
+rm -r -f /root/envoy/
