@@ -15,7 +15,7 @@ scrape_configs:
   - job_name: 'envoy'
     metrics_path: /stats/prometheus
     static_configs:
-      - targets: [[HOST_IP]]:9901/stats/prometheus
+      - targets: ['[[HOST_IP]]:9901']
         labels:
           group: 'envoy'
 
