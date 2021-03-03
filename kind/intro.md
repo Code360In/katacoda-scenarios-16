@@ -3,7 +3,7 @@ Kind Kubernetes
 The following scenario demonstrates how to:
 
 
-- Install Kind.
+- Install [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/).
 
 - Create [Kubernetes](https://kubernetes.io/)  cluster.
 
