@@ -25,7 +25,7 @@ kubectl get statefulset -n mon
 
 
 
-Let's define a datasource for Loki :
+Let's define a datasource for Loki on Grafana:
 
 The URL for Loki should be:
 
