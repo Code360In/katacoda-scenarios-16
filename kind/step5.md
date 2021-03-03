@@ -22,3 +22,18 @@ kubectl get deployments -n mon
 kubectl get daemonset -n mon
 kubectl get statefulset -n mon
 ```{{execute}}
+
+
+
+Let's define a datasource with Loki configured before:
+
+The URL for Loki should be:
+
+`http://loki:3100`{{copy}}
+
+For all the other fields you can use the default values
+
+Test and save your datasource.
+
+
+
