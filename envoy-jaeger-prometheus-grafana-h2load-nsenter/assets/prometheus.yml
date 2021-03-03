@@ -6,6 +6,6 @@ scrape_configs:
   - job_name: 'envoy'
     metrics_path: /stats/prometheus
     static_configs:
-      - targets: ['172.18.0.2:9901']
+      - targets: ['https://[[HOST_SUBDOMAIN]]-9901-[[KATACODA_HOST]].environments.katacoda.com/stats/prometheus']
         labels:
           group: 'envoy'

@@ -42,4 +42,4 @@ You can now send a request to service1 via the front-envoy as follows:
 ```curl -v localhost:8000/trace/1```{{execute}}
 
 
-Also, you can test this via your local browser with the URL https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+Also, you can test this via your local browser with the URL https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/
