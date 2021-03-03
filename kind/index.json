@@ -52,7 +52,7 @@
       {"name": "Jaeger Tracing", "port": 16686},
       {"name": "Metrics otel", "href": "https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com/metrics"}
     ],
-    "uilayout": "terminal-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "kubernetes-cluster:1.18"
