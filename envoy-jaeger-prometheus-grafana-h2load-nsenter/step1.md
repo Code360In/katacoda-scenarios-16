@@ -7,13 +7,21 @@ Now, let's see the prometheus configuration:
 We can see that the prometheus config is using a job named  `envoy`.
 
 ```
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
 scrape_configs:
   - job_name: 'envoy'
     metrics_path: /stats/prometheus
-```
+    static_configs:
+      - targets: [[HOST_IP]]:9901/stats/prometheus
+        labels:
+          group: 'envoy'
 
-copy config to editor:
-`[[HOST_IP]]:9901/stats/prometheus`{{copy}}
+```{{copy}}
+
+
 
 Start prometheus with command:
 
