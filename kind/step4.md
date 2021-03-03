@@ -56,9 +56,6 @@ helm upgrade --install mon prometheus-community/kube-prometheus-stack -n mon \
 --set defaultRules.rules.time=false
 ```{{execute}}
 
-helm upgrade --install mon prometheus-community/kube-prometheus-stack -n mon \
---set defaultRules.rules.time=false
-
 
 Verify Pods running:
 ``` 
