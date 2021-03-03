@@ -1,6 +1,6 @@
 Now, let's run grafana with this command:
 
-`docker run --name=grafana -d -p 3000:3000 grafana/grafana`{{execute T1}}
+`docker run --name=grafana -d -p 3000:3000 grafana/grafana:latest-ubuntu`{{execute T1}}
 
 And access to the dashboard using this url:
 
