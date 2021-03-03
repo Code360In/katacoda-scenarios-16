@@ -12,8 +12,8 @@ scrape_configs:
     metrics_path: /stats/prometheus
 ```
 
-copy IP to editor:
-`[[HOST_IP]]`{{copy}}
+copy config to editor:
+`[[HOST_IP]]:9901/stats/prometheus`{{copy}}
 
 Start prometheus with command:
 
