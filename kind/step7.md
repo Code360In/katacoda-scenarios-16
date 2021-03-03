@@ -8,8 +8,7 @@
 kubectl create namespace otel
 ```{{execute}}
 
-
-
+Install otel collector
 ``` 
 kubectl -n otel apply -f https://raw.githubusercontent.com/open-telemetry/opentelemetry-collector/main/examples/k8s/otel-config.yaml
 ```{{execute}}
@@ -25,15 +24,4 @@ kubectl get daemonset -n otel
 ```{{execute}}
 
 
-
-Expose Jaeger:
-``` 
-kubectl -n otel port-forward service/jaeger-query 16686:16686  --address 0.0.0.0 &
-kubectl get pods -A
-```{{execute}}
-
-
-Access Jaeger Gui:
-
-https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com
-
+# Jaeger-all-in-one not ready.
