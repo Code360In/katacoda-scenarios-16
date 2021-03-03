@@ -53,7 +53,8 @@ kubectl create namespace mon
 Run helm:
 ``` 
 helm upgrade --install mon prometheus-community/kube-prometheus-stack -n mon \
---set defaultRules.rules.time=false
+--set defaultRules.rules.time=false \
+--set defaultRules.rules.etcd=false
 ```{{execute}}
 
 
