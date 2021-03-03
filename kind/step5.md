@@ -25,7 +25,7 @@ kubectl get statefulset -n mon
 
 
 
-Let's define a datasource with Loki configured before:
+Let's define a datasource for Loki :
 
 The URL for Loki should be:
 
