@@ -76,7 +76,7 @@ kubectl get pods -A
 ```{{execute}}
 
 
-Decode secret username/password:
+Decode Grafana secret username/password:
 ``` 
 kubectl -n mon get secret/mon-grafana -o go-template='{{range $k,$v := .data}}{{printf "%s: " $k}}{{if not $v}}{{$v}}{{else}}{{$v | base64decode}}{{end}}{{"\n"}}{{end}}'
 ```{{execute}}
