@@ -55,6 +55,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "Kotlin"
+    "imageid": "kotlin:1.3.61"
   }
 }
