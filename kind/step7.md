@@ -1,10 +1,10 @@
 ### OpenTelemetry/Jaeger
 
-https://opentelemetry.io/
+`https://opentelemetry.io/`
 
-https://github.com/open-telemetry/opentelemetry-helm-charts
+`https://github.com/open-telemetry/opentelemetry-helm-charts`
 
-https://github.com/open-telemetry/opentelemetry-helm-charts/tree/main/charts/opentelemetry-collector
+`https://github.com/open-telemetry/opentelemetry-helm-charts/tree/main/charts/opentelemetry-collector`
 
 
 ``` 
