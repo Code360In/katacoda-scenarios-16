@@ -16,5 +16,5 @@ The following scenario demonstrates how to:
 - Deploy kube-prometheus-stack 
   (Promethes-Operator,kube-state-metrics,node-exporter,Prometheus,Grafana,Alertmanager)
 
-- Deploy Loki
+- Deploy Loki.
 
