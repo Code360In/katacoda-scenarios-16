@@ -2,9 +2,6 @@
 
 `https://opentelemetry.io/`
 
-`https://github.com/open-telemetry/opentelemetry-helm-charts`
-
-`https://github.com/open-telemetry/opentelemetry-helm-charts/tree/main/charts/opentelemetry-collector`
 
 
 ``` 
@@ -13,37 +10,10 @@ kubectl create namespace otel
 
 
 
-Add OpenTelemetry Helm repository:
 ``` 
-helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
+kubectl -n otel apply -f https://raw.githubusercontent.com/open-telemetry/opentelemetry-collector/main/examples/k8s/otel-config.yaml
 ```{{execute}}
 
-
-To install the chart with the release name my-opentelemetry-collector, run the following command:
-
-`
-https://opentelemetry.io/docs/collector/configuration/
-
-# Data sources: traces, metrics, logs
-  memory_limiter:
-    ballast_size_mib: 2000
-    check_interval: 5s
-    limit_mib: 4000
-    spike_limit_mib: 500
-`
-
-``` 
-helm upgrade --install  -n otel  opentelemetry-collector open-telemetry/opentelemetry-collector --set config.processors.memory_limiter.ballast_size_mib=2000 \
---set config.processors.memory_limiter.limit_mib=4000
-
-```{{execute}}
-
-
-
-Patch Service from  LoadBalancer to ClusterIP:
-``` 
-kubectl patch svc jaeger-query -n otel --type='json' -p '[{"op":"replace","path":"/spec/type","value":"ClusterIP"}]'
-```{{execute}}
 
 
 Verify Pods running:
