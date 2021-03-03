@@ -55,6 +55,6 @@
     "uilayout": "terminal-terminal"
   },
   "backend": {
-    "imageid": "kotlin:1.3.61"
+    "imageid": "kubernetes-cluster:1.18"
   }
 }
