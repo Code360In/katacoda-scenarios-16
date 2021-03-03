@@ -6,8 +6,6 @@ scenario: https://www.envoyproxy.io/docs/envoy/latest/start/sandboxes/jaeger_nat
 The following scenario demonstrates how to:
 
 
-- 
-
 - Expose Envoy's statistics in [Prometheus](https://prometheus.io/).  
 
 - Use prometheus datasource to build dashboards in [Grafana](https://grafana.com/).
