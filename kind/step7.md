@@ -185,7 +185,7 @@ kubectl get statefulset -n otel
 
 Expose Jaeger:
 ``` 
-kubectl -n otel port-forward service/ 16686:16686  --address 0.0.0.0 &
+kubectl -n otel port-forward service/jaeger-query 16686:16686  --address 0.0.0.0 &
 kubectl get pods -A
 ```{{execute}}
 
