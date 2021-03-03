@@ -44,7 +44,9 @@
     "dashboards": [
       {"name": "Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com"},
       {"name": "Prometheus", "href": "https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com"},
-      {"name": "Grafana", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com"}
+      {"name": "Grafana", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Jaeger Tracing", "port": 16686},
+      {"name": "Metrics otel", "href": "https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com/metrics"}
     ],
     "uilayout": "terminal"
   },
