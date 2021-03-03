@@ -68,7 +68,7 @@ kubectl get statefulset -n mon
 ```{{execute}}
 
 
-port-forward prometheus/grafana:
+Expose using port-forward prometheus/grafana:
 ``` 
 kubectl -n mon port-forward service/mon-kube-prometheus-stack-prometheus  9090:9090  --address 0.0.0.0 &
 kubectl -n mon port-forward service/mon-grafana 3000:80  --address 0.0.0.0 &
