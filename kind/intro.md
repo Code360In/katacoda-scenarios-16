@@ -9,9 +9,9 @@ The following scenario demonstrates how to:
 
 - Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
-- Install (https://helm.sh/docs/intro/install/).
+- Install [Helm](https://helm.sh/docs/intro/install/).
 
-- Deploy Kubernetes [dashboard](https://helm.sh/docs/intro/install/).
+- Deploy Kubernetes [Dashboard](https://helm.sh/docs/intro/install/).
 
 - Deploy [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
  <pre class="file">
