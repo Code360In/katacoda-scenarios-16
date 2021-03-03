@@ -45,7 +45,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "port": 443,
     "imageid": "ubuntu:2004"
   }
 }
