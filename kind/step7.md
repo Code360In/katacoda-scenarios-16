@@ -22,7 +22,7 @@ helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm
 To install the chart with the release name my-opentelemetry-collector, run the following command:
 
 ``` 
-helm upgrade --install  -n otel  opentelemetry-collector open-telemetry/opentelemetry-collector --set standaloneCollector.enabled=false
+helm upgrade --install  -n otel  opentelemetry-collector open-telemetry/opentelemetry-collector --set config.processors.memory_limiter=200m
 ```{{execute}}
 
 
