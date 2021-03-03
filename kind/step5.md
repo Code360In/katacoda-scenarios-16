@@ -12,3 +12,13 @@ helm repo update
 ``` 
 helm upgrade --install loki grafana/loki-stack -n mon
 ```{{execute}}
+
+
+Verify Pods running:
+``` 
+kubectl get pods -n mon
+kubectl get svc -n mon
+kubectl get deployments -n mon
+kubectl get daemonset -n mon
+kubectl get statefulset -n mon
+```{{execute}}
