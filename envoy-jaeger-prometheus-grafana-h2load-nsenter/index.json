@@ -2,6 +2,8 @@
   "title": "Implementing Metrics and Tracing Capabilities with Load",
   "description": "Gain visibility into production traffic with Metrics and Tracing",
   "icon": "fa-envoyproxy",
+  "difficulty": "intermediate",
+  "time": "240 minutes",
   "details": {
     "steps": [
       {
