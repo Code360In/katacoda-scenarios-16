@@ -23,13 +23,13 @@ ping -h
 
 sending a packet larger than the current MTU setting:
 ```
-ping -M do -s 1501 $ip
+ping -M do -s 1501 -c 10 $ip
 ```{{execute T2}}
 
 
 Sending one too large:
 ```
-ping -M do -s 118972 $ip
+ping -M do -s 118972 -c 10 $ip
 ```{{execute T2}}
 
 <pre class="file">
@@ -40,12 +40,12 @@ Expected Error: packet size 118972 is too large. Maximum is 65507
 
 ok:
 ```
-ping -M do -s 1472 172.18.0.2
+ping -M do -s 1472 -c 10 $ip
 ```{{execute T2}}
 
 fail:
 ```
-ping -M do -s 1474 172.18.0.2
+ping -M do -s 1474 -c 10 $ip
 ```{{execute T2}}
 
 
