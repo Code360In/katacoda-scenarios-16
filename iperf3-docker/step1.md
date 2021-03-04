@@ -1,12 +1,11 @@
-# IPERF3 Install
+# IPERF3 SCTP Deploy and run tests.
 
 https://iperf.fr/iperf-doc.php
 https://hub.docker.com/r/networkstatic/iperf3/
 
 
-# Run SCTP tests
+# Iperf3 Server
 
-Iperf3 Server
 Start a listener service on port 5201 and name the container "iperf3-server":
 ```
 docker run  -it --rm --name=iperf3-server -p 5201:5201 networkstatic/iperf3 -s
