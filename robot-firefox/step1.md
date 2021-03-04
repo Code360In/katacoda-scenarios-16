@@ -1,6 +1,7 @@
 # [Robot](https://robotframework.org/)
 
 
+
 # Build image
 
 ```
@@ -36,5 +37,5 @@ docker exec robot git clone https://github.com/robotframework/WebDemo.git
 
 Run demo:
 ```
-docker exec robot robot /WebDemo/login_tests/ valid_login.robot
+docker exec robot robot /WebDemo/login_tests/valid_login.robot
 ```{{execute}}
