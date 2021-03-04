@@ -99,7 +99,7 @@ ping -M do -s 1474 172.18.0.2
 ```{{execute T2}}
 
 
-# Fragementation
+# IP Fragmentation
 https://tools.ietf.org/html/rfc4459
 https://tools.ietf.org/id/draft-ietf-intarea-frag-fragile-17.html#rfc.section.2.1
 
