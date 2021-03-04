@@ -19,11 +19,7 @@
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Verify Traces",
-        "text": "step4.md"
-      },
-      {
-        "title": "Step 5 - Generating Traffic by h2load",
+        "title": "Step 4 - Generating Traffic by h2load",
         "text": "step5.md"
       }
     ],
