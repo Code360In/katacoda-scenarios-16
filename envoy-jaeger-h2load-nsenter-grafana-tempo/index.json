@@ -15,20 +15,16 @@
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Deploy Grafana",
+        "title": "Step 3 - Deploy Grafana/Tempo",
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Generating Traffic by h2load",
+        "title": "Step 4 - Verify Traces",
         "text": "step4.md"
       },
       {
-        "title": "Step 5 - Verify Traces",
+        "title": "Step 5 - Generating Traffic by h2load",
         "text": "step5.md"
-      },
-      {
-        "title": "Step 6 - Install Tempo",
-        "text": "step6.md"
       }
     ],
     "intro": {
