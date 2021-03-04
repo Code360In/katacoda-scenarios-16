@@ -25,10 +25,10 @@ docker run --name=robot -d -p 80:80 robot:chrome
 
 # Run:
 ```
-docker run exec robot robot --rpa --help
+docker exec robot robot --rpa --help
 ```{{execute}}
 
 Clone demo:
 ```
-docker run exec robot git clone https://github.com/robotframework/WebDemo.git
+docker exec robot git clone https://github.com/robotframework/WebDemo.git
 ```{{execute}}
