@@ -7,7 +7,7 @@
 FROM selenium/standalone-firefox:80.0
 
 
-MAINTAINER kotakoda
+MAINTAINER va
 LABEL description Robot Framework in Docker.
 
 
