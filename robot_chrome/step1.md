@@ -13,7 +13,7 @@ Successfully built cfd4e019797c
 Successfully tagged robot:chrome
  </pre>
 
-Verify:
+# Verify:
 ```
 docker ps -a
 ```{{execute}}
