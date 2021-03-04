@@ -10,6 +10,11 @@ Install h2load to generate http2 traffic:
 
 on terminal2
 ```
+echo t2
+```{{execute T2}}
+
+
+```
 cnid=`docker ps | grep front-envoy |awk 'NR==1{print $1}'`
 pid=`docker inspect -f '{{.State.Pid}}' $cnid`
 echo $pid
