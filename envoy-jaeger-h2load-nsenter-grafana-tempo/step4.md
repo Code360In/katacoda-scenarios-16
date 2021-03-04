@@ -23,6 +23,9 @@ nsenter -t $pid --net tcpdump udp
 
 
 #Start h2load
+
+on terminal1
+
 Run traffic with 100 clients and 1000 requests:
 
 `h2load http://localhost:8000/trace/1 -c 100 -n 1000 `{{execute T1}}
