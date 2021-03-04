@@ -1,5 +1,5 @@
 {
-  "title": "Iperf3 SCTP",
+  "title": "Docker Iperf3 SCTP",
   "description": "SCTP verification",
   "details": {
     "steps": [
@@ -10,18 +10,11 @@
     ],
     "finish": {
       "text": "finish.md"
-    },
-    "assets": {
-      "host01": [
-          {"file": "python_sctp.tar", "target": "/root/"}
-      ],
-      "host02": [
-    ]
-}
+    }
   },
   "environment": {
     "hideintro": false,
-    "uilayout": "editor-terminal",
+    "uilayout": "terminal",
     "uieditorpath": "/root/"
   },
   "backend": {
