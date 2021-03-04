@@ -13,7 +13,7 @@
     },
     "assets": {
       "host01": [
-          {"dir": "python_sctp", "target": "/root/"}
+          {"file": "python_sctp.tar", "target": "/root/"}
       ],
       "host02": [
     ]

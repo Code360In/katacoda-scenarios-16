@@ -43,9 +43,16 @@ rm libiperf0_3.9-1_amd64.deb iperf3_3.9-1_amd64.deb
 ```{{execute}}
 
 
+
+# Prepare SCTP server.
+
+```
+tar -xvf /root/python_sctp.tar
+```{{execute HOST1}}
+
+
+
 # Run SCTP tests
-
-
 
 ```
 iperf3 -s
