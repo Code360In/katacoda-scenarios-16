@@ -1,6 +1,11 @@
 # [Robot](https://robotframework.org/)
 
 
- - Build image
- - Deploy 
+# Build image
+
+```
+docker build -t robot:chrome .
+```{{execute}}
+
+# Deploy 
 
