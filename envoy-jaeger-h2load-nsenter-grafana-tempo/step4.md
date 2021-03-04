@@ -33,6 +33,12 @@ Run traffic with 100 clients and 1000 requests:
 # Run RTOP
 
 on terminal3
+```
+echo t3
+```{{execute T3}}
 
 `go get github.com/rapidloop/rtop `{{execute T3}}
 `go build github.com/rapidloop/rtop `{{execute T3}}
+
+Run
+`rtop 127.0.0.1 `{{execute T3}}
