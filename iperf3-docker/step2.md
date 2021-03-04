@@ -50,6 +50,12 @@ ping -M do -s 1474 172.18.0.2
 
 
 # TCPDUMP docker0 interface
+
+on terminal4
+```
+echo t4
+```{{execute T4}}
+
 ```
 tcpdump -i docker0 icmp
 ```{{execute T4}}
