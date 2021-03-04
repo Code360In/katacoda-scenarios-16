@@ -31,7 +31,7 @@ echo t2
 ```{{execute T2}}
 
 ```
-ip=docker inspect --format "{{ .NetworkSettings.IPAddress }}" iperf3-server
+ip=`docker inspect --format "{{ .NetworkSettings.IPAddress }}" iperf3-server`
 ```{{execute T2}}
 
 
