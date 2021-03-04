@@ -7,9 +7,14 @@
 https://github.com/iovisor/bcc
 
 install bpftrace
+
+```
+echo t5
+```{{execute T5}}
+
 ```
 apt update && apt install -y bpftrace linux-headers-$(uname -r)
-```{{execute T2}}
+```{{execute T5}
 
 
 install tools/examples:
@@ -17,11 +22,11 @@ install tools/examples:
 echo "deb [trusted=yes] https://repo.iovisor.org/apt/xenial xenial-nightly main" | sudo tee /etc/apt/sources.list.d/iovisor.list
 sudo apt-get update
 sudo apt-get install -y bcc-tools libbcc-examples linux-headers-$(uname -r)
-```{{execute T2}}
+```{{execute T5}}
 
 ```
 cd /usr/share/bcc/tools
-```{{execute T2}}
+```{{execute T5}}
 
 
 
@@ -30,11 +35,12 @@ cd /usr/share/bcc/tools
 To build a package from latest sources:
 ```
 go get -u -v github.com/cloudflare/ebpf_exporter/...
-```{{execute T2}}
+```{{execute T5}}
 
 To run with bio config:
 ```
-```{{execute T2}}
+~/go/bin/ebpf_exporter --config.file=src/github.com/cloudflare/ebpf_exporter/examples/bio.yaml
+```{{execute T5}}
 
 
 ref:
