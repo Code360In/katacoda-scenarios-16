@@ -21,9 +21,9 @@ ping -h
 -s <size>          use <size> as number of data bytes to be sent
 `
 
-sending a packet larger than the current MTU setting, but is still accepted:
+sending a packet larger than the current MTU setting:
 ```
-ping -M do -s 11897 $ip
+ping -M do -s 1501 $ip
 ```{{execute T2}}
 
 
