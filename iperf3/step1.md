@@ -48,5 +48,10 @@ rm libiperf0_3.9-1_amd64.deb iperf3_3.9-1_amd64.deb
 
 
 ```
+iperf3 -s
+```{{execute HOST1}}
 
-```{{execute}}
+
+```
+iperf3 -s
+```{{execute HOST2}}
