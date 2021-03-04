@@ -21,8 +21,12 @@ Sending one too large:
 ```
 ping -M do -s 118972 $ip
 ```{{execute T2}}
+<pre class="file">
+
 Expected Error: packet size 118972 is too large. Maximum is 65507
 
+
+</pre>
 
 # Change MTU to 4000 bytes
 ```
