@@ -1,0 +1,22 @@
+{
+  "title": "Iperf3 SCTP",
+  "description": "SCTP verification",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "hideintro": true,
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
