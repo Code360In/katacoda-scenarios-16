@@ -48,9 +48,11 @@
     ],
     "uilayout": "editor-terminal",
     "uieditorpath": "/root",
-    "hideuieditortree": true
+    "hideuieditortree": true,
+    "terminals": [{"name": "Terminal 2", "target": "host01"}]
   },
   "backend": {
     "imageid": "ubuntu:2004"
   }
 }
+

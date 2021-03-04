@@ -8,11 +8,6 @@ Install h2load to generate http2 traffic:
 
 # start TCPDUMP on container
 
-<pre>
-"environment": {
-  "terminals": [{"name": "Terminal 2", "target": "host01"}]
-}
-</pre>
 
 ```
 cnid=`docker ps | grep front-envoy |awk 'NR==1{print $1}'`
