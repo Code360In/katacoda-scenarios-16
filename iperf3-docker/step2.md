@@ -49,6 +49,12 @@ ping -M do -s 1474 172.18.0.2
 ```{{execute T2}}
 
 
+# TCPDUMP docker0 interface
+```
+tcpdump -i docker0 icmp
+```{{execute T4}}
+
+
 
 # Change MTU 
 
