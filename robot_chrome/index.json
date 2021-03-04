@@ -1,0 +1,30 @@
+{
+  "title": "Ubuntu 20.04 Instance",
+  "description": "General purpose environment",
+  "difficulty": "intermediate",
+  "time": "5 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+          {"file": "docker-entrypoint.sh", "target": "/root/"},
+          {"file": "Dockerfile", "target": "/root/"}
+      ]
+  }
+  },
+  "environment": {
+    "hideintro": true,
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
