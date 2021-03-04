@@ -1,11 +1,10 @@
 # March 3 2021
-# Robot Framework and Chrome, running headless in ubuntu
+# Robot Framework and firefox, running headless in ubuntu
 # based on  https://hub.docker.com/r/selenium/standalone-chrome
-
 # https://robotframework.org/SeleniumLibrary/
 # https://ftp.mozilla.org/pub/firefox/releases/
 
-FROM selenium/standalone-chrome:85.0
+FROM selenium/standalone-firefox:80.0
 
 
 MAINTAINER kotakoda

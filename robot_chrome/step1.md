@@ -18,12 +18,17 @@ Verify:
 docker ps -a
 ```{{execute}}
 
-# Deploy 
+# Deploy:
 ```
 docker run --name=robot -d -p 80:80 robot:chrome
 ```{{execute}}
 
-# Run
+# Run:
 ```
 docker run exec robot robot --rpa --help
+```{{execute}}
+
+Clone demo:
+```
+docker run exec robot git clone https://github.com/robotframework/WebDemo.git
 ```{{execute}}
