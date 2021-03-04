@@ -79,15 +79,27 @@ ping -M do -s 118972 $ip
 
 Expected Error: packet size 118972 is too large. Maximum is 65507
 
-
 </pre>
 
-# Change MTU to 4000 bytes
+ok:
 ```
-docker exec iperf3-server ip link set eth0 mtu 4000
+ping -M do -s 1472 172.18.0.2
+```{{execute T2}}
+
+fail:
+```
+ping -M do -s 1474 172.18.0.2
 ```{{execute T2}}
 
 
+
+# Change MTU 
+
+```
+```{{execute T2}}
+
+
+# Fragementation
 https://tools.ietf.org/html/rfc4459
 https://tools.ietf.org/id/draft-ietf-intarea-frag-fragile-17.html#rfc.section.2.1
 
