@@ -13,5 +13,6 @@ Run traffic with 100 clients and 1000 requests:
 # TCPDUMP
 
 ```
-nsenter -t `docker inspect -f '{{.State.Pid}}' demo_jaeger-all-in-one_1` --net tcpdump udp port 6831
+nsenter -t `docker inspect -f '{{.State.Pid}}'  `docker ps | grep front-envoy |awk 'NR==1{print $1}'` ` --net tcpdump udp
 ```{{execute}}
+
