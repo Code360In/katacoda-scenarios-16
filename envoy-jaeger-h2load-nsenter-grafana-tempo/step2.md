@@ -1,24 +1,5 @@
-Distributed tracing allows developers to obtain visualizations of call flows in large service oriented architectures. It can be invaluable in understanding serialization, parallelism, and sources of latency. For this example we will use Jaeger, an open source, end-to-end distributed tracing.
-
-We can see the tracing configuration in `envoy.yaml`{{open}}
-
 <pre class="file">
-tracing:
-  http:
-    name: envoy.zipkin
-    config:
-      collector_cluster: [[HOST_IP]]
-      collector_endpoint: "/api/v1/spans"
-      shared_span_context: false
+Before routing a request to the appropriate service Envoy or the application, Envoy will take care of generating the appropriate spans for tracing (parent/child context spans). At a high-level, each span records the latency of upstream API calls as well as information needed to correlate the span with other related spans (e.g., the trace ID).
+
+One of the most important benefits of tracing from Envoy is that it will take care of propagating the traces to the Jaeger service cluster. However, in order to fully take advantage of tracing, the application has to propagate trace headers that Envoy generates, while making calls to other services. In the sandbox we have provided, the simple flask app (see trace function in front-proxy/service.py) acting as service1 propagates the trace headers while making an outbound call to service2.
 </pre>
-
-Ensure that Jaeger is configured to accept Zipkin requests via the *COLLECTOR_ZIPKIN_HTTP_PORT* Environment Variable.
-
-One important configuration for our example is telling to the connection manager that generates the
- `x-request-id` header if it does not exist.
-
- <pre class="file">
- generate_request_id: true
- tracing:
-   operation_name: egress
- </pre>
