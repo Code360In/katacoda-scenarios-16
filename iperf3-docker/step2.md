@@ -13,7 +13,7 @@ docker exec iperf3-server ip l  | grep eth0 | awk '{print $4,$5}'
 
 sending a packet larger than the current MTU setting, but is still accepted:
 ```
-ping -M do -s 8972 $ip
+ping -M do -s 11897 $ip
 ```{{execute T2}}
 
 
@@ -21,6 +21,8 @@ Sending one too large:
 ```
 ping -M do -s 118972 $ip
 ```{{execute T2}}
+Expected Error: packet size 118972 is too large. Maximum is 65507
+
 
 # Change MTU to 4000 bytes
 ```
