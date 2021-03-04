@@ -1,9 +1,19 @@
-Start using the Ubuntu environment for your content by setting the `imageid` to `ubuntu:2004`.
-
-For example:
+Robot File:
 
 <pre class="file">
-"backend": {
-  "imageid": "ubuntu:2004"
-}
+*** Settings ***
+Documentation     A test suite with a single test for valid login.
+...
+...               This test has a workflow that is created using keywords in
+...               the imported resource file.
+Resource          resource.txt
+
+*** Test Cases ***
+Valid Login
+    Open Browser To Login Page
+    Input Username    demo
+    Input Password    mode
+    Submit Credentials
+    Welcome Page Should Be Open
+    [Teardown]    Close Browser
 </pre>
