@@ -25,16 +25,22 @@ cd /usr/share/bcc/tools
 
 
 
-# ebpf_exporter
+# ebpf Exporter
 
+To build a package from latest sources:
 ```
-git clone https://github.com/cloudflare/ebpf_exporter.git
-
- go get -u -v github.com/cloudflare/ebpf_exporter/...
- 
+go get -u -v github.com/cloudflare/ebpf_exporter/...
 ```{{execute T2}}
 
+To run with bio config:
+```
+```{{execute T2}}
+
+
 ref:
+
+`
 http://www.brendangregg.com/ebpf.html#bcc
 https://kubernetes.io/blog/2017/12/using-ebpf-in-kubernetes/
 https://github.com/cloudflare/ebpf_exporter.git
+`

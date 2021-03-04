@@ -1,6 +1,8 @@
 {
   "title": "Docker Iperf3 SCTP",
   "description": "SCTP verification",
+  "difficulty": "intermediate",
+  "time": "2 hours",
   "details": {
     "steps": [
       {
