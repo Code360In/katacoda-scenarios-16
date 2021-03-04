@@ -10,9 +10,11 @@ Run traffic with 100 clients and 1000 requests:
 `h2load http://localhost:8000/trace/1 -c 100 -n 1000 `{{execute}}
 
 
-# TCPDUMP
+# start TCPDUMP on container
 
 ```
-nsenter -t `docker inspect -f '{{.State.Pid}}'  `docker ps | grep front-envoy |awk 'NR==1{print $1}'` ` --net tcpdump udp
+cnid=`docker ps | grep front-envoy |awk 'NR==1{print $1}'`
+pid=`docker inspect -f '{{.State.Pid}}' $cnid`
+echo $pid
+nsenter -t $pid --net tcpdump udp
 ```{{execute}}
-
