@@ -34,6 +34,9 @@ echo t2
 ip=`docker inspect --format "{{ .NetworkSettings.IPAddress }}" iperf3-server`
 ```{{execute T2}}
 
+```
+echo $ip
+```{{execute T2}}
 
 Next, initiate a client connection from another container to measure the bandwidth between the two endpoints.
 
