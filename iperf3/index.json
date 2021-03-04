@@ -10,7 +10,14 @@
     ],
     "finish": {
       "text": "finish.md"
-    }
+    },
+    "assets": {
+      "host01": [
+          {"dir": "python_sctp", "target": "/root/"}
+      ],
+      "host02": [
+    ]
+}
   },
   "environment": {
     "hideintro": false,

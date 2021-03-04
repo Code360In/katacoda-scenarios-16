@@ -8,9 +8,6 @@
 
 `[[HOST_IP]]`{{execute}}
 
-<pre>[[HOST2_IP]]</pre>
-
-`[[HOST2_IP]]`{{execute}}
 
 
 - Ubuntu 64 bits / Debian 64 bits / Mint 64 bits (AMD64) :
@@ -49,8 +46,6 @@ rm libiperf0_3.9-1_amd64.deb iperf3_3.9-1_amd64.deb
 # Run SCTP tests
 
 
-host1=[[host1]]
-host2=[[host2]]
 
 ```
 
