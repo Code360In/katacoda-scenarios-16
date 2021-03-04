@@ -8,7 +8,6 @@ Find MTU size
 docker exec iperf3-server ip l  | grep eth0 | awk '{print $4,$5}'
 ```{{execute T2}}
 
-<pre class="file">
 
 ```
 ping -h
