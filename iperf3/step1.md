@@ -4,11 +4,13 @@
 [Packages](https://iperf.fr/iperf-download.php#more-recent) are manually installed via the dpkg command (Debian Package Management System). dpkg is the backend to commands like apt and aptitude, which in turn are the backend for GUI install apps like the Software Center and Synaptic.
 
 
-```
-hosts: [
-  { socket_address: { address: 172.18.0.3, port_value: 80 }},
-  { socket_address: { address: 172.18.0.4, port_value: 80 }}
-]```
+<pre>[[HOST_IP]]</pre>
+
+`[[HOST_IP]]`{{execute}}
+
+<pre>[[HOST2_IP]]</pre>
+
+`[[HOST2_IP]]`{{execute}}
 
 
 - Ubuntu 64 bits / Debian 64 bits / Mint 64 bits (AMD64) :
