@@ -74,3 +74,25 @@ iperf Done.
 
 
 </pre>
+
+# Runt TCPDUMP on container
+
+on terminal3
+```
+echo t3
+```{{execute T3}}
+
+
+```
+cnid=`docker ps | grep iperf3-server |awk 'NR==1{print $1}'`
+pid=`docker inspect -f '{{.State.Pid}}' $cnid`
+echo $pid
+nsenter -t $pid --net tcpdump sctp
+```{{execute T3}}
+
+
+# Run traffic again:
+
+```
+docker run  -it --rm networkstatic/iperf3 -c $ip --sctp
+```{{execute T2}}
