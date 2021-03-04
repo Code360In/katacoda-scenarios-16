@@ -9,3 +9,5 @@ docker build -t robot:chrome .
 
 # Deploy 
 
+```docker run --name=robot -d -p 80:80 robot:chrome
+```{{execute}}
