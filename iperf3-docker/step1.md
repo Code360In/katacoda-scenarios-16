@@ -102,7 +102,3 @@ nsenter -t $pid --net tcpdump sctp
 docker run  -it --rm networkstatic/iperf3 -c $ip --sctp
 ```{{execute T2}}
 
-
-`
-Let's change the world a little bit.
-`
