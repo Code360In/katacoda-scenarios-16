@@ -34,7 +34,7 @@ Let's use this existing dashboard. Copy the ID, and use the option `Import`.
 Select **Prometheus** as the data source and Import.
 
 
-[View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]]
+[View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]])
 
 
 ref:

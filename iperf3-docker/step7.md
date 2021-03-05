@@ -34,5 +34,5 @@ Select **Prometheus** as the data source and Import.
 
 ![](import.png)
 
-[View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]]
+[View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]])
 
