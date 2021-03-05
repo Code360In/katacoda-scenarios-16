@@ -42,3 +42,20 @@ echo t3
 
 Run
 `rtop 127.0.0.1 `{{execute T3}}
+
+
+# Docker logs
+```
+echo t5
+```{{execute T5}}
+
+
+
+```
+cnid=`docker ps | grep jaeger-native-tracing_front-envoy |awk 'NR==1{print $1}'`
+pid=`docker inspect -f '{{.State.Pid}}' $cnid`
+echo $cnid
+echo $pid
+
+docker logs $cnid -f 
+```{{execute T5}}
