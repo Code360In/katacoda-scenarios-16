@@ -41,7 +41,7 @@
   },
   "environment": {
     "hideintro": false,
-    "uilayout": "terminal",
+    "uilayout": "editor-terminal",
     "uieditorpath": "/root/"
   },
   "backend": {
