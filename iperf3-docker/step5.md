@@ -25,20 +25,3 @@ For all the other fields you can use the default values
 ![](/envoyproxy/scenarios/implementing-metrics-tracing/assets/prometheus-data-source.png)
 
 Test and save your datasource.
-
-## Build a dashboard
-
-In order to build a dashboard you can build one from scratch or you can use an existing one, for example:
-https://grafana.com/grafana/dashboards/1860
-
-Let's use this existing dashboard. Copy the ID, and use the option `Import`.
-
-`1860`{{copy}}
-
-Select **Prometheus** as the data source and Import.
-
-![](/envoyproxy/scenarios/implementing-metrics-tracing/assets/import.png)
-
-[View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/d/000000003/envoy-proxy?refresh=5s&orgId=1&var-cluster=targetCluster&var-hosts=All)
-
-

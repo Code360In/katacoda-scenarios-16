@@ -18,3 +18,23 @@ If you're interested in seeing the raw metrics, they can be viewed with:
 ```
 curl localhost:9323/metrics
 ```{{execute T2}}
+
+
+
+## Build a dashboard
+
+In order to build a dashboard you can build one from scratch or you can use an existing one, for example:
+https://grafana.com/grafana/dashboards/893
+
+Let's use this existing dashboard. Copy the ID, and use the option `Import`.
+
+`893`{{copy}}
+
+Select **Prometheus** as the data source and Import.
+
+![](import.png)
+
+[View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/d/000000003/envoy-proxy?refresh=5s&orgId=1&var-cluster=targetCluster&var-hosts=All)
+
+
+
