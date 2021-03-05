@@ -1,6 +1,13 @@
 # Docker metrics
 
+Verify config:
 
+```
+more /etc/docker/daemon.json
+```{{execute T2}}
+
+
+Add into config:
 ```
 printf "{
   "metrics-addr" : "localhost:9323",
