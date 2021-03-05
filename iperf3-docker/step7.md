@@ -36,39 +36,3 @@ Select **Prometheus** as the data source and Import.
 
 [View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]]
 
-
-# [cAdvisor](https://github.com/google/cadvisor)
-
-
-```
-docker run -d \
-  --net=host \
-  --volume=/:/rootfs:ro \
-  --volume=/var/run:/var/run:ro \
-  --volume=/sys:/sys:ro \
-  --volume=/var/lib/docker/:/var/lib/docker:ro \
-  --volume=/dev/disk/:/dev/disk:ro \
-  --publish=8080:8080 \
-  --detach=true \
-  --name=cadvisor \
-  --privileged \
-  --device=/dev/kmsg \
-  gcr.io/cadvisor/cadvisor:latest
-```{{execute T2}}
-
-
-
-## Build a dashboard
-
-In order to build a dashboard you can build one from scratch or you can use an existing one, for example:
-https://grafana.com/grafana/dashboards/893
-
-Let's use this existing dashboard. Copy the ID, and use the option `Import`.
-
-`893`{{copy}}
-
-Select **Prometheus** as the data source and Import.
-
-![](import.png)
-
-[View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]]
