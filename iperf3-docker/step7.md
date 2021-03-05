@@ -41,7 +41,7 @@ Select **Prometheus** as the data source and Import.
 
 
 ```
-sudo docker run \
+docker run -d \
   --net=host \
   --volume=/:/rootfs:ro \
   --volume=/var/run:/var/run:ro \
