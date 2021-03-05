@@ -53,8 +53,6 @@ sudo docker run \
   --name=cadvisor \
   --privileged \
   --device=/dev/kmsg \
-  gcr.io/cadvisor/cadvisor:$VERSION
+  gcr.io/cadvisor/cadvisor:latest
 ```{{execute T2}}
 
-
-### Complete!
