@@ -13,6 +13,10 @@ printf "{
 systemctl restart docker
 ```{{execute T2}}
 
+```
+systemctl status docker
+```{{execute T2}}
+
 
 If you're interested in seeing the raw metrics, they can be viewed with: 
 ```
