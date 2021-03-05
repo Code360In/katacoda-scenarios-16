@@ -9,3 +9,10 @@ scrape_configs:
       - targets: ['localhost:9901']
         labels:
           group: 'linux'
+
+  - job_name: 'containers'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['localhost:9323']
+        labels:
+          group: 'docker'
