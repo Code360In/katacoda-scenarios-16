@@ -17,7 +17,7 @@ docker run -d \
     -collector.procfs /host/proc \
     -collector.sysfs /host/sys \
     -collector.filesystem.ignored-mount-points "^/(sys|proc|dev|host|etc)($|/)"
-```{{execute T1}}
+```{{execute T2}}
 
 
 If you're interested in seeing the raw metrics, they can be viewed with 

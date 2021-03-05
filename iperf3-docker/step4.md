@@ -13,7 +13,7 @@ docker run --net=host -d -p 9090:9090 \
     -v /root/prometheus.yml:/etc/prometheus/prometheus.yml \
     --name prometheus-server \
     prom/prometheus
-```{{execute}}
+```{{execute T2}}
 
 You can access to the prometheus dashboard using this link:
 
