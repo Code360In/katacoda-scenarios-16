@@ -1,7 +1,7 @@
 3GPP test new stuff
 
 
-# Install Redis
+# Install [Redis](https://redis.io/)
 ```
 apt install -y redis
 ```{{execute}}
