@@ -17,6 +17,9 @@ The URL for phometheus should be:
 
 `http://localhost:9901`{{copy}}
 
+`http://localhost:9901`{{Execute}}
+
+
 For all the other fields you can use the default values
 
 ![](/envoyproxy/scenarios/implementing-metrics-tracing/assets/prometheus-data-source.png)
