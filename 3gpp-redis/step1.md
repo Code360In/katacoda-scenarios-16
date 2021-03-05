@@ -10,7 +10,7 @@ apt install -y redis
 # Run
 ./
 
-You can access dashboard using this link:
+You can access the website using this link:
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/targets
 
