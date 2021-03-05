@@ -1,6 +1,8 @@
 {
   "title": "Ubuntu 20.04 Instance",
   "description": "General purpose environment",
+  "difficulty": "intermediate",
+  "time": "160 minutes",
   "details": {
     "steps": [
       {
