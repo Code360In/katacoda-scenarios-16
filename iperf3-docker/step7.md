@@ -1,33 +1,20 @@
-# Docker metrics
+#  container level metrics
 
 Verify config:
 
 ```
-more /etc/docker/daemon.json
+docker run -d --name PROM_CON_EXP \
+              -p 9104:9104 \
+              -v /sys/fs/cgroup:/cgroup \
+              -v /var/run/docker.sock:/var/run/docker.sock \
+              prom/container-exporter
 ```{{execute T2}}
 
-
-Add into config:
-```
-printf "{
-  "metrics-addr" : "localhost:9323",
-  "experimental" : true
-}" >> /etc/docker/daemon.json
-```{{execute T2}}
-
-
-```
-systemctl restart docker
-```{{execute T2}}
-
-```
-systemctl status docker
-```{{execute T2}}
 
 
 If you're interested in seeing the raw metrics, they can be viewed with: 
 ```
-curl localhost:9323/metrics
+curl localhost:9104/metrics
 ```{{execute T2}}
 
 
