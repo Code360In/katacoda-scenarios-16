@@ -11,9 +11,7 @@ Suite Teardown    Close all Connection Execute Teardown
 
 *** Variables ***
 ${BROWSERNAME}         Chrome
-${USERNAME}            ${au}
-${PASSWORD}            ${ap}
-${URL_main}            https://www.katacoda.com/
+${URL}            https://www.katacoda.com/
 ${T1}                  120
 
 ######################################################
@@ -34,6 +32,6 @@ Open Browser To Login Page
 *** Test Cases ***
 
 Task Open Browse and Login
-    Open Browser To Login Page   ${URL_main}
+    Open Browser To Login Page   ${URL}
 
 ######################################################
