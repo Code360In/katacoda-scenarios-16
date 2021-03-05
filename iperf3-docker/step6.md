@@ -22,4 +22,6 @@ docker run -d \
 
 If you're interested in seeing the raw metrics, they can be viewed with 
 
+```
 curl localhost:9100/metrics
+```{{execute T2}}
