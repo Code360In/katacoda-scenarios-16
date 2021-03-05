@@ -31,11 +31,11 @@ docker exec robot robot --rpa --help
 
 Clone demo:
 ```
-docker exec robot git clone https://github.com/robotframework/WebDemo.git
+docker cp /root/test.robot robot:/
 ```{{execute}}
 
 
 Run demo:
 ```
-docker exec robot robot /WebDemo/login_tests/valid_login.robot
+docker exec robot robot test.robot
 ```{{execute}}
