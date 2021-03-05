@@ -7,7 +7,6 @@ Now, let's see the prometheus configuration:
 `prometheus.yml`{{open}}
 
 
-
 Start prometheus with command:
 
 ```
