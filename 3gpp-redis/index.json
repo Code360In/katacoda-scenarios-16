@@ -1,6 +1,6 @@
 {
   "title": "3GGP new v15.3.0",
-  "description": "study purpose",
+  "description": "For study purpose",
   "difficulty": "intermediate",
   "time": "160 minutes",
   "details": {
@@ -12,7 +12,13 @@
     ],
     "finish": {
       "text": "finish.md"
-    }
+    },
+    "assets": {
+      "host01": [
+          {"file": "5GcoreOpenApiV1530", "target": "/root/"},
+          {"file": "config.yml", "target": "/root/"}
+      ]
+  }
   },
   "environment": {
     "hideintro": true,

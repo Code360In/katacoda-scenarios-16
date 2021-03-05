@@ -8,7 +8,7 @@ apt install -y redis
 
 
 # Run
-./
+./5GcoreOpenApiV1530 
 
 You can access the website using this link:
 
