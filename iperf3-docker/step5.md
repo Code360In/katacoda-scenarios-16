@@ -25,6 +25,6 @@ The URL for phometheus should be:
 
 For all the other fields you can use the default values
 
-![](/envoyproxy/scenarios/implementing-metrics-tracing/assets/prometheus-data-source.png)
+![](import.png)
 
 Test and save your datasource.
