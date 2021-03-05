@@ -6,7 +6,6 @@ Now, let's see the prometheus configuration:
 
 
 
-
 Start prometheus with command:
 
 ```

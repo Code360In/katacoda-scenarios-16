@@ -19,6 +19,7 @@ ping -h
 `
 -M define mtu discovery, can be one of <do|dont|want>
 -s <size>          use <size> as number of data bytes to be sent
+-c <count>         stop after <count> replies
 `
 
 sending a packet larger than the current MTU setting:
