@@ -44,10 +44,13 @@
       {"name": "Grafana", "port": 3000},
       {"name": "Jaeger Tracing", "port": 16686}
     ],
-    "uilayout": "editor-terminal",
+    "uilayout": "terminal-terminal",
     "uieditorpath": "/root",
     "hideuieditortree": true,
-    "terminals": [{"name": "Terminal 2", "target": "host01"}]
+    "terminals": [{"name": "Terminal 1", "target": "host01"},
+                  {"name": "Terminal 2", "target": "host01"},
+                  {"name": "Terminal 3", "target": "host01"}
+                ]
   },
   "backend": {
     "imageid": "ubuntu:2004"
