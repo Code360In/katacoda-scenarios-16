@@ -23,7 +23,8 @@ netstat -i
 
 
 ```
-docker exec iperf3-server  netstat -s;netstat -i 
+docker exec iperf3-server  netstat -s
+docker exec iperf3-server  netstat -i 
 ```{{execute T5}}
 
 
