@@ -21,6 +21,7 @@ netstat -i
 
 # netstat on container
 
+
 ```
 docker exec iperf3-server  netstat -s;netstat -i 
 ```{{execute T5}}
