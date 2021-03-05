@@ -16,7 +16,8 @@
     "assets": {
       "host01": [
           {"file": "docker-entrypoint.sh", "target": "/root/"},
-          {"file": "Dockerfile", "target": "/root/"}
+          {"file": "Dockerfile", "target": "/root/"},
+          {"file": "test.robot", "target": "/root/"}
       ]
   }
   },
