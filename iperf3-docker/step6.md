@@ -8,15 +8,9 @@ Launch the Node Exporter container. By mounting the host /proc and /sys director
 
 ```
 docker run -d \
-  -v "/proc:/host/proc" \
-  -v "/sys:/host/sys" \
-  -v "/:/rootfs" \
   --net="host" \
-  --name=prometheus \
-  quay.io/prometheus/node-exporter:v0.13.0 \
-    -collector.procfs /host/proc \
-    -collector.sysfs /host/sys \
-    -collector.filesystem.ignored-mount-points "^/(sys|proc|dev|host|etc)($|/)"
+  --name=node-exporter \
+  prom/node-exporter:latest
 ```{{execute T2}}
 
 
@@ -44,3 +38,5 @@ Select **Prometheus** as the data source and Import.
 [View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/d/000000003/envoy-proxy?refresh=5s&orgId=1&var-cluster=targetCluster&var-hosts=All)
 
 
+ref:
+https://hub.docker.com/r/prom/node-exporter
