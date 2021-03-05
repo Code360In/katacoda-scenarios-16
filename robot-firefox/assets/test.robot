@@ -1,15 +1,39 @@
-*** Settings ***
-Documentation     A test suite with a single test for valid login.
-...
-...               This test has a workflow that is created using keywords in
-...               the imported resource file.
-Resource          resource.txt
+######################################################
 
+######################################################
+*** Settings ***
+Library           SeleniumLibrary   run_on_failure=Nothing
+Library           OperatingSystem
+Library           Collections
+Library           DateTime
+Suite Teardown    Close all Connection Execute Teardown
+
+
+*** Variables ***
+${BROWSERNAME}         Chrome
+${USERNAME}            ${au}
+${PASSWORD}            ${ap}
+${URL_main}            https://www.katacoda.com/
+${T1}                  120
+
+######################################################
+*** Keywords ***
+
+
+Close all Connection Execute Teardown
+    Close Browser
+
+Open Browser To Login Page
+    [Arguments]     ${url} 
+    Open Browser    ${url}    ${BROWSERNAME} 
+    Maximize Browser Window
+  
+
+
+######################################################
 *** Test Cases ***
-Valid Login
-    Open Browser To Login Page
-    Input Username    demo
-    Input Password    mode
-    Submit Credentials
-    Welcome Page Should Be Open
-    [Teardown]    Close Browser
+
+Task Open Browse and Login
+    Open Browser To Login Page   ${URL_main}
+
+######################################################
