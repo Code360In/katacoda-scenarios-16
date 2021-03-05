@@ -48,7 +48,7 @@
     "uieditorpath": "/root",
     "hideuieditortree": true,
     "terminals": [{"name": "Terminal 1", "target": "host01"},
-                  {"name": "Terminal 2", "target": "host02"}
+                  {"name": "Terminal 2", "target": "host01"}
                 ]
   },
   "backend": {
