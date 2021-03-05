@@ -15,7 +15,7 @@ The first step to create a dashboard is to have a datasource. Let's define a dat
 
 The URL for phometheus should be:
 
-`https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/graph`{{copy}}
+`http://localhost:9901`{{copy}}
 
 For all the other fields you can use the default values
 
