@@ -1,6 +1,6 @@
 # Deploy Prometheus
 
-Prometheus is an open-source monitoring solution that can be integrated with Envoy's own stats.
+Prometheus is an open-source monitoring solution.
 
 Now, let's see the prometheus configuration:
 
