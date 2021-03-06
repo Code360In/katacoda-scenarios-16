@@ -10,6 +10,10 @@ Now, let's see the prometheus configuration:
 Start prometheus with command:
 
 ```
+ehcho 
+```{{execute T4}}
+
+```
 docker run --net=host -d -p 9090:9090 \
     -v /root/prometheus.yml:/etc/prometheus/prometheus.yml \
     --name prometheus-server \
