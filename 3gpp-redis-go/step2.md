@@ -6,6 +6,11 @@ https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/TS29
 
 Change API.root to be  ```https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com```{{copy}}
 
+Try-out
+Execute
+
+Verify response 200-ok on web and console.
+
 ![](3gpp-2.png)
 
 
