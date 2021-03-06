@@ -8,12 +8,13 @@ wait to get:
 ```
 ls
 ```{{execute}}
+
 `
 $ ls
 docker-entrypoint.sh  Dockerfile  test.robot
 `
 
-
+Start build:
 ```
 docker build -t robot:01 .
 ```{{execute}}
