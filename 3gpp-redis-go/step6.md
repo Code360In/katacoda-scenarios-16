@@ -32,6 +32,7 @@ Test and save your datasource.
 + Import --> Import via panel json
 
 
+
 just click to copy to clipboard:
 
 `
@@ -793,6 +794,8 @@ just click to copy to clipboard:
   "version": 20
 }
 `{{copy}}
+
+
 
 
 Access:
