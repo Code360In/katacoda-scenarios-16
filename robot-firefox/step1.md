@@ -14,6 +14,10 @@ $ ls
 docker-entrypoint.sh  Dockerfile  test.robot
 `
 
+Display Docker file content `Dockerfile`{{open}}
+
+
+
 Start build:
 ```
 docker build -t robot:01 .
