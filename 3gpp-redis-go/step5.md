@@ -10,8 +10,9 @@ Now, let's see the prometheus configuration:
 Start prometheus with command:
 
 ```
-ehcho 
+echo t4 
 ```{{execute T4}}
+
 
 ```
 docker run --net=host -d -p 9090:9090 \
@@ -19,6 +20,7 @@ docker run --net=host -d -p 9090:9090 \
     --name prometheus-server \
     prom/prometheus
 ```{{execute T4}}
+
 
 You can access to the prometheus dashboard using this link:
 
