@@ -32,7 +32,7 @@ docker ps -a
 
 # Deploy:
 ```
-docker run --name=robot -d -p 80:80 robot:01
+docker run --name=robot -d -p 8000:8000 robot:01
 ```{{execute}}
 
 # Run:
