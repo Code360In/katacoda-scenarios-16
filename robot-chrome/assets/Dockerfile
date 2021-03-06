@@ -48,13 +48,6 @@ RUN pip install PyMySQL
 RUN pip install mailer
 RUN pip install prometheus_client
 
-
-# add robotuser
-RUN useradd -d /home/robotuser -G users -m -s /bin/bash robotuser
-USER robotuser
-RUN mkdir -p  /home/robotuser/.ssh
-RUN chown robotuser /home/robotuser/.ssh &  chgrp robotuser /home/robotuser/.ssh
-
 USER root
 
 RUN apt-get update && apt-get install -y  mysql-client apt-utils curl git dnsutils iputils-ping \
@@ -77,15 +70,17 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
 
+# add robotuser
+RUN useradd -d /home/robotuser -G users -m -s /bin/bash robotuser
+USER robotuser
+RUN mkdir -p  /home/robotuser/.ssh
+RUN chown robotuser /home/robotuser/.ssh &  chgrp robotuser /home/robotuser/.ssh
+
 # ssh
 EXPOSE 22
 # webserver
 EXPOSE 8000
 
-
-# Switch to 'robotuser'
-USER robotuser
-WORKDIR /home/robotuser
 
 # tini as init to control child process:
 ENTRYPOINT ["/tini", "--", "/docker-entrypoint.sh"]
