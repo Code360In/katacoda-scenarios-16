@@ -50,16 +50,6 @@ https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 ![](3gpp-1.png)
 
 
-# Start test example:Nnrf
-
-https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/TS29510_Nnrf_NFManagement.html#/
-
-
-Change API.root to be  https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
-
-
-![](3gpp-2.png)
-
 ref:
 
 https://github.com/OpenAPITools/openapi-generator
@@ -71,7 +61,3 @@ https://www.3gpp.org/ftp/Specs/archive/OpenAPI/Rel-15
 todo:
 
 https://www.3gpp.org/ftp/Specs/archive/OpenAPI/Rel-16
-
-
-<pre class="file">
-</pre>
