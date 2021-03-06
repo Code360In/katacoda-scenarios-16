@@ -3,6 +3,11 @@
 
 
 Start server on port 8000
+
+```
+echo t2
+```{{execute T2}}
+
 ```
 docker exec robot python3 -m http.server --directory /home/robotuser/report/
 ```{{execute}}
