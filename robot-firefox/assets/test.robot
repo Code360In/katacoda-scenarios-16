@@ -34,4 +34,7 @@ Open Browser To Login Page
 Task Open Browse and Login
     Open Browser To Login Page   ${URL}
 
+Task Connect to kotacoda scenario
+    Open Browser To Login Page   https://www.katacoda.com/va/scenarios/
+
 ######################################################
