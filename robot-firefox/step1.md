@@ -37,14 +37,12 @@ docker cp /root/test.robot robot:/home/robotuser/
 
 Run demo:
 ```
-docker exec robot robot /home/robotuser/test.robot
+docker exec -it robot bash
 ```{{execute}}
 
 
-or
 ```
-docker exec -it robot bash
-robot test.robot
+robot /home/robotuser/test.robot
 ```{{execute}}
 
 ![](robot.png)
