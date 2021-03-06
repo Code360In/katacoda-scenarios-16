@@ -5,6 +5,15 @@
 apt install -y redis
 ```{{execute}}
 
+# Verify
+```
+systemctl status redis
+```{{execute}}
+
+```
+journal -u redis
+```{{execute}}
+
 ```
 redis-cli info
 ```{{execute}}
