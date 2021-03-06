@@ -28,7 +28,7 @@
   "environment": {
     "showdashboard": true,
     "dashboards": [
-      {"name": "Report", "port": 8000}
+      {"name": "RobotReport", "port": 8000}
     ],
     "hideintro": false,
     "uilayout": "editor-terminal",
