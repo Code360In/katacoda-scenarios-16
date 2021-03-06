@@ -21,7 +21,8 @@
       "host01": [
           {"file": "docker-entrypoint.sh", "target": "/root/"},
           {"file": "Dockerfile", "target": "/root/"},
-          {"file": "test.robot", "target": "/root/"}
+          {"file": "test.robot", "target": "/root/"},
+          {"file": "etc-ssh-sshd_config", "target": "/root/"}
       ]
   }
   },

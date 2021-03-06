@@ -62,6 +62,7 @@ RUN locale-gen en_US.UTF-8
 RUN dpkg-reconfigure locales
 RUN echo LANG=en_US.UTF-8 >>  /etc/default/locale
 
+COPY etc-ssh-sshd_config /etc/ssh/sshd_config
 
 # Add Tini
 ENV TINI_VERSION v0.19.0
@@ -84,8 +85,8 @@ RUN useradd -d /home/robotuser -G users -m -s /bin/bash robotuser
 USER robotuser
 
 
-RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa <<<y 2>&1 >/dev/null
-RUN ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa <<<y 2>&1 >/dev/null
+#RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa 
+#RUN ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa 
 
 # ssh
 EXPOSE 22
