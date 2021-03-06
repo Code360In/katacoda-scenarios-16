@@ -11,6 +11,24 @@ pip3 install redis
 git clone https://github.com/valdemarpavesi/verifyREDIS
 ```{{execute}}
 
+
+<pre class="file">
+
+Usage: verifyREDIS.py [options] --create --delete --verify [--keyname] [--host] [--port] 
+
+Options:
+  -h, --help         show this help message and exit
+  --create           set keys
+  --delete           del keys
+  --verify           verify REDIS database SET DEL VERIFY
+  --keyname=KEYNAME  key name prefix
+  --host=HOST        REDIS ipaddr
+  --port=PORT        REDIS tcp port
+
+</pre>
+ 
+
+
 ```
 python3 /root/verifyREDIS/verifyREDIS.py
 ```{{execute}}
@@ -29,6 +47,11 @@ python3 /root/verifyREDIS/verifyREDIS.py --create
 python3 /root/verifyREDIS/verifyREDIS.py --delete
 ```{{execute}}
 
+
+# VERIFY
+```
+python3 /root/verifyREDIS/verifyREDIS.py --verify
+```{{execute}}
 
 <pre class="file">
 </pre>
