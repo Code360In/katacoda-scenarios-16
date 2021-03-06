@@ -40,7 +40,8 @@
     "assets": {
       "host01": [
           {"file": "5GcoreOpenApiV1530", "target": "/root/"},
-          {"file": "config.yml", "target": "/root/"}
+          {"file": "config.yml", "target": "/root/"},
+          {"file": "prometheus.yml", "target": "/root/"}
       ]
   }
   },

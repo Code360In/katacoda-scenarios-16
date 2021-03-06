@@ -1,29 +1,21 @@
-# Task
+# Deploy Prometheus
 
-Now, let's run grafana with this command:
+Prometheus is an open-source monitoring solution.
 
-`docker run --name=grafana -d -p 3000:3000 grafana/grafana:latest-ubuntu`{{execute T1}}
+Now, let's see the prometheus configuration:
 
-And access to the dashboard using this url:
-
-https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
-
-And use this default credentials:
-`admin`{{copy}} \ `admin`{{copy}}
-
-The initial step will ask you to change the password, you can do it if you want or you can skip this step.
+`prometheus.yml`{{open}}
 
 
-# Task
+Start prometheus with command:
 
-Let's define a datasource with [Tempo](https://grafana.com/oss/tempo/):
+```
+docker run --net=host -d -p 9090:9090 \
+    -v /root/prometheus.yml:/etc/prometheus/prometheus.yml \
+    --name prometheus-server \
+    prom/prometheus
+```{{execute T2}}
 
-The URL for Tempo should be:
+You can access to the prometheus dashboard using this link:
 
-`https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com`{{copy}}
-
-For all the other fields you can use the default values
-
-
-Test and save your datasource.
-
+https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targets
