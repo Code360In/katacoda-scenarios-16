@@ -9,6 +9,12 @@ Change API.root to be  ```https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].envi
 ![](3gpp-2.png)
 
 
+# results:  200ok
+
+![](3gpp-3.png)
+
+
+
 <pre class="file">
 # end.
 </pre>
