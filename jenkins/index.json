@@ -1,6 +1,6 @@
 {
   "title": "Jenkins",
-  "description": "General purpose environment",
+  "description": "The Jenkins Continuous Integration and Delivery server",
   "difficulty": "intermediate",
   "time": "160 minutes",
   "details": {
