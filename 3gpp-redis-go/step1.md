@@ -56,6 +56,9 @@ https://github.com/OpenAPITools/openapi-generator
 https://github.com/APIDevTools/swagger-parser
 https://www.3gpp.org/DynaReport/29-series.htm
 https://www.3gpp.org/ftp/Specs/archive/OpenAPI/Rel-15
+https://www.etsi.org/deliver/etsi_ts/123500_123599/123501/15.03.00_60/ts_123501v150300p.pdf
+https://www.3gpp.org/news-events/1930-sys_architecture
+
 
 
 todo:
