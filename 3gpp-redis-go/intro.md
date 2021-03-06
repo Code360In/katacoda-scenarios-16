@@ -8,7 +8,7 @@
 
 
 <pre class="file">
-Still a lot to be done.
+there is still a great deal to be done
 </pre>
 
 
