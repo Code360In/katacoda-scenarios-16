@@ -84,7 +84,9 @@ RUN chown -R robotuser:robotgroup /home/robotuser
 # Switch to 'robotuser'
 USER robotuser
 
+# ssh
 EXPOSE 22
+# webserver
 EXPOSE 8080
 
 # tini as init to control child process:
