@@ -1,4 +1,4 @@
-# Task
+# Deploy Grafana
 
 Now, let's run grafana with this command:
 
@@ -27,7 +27,15 @@ For all the other fields you can use the default values
 Test and save your datasource.
 
 
-#Import Dashboard
+
+### Verify Grafana own Metrics:
+
+https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/metrics
+
+
+
+
+### Import Dashboard
 
 + Import --> Import via panel json
 
@@ -802,7 +810,3 @@ Access:
 
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/d/3gpp/openapi?orgId=1&refresh=5s&from=now-30m&to=now
 
-
-Verify Grafana own Metrics:
-
-https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/metrics
