@@ -11,3 +11,9 @@ One important configuration for our example is telling to the connection manager
 
 
 `docker run -d --name jaeger -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 -p 9411:9411 -p 5775:5775/udp -p 16686:16686 jaegertracing/all-in-one:latest`{{execute}}
+
+
+access:
+
+
+https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/
