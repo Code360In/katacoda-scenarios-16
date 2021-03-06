@@ -1,4 +1,4 @@
-# Verify [Redis](https://redis.io/)
+# [Redis](https://redis.io/)
 
 # Install 
 ```
