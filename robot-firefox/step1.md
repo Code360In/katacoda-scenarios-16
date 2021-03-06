@@ -11,7 +11,6 @@ ls
 `
 $ ls
 docker-entrypoint.sh  Dockerfile  test.robot
-$ 
 `
 
 
