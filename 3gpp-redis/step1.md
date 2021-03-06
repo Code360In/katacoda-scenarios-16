@@ -36,18 +36,27 @@ chmod +x /root/5GcoreOpenApiV1530
 ```{{execute}}
 
 
-You can access the website using this link:
-
-https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
-
-
-
 <pre class="file">
 Webpages are embedded into the binnary.
 </pre>
 
 
+You can access the website using this link:
 
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
+
+![](3gpp-1.png)
+
+
+# Start test example:Nnrf
+
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/TS29510_Nnrf_NFManagement.html#/
+
+
+Change API.root to be  https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
+
+
+![](3gpp-2.png)
 
 ref:
 
