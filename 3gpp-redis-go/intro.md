@@ -7,8 +7,8 @@
 
 
 
-<pre class="file">
-there is still a great deal to be done
-</pre>
+`
+There is still a great deal to be done.
+`
 
 
