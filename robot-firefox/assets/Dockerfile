@@ -72,8 +72,6 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
 
-#EXPOSE 22
-
 # Create a user group 'robotgroup'
 RUN addgroup -S robotgroup
 
@@ -86,6 +84,8 @@ RUN chown -R robotuser:robotgroup /home/robotuser
 # Switch to 'robotuser'
 USER robotuser
 
+EXPOSE 22
+EXPOSE 8080
 
 # tini as init to control child process:
 ENTRYPOINT ["/tini", "--", "/docker-entrypoint.sh"]
