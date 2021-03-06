@@ -26,6 +26,10 @@
   }
   },
   "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {"name": "Report", "port": 8000}
+    ],
     "hideintro": false,
     "uilayout": "editor-terminal",
     "uieditorpath": "/root/"
