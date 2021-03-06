@@ -1,6 +1,6 @@
 {
   "title": "Robot Firefox",
-  "description": "SeleniumLibrary",
+  "description": "headlessfirefox",
   "difficulty": "intermediate",
   "time": "5 minutes",
   "details": {

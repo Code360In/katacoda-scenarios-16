@@ -10,8 +10,8 @@ Suite Teardown    Close all Connection Execute Teardown
 
 
 *** Variables ***
-${BROWSERNAME}         Chrome
-${URL}            https://www.katacoda.com/
+${BROWSERNAME}         headlessfirefox
+${URL}                 https://www.katacoda.com/
 ${T1}                  120
 
 ######################################################
