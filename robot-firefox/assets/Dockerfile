@@ -72,17 +72,13 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
 
-# Create a user group 'robotgroup'
-RUN addgroup -S robotgroup
-
-# Create a user 'robotuser' under 'robotgroup'
-RUN adduser -S -D -h /home/robotuser robotuser robotgroup
-
-# Chown all the files to the app user.
-RUN chown -R robotuser:robotgroup /home/robotuser
-
+# Create a user 'robotuser' 
+RUN useradd -rm -d /home/robotuser -s /bin/bash -g root -G sudo -u 1001 robotuser
 # Switch to 'robotuser'
 USER robotuser
+WORKDIR /home/robotuser
+
+
 
 # ssh
 EXPOSE 22
