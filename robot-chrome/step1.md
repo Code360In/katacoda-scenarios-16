@@ -56,7 +56,7 @@ b) run robot calling test.robot file.
 robot /home/robotuser/test.robot
 ```{{execute}}
 
-![](robot.png)
+![](robot_exec.png)
 
 c) robot will connect to url https://www.katacoda.com/
 `
