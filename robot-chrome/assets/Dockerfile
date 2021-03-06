@@ -73,8 +73,6 @@ RUN chmod +x /docker-entrypoint.sh
 # add robotuser
 RUN useradd -d /home/robotuser -G users -m -s /bin/bash robotuser
 USER robotuser
-RUN mkdir -p  /home/robotuser/.ssh
-RUN chown robotuser /home/robotuser/.ssh &  chgrp robotuser /home/robotuser/.ssh
 
 # ssh
 EXPOSE 22
