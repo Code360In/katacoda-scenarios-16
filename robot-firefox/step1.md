@@ -31,11 +31,20 @@ docker exec robot robot --rpa --help
 
 Clone demo:
 ```
-docker cp /root/test.robot robot:/
+docker cp /root/test.robot robot:/home/robotuser/
 ```{{execute}}
 
 
 Run demo:
 ```
-docker exec robot robot test.robot
+docker exec robot robot /home/robotuser/test.robot
 ```{{execute}}
+
+
+or
+```
+docker exec -it robot bash
+robot test.robot
+```{{execute}}
+
+![](robot.png)
