@@ -1,8 +1,8 @@
 {
-  "title": "3GGP openApi v15.3.0",
+  "title": "Verify Redis",
   "description": "For study purpose",
   "difficulty": "intermediate",
-  "time": "160 minutes",
+  "time": "60 minutes",
   "details": {
     "steps": [
       {
@@ -23,8 +23,6 @@
     },
     "assets": {
       "host01": [
-          {"file": "5GcoreOpenApiV1530", "target": "/root/"},
-          {"file": "config.yml", "target": "/root/"}
       ]
   }
   },
