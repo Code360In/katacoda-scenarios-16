@@ -57,6 +57,11 @@ python3 /root/verifyREDIS/verifyREDIS.py --delete
 ```{{execute}}
 ctrl+c to stop
 
+expected:
+
+`delete all keys`
+
+
 ```
 redis-cli get keys
 ```{{execute}}
