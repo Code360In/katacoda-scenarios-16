@@ -73,20 +73,11 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
 
-# Create a user 'robotuser' 
-#RUN useradd -rm -d /home/robotuser -s /bin/bash -g root -G sudo -u 1001 robotuser
-# Switch to 'robotuser'
-#USER robotuser
-#WORKDIR /home/robotuser
-
-
 # add robotuser
 RUN useradd -d /home/robotuser -G users -m -s /bin/bash robotuser
 USER robotuser
 
-
-#RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa 
-#RUN ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa 
+RUN /usr/bin/ssh-keygen -A 
 
 # ssh
 EXPOSE 22

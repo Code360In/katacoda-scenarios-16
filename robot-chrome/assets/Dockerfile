@@ -75,8 +75,7 @@ RUN useradd -d /home/robotuser -G users -m -s /bin/bash robotuser
 USER robotuser
 
 
-#RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa 
-#RUN ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa 
+RUN /usr/bin/ssh-keygen -A 
 
 
 # ssh
