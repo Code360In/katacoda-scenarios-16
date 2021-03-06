@@ -29,20 +29,25 @@ docker run --name=robot -d -p 80:80 robot:01
 docker exec robot robot --rpa --help
 ```{{execute}}
 
-Clone demo:
-```
-docker cp /root/test.robot robot:/home/robotuser/
-```{{execute}}
+
+An example of robot file `test.robot`{{open}}
 
 
 Run demo:
+
+a) bash to container robot:
 ```
 docker exec -it robot bash
 ```{{execute}}
 
 
+b) run robot calling test.robot file.
 ```
 robot /home/robotuser/test.robot
 ```{{execute}}
 
 ![](robot.png)
+
+c) robot will connect to url https://www.katacoda.com/
+`
+( next step robot will start the kotacoda scenario and start robot, robot, robot....)`
