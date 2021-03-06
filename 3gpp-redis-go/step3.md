@@ -15,11 +15,11 @@ echo t2
 
 on terminal2
 
-Run traffic with 4 clients and 500 requests:
+Run traffic with 10 clients and 100k requests:
 
 
 ```
-h2load -v "http://127.0.0.1:8080/nnrf-nfm/v1/nf-instances/111" -H "accept: application/json" -n 10000 -c 10
+h2load -v "http://127.0.0.1:8080/nnrf-nfm/v1/nf-instances/111" -H "accept: application/json" -n 100000 -c 10
 ```{{execute T2}}
 
 
@@ -40,3 +40,5 @@ Run
 ref:
 
 https://nghttp2.org/documentation/h2load-howto.html
+
+
