@@ -50,6 +50,12 @@
   }
   },
   "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {"name": "Grafana", "port": 3000},
+      {"name": "Prometheus", "port": 9090},
+      {"name": "OpenMetrics", "href": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/metrics"}
+    ],
     "hideintro": false,
     "uilayout": "terminal"
   },
