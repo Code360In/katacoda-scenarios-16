@@ -14,6 +14,17 @@ redis-cli info
 redis-cli get keys
 ```{{execute}}
 
+
+```
+redis-cli SET mykey "Hello"
+```{{execute}}
+
+
+```
+redis-cli GET mykey
+```{{execute}}
+
+
 Change to executable:
 ```
 chmod +x /root/5GcoreOpenApiV1530 
