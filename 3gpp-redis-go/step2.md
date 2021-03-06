@@ -20,5 +20,6 @@ Verify response 200-ok on web and console.
 
 
 [architecture](https://www.3gpp.org/news-events/1930-sys_architecture)
+
 ![](https://www.3gpp.org/images/articleimages/architecture_image01v3b.jpg)
 
