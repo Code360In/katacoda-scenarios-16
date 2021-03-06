@@ -6,11 +6,18 @@
 apt install -y redis
 ```{{execute}}
 
+```
+redis-cli info
+```{{execute}}
+
+```
+redis-cli get keys
+```{{execute}}
+
 Change to executable:
 ```
 chmod +x /root/5GcoreOpenApiV1530 
 ```{{execute}}
-
 
 # Run
 ```
