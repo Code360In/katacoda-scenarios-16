@@ -20,10 +20,3 @@ Verify response 200-ok on web and console.
 
 
 
-<pre class="file">
-# end.
-</pre>
-
-
-Still a lot to be done.
-
