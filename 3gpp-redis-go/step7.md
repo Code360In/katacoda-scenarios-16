@@ -9,10 +9,5 @@ Ensure that Jaeger is configured to accept Zipkin requests via the *COLLECTOR_ZI
 One important configuration for our example is telling to the connection manager that generates the
  `x-request-id` header if it does not exist.
 
- <pre class="file">
- generate_request_id: true
- tracing:
-   operation_name: egress
- </pre>
 
 `docker run -d --name jaeger -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 -p 9411:9411 -p 5775:5775/udp -p 16686:16686 jaegertracing/all-in-one:latest`{{execute}}
