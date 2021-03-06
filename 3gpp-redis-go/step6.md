@@ -32,6 +32,7 @@ Test and save your datasource.
 + Import --> Import via panel json
 
 
+just click to copy to clipboard:
 
 `
 {
