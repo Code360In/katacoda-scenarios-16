@@ -87,7 +87,7 @@ USER robotuser
 # ssh
 EXPOSE 22
 # webserver
-EXPOSE 8080
+EXPOSE 8000
 
 # tini as init to control child process:
 ENTRYPOINT ["/tini", "--", "/docker-entrypoint.sh"]
