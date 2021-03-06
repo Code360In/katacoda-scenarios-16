@@ -1,6 +1,12 @@
 
 # Start test
 
+
+```
+pip3 install redis
+```{{execute}}
+
+
 ```
 git clone https://github.com/valdemarpavesi/verifyREDIS
 ```{{execute}}
