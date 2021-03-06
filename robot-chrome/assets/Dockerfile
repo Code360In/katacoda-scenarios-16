@@ -69,6 +69,8 @@ RUN chmod +x /tini
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
+RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa
+RUN ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa
 
 # add robotuser
 RUN useradd -d /home/robotuser -G users -m -s /bin/bash robotuser
