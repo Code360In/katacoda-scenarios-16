@@ -54,7 +54,7 @@ Test and save your datasource.
   "gnetId": null,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1615002115021,
+  "iteration": 1615002948172,
   "links": [],
   "panels": [
     {
@@ -218,22 +218,6 @@ Test and save your datasource.
           "intervalFactor": 2,
           "legendFormat": "Total",
           "refId": "A"
-        },
-        {
-          "expr": "histogram_quantile(0.95, sum(rate(processing_duration_seconds_bucket{}[1m])) by (le)) ",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "Processing",
-          "refId": "C"
-        },
-        {
-          "expr": "histogram_quantile(0.95, sum(rate(download_duration_seconds_bucket{}[1m])) by (le)) ",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "Downloading",
-          "refId": "B"
         }
       ],
       "thresholds": [],
@@ -293,7 +277,7 @@ Test and save your datasource.
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 9,
+        "h": 8,
         "w": 24,
         "x": 0,
         "y": 9
@@ -404,6 +388,115 @@ Test and save your datasource.
       "fieldConfig": {
         "defaults": {
           "custom": {},
+          "links": [],
+          "unit": "ops"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 17
+      },
+      "hiddenSeries": false,
+      "id": 26,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.4.3",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "Total",
+          "lines": false,
+          "stack": false
+        }
+      ],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(process_cpu_seconds_total[5m]) ",
+          "format": "time_series",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "{{job}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "CPU",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "ops",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
           "links": []
         },
         "overrides": []
@@ -414,7 +507,7 @@ Test and save your datasource.
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 25
       },
       "hiddenSeries": false,
       "id": 10,
@@ -531,7 +624,7 @@ Test and save your datasource.
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 26
+        "y": 33
       },
       "hiddenSeries": false,
       "id": 18,
@@ -622,10 +715,13 @@ Test and save your datasource.
       }
     }
   ],
-  "refresh": "5s",
+  "refresh": "10s",
   "schemaVersion": 27,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "3gpp",
+    "http2"
+  ],
   "templating": {
     "list": [
       {
@@ -693,7 +789,7 @@ Test and save your datasource.
   "timezone": "",
   "title": "openapi",
   "uid": "3gpp",
-  "version": 8
+  "version": 20
 }
 `{{copy}}
 
