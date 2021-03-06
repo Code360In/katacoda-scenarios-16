@@ -6,6 +6,9 @@ Now, let's run grafana with this command:
 
 `docker logs grafana`{{execute T4}}
 
+if necessary change change config opem `/var/lib/grafana`{{open}}
+
+
 And access to the dashboard using this url:
 
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
