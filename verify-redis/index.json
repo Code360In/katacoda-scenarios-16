@@ -16,16 +16,13 @@
     ],
     "intro": {
       "courseData": "env-init.sh",
-      "text": "intro.md",
-      "code": "set-env.sh"
+      "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"
     },
     "assets": {
       "host01": [
-        {"file": "set-env.sh", "target": "/root/"}
-  
       ]
   }
   },
