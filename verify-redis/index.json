@@ -24,6 +24,8 @@
     },
     "assets": {
       "host01": [
+        {"file": "set-env.sh", "target": "/root/"}
+  
       ]
   }
   },
