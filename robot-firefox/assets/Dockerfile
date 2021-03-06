@@ -78,8 +78,6 @@ RUN useradd -rm -d /home/robotuser -s /bin/bash -g root -G sudo -u 1001 robotuse
 USER robotuser
 WORKDIR /home/robotuser
 
-
-
 # ssh
 EXPOSE 22
 # webserver
