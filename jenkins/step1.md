@@ -8,7 +8,7 @@ For weekly releases check out [jenkinsci/jenkins](https://hub.docker.com/_/jenki
 
 ### Deploy
 ```
-docker run --name=jenkins -d -p 8080:8080 -p 50000:50000 jenkins:latest
+docker run --name=jenkins -d -p 8080:8080 -p 50000:50000 jenkins:lts
 ```{{execute}}
 
 
