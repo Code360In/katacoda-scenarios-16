@@ -19,7 +19,7 @@ $
 docker build -t robot:01 .
 ```{{execute}}
 
-Wait for:
+wait for:
  <pre class="file">
 Successfully built cfd4e019797c
 Successfully tagged robot:chrome
