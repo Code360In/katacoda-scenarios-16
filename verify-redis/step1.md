@@ -22,14 +22,3 @@ redis-cli SET mykey "Hello"
 ```
 redis-cli GET mykey
 ```{{execute}}
-
-# Start test
-
-```
-
-```{{execute}}
-
-
-<pre class="file">
-</pre>
-
