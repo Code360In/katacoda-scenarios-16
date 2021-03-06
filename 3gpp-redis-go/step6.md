@@ -18,7 +18,7 @@ The first step to create a dashboard is to have a datasource. Let's define a dat
 
 The URL for phometheus should be:
 
-`http://172.18.0.5:9090`{{copy}}
+`http://127.0.0.1:9090`{{copy}}
 
 For all the other fields you can use the default values
 
