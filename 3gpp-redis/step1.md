@@ -6,11 +6,17 @@
 apt install -y redis
 ```{{execute}}
 
+Change to executable:
+```
+chmod +x /root/5GcoreOpenApiV1530 
+```{{execute}}
+
 
 # Run
 ```
 ./5GcoreOpenApiV1530 
 ```{{execute}}
+
 
 You can access the website using this link:
 
