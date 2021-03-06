@@ -19,7 +19,7 @@ Run traffic with 4 clients and 500 requests:
 
 
 ```
-h2load -v https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com -d "{\"reqNotifEvents\":[null],\"notifCondition\":{\"unmonitoredAttributes\":[\"string\"],\"monitoredAttributes\":[\"string\"]},\"plmnId\":{\"mnc\":\"string\",\"mcc\":\"string\"},\"nfStatusNotificationUri\":\"string\",\"reqNfFqdn\":\"string\",\"validityTime\":\"2021-03-06T01:48:35.399Z\"}" --h1 --header 'Content-Type: application/json' -n 500 -t 4 -c 4 -T 10
+h2load -v "http://127.0.0.1:8080/nnrf-nfm/v1/nf-instances/111" -H "accept: application/json" -n 100 -c 1000
 ```{{execute T2}}
 
 
