@@ -28,3 +28,8 @@ https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targ
 
 
 ![](prom.png)
+
+
+Prometheus Metrics:
+
+https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/metrics
