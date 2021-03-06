@@ -2,7 +2,7 @@
 # Start test
 
 ```
-
+git clone https://github.com/valdemarpavesi/verifyREDIS
 ```{{execute}}
 
 
