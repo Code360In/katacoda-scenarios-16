@@ -72,7 +72,19 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
 
-EXPOSE 22
+#EXPOSE 22
+
+# Create a user group 'robotgroup'
+RUN addgroup -S robotgroup
+
+# Create a user 'robotuser' under 'robotgroup'
+RUN adduser -S -D -h /home/robotuser robotuser robotgroup
+
+# Chown all the files to the app user.
+RUN chown -R robotuser:robotgroup /home/robotuser
+
+# Switch to 'robotuser'
+USER robotuser
 
 
 # tini as init to control child process:
