@@ -42,17 +42,20 @@ python3 /root/verifyREDIS/verifyREDIS.py --help
 ```
 python3 /root/verifyREDIS/verifyREDIS.py --create
 ```{{execute}}
+ctrl+c to stop
 
 # DELETE
 ```
 python3 /root/verifyREDIS/verifyREDIS.py --delete
 ```{{execute}}
+ctrl+c to stop
 
 
 # VERIFY
 ```
 python3 /root/verifyREDIS/verifyREDIS.py --verify
 ```{{execute}}
+ctrl+c to stop
 
 <pre class="file">
 </pre>
