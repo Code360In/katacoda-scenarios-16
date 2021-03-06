@@ -10,9 +10,6 @@ apt install -y redis
 systemctl status redis
 ```{{execute}}
 
-```
-journal -u redis
-```{{execute}}
 
 ```
 redis-cli info

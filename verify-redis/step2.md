@@ -44,11 +44,23 @@ python3 /root/verifyREDIS/verifyREDIS.py --create
 ```{{execute}}
 ctrl+c to stop
 
+
+```
+redis-cli get keys
+```{{execute}}
+
+
+
 # DELETE
 ```
 python3 /root/verifyREDIS/verifyREDIS.py --delete
 ```{{execute}}
 ctrl+c to stop
+
+```
+redis-cli get keys
+```{{execute}}
+
 
 
 # VERIFY
@@ -56,6 +68,11 @@ ctrl+c to stop
 python3 /root/verifyREDIS/verifyREDIS.py --verify
 ```{{execute}}
 ctrl+c to stop
+
+```
+redis-cli get keys
+```{{execute}}
+
 
 <pre class="file">
 </pre>
