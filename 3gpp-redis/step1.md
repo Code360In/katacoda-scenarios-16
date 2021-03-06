@@ -38,7 +38,13 @@ chmod +x /root/5GcoreOpenApiV1530
 
 You can access the website using this link:
 
-https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/targets
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
+
+.
+.
+.
+
+
 
 
 
