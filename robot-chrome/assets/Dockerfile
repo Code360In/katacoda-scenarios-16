@@ -68,9 +68,6 @@ RUN dpkg-reconfigure locales
 RUN echo LANG=en_US.UTF-8 >>  /etc/default/locale
 
 
-COPY etc-ssh-sshd_config /etc/ssh/sshd_config
-
-
 # Add Tini
 ENV TINI_VERSION v0.19.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
