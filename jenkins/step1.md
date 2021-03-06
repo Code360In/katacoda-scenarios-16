@@ -8,7 +8,7 @@ For weekly releases check out [jenkinsci/jenkins](https://hub.docker.com/_/jenki
 
 ### Deploy
 ```
-docker run -d -p 8080:8080 -p 50000:50000 jenkins
+docker run --name=grafana -d -p 8080:8080 -p 50000:50000 jenkins
 ```{{execute}}
 
 
