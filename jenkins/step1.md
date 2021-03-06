@@ -6,10 +6,23 @@ This is a fully functional Jenkins server, based on the Long Term Support releas
 For weekly releases check out [jenkinsci/jenkins](https://hub.docker.com/_/jenkins)
 
 
-
+### Deploy
 ```
 docker run -d -p 8080:8080 -p 50000:50000 jenkins
 ```{{execute}}
+
+
+### Verify
+```
+docker ps -a
+```{{execute}}
+
+
+### Logs
+```
+docker logs jenkins
+```{{execute}}
+
 
 access by:
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
