@@ -2,11 +2,11 @@
 
 Now, let's run grafana with this command:
 
-`docker run --name=grafana -d -p 3000:3000 -v /var/lib/grafana:/var/lib/grafana grafana/grafana:latest-ubuntu`{{execute T4}}
+`docker run --name=grafana -d -p 3000:3000 -v /root/grafana:/var/lib/grafana grafana/grafana:latest-ubuntu`{{execute T4}}
 
 `docker logs grafana`{{execute T4}}
 
-if necessary change change config opem `/var/lib/grafana`{{open}}
+if necessary change change config opem `/root/grafana`{{open}}
 
 
 And access to the dashboard using this url:
