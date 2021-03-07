@@ -73,7 +73,7 @@ docker exec -it robot bash
 
 d) run robot calling test.robot file. ( -d dir to save report files)
 ```
-robot -d  /home/robotuser/report/ /home/robotuser/test.robot
+robot --rpa -d /home/robotuser/report/ /home/robotuser/test.robot
 ```{{execute}}
 
 ![](robot_exec.png)
