@@ -69,16 +69,6 @@ RUN chmod +x /tini
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
-# add robotuser
-#RUN useradd -d /home/robotuser -G users -m -s /bin/bash robotuser
-#USER robotuser
-
-#RUN useradd -ms /bin/bash -d /home/robotuser robotuser
-#USER robotuser
-
-#RUN /usr/bin/ssh-keygen -A 
-
-
 # ssh
 EXPOSE 22
 # webserver
