@@ -41,7 +41,7 @@ docker run --name=robot -d -p 8000:8000 robot:01
 
 Verify
 ```
-docker logs grafana
+docker logs robot
 ```{{execute}}
 
 
