@@ -6,7 +6,10 @@ Now, let's run grafana with this command:
 
 `docker logs grafana`{{execute T4}}
 
-if necessary change change config opem `/root/grafana`{{open}}
+results:
+`
+"HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+`
 
 
 And access to the dashboard using this url:
