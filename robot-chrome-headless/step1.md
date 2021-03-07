@@ -53,7 +53,6 @@ An example of robot file `test.robot`{{open}}
 
 Run demo:
 
-
 a) create dir on container:
 ```
 docker exec robot mkdir /home/robotuser

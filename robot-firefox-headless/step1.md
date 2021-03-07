@@ -56,19 +56,30 @@ An example of robot file `test.robot`{{open}}
 
 Run demo:
 
-a) bash to container robot:
+a) create dir on container:
 ```
-docker exec -it robot bash
+docker exec robot mkdir /home/robotuser
+```{{execute}}
+
+b) Copy robot file to container:
+```
+docker cp /root/test.robot robot:/home/robotuser/
+```{{execute}}
+
+c) bash to container
+```
+docker exec -t robot bash
 ```{{execute}}
 
 
-b) run robot calling test.robot file.
+d) run robot calling test.robot file.
 ```
 robot /home/robotuser/test.robot
 ```{{execute}}
 
 ![](robot_exec.png)
 
-c) robot will connect to url https://www.katacoda.com/
+
+e) robot will connect to url https://www.katacoda.com/
 `
 ( next step robot will start the kotacoda scenario and start robot, robot, robot....)`
