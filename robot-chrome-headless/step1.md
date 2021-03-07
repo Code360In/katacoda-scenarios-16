@@ -56,6 +56,8 @@ Run demo:
 a) create dir on container:
 ```
 docker exec robot mkdir /home/robotuser
+docker exec robot mkdir /home/robotuser/report/
+
 ```{{execute}}
 
 b) Copy robot file to container:
@@ -69,9 +71,9 @@ docker exec -it robot bash
 ```{{execute}}
 
 
-d) run robot calling test.robot file.
+d) run robot calling test.robot file. ( -d dir to save report files)
 ```
-robot /home/robotuser/test.robot
+robot -d  /home/robotuser/report/ /home/robotuser/test.robot
 ```{{execute}}
 
 ![](robot_exec.png)
