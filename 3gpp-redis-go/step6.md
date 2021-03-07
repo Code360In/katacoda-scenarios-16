@@ -2,7 +2,7 @@
 
 Now, let's run grafana with this command:
 
-`docker run --name=grafana -d -p 3000:3000 -v /root/grafana:/var/lib/grafana grafana/grafana:latest-ubuntu`{{execute T4}}
+`docker run --name=grafana -d -p 3000:3000  grafana/grafana:latest-ubuntu`{{execute T4}}
 
 `docker logs grafana`{{execute T4}}
 
