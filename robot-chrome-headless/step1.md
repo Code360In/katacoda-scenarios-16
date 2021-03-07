@@ -65,7 +65,7 @@ docker cp /root/test.robot robot:/home/robotuser/
 
 c) bash to container
 ```
-docker exec -t robot bash
+docker exec -it robot bash
 ```{{execute}}
 
 
