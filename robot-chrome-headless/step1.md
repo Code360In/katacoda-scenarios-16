@@ -36,6 +36,12 @@ docker ps -a
 docker run --name=robot -d -p 8000:8000 robot:01
 ```{{execute}}
 
+Verify
+```
+docker logs grafana
+```{{execute}}
+
+
 # Run:
 ```
 docker exec robot robot --rpa --help
