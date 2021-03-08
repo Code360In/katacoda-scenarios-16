@@ -10,8 +10,10 @@ One important configuration for our example is telling to the connection manager
  `x-request-id` header if it does not exist.
 
 
-`docker run -d --name jaeger --net=host -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 -p 9411:9411 -p 5775:5775/udp -p 16686:16686 jaegertracing/all-in-one:latest`{{execute}}
-
+`docker run -d --name jaeger --net=host \
+  -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 -p 9411:9411 -p 5775:5775/udp -p 16686:16686 -p 6831:6831/udp -p 6832:6832/udp\
+  jaegertracing/all-in-one:latest
+`{{execute}}
 
 access:
 
