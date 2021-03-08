@@ -3,6 +3,7 @@
 
 # Install [Redis](https://redis.io/)
 
+Redis key-value database to store Json.
 
 ```
 apt install -y redis
