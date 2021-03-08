@@ -6,6 +6,12 @@
 Redis key-value database to store Json.
 
 ```
+pwd
+ls
+```{{execute}}
+
+
+```
 apt install -y redis
 ```{{execute}}
 

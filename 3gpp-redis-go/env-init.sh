@@ -1,2 +1,3 @@
 #!/bin/bash
-uname -a 
+pwd
+ls
