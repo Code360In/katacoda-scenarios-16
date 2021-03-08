@@ -7,8 +7,6 @@
 
 
 
-`
 There is still a great deal to be done.
-`
 
 
