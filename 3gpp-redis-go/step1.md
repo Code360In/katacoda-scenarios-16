@@ -5,6 +5,7 @@
 
 Redis key-value database to store Json.
 
+Wait for file `/root/5GcoreOpenApiV1530 ` to be loaded:
 ```
 pwd
 ls
