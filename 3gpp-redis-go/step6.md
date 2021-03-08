@@ -2,7 +2,15 @@
 
 Now, let's run grafana with this command:
 
-`docker run --name=grafana --net=host -d -p 3000:3000  grafana/grafana:latest-ubuntu`{{execute T4}}
+
+```
+docker run -d \
+  -p 3000:3000 \
+  --net=host \
+  --name=grafana \
+  -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-worldmap-panel,marcusolsson-json-datasource" \
+  grafana/grafana:latest-ubuntu```{{execute T4}}
+
 
 `docker logs grafana`{{execute T4}}
 
