@@ -60,6 +60,7 @@ https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/metr
 
 just click to copy to clipboard:
 
+
 `
 {
   "annotations": {
