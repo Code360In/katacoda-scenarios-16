@@ -1,7 +1,7 @@
 # test only
 
-- install redis ( key value, to store entire json)
-- run 3gpp openApi.
+- Install redis ( key value, to store entire json)
+- Run 3GPP OpenApi application.
 - Http2.
 - OpenMetrics (Prometheus)
 
