@@ -2,7 +2,7 @@
 
 ######################################################
 *** Settings ***
-Library           SeleniumLibrary   run_on_failure=Nothing
+Library           SeleniumLibrary   run_on_failure=Nothing   timeout=30 seconds
 Library           OperatingSystem
 Library           Collections
 Library           DateTime

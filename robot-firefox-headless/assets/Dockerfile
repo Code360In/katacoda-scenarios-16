@@ -4,7 +4,7 @@
 # https://robotframework.org/SeleniumLibrary/
 # https://ftp.mozilla.org/pub/firefox/releases/
 
-FROM selenium/standalone-firefox:85.0
+FROM selenium/standalone-firefox:80.0
 
 
 MAINTAINER va

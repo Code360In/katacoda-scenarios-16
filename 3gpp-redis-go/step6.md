@@ -2,7 +2,7 @@
 
 Now, let's run grafana with this command:
 
-`docker run --name=grafana -d -p 3000:3000  grafana/grafana:latest-ubuntu`{{execute T4}}
+`docker run --name=grafana --net=host -d -p 3000:3000  grafana/grafana:latest-ubuntu`{{execute T4}}
 
 `docker logs grafana`{{execute T4}}
 
@@ -13,6 +13,7 @@ results:
 
 
 And access to the dashboard using this url:
+http://localhost:9090 or
 
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
 
