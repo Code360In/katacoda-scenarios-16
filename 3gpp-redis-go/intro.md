@@ -2,7 +2,7 @@
 
 - install redis ( key value, to store entire json)
 - run 3gpp openApi.
-- http2.
+- Http2.
 - OpenMetrics (Prometheus)
 
 
