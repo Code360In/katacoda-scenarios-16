@@ -23,7 +23,7 @@ h2load -v "http://127.0.0.1:8080/nnrf-nfm/v1/nf-instances/111" -H "accept: appli
 ```{{execute T2}}
 
 
-# Run RTOP
+# Run RTOP to monitor Linux resources:
 
 on terminal3
 ```
