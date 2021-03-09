@@ -1,6 +1,6 @@
 {
-  "title": "Kind Kubernetes",
-  "description": "Using Kind to install Kubernetes",
+  "title": "Kind Kubernetes Telemetry",
+  "description": "Metrics Logs Alerts",
   "difficulty": "intermediate",
   "time": "240 minutes",
   "details": {

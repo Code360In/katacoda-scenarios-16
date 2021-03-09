@@ -1,4 +1,4 @@
-Kind Kubernetes
+Kind Kubernetes 
 
 The following scenario demonstrates how to:
 
@@ -24,3 +24,4 @@ The following scenario demonstrates how to:
 
 - Deploy OpenTelemetry/Jaeger
 
+- Deploy FluendD and Elasticsearch
