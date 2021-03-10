@@ -148,6 +148,7 @@ Expose Service:
 oc expose service quickstart-es-http -n elastic-system 
 ```{{execute}}
 
+Verify by console, there is a new routes.
 
 Access to elasticsearch Api:
 
