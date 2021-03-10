@@ -17,9 +17,7 @@ Verify Pods running:
 ``` 
 kubectl get pods -n elastic-system
 kubectl get svc -n elastic-system
-kubectl get deployments -n elastic-system
-kubectl get daemonset -n elastic-system
-```{{execute}}
+k```{{execute}}
 
 
 Monitor the operator logs:
@@ -88,8 +86,6 @@ Verify Pods running:
 ``` 
 kubectl get pods -n elastic-system
 kubectl get svc -n elastic-system
-kubectl get deployments -n elastic-system
-kubectl get daemonset -n elastic-system
 ```{{execute}}
 
 
