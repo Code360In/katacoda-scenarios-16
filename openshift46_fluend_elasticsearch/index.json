@@ -4,7 +4,7 @@
     "description": "",
     "pathwayTitle": "OpenShift",
     "difficulty": "beginner",
-    "time": "121 minutes",
+    "time": "122 minutes",
     "backend": {
         "imageid": "openshift-4-6"
     },
