@@ -156,9 +156,9 @@ https://quickstart-es-http-elastic-system.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]
 
 or
 
-curl --user elastic:$new_password -X GET 'https://quickstart-es-http-elastic-system.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/_cluster/health?wait_for_status=yellow&timeout=50s&pretty"'
+curl --user elastic:`$new_password` -X GET 'https://quickstart-es-http-elastic-system.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/_cluster/health?wait_for_status=yellow&timeout=50s&pretty"'
 
 
 List all indexes:
 
-curl --user elastic:$new_password -X GET 'https://quickstart-es-http-elastic-system.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/_cat/indices?v'
+curl --user elastic:`$new_password` -X GET 'https://quickstart-es-http-elastic-system.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/_cat/indices?v'
