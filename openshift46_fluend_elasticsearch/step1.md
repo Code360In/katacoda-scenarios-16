@@ -100,42 +100,17 @@ https://docs.fluentd.org/container-deployment/kubernetes
 kubectl get svc  -n elastic-system 
 ```{{execute}}
 
-hostname/dns: "quickstart-es-default.elastic-system"
-port: 9200
-user:elastic 
-password: 3AlO1z58gb1801Xl86hVPvCW
-
 Modify fluentd-daemonset-elasticsearch-rbac.yaml
 
+Change password changeme:
 
+``` 
+new_password=`kubectl -n elastic-system get secret/quickstart-es-elastic-user -o go-template='{{range $k,$v := .data}}{{printf "%s: " $k}}{{if not $v}}{{$v}}{{else}}{{$v | base64decode}}{{end}}{{"\n"}}{{end}}'`
+```{{execute}}
 
-results:
-`
-- name: fluentd
-        image: fluent/fluentd-kubernetes-daemonset:v1-debian-elasticsearch
-        env:
-          - name:  FLUENT_ELASTICSEARCH_HOST
-            value: "quickstart-es-default.elastic-system"
-          - name:  FLUENT_ELASTICSEARCH_PORT
-            value: "9200"
-          - name: FLUENT_ELASTICSEARCH_SCHEME
-            value: "http"
-          # Option to configure elasticsearch plugin with self signed certs
-          # ================================================================
-          - name: FLUENT_ELASTICSEARCH_SSL_VERIFY
-            value: "true"
-          # Option to configure elasticsearch plugin with tls
-          # ================================================================
-          - name: FLUENT_ELASTICSEARCH_SSL_VERSION
-            value: "TLSv1_2"
-          # X-Pack Authentication
-          # =====================
-          - name: FLUENT_ELASTICSEARCH_USER
-            value: "elastic"
-          - name: FLUENT_ELASTICSEARCH_PASSWORD
-            value: "3AlO1z58gb1801Xl86hVPvCW"
-`
-
+``` 
+sed -i 's/changeme/$new_password/' /root/fluentd-daemonset-elasticsearch-rbac.yaml
+```{{execute}}
 
 ``` 
 kubectl apply  -n kube-system -f /root/fluentd-daemonset-elasticsearch-rbac.yaml
