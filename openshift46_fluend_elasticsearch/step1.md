@@ -120,7 +120,7 @@ echo $new_password
 
 Replace changeme:
 ``` 
-sed -i 's/changeme/$new_password/' /root/fluentd-daemonset-elasticsearch-rbac.yaml
+sed -i 's/changeme/`$new_password`/' /root/fluentd-daemonset-elasticsearch-rbac.yaml
 ```{{execute}}
 
 
