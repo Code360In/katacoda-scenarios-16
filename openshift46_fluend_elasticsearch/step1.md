@@ -143,4 +143,18 @@ NAME            READY   STATUS    RESTARTS   AGE
 fluentd-5vvdj   1/1     Running   0          5s
 `
 
+Expose Service:
+```{{execute}}
+oc expose service quickstart-es-http -n elastic-system 
+```{{execute}}
+
+
+Access to elasticsearch Api:
+
+https://quickstart-es-http-elastic-system.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
+
+or
+
+curl --user elastic:$new_password -X GET 'https://quickstart-es-http-elastic-system.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/_cluster/health?wait_for_status=yellow&timeout=50s&pretty"'
+
 
