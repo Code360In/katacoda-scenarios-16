@@ -3,7 +3,9 @@
 ### Deploy Elastic
 
 https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-deploy-elasticsearch.html
+
 https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-managing-compute-resources.html
+
 
 Install custom resource definitions and the operator with its RBAC rules:
 
@@ -96,6 +98,7 @@ kubectl get daemonset -n elastic-system
 ### Deploy Daemon Fluentd
 
 https://docs.fluentd.org/container-deployment/kubernetes
+
 
 
 ``` 
