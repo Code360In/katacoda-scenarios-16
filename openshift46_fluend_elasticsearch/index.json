@@ -1,6 +1,6 @@
 {
     "icon": "fa-openshift",
-    "title": "Playground (OpenShift 4.6)",
+    "title": "OpenShift 4.6 Logging by FluentD and Elasticsearch",
     "description": "",
     "pathwayTitle": "OpenShift",
     "difficulty": "beginner",
