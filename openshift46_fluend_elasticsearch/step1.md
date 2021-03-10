@@ -144,7 +144,7 @@ fluentd-5vvdj   1/1     Running   0          5s
 `
 
 Expose Service:
-```{{execute}}
+```
 oc expose service quickstart-es-http -n elastic-system 
 ```{{execute}}
 

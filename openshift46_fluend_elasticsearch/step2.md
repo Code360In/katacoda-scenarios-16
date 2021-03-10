@@ -1,7 +1,14 @@
 
-# Deploy cluster-monitoring
+# Deploy Grafana
 
 
-https://docs.openshift.com/container-platform/4.6/monitoring/understanding-the-monitoring-stack.html
 
-https://docs.openshift.com/container-platform/4.6/monitoring/configuring-the-monitoring-stack.html#configuring-the-monitoring-stack
+```
+oc new-app grafana/grafana:latest-ubuntu -n elastic-system 
+```{{execute}}
+
+Expose service:
+
+```
+oc expose svc/grafana -n elastic-system 
+```{{execute}}
