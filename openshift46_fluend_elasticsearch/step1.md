@@ -123,14 +123,18 @@ Replace changeme:
 sed -i 's/changeme/$new_password/' /root/fluentd-daemonset-elasticsearch-rbac.yaml
 ```{{execute}}
 
+
+Deploy FluentD:
 ``` 
 kubectl apply  -n kube-system -f /root/fluentd-daemonset-elasticsearch-rbac.yaml
 ```{{execute}}
+
 
 Verify Pods running:
 ``` 
 kubectl get pods -n kube-system
 ```{{execute}}
+
 
 results:
 
