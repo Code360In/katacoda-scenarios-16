@@ -11,6 +11,14 @@ Install custom resource definitions and the operator with its RBAC rules:
 kubectl apply -f https://download.elastic.co/downloads/eck/1.4.0/all-in-one.yaml --namespace=elastic-system
 ```{{execute}}
 
+Verify Pods running:
+``` 
+kubectl get pods -n elastic-system
+kubectl get svc -n elastic-system
+kubectl get deployments -n elastic-system
+kubectl get daemonset -n elastic-system
+```{{execute}}
+
 
 Monitor the operator logs:
 ``` 
