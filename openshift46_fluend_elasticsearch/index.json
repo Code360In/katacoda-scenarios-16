@@ -21,8 +21,12 @@
         {
           "title": "Step 1",
           "text": "step1.md"
-        }
-    ],
+        },
+        {
+            "title": "Step 2",
+            "text": "step2.md"
+          }
+      ],
         "intro": {
             "code": "set-env.sh",
             "text": "intro.md"

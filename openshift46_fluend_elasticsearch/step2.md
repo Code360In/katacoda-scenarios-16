@@ -1,0 +1,35 @@
+# Deploy Grafana
+
+Now, let's run grafana with this command:
+
+
+```
+docker run -d \
+  -p 3000:3000 \
+  --net=host \
+  --name=grafana \
+  -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-worldmap-panel,marcusolsson-json-datasource" \
+  grafana/grafana:latest-ubuntu```{{execute T4}}
+
+
+`docker logs grafana`{{execute T4}}
+
+results:
+`
+"HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+`
+
+
+And access to the dashboard using this url:
+http://localhost:9090 or
+
+https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
+
+And use this default credentials:
+`admin`{{copy}} \ `admin`{{copy}}
+
+
+The initial step will ask you to change the password, you can do it if you want or you can skip this step.
+
+The first step to create a dashboard is to have a datasource. Let's define a datasource with Elasticsearch data configured before:
+

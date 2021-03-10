@@ -10,4 +10,6 @@ Explore OpenShift version 4.6 and deploy Logging.
 * Your applications on OpenShift
 * Deploy Elastisearch
 * Deploy FluentD
+* Deploy Grafana
+
 
