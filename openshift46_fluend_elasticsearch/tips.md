@@ -45,14 +45,14 @@ to the command. For example:
 
 ## Creating your own Project
 
-To create a new project called ``myproject`` run the command:
+To create a new project called ``elastic-system`` run the command:
 
-``oc new-project myproject``{{execute}}
+``oc new-project elastic-system``{{execute}}
 
 You could instead create the project from the web console. If you do this,
 to change to the project from the command line run the command:
 
-``oc project myproject``{{execute}}
+``oc project elastic-system``{{execute}}
 
 ## Persistent Volume Claims
 
@@ -92,5 +92,5 @@ In order to run such an image, you will need to grant additional privileges
 to the project you create to allow it to run an application image as any
 user ID. This can be done by running the command:
 
-``oc adm policy add-scc-to-user anyuid -z default -n myproject --as system:admin``{{execute}}
+``oc adm policy add-scc-to-user anyuid -z default -n elastic-system --as system:admin``{{execute}}
 
