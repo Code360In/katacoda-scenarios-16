@@ -142,9 +142,11 @@ kubectl apply -f fluentd-daemonset-elasticsearch-rbac.yaml
 
 Verify Pods running:
 ``` 
-kubectl get pods -n elastic-system
-kubectl get svc -n elastic-system
-kubectl get deployments -n elastic-system
-kubectl get daemonset -n elastic-system
+kubectl get pods -n kube-system
 ```{{execute}}
 
+results:
+`
+NAME            READY   STATUS    RESTARTS   AGE
+fluentd-5vvdj   1/1     Running   0          5s
+`
