@@ -79,8 +79,6 @@ kubectl -n elastic-system get secret/quickstart-es-elastic-user -o go-template='
 
 results: user/password
 
-elastic: 3AlO1z58gb1801Xl86hVPvCW
-
 
 Verify Pods running:
 ``` 
@@ -112,7 +110,7 @@ Modify fluentd-daemonset-elasticsearch-rbac.yaml
 Change password changeme:
 
 ``` 
-new_password=`kubectl -n elastic-system get secret/quickstart-es-elastic-user -o go-template='{{range $k,$v := .data}}{{printf "%s: " $k}}{{if not $v}}{{$v}}{{else}}{{$v | base64decode}}{{end}}{{"\n"}}{{end}}' | awk '{print $3}' `
+new_password=`kubectl -n elastic-system get secret/quickstart-es-elastic-user -o go-template='{{range $k,$v := .data}}{{printf "%s: " $k}}{{if not $v}}{{$v}}{{else}}{{$v | base64decode}}{{end}}{{"\n"}}{{end}}' | awk '{print $2}' `
 ```{{execute}}
 
 Verify:
