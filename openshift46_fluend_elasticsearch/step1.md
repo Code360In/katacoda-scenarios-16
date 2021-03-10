@@ -17,7 +17,7 @@ Verify Pods running:
 ``` 
 kubectl get pods -n elastic-system
 kubectl get svc -n elastic-system
-k```{{execute}}
+```{{execute}}
 
 
 Monitor the operator logs:
