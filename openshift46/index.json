@@ -17,7 +17,8 @@
         "steps": [{
             "title": "OpenShift Playground",
             "text": "tips.md"
-        }],
+        }
+      ],
         "intro": {
             "code": "set-env.sh",
             "text": "intro.md"
