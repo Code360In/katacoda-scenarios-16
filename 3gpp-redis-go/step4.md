@@ -29,3 +29,6 @@ request_duration_seconds_bucket{method="GET",route="other",status_code="204",ws=
 request_duration_seconds_bucket{method="GET",route="other",status_code="204",ws="false",le="0.01"} 129986
 request_duration_seconds_bucket{method="GET",route="other",status_code="204",ws="false",le="0.025"} 130000
 </pre>
+
+
+https://prometheus.io/docs/prometheus/latest/querying/functions/#histogram_quantile
