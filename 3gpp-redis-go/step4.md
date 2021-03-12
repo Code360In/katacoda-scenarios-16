@@ -32,3 +32,13 @@ request_duration_seconds_bucket{method="GET",route="other",status_code="204",ws=
 
 
 https://prometheus.io/docs/prometheus/latest/querying/functions/#histogram_quantile
+
+
+`
+example:
+request_duration_seconds_bucket{method="GET",route="other",status_code="204",ws="false",le="0.01"} 2000
+
+A 99th percentile latency of 10 ms means that every 1 in 100 requests experience 10 ms of delay.
+
+`
+
