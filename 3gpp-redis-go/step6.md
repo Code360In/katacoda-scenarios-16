@@ -21,8 +21,6 @@ results:
 
 
 And access to the dashboard using this url:
-http://localhost:9090 or
-
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
 
 And use this default credentials:
@@ -34,6 +32,9 @@ The initial step will ask you to change the password, you can do it if you want 
 The first step to create a dashboard is to have a datasource. Let's define a datasource with phometheus data configured before:
 
 The URL for phometheus should be:
+`http://localhost:9090`{{copy}}  
+
+or
 
 `https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com`{{copy}}
 
