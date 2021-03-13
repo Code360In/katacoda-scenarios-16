@@ -118,6 +118,12 @@ docker logs elasticsearch
 ```{{execute}}
 
 
+Test from logstash to elasticsearch:
+```
+docker exec -it logstash curl localhost:9200
+```{{execute}}
+
+
 
 # Deploy Filebeat
 
