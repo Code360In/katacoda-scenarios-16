@@ -386,3 +386,16 @@ logger comment to be added to log
 ```
 tail -f /var/log/syslog
 ```{{execute T2}}
+
+
+
+
+### Filebeat output can be Logstash or direct to Elasticsearch
+
+Change the config ```/root/filebeat.yml```{{open}}
+
+and restart the container:
+
+```
+docker restart filebeat
+```{{execute}}
