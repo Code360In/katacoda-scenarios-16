@@ -205,8 +205,14 @@ output.elasticsearch:
 setup.kibana:
   host: "http://localhost:5601"
 
-filebeat.modules:
-- module: system
+logging.level: info
+logging.to_files: true
+logging.files:
+  path: /var/log/filebeat
+  name: filebeat
+  keepfiles: 7
+  permissions: 0644
+    
 EOF
 ```{{execute}}
 
