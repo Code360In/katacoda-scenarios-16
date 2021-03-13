@@ -52,13 +52,18 @@ output {
 
 Deploy logstash
 ```
-docker run -d  --net=host --name=logstash -p 5044:5044 --rm -it -v /root/logstash.conf:/usr/share/logstash/config/logstash.conf docker.elastic.co/logstash/logstash:7.11.1
+docker run -d  --net=host --name=logstash -p 5044:5044 --rm -it -v /root/logstash.conf:/usr/share/logstash/pipeline/logstash.conf docker.elastic.co/logstash/logstash:7.11.1
 ```{{execute}}
 
 
 Verify:
 ```
 docker ps -a
+```{{execute}}
+
+Config file:
+```
+docker exec logstash more /usr/share/logstash/pipeline/logstash.conf
 ```{{execute}}
 
 
