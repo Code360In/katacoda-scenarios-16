@@ -275,6 +275,10 @@ filebeat.inputs:
   #  level: debug
   #  review: 1
 
+- type: tcp
+  max_message_size: 10MiB
+  host: "localhost:9000"
+
 # ============================== Filebeat modules ==============================
 
 filebeat.config.modules:
@@ -459,6 +463,7 @@ EOF
 ```
 docker run -d --net=host --name=filebeat \
 --user=root \
+-p 5044:5044 \
 -v /root/filebeat.yml:/usr/share/filebeat/filebeat.yml \
 -v /var/log/:/var/log:ro \
 docker.elastic.co/beats/filebeat:7.11.2
