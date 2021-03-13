@@ -459,6 +459,7 @@ EOF
 ```
 docker run -d --net=host --name=filebeat \
 -v /root/filebeat.yml:/usr/share/filebeat/filebeat.yml \
+-v /var/log/:/var/log/ \
 docker.elastic.co/beats/filebeat:7.11.2
 ```{{execute}}
 
