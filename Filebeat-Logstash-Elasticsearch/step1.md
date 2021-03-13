@@ -151,10 +151,20 @@ EOF
 
 ```
 docker run -d --net=host --name=filebeat \
-docker.elastic.co/beats/filebeat:7.11.2 \
-setup -E output.logstash.hosts=["localhost:5044"]  
+-v /root/filebeat.yml:/usr/share/filebeat/filebeat.yml \
+docker.elastic.co/beats/filebeat:7.11.2 
 ```{{execute}}
 
+
+Verify:
+```
+docker logs filebeat
+```{{execute T2}}
+
+Results:
+`
+2021-03-13T02:43:54.400Z        INFO    instance/beat.go:468    filebeat start running.
+`
 
 
 tcpdump
