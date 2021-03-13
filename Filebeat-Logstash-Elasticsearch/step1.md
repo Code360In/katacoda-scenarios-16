@@ -208,11 +208,11 @@ setup.kibana:
 logging.level: info
 logging.to_files: true
 logging.files:
-  path: /var/log/filebeat
+  path: /root/filebeat.log
   name: filebeat
   keepfiles: 7
   permissions: 0644
-    
+
 EOF
 ```{{execute}}
 
