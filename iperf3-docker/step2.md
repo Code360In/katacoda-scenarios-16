@@ -75,3 +75,11 @@ tcpdump -i docker0 icmp
 https://tools.ietf.org/html/rfc4459
 https://tools.ietf.org/id/draft-ietf-intarea-frag-fragile-17.html#rfc.section.2.1
 
+
+https://tools.ietf.org/html/rfc2460
+https://tools.ietf.org/html/rfc5722
+
+`
+Routers are no longer required to perform packet fragmentation and reassembly, resulting in packets larger than the router’s interface MTU being dropped. IPv6 hosts perform PMTU to determine the maximum packet size for the entire path. When a packet hits an interface with a smaller MTU, the routers send back an ICMPv6 type 2 error, known as Packet Too Big to the sending host. The sending host receives the error message, reduces the size of the sending packet and tries again.
+
+`
