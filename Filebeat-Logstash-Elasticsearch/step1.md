@@ -20,10 +20,13 @@ curl localhost:9200
 
 
 Results:
-`
+
+<pre class="file">
+
 ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role  master name
 172.18.0.2           62          95  11    0.69    0.40     0.17 cdhilmrstw *      37afd33e70f0
-`
+
+</pre>
 
 
 ```
