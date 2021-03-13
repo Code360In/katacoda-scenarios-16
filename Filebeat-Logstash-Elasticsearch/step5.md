@@ -15,9 +15,12 @@ docker run -d \
 `docker logs grafana`{{execute}}
 
 results:
-`
+
+<pre class="file">
+
 "HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
-`
+
+</pre>
 
 
 And access to the dashboard using this url:
