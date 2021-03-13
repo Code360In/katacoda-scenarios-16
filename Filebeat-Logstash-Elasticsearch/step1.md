@@ -134,7 +134,9 @@ https://www.elastic.co/guide/en/beats/filebeat/current/logstash-output.html
 
 
 Config file /root/filebeat.yml
+
 ```
+cat << 'EOF' > /root/filebeat.yml
 filebeat.inputs:
 - type: log
   paths:
@@ -142,8 +144,9 @@ filebeat.inputs:
     - /var/log/*.log
 
 output.logstash:
-  hosts: ["127.0.0.1:5044"]
-```{{copy}}
+  hosts: ["localhost:5044"]
+EOF
+```{{execute}}
 
 
 ```
