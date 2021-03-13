@@ -211,3 +211,11 @@ nsenter -t $pid netstat -a -p
 ```
 curl -X GET "localhost:9200/_cat/indices/*?v&s=index&pretty"
 ```{{execute}}
+
+
+# Deploy Kibana
+
+```
+docker run -d  --net=host  --name kibana  -p 5601:5601  kibana:7.11.1
+```{{execute}}
+
