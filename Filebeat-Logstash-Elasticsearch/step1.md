@@ -33,8 +33,8 @@ ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role  mast
 
 Copy logstash.conf to /root/
 
-
 ```
+cat << 'EOF' > /root/logstash.yml
 input {
   beats {
     port => 5044
@@ -47,12 +47,29 @@ output {
     index => "%{[@metadata][beat]}-%{[@metadata][version]}" 
   }
 }
-```{{copy}}
+EOF
+```{{execute}}
+
+
+
+
+logstash.yml
+```
+cat << 'EOF' > /root/logstash.yml
+http.host: "0.0.0.0
+xpack.monitoring.enabled: true
+xpack.monitoring.elasticsearch.url: http://localhost:9200
+EOF
+```{{execute}}
+
 
 
 Deploy logstash
 ```
-docker run -d  --net=host --name=logstash -p 5044:5044 --rm -it -v /root/logstash.conf:/usr/share/logstash/pipeline/logstash.conf docker.elastic.co/logstash/logstash:7.11.1
+docker run -d  --net=host --name=logstash -p 5044:5044 --rm -it \
+-v /root/logstash.conf:/usr/share/logstash/pipeline/logstash.conf \
+-v /root/logstash.yml:/usr/share/logstash/config/logstash.yml \
+docker.elastic.co/logstash/logstash:7.11.1
 ```{{execute}}
 
 
