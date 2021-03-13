@@ -32,3 +32,11 @@ ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role  mast
 ```
 docker logs elasticsearch
 ```{{execute}}
+
+Results:
+
+<pre class="file">
+
+{"type": "server", "timestamp": "2021-03-13T18:27:30,522Z", "level": "INFO", "component": "o.e.x.s.s.SecurityStatusChangeListener", "cluster.name": "docker-cluster", "node.name": "host01", "message": "Active license is now [BASIC]; Security is disabled", "cluster.uuid": "miGT76pkRB6izijC4CYHUg", "node.id": "pgMNigQWSCy1JK1lNR7caQ"  }
+
+</pre>
