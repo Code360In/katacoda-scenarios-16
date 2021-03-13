@@ -50,7 +50,9 @@ output {
 EOF
 ```{{execute}}
 
-
+```
+pwd;ls
+```{{execute}}
 
 
 logstash.yml
