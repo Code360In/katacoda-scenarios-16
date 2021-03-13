@@ -48,7 +48,6 @@
     "assets": {
       "host01": [
         {"file": "prometheus.yml", "target": "/root/"},
-        {"file": "5GcoreOpenApiV1530.tar.gz", "target": "/root/"},
         {"file": "config.yml", "target": "/root/"},
         {"file": "grafana-dashboard-3gpp-openapi.json", "target": "/root/"}
       ]
