@@ -201,6 +201,9 @@ output.logstash:
 
 setup.kibana:
   host: "http://localhost:5601"
+
+filebeat.modules:
+- module: system
 EOF
 ```{{execute}}
 
