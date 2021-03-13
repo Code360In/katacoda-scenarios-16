@@ -47,7 +47,7 @@ output {
 
 Deploy logstash
 ```
-docker run -d  --rm -it -v /root/logstash.conf:/usr/share/logstash/config/logstash.conf docker.elastic.co/logstash/logstash:7.11.1
+docker run -d  --name=logstash --rm -it -v /root/logstash.conf:/usr/share/logstash/config/logstash.conf docker.elastic.co/logstash/logstash:7.11.1
 ```{{execute}}
 
 
