@@ -305,6 +305,8 @@ Open file filebeat.yml
 
 
 
+Deploy filebeat:
+
 ```
 docker run -d --net=host --name=filebeat \
 --user=root \
