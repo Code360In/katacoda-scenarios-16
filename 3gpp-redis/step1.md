@@ -39,6 +39,11 @@ redis-cli GET mykey
 
 # Start
 
+Github clone repo:
+```
+git clone https://github.com/valdemarpavesi/justthebin.git
+mv justthebin/5GcoreOpenApiV1530.tar.gz /root/
+```{{execute}}
 
 Extract:
 ```
