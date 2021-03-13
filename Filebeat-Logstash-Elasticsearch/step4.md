@@ -297,6 +297,14 @@ EOF
 ```{{execute}}
 
 
+Open file filebeat.yml
+
+```
+/root/filebeat.yml
+```{{open}}
+
+
+
 ```
 docker run -d --net=host --name=filebeat \
 --user=root \
