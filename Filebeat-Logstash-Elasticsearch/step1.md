@@ -14,10 +14,6 @@ Verify:
 curl -X GET "localhost:9200/_cat/nodes?v=true&pretty"
 ```{{execute}}
 
-```
-curl localhost:9200
-```{{execute}}
-
 
 Results:
 
@@ -27,6 +23,12 @@ ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role  mast
 172.18.0.2           62          95  11    0.69    0.40     0.17 cdhilmrstw *      37afd33e70f0
 
 </pre>
+
+
+```
+curl localhost:9200
+```{{execute}}
+
 
 
 ```
