@@ -39,6 +39,11 @@ redis-cli GET mykey
 
 # Start
 
+Extract:
+```
+tar -xzvf 5GcoreOpenApiV1530.tar.gz
+```{{execute}}
+
 Change to executable:
 ```
 ls
