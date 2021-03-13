@@ -68,6 +68,15 @@ docker logs logstash
 
 ```
 curl localhost:5044
+curl localhost:9600
+```{{execute}}
+
+```
+curl -XGET 'localhost:9600/?pretty'
+```{{execute}}
+
+```
+curl -XGET 'localhost:9600/_node/plugins?pretty'
 ```{{execute}}
 
 
