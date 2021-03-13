@@ -2,7 +2,7 @@
   "title": "Verify Filebeat Logstash and Elasticsearch Performance",
   "description": "/var/log/* --> filebeat --> logstash --> elasticsearch",
   "difficulty": "intermediate",
-  "time": "340 minutes",
+  "time": "341 minutes",
   "details": {
     "steps": [
       {
