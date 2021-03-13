@@ -34,7 +34,7 @@ ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role  mast
 Copy logstash.conf to /root/
 
 ```
-cat << 'EOF' > /root/logstash.yml
+cat << 'EOF' > /root/logstash.conf
 input {
   beats {
     port => 5044
