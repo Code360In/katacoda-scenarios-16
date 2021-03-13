@@ -74,7 +74,7 @@ Deploy logstash
 ```
 docker run -d -it \
  --net=host --name=logstash \
- -p 5044:5044 \
+ -p 5044:5044 \ 
  -v /root/logstash.conf:/usr/share/logstash/pipeline/logstash.conf \
  -v /root/logstash.yml:/usr/share/logstash/config/logstash.yml \
  docker.elastic.co/logstash/logstash:7.11.1
@@ -216,7 +216,21 @@ curl -X GET "localhost:9200/_cat/indices/*?v&s=index&pretty"
 # Deploy Kibana
 
 ```
-docker run -d  --net=host  --name kibana  -p 5601:5601  kibana:7.11.1
+cat << 'EOF' > /root/kibana.yml
+# Default Kibana configuration for docker target
+server.name: kibana
+server.host: "0"
+elasticsearch.hosts: [ "http://localhost:9200" ]
+xpack.monitoring.ui.container.elasticsearch.enabled: true
+EOF
+```{{execute}}
+
+
+```
+docker run -d  --net=host \ 
+--name kibana  -p 5601:5601 \ 
+k-v /root/kibana.yml:/usr/share/kibana/config/kibana.yml \ 
+kibana:7.11.1
 ```{{execute}}
 
 And access to the kibana using this url:
