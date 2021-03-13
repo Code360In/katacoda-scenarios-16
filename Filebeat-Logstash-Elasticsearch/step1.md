@@ -463,7 +463,7 @@ EOF
 ```
 docker run -d --net=host --name=filebeat \
 --user=root \
--p 5044:5044 \
+-p 9000:9000 \
 -v /root/filebeat.yml:/usr/share/filebeat/filebeat.yml \
 -v /var/log/:/var/log:ro \
 docker.elastic.co/beats/filebeat:7.11.2
