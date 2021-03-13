@@ -476,11 +476,13 @@ docker logs filebeat
 ```{{execute}}
 
 Results:
+
 `
 2021-03-13T02:43:54.400Z        INFO    instance/beat.go:468    filebeat start running.
 `
 
 and
+
 
 `
 2021-03-13T16:30:17.024Z        INFO    log/harvester.go:302    Harvester started for file: /var/log/dpkg.log
@@ -494,7 +496,7 @@ and
 
 
 
-tcpdump
+### tcpdump
 ```
 cnid=`docker ps | grep logstash |awk 'NR==1{print $1}'`
 pid=`docker inspect -f '{{.State.Pid}}' $cnid`
@@ -504,7 +506,7 @@ nsenter -t $pid --net tcpdump tcp
 
 
 
-netstat
+### netstat
 ```
 cnid=`docker ps | grep logstash |awk 'NR==1{print $1}'`
 pid=`docker inspect -f '{{.State.Pid}}' $cnid`
@@ -530,7 +532,7 @@ yellow open   filebeat-7.11.2-2021.03.13-000001 VQ_UsZkMQ_q36RWXjU3Pdw   1   1  
 
 `
 
-Generate logs:
+### Generate logs:
 ```
 logger comment to be added to log
 ```{{execute}}
