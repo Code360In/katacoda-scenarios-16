@@ -81,6 +81,7 @@ Verify:
 docker ps -a
 ```{{execute}}
 
+
 Config file:
 ```
 docker exec logstash more /usr/share/logstash/pipeline/logstash.conf
