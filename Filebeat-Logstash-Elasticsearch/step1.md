@@ -195,7 +195,6 @@ filebeat.inputs:
     - /var/log/messages
     - /var/log/*.log
   exclude_files: ['/var/log/yum.log']
-  include_lines: ['^ERR', '^WARN']
 
 output.logstash:
   hosts: ["localhost:5044"]
