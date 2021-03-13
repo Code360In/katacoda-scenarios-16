@@ -18,21 +18,6 @@ on terminal2
 Run traffic with 10 clients and 100k requests:
 
 
-100k
-```
-h2load -v "http://localhost:9000" -H "accept: application/json" -n 100000 -c 10
-```{{execute T2}}
-
-10k
-```
-h2load -v "http://localhost:9000" -H "accept: application/json" -n 10000 -c 10
-```{{execute T2}}
-
-1k
-```
-h2load -v "http://localhost:9000" -H "accept: application/json" -n 1000 -c 10
-```{{execute T2}}
-
 
 testpayload.json
 ```
@@ -43,9 +28,29 @@ cat << 'EOF' > /root/testpayload.json
 EOF
 ```{{execute}}
 
+
+500
 ```
 h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 500 -t 4 -c 4 -T 10
 ```{{execute}}
+
+
+
+100k
+```
+h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 100000 -t 4 -c 4 -T 10
+```{{execute T2}}
+
+10k
+```
+h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 10000 -t 4 -c 4 -T 10
+```{{execute T2}}
+
+1k
+```
+h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 1000 -t 4 -c 4 -T 10
+```{{execute T2}}
+
 
 
 # Run RTOP to monitor Linux resources:
