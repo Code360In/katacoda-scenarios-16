@@ -51,7 +51,7 @@ heartbeat.monitors:
 Where <http://localhost:9200> is your monitored URL, For more details on how to configure Monitors in Heartbeat, read the Heartbeat configuration docs.
 
 
-Open
+Open file heartbeat.yml
 ```/etc/heartbeat/heartbeat.yml```{{open}}
 
 
