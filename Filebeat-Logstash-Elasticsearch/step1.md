@@ -219,3 +219,5 @@ curl -X GET "localhost:9200/_cat/indices/*?v&s=index&pretty"
 docker run -d  --net=host  --name kibana  -p 5601:5601  kibana:7.11.1
 ```{{execute}}
 
+And access to the kibana using this url:
+https://[[HOST_SUBDOMAIN]]-5601-[[KATACODA_HOST]].environments.katacoda.com/
