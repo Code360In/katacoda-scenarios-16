@@ -1,6 +1,8 @@
 # Verify Logstash and Elasticsearh Performance
 
+
 https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
+
 
 
 ### Deploy Elasticsearch
@@ -9,7 +11,7 @@ docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elas
 ```{{execute}}
 
 
-
+Verify:
 ```
 curl -X GET "localhost:9200/_cat/nodes?v=true&pretty"
 ```{{execute}}
