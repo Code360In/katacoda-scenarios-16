@@ -60,7 +60,7 @@ logstash.yml
 cat << 'EOF' > /root/logstash.yml
 http.host: "0.0.0.0
 xpack.monitoring.enabled: true
-xpack.monitoring.elasticsearch.url: http://localhost:9200
+xpack.monitoring.elasticsearch.url: "http://localhost:9200"
 EOF
 ```{{execute}}
 
@@ -188,7 +188,7 @@ docker.elastic.co/beats/filebeat:7.11.2
 Verify:
 ```
 docker logs filebeat
-```{{execute T2}}
+```{{execute}}
 
 Results:
 `
