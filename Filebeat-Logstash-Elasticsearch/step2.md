@@ -1,6 +1,4 @@
 
-
-
 # Deploy Logstash
 
 Copy logstash.conf to /root/
@@ -24,10 +22,6 @@ output {
 EOF
 ```{{execute}}
 
-```
-pwd;ls
-```{{execute}}
-
 
 logstash.yml
 ```
@@ -36,6 +30,13 @@ http.host: "0.0.0.0"
 xpack.monitoring.enabled: true
 xpack.monitoring.elasticsearch.hosts : "http://localhost:9200"
 EOF
+```{{execute}}
+
+
+Verify:
+
+```
+pwd;ls
 ```{{execute}}
 
 
