@@ -72,7 +72,8 @@ docker logs logstash
 ```{{execute}}
 
 Results:
-`
+<pre class="file">
+
 [2021-03-13T02:22:50,015][INFO ][logstash.outputs.elasticsearch][main] Installing elasticsearch template to _template/logstash
 [2021-03-13T02:22:50,964][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>1.01}
 [2021-03-13T02:22:50,983][INFO ][logstash.inputs.beats    ][main] Starting input listener {:address=>"0.0.0.0:5044"}
@@ -80,7 +81,10 @@ Results:
 [2021-03-13T02:22:51,071][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
 [2021-03-13T02:22:51,161][INFO ][org.logstash.beats.Server][main][db5a67781e65c48adbecd85fbd1e99942978082594da35d277a9edd7cc8b5fa2] Starting server on port: 5044
 [2021-03-13T02:22:51,305][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
-`
+
+</pre>
+
+
 
 ```
 curl localhost:5044
