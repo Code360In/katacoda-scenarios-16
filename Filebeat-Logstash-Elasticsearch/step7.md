@@ -28,7 +28,9 @@ output.elasticsearch:
   password: "<password>"
 setup.kibana:
   host: "<kibana_url>"
+
 `
+
 Where <password> is the password of the elastic user, <es_url> is the URL of Elasticsearch, and <kibana_url> is the URL of Kibana.
 
 
@@ -42,7 +44,10 @@ heartbeat.monitors:
 - type: http
   urls: ["<http://localhost:9200>"]
   schedule: "@every 10s"
+
 `
+
+
 Where <http://localhost:9200> is your monitored URL, For more details on how to configure Monitors in Heartbeat, read the Heartbeat configuration docs.
 
 
