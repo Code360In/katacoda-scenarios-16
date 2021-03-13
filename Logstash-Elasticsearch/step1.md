@@ -34,3 +34,8 @@ docker run -d  --rm -it -v /root/logstash.yml:/usr/share/logstash/config/logstas
 docker run -d   --name=logstash --rm -it docker.elastic.co/logstash/logstash:7.11.1
 ```{{execute}}
 
+
+Verify:
+```
+docker ps -a
+```{{execute}}
