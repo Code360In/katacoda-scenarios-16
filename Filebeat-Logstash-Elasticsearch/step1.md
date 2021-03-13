@@ -192,9 +192,13 @@ cat << 'EOF' > /root/filebeat.yml
 filebeat.inputs:
 - type: log
   paths:
-    - /var/log/messages
-    - /var/log/*.log
-  exclude_files: ['/var/log/yum.log']
+    - /root/log/*.log
+  
+  # Change to true to enable this input configuration.
+  enabled: true
+
+processors:
+  - add_host_metadata: ~
 
 #output.logstash:
 #  hosts: ["localhost:5044"]
@@ -205,7 +209,8 @@ output.elasticsearch:
 setup.kibana:
   host: "http://localhost:5601"
 
-logging.level: info
+logging.level: debug
+setup.dashboards.enabled: true
 
 EOF
 ```{{execute}}
@@ -257,3 +262,13 @@ nsenter -t $pid netstat -at | wc -l
 curl -X GET "localhost:9200/_cat/indices/*?v&s=index&pretty"
 ```{{execute}}
 
+```
+mkdir /root/log/
+touch /root/log/test.log
+docker restart filebeat
+```{{execute}}
+
+
+```
+echo "Nov 10 12:19:30 host01 kernel: [    0.000003] tsc: Detected 3192.000 MHz processor" | tee -a /root/log/test.log
+```{{execute}}
