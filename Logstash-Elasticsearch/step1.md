@@ -27,7 +27,9 @@ ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role  mast
 ### Deploy Logstash
 
 Copy logstash.conf to /root/
-`
+
+
+```
 input {
   beats {
     port => 5044
@@ -40,7 +42,7 @@ output {
     index => "%{[@metadata][beat]}-%{[@metadata][version]}" 
   }
 }
-`{{copy}
+```{{copy}}
 
 
 Deploy logstash
