@@ -2,7 +2,7 @@
   "title": "Verify Filebeat Logstash and Elasticsearch",
   "description": "test only",
   "difficulty": "intermediate",
-  "time": "120 minutes",
+  "time": "240 minutes",
   "details": {
     "steps": [
       {
