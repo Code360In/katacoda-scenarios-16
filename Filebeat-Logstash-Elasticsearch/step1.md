@@ -1,6 +1,6 @@
 # Verify Filebeat Logstash and Elasticsearh Performance
 
-/var/logs/* --> filebeat --> logstash --> elasticsearch
+/var/log/* --> filebeat --> logstash --> elasticsearch
 
 https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 
@@ -127,7 +127,24 @@ docker exec -it logstash curl localhost:9200
 
 # Deploy Filebeat
 
+https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html
 https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html
+https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-log.html
+https://www.elastic.co/guide/en/beats/filebeat/current/logstash-output.html
+
+
+Config file /root/filebeat.yml
+```
+filebeat.inputs:
+- type: log
+  paths:
+    - /var/log/messages
+    - /var/log/*.log
+
+output.logstash:
+  hosts: ["127.0.0.1:5044"]
+```{{copy}}
+
 
 ```
 docker run -d --net=host --name=filebeat \
