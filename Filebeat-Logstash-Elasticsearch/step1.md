@@ -173,7 +173,7 @@ EOF
 ```
 docker run -d --net=host --name=filebeat \
 -v /root/filebeat.yml:/usr/share/filebeat/filebeat.yml \
-docker.elastic.co/beats/filebeat:7.11.2
+docker.elastic.co/beats/filebeat:7.11.2 setup -E setup.kibana.host=localhost:5601
 ```{{execute}}
 
 
@@ -240,4 +240,4 @@ docker logs kibana
 
 
 And access to the kibana using this url:
-https://[[HOST_SUBDOMAIN]]-5601-[[KATACODA_HOST]].environments.katacoda.com/
+https://[[HOST_SUBDOMAIN]]-5601-[[KATACODA_HOST]].environments.katacoda.com/app/home
