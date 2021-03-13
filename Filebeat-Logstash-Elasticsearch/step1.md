@@ -196,8 +196,11 @@ filebeat.inputs:
     - /var/log/*.log
   exclude_files: ['/var/log/yum.log']
 
-output.logstash:
-  hosts: ["localhost:5044"]
+#output.logstash:
+#  hosts: ["localhost:5044"]
+
+output.elasticsearch:
+  hosts: ["http://localhost:9200"]
 
 setup.kibana:
   host: "http://localhost:5601"
