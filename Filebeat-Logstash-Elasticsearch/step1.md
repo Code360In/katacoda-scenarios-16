@@ -233,5 +233,11 @@ docker run -d  --net=host \
 kibana:7.11.1
 ```{{execute}}
 
+
+```
+docker logs kibana
+```{{execute}}
+
+
 And access to the kibana using this url:
 https://[[HOST_SUBDOMAIN]]-5601-[[KATACODA_HOST]].environments.katacoda.com/
