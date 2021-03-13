@@ -194,7 +194,7 @@ cnid=`docker ps | grep logstash |awk 'NR==1{print $1}'`
 pid=`docker inspect -f '{{.State.Pid}}' $cnid`
 echo $pid
 nsenter -t $pid --net tcpdump tcp
-```{{execute T2}}
+```{{execute}}
 
 
 
@@ -206,8 +206,8 @@ echo $pid
 nsenter -t $pid netstat -s
 nsenter -t $pid netstat -a -p
 
-```{{execute T2}}
+```{{execute}}
 
 ```
 curl -X GET "localhost:9200/_cat/indices/*?v&s=index&pretty"
-```{{execute T2}}
+```{{execute}}
