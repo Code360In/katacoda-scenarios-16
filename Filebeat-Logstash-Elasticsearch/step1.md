@@ -227,9 +227,9 @@ EOF
 
 
 ```
-docker run -d  --net=host \ 
---name kibana  -p 5601:5601 \ 
-k-v /root/kibana.yml:/usr/share/kibana/config/kibana.yml \ 
+docker run -d  --net=host \
+--name kibana  -p 5601:5601 \
+-v /root/kibana.yml:/usr/share/kibana/config/kibana.yml \
 kibana:7.11.1
 ```{{execute}}
 
