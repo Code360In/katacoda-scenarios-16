@@ -1,3 +1,5 @@
+
+
 # Verify Filebeat Logstash and Elasticsearh Performance
 
 /var/log/* --> filebeat --> logstash --> elasticsearch
