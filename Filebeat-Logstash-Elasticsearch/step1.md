@@ -475,6 +475,19 @@ Results:
 2021-03-13T02:43:54.400Z        INFO    instance/beat.go:468    filebeat start running.
 `
 
+and
+
+`
+2021-03-13T16:30:17.024Z        INFO    log/harvester.go:302    Harvester started for file: /var/log/dpkg.log
+2021-03-13T16:30:17.025Z        INFO    log/harvester.go:302    Harvester started for file: /var/log/kern.log
+2021-03-13T16:30:17.025Z        INFO    log/harvester.go:302    Harvester started for file: /var/log/ubuntu-advantage.log
+2021-03-13T16:30:17.026Z        INFO    log/harvester.go:302    Harvester started for file: /var/log/bootstrap.log
+2021-03-13T16:30:17.026Z        INFO    log/harvester.go:302    Harvester started for file: /var/log/alternatives.log
+2021-03-13T16:30:17.027Z        INFO    log/harvester.go:302    Harvester started for file: /var/log/boot.log
+2021-03-13T16:30:17.027Z        INFO    log/harvester.go:302    Harvester started for file: /var/log/auth.log
+`
+
+
 
 tcpdump
 ```
@@ -500,17 +513,24 @@ count TCP ports open:
 nsenter -t $pid netstat -at | wc -l
 ```{{execute}}
 
+
+Display all indeces:
 ```
 curl -X GET "localhost:9200/_cat/indices/*?v&s=index&pretty"
 ```{{execute}}
 
+results:
+`
+yellow open   filebeat-7.11.2-2021.03.13-000001 VQ_UsZkMQ_q36RWXjU3Pdw   1   1      10483            0      1.4mb          1.4mb
+
+`
+
+Generate logs:
 ```
-mkdir /root/log/
-touch /root/log/test.log
-docker restart filebeat
+logger comment to be added to log
 ```{{execute}}
 
 
 ```
-echo "Nov 10 12:19:30 host01 kernel: [    0.000003] tsc: Detected 3192.000 MHz processor" | tee -a /root/log/test.log
-```{{execute}}
+tail -f /var/log/syslog
+```{{execute T2}}
