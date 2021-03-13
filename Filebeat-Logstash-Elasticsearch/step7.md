@@ -51,6 +51,11 @@ heartbeat.monitors:
 Where <http://localhost:9200> is your monitored URL, For more details on how to configure Monitors in Heartbeat, read the Heartbeat configuration docs.
 
 
+Open
+```/etc/heartbeat/heartbeat.yml```{{open}}
+
+
+
 ### Start Heartbeat
 
 The setup command loads the Kibana index pattern.
