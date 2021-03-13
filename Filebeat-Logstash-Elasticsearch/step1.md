@@ -166,6 +166,9 @@ filebeat.inputs:
 
 output.logstash:
   hosts: ["localhost:5044"]
+
+setup.kibana:
+  host: "http://localhost:5601"
 EOF
 ```{{execute}}
 
@@ -173,7 +176,7 @@ EOF
 ```
 docker run -d --net=host --name=filebeat \
 -v /root/filebeat.yml:/usr/share/filebeat/filebeat.yml \
-docker.elastic.co/beats/filebeat:7.11.2 setup -E setup.kibana.host=localhost:5601
+docker.elastic.co/beats/filebeat:7.11.2
 ```{{execute}}
 
 
