@@ -52,7 +52,7 @@ output {
 
 Deploy logstash
 ```
-docker run -d  --net=host --name=logstash --rm -it -v /root/logstash.conf:/usr/share/logstash/config/logstash.conf docker.elastic.co/logstash/logstash:7.11.1
+docker run -d  --net=host --name=logstash -p 5044:5044 --rm -it -v /root/logstash.conf:/usr/share/logstash/config/logstash.conf docker.elastic.co/logstash/logstash:7.11.1
 ```{{execute}}
 
 
@@ -66,8 +66,45 @@ docker ps -a
 docker logs logstash
 ```{{execute}}
 
+```
+curl localhost:5044
+```{{execute}}
 
 
 ```
 docker logs elasticsearch
 ```{{execute}}
+
+
+
+# Deploy Filebeat
+
+https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html
+
+```
+docker run -d --net=host --name=filebeat \
+docker.elastic.co/beats/filebeat:7.11.2 \
+setup -E output.logstash.hosts=["localhost:5044"]  
+```{{execute}}
+
+
+
+tcpdump
+```
+cnid=`docker ps | grep logstash |awk 'NR==1{print $1}'`
+pid=`docker inspect -f '{{.State.Pid}}' $cnid`
+echo $pid
+nsenter -t $pid --net tcpdump tcp
+```{{execute T2}}
+
+
+
+netstat
+```
+cnid=`docker ps | grep logstash |awk 'NR==1{print $1}'`
+pid=`docker inspect -f '{{.State.Pid}}' $cnid`
+echo $pid
+nsenter -t $pid netstat -s
+nsenter -t $pid netstat -a -p
+
+```{{execute T2}}
