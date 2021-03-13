@@ -2,12 +2,6 @@
 
 # Start
 
-Wait for file `/root/5GcoreOpenApiV1530 ` to be loaded:
-```
-pwd
-ls
-```{{execute}}
-
 
 # Install [Redis](https://redis.io/)
 
