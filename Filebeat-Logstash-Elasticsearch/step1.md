@@ -240,8 +240,12 @@ cnid=`docker ps | grep logstash |awk 'NR==1{print $1}'`
 pid=`docker inspect -f '{{.State.Pid}}' $cnid`
 echo $pid
 nsenter -t $pid netstat -s
-nsenter -t $pid netstat -a -p
+nsenter -t $pid netstat -at
+```{{execute}}
 
+count TCP ports open:
+```
+nsenter -t $pid netstat -at | wc -l
 ```{{execute}}
 
 ```
