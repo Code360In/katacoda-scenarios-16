@@ -4,10 +4,9 @@
 https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 
 
-
 ### Deploy Elasticsearch
 ```
-docker run -d  -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.11.2
+docker run -d  --name=elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.11.2
 ```{{execute}}
 
 
@@ -32,6 +31,6 @@ docker run -d  --rm -it -v /root/logstash.yml:/usr/share/logstash/config/logstas
 ```{{execute}}
 
 ```
-docker run -d  --rm -it docker.elastic.co/logstash/logstash:7.11.1
+docker run -d   --name=logstash --rm -it docker.elastic.co/logstash/logstash:7.11.1
 ```{{execute}}
 
