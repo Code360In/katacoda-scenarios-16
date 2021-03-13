@@ -19,7 +19,7 @@ Run traffic with 10 clients and 100k requests:
 
 
 ```
-h2load -v "http://127.0.0.1:8080/nnrf-nfm/v1/nf-instances/111" -H "accept: application/json" -n 100000 -c 10
+h2load -v "http://localhost:9000" -H "accept: application/json" -n 100000 -c 10
 ```{{execute T2}}
 
 
