@@ -399,3 +399,6 @@ and restart the container:
 ```
 docker restart filebeat
 ```{{execute}}
+
+
+To have full control for all data inserted to Elasticsearch, we can remove input-log from filebeat and have only input-http
