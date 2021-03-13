@@ -16,6 +16,7 @@ Verify:
 curl -X GET "localhost:9200/_cat/nodes?v=true&pretty"
 ```{{execute}}
 
+
 Results:
 `
 ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role  master name
@@ -23,12 +24,10 @@ ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role  mast
 `
 
 
+
 ### Deploy Logstash
 
 ```
 docker run --rm -it -v ~/settings/logstash.yml:/usr/share/logstash/config/logstash.yml docker.elastic.co/logstash/logstash:7.11.1
 ```{{execute}}
-
-
-### Deploy Grafana
 
