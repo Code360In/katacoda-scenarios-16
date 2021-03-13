@@ -40,6 +40,8 @@ cat << 'EOF' > /root/logstash.conf
 input {
   beats {
     port => 5044
+    ssl => false
+    ssl_verify_mode => "none"
   }
 }
 
@@ -176,7 +178,7 @@ EOF
 ```
 docker run -d --net=host --name=filebeat \
 -v /root/filebeat.yml:/usr/share/filebeat/filebeat.yml \
-docker.elastic.co/beats/filebeat:7.11.2 
+docker.elastic.co/beats/filebeat:7.11.2
 ```{{execute}}
 
 
@@ -209,4 +211,8 @@ echo $pid
 nsenter -t $pid netstat -s
 nsenter -t $pid netstat -a -p
 
+```{{execute T2}}
+
+```
+curl -X GET "localhost:9200/_cat/indices/*?v&s=index&pretty"
 ```{{execute T2}}
