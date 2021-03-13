@@ -20,7 +20,8 @@
   },
   "environment": {
     "hideintro": true,
-    "uilayout": "terminal"
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/"
   },
   "backend": {
     "imageid": "ubuntu:2004"
