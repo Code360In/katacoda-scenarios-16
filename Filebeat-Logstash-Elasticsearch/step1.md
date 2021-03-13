@@ -111,12 +111,7 @@ Results:
 </pre>
 
 
-
-type any + ctrl+c
-```
-nc localhost 5044
-```{{execute}}
-
+Verify:
 ```
 curl localhost:9600
 ```{{execute}}
