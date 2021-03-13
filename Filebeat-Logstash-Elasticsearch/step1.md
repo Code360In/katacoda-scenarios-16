@@ -87,7 +87,10 @@ Results:
 
 
 ```
-curl localhost:5044
+nc localhost 5044
+type any + ctrl+c
+```{{execute}}
+
 curl localhost:9600
 ```{{execute}}
 
