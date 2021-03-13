@@ -58,7 +58,7 @@ pwd;ls
 logstash.yml
 ```
 cat << 'EOF' > /root/logstash.yml
-http.host: "0.0.0.0
+http.host: "0.0.0.0"
 xpack.monitoring.enabled: true
 xpack.monitoring.elasticsearch.url: "http://localhost:9200"
 EOF
