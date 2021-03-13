@@ -1,6 +1,6 @@
 {
-  "title": "Verify Filebeat Logstash and Elasticsearch",
-  "description": "test only",
+  "title": "Verify Filebeat Logstash and Elasticsearch Performance",
+  "description": "/var/log/* --> filebeat --> logstash --> elasticsearch",
   "difficulty": "intermediate",
   "time": "340 minutes",
   "details": {
@@ -20,6 +20,18 @@
       {
         "title": "Step 4",
         "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6",
+        "text": "step6.md"
+      },
+      {
+        "title": "Step 7",
+        "text": "step7.md"
       }
     ],
     "finish": {

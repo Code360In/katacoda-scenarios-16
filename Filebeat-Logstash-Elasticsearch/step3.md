@@ -1,75 +1,30 @@
-# LOAD
-
-Now, we should generate traffic performing requests to the envoy proxy.
-
-Install h2load to generate http2 traffic:
+# Deploy Kibana
 
 ```
-sudo apt install -y nghttp2-client
-```{{execute}}
-
-
-
-
-### Start h2load
-
-on terminal2
-
-Run traffic with 10 clients and 100k requests:
-
-
-
-testpayload.json
-```
-cat << 'EOF' > /root/testpayload.json
-{
-    "query": "convert text into entities"
-}
+cat << 'EOF' > /root/kibana.yml
+# Default Kibana configuration for docker target
+server.name: kibana
+server.host: "0"
+elasticsearch.hosts: [ "http://localhost:9200" ]
+xpack.monitoring.ui.container.elasticsearch.enabled: true
 EOF
 ```{{execute}}
 
 
-500
 ```
-h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 500 -t 4 -c 4 -T 10
+docker run -d  --net=host \
+--name kibana  -p 5601:5601 \
+-v /root/kibana.yml:/usr/share/kibana/config/kibana.yml \
+kibana:7.11.1
 ```{{execute}}
 
 
-
-100k
 ```
-h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 100000 -t 4 -c 4 -T 10
-```{{execute}}
-
-10k
-```
-h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 10000 -t 4 -c 4 -T 10
-```{{execute}}
-
-1k
-```
-h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 1000 -t 4 -c 4 -T 10
+docker logs kibana
 ```{{execute}}
 
 
-
-### Run RTOP to monitor Linux resources: 
-
-on terminal3
-```
-echo t3
-```{{execute T3}}
-
-```go get github.com/rapidloop/rtop```{{execute T3}}
-
-```go build github.com/rapidloop/rtop```{{execute T3}}
-
-Run
-```rtop 127.0.0.1 ```{{execute T3}}
-
-
-ref:
-
-https://nghttp2.org/documentation/h2load-howto.html
+And access to the kibana using this url:
+https://[[HOST_SUBDOMAIN]]-5601-[[KATACODA_HOST]].environments.katacoda.com/app/home
 
 
