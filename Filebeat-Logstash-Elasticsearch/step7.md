@@ -3,6 +3,7 @@
 
 
 following DEB instructions:
+
 https://[[HOST_SUBDOMAIN]]-5601-[[KATACODA_HOST]].environments.katacoda.com/app/home#/tutorial/uptimeMonitors
 
 
@@ -28,7 +29,7 @@ output.elasticsearch:
   password: "<password>"
 setup.kibana:
   host: "<kibana_url>"
-  
+
 </pre>
 
 
