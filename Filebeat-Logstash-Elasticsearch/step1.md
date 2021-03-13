@@ -206,12 +206,6 @@ setup.kibana:
   host: "http://localhost:5601"
 
 logging.level: info
-logging.to_files: true
-logging.files:
-  path: /root/filebeat
-  name: filebeat
-  keepfiles: 7
-  permissions: 0777
 
 EOF
 ```{{execute}}
