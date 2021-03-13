@@ -59,3 +59,14 @@ Verify:
 ```
 docker ps -a
 ```{{execute}}
+
+
+```
+docker logs logstash
+```{{execute}}
+
+
+
+```
+docker logs elasticsearch
+```{{execute}}
