@@ -4,10 +4,9 @@ Now, we should generate traffic performing requests to the envoy proxy.
 Install h2load to generate http2 traffic:
 
 ```
-echo t2
-```{{execute T2}}
+sudo apt install -y nghttp2-client
+```{{execute}}
 
-`sudo apt install -y nghttp2-client`{{execute T2}}
 
 
 
@@ -39,17 +38,17 @@ h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type:
 100k
 ```
 h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 100000 -t 4 -c 4 -T 10
-```{{execute T2}}
+```{{execute}}
 
 10k
 ```
 h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 10000 -t 4 -c 4 -T 10
-```{{execute T2}}
+```{{execute}}
 
 1k
 ```
 h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 1000 -t 4 -c 4 -T 10
-```{{execute T2}}
+```{{execute}}
 
 
 
