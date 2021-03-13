@@ -68,10 +68,6 @@ EOF
 
 Deploy logstash
 ```
-docker run -d --net=host --name=logstash -p 5044:5044 -v /root/logstash.conf:/usr/share/logstash/pipeline/logstash.conf docker.elastic.co/logstash/logstash:7.11.1
-```{{execute}}
-
-```
 docker run -d -it  --net=host --name=logstash -p 5044:5044 -v /root/logstash.conf:/usr/share/logstash/pipeline/logstash.conf docker.elastic.co/logstash/logstash:7.11.1
 ```{{execute}}
 
