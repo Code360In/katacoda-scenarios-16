@@ -374,10 +374,14 @@ curl -X GET "localhost:9200/_cat/indices/*?v&s=index&pretty"
 ```{{execute}}
 
 results:
-`
+
+<pre class="file">
+
 yellow open   filebeat-7.11.2-2021.03.13-000001 VQ_UsZkMQ_q36RWXjU3Pdw   1   1      10483            0      1.4mb          1.4mb
 
-`
+</pre>
+
+
 
 ### Generate logs:
 ```
