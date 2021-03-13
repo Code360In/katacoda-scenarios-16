@@ -26,12 +26,26 @@ ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role  mast
 
 ### Deploy Logstash
 
-```
-docker run -d  --rm -it -v /root/logstash.yml:/usr/share/logstash/config/logstash.yml docker.elastic.co/logstash/logstash:7.11.1
-```{{execute}}
+Copy logstash.conf to /root/
+`
+input {
+  beats {
+    port => 5044
+  }
+}
 
+output {
+  elasticsearch {
+    hosts => ["http://localhost:9200"]
+    index => "%{[@metadata][beat]}-%{[@metadata][version]}" 
+  }
+}
+`{{copy}
+
+
+Deploy logstash
 ```
-docker run -d   --name=logstash --rm -it docker.elastic.co/logstash/logstash:7.11.1
+docker run -d  --rm -it -v /root/logstash.conf:/usr/share/logstash/config/logstash.conf docker.elastic.co/logstash/logstash:7.11.1
 ```{{execute}}
 
 
