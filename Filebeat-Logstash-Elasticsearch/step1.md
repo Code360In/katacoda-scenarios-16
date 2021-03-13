@@ -79,6 +79,15 @@ curl -XGET 'localhost:9600/?pretty'
 curl -XGET 'localhost:9600/_node/plugins?pretty'
 ```{{execute}}
 
+```
+curl -XGET 'localhost:9600/_node/hot_threads?pretty'
+```{{execute}}
+
+```
+curl -XGET 'localhost:9600/_node/pipelines?pretty'
+curl -XGET 'localhost:9600/_node/os?pretty'
+curl -XGET 'localhost:9600/_node/jvm?pretty'
+```{{execute}}
 
 ```
 docker logs elasticsearch
