@@ -22,33 +22,37 @@ Run traffic with 10 clients and 100k requests:
 testpayload.json
 ```
 cat << 'EOF' > /root/testpayload.json
-{
-    "query": "convert text into entities"
-}
+{"streams": [{ "stream": { "foo": "bar2" }, "values": [ [ "1570818238000000000", "fizzbuzz" ] ] }]}
 EOF
+```{{execute}}
+
+
+```
+curl -v -H "Content-Type: application/json" -XPOST -s "http://localhost:3100/loki/api/v1/push" --data-raw \
+  '{"streams": [{ "stream": { "foo": "bar2" }, "values": [ [ "1570818238000000000", "fizzbuzz" ] ] }]}'
 ```{{execute}}
 
 
 500
 ```
-h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 500 -t 4 -c 4 -T 10
+h2load -v http://localhost:3100/loki/api/v1/push -d testpayload.json --h1 --header 'Content-Type: application/json' -n 500 -t 4 -c 4 -T 10
 ```{{execute}}
 
 
 
 100k
 ```
-h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 100000 -t 4 -c 4 -T 10
+h2load -v http://localhost:3100/loki/api/v1/push -d testpayload.json --h1 --header 'Content-Type: application/json' -n 100000 -t 4 -c 4 -T 10
 ```{{execute}}
 
 10k
 ```
-h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 10000 -t 4 -c 4 -T 10
+h2load -v http://localhost:3100/loki/api/v1/push -d testpayload.json --h1 --header 'Content-Type: application/json' -n 10000 -t 4 -c 4 -T 10
 ```{{execute}}
 
 1k
 ```
-h2load -v http://localhost:9000 -d testpayload.json --h1 --header 'Content-Type: application/json' -n 1000 -t 4 -c 4 -T 10
+h2load -v http://localhost:3100/loki/api/v1/push -d testpayload.json --h1 --header 'Content-Type: application/json' -n 1000 -t 4 -c 4 -T 10
 ```{{execute}}
 
 

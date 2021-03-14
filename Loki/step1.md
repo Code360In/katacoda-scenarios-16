@@ -29,3 +29,12 @@ docker logs loki
 ```
 curl localhost:3100/metrics
 ```{{execute}}
+
+
+
+sending data to loki:
+
+```
+curl -v -H "Content-Type: application/json" -XPOST -s "http://localhost:3100/loki/api/v1/push" --data-raw \
+  '{"streams": [{ "stream": { "foo": "bar2" }, "values": [ [ "1570818238000000000", "fizzbuzz" ] ] }]}'
+```{{execute}}
