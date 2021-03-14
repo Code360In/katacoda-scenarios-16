@@ -3,6 +3,8 @@
 
 https://grafana.com/docs/loki/latest/installation/docker/
 
+https://grafana.com/docs/loki/latest/api/
+
 
 ```
 wget https://raw.githubusercontent.com/grafana/loki/v2.2.0/cmd/loki/loki-local-config.yaml -O loki-config.yaml
