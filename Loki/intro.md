@@ -1,5 +1,7 @@
 Verify Loki and Promtail Performance
 
+/var/log/* --> Promtail --> Loki
+
 The following scenario demonstrates how to:
 
 - Deploy Loki
@@ -9,3 +11,5 @@ The following scenario demonstrates how to:
 - Deploy Grafana
 
 - Generate Load
+
+

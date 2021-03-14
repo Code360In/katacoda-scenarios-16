@@ -1,5 +1,7 @@
 Verify Filebeat Logstash and Elasticsearch Performance
 
+/var/log/* --> filebeat --> logstash --> elasticsearch
+
 The following scenario demonstrates how to:
 
 - Deploy Elasticsearch
