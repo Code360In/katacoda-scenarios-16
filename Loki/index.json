@@ -1,6 +1,7 @@
 {
   "title": "Verify Loki and Promtail Performance",
   "description": "/var/log/* --> Promtail --> Loki",
+  "icon": "avatar.png",
   "difficulty": "intermediate",
   "time": "341 minutes",
   "details": {
