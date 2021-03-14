@@ -2,7 +2,6 @@ Verify Filebeat Logstash and Elasticsearch Performance
 
 The following scenario demonstrates how to:
 
-
 - Deploy Elasticsearch
 
 - Deploy Logstash
