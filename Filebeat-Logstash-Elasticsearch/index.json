@@ -1,6 +1,6 @@
 {
-  "title": "Verify Filebeat Logstash and Elasticsearch Performance",
-  "description": "",
+  "title": "Verify Filebeat Logstash and Elasticsearch",
+  "description": "Performance",
   "icon": "avatar.png",
   "difficulty": "intermediate",
   "time": "341 minutes",
