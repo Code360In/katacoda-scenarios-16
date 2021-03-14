@@ -1,26 +1,18 @@
-Kind Kubernetes
+Verify Filebeat Logstash and Elasticsearch Performance
 
 The following scenario demonstrates how to:
 
 
-- Install [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/).
+- Deploy Elasticsearch
 
-- Create [Kubernetes](https://kubernetes.io/)  cluster.
+- Deploy Logstash
 
-- Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
+- Deploy Kibana
 
-- Install [Helm](https://helm.sh/docs/intro/install/).
+- Deploy Filebeat
 
-- Deploy Kubernetes [Dashboard](https://helm.sh/docs/intro/install/) by Helm.
+- Deploy Grafana
 
-- Deploy [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) by Helm.
-<pre class="file">
-  Promethes-Operator,kube-state-metrics,node-exporter,Prometheus,Grafana,Alertmanager
-</pre>
+- Generate Load
 
-- Deploy [Loki](https://grafana.com/oss/loki/) by Helm.
-
-- Deploy Prometheus-adapter
-
-- Deploy OpenTelemetry/Jaeger
-
+- Deploy Heartbeat
