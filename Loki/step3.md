@@ -23,6 +23,13 @@ results:
 </pre>
 
 
+
+```
+curl localhost:3000/metrics
+```{{execute}}
+
+
+
 And access to the dashboard using this url:
 
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
