@@ -13,6 +13,12 @@ Change loki:3100 to localhost:3100
 sed -i 's/loki:3100/localhost:3100/' /root/promtail-config.yaml
 ```{{execute}}
 
+Open file:
+
+```
+/root/promtail-config.yaml
+```{{opem}}
+
 
 Add push config for promtail:
 
