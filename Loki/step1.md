@@ -36,5 +36,6 @@ sending data to loki:
 
 ```
 curl -H "Content-Type: application/json" -XPOST -s "http://localhost:3100/api/prom/push" --data-raw \
-  '{"streams": [{ "labels": "{foo=\"bar\"}", "entries": [{ "ts": "2018-12-18T08:28:06.801064-04:00", "line": "fizzbuzz" }] }]}'
+  '{"streams": [{ "labels": "{foo=\"bar\"}", "entries": [{ "ts": "2021-03-13T08:28:06.801064-04:00", "line": "fizzbuzz" }] }]}'
 ```{{execute}}
+
