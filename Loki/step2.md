@@ -7,7 +7,7 @@ wget https://raw.githubusercontent.com/grafana/loki/v2.2.0/cmd/promtail/promtail
 ```{{execute}}
 
 
-Change loki:3100 to be localhost:3100 
+Change loki:3100 to localhost:3100 
 
 ```
 sed -i 's/loki:3100/localhost:3100/' /root/promtail-config.yaml
