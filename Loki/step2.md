@@ -17,7 +17,7 @@ sed -i 's/loki:3100/localhost:3100/' /root/promtail-config.yaml
 Deploy promtail:
 
 ```
-docker run -d --user=root -v /root/promtail-config.yaml:/usr/share/promtail-config.yaml --net=host -p 9080:9080 --name=promtail -v /var/log:/var/log grafana/promtail:2.2.0 -config.file=/usr/share/promtail-config.yaml
+docker run -d --user=root -v /root/promtail-config.yaml:/usr/share/promtail-config.yaml --net=host -p 9080:9080 -p 3500:3500 --name=promtail -v /var/log:/var/log grafana/promtail:2.2.0 -config.file=/usr/share/promtail-config.yaml
 ```{{execute}}
 
 
@@ -35,3 +35,14 @@ docker logs promtail
 
 
 
+push config for promtail:
+`
+scrape_configs:
+- job_name: push1
+  loki_push_api:
+    server:
+      http_listen_port: 3500
+      grpc_listen_port: 3600
+    labels:
+      pushserver: push1
+`
