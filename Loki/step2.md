@@ -7,6 +7,8 @@ wget https://raw.githubusercontent.com/grafana/loki/v2.2.0/cmd/promtail/promtail
 ```{{execute}}
 
 
+Change loki:3100 to be localhost:3100 
+
 
 ```
 docker run -d --user=root -v /root/promtail-config.yaml:/usr/share/promtail-config.yaml --net=host -p 9080:9080 --name=promtail -v /var/log:/var/log grafana/promtail:2.2.0 -config.file=/usr/share/promtail-config.yaml
@@ -23,3 +25,6 @@ curl localhost:9080/metrics
 ```
 docker logs promtail
 ```{{execute}}
+
+
+
