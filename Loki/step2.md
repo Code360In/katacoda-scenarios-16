@@ -15,7 +15,8 @@ sed -i 's/loki:3100/localhost:3100/' /root/promtail-config.yaml
 
 
 Add push config for promtail:
-`
+
+```
 - job_name: push1
   loki_push_api:
     server:
@@ -23,7 +24,7 @@ Add push config for promtail:
       grpc_listen_port: 3600
     labels:
       pushserver: push1
-`{{copy}}
+```{{copy}}
 
 
 
