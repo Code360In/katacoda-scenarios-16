@@ -22,3 +22,8 @@ Verify:
 ```
 docker logs loki
 ```{{execute}}
+
+
+```
+curl localhost:3100/metrics
+```{{execute}}
