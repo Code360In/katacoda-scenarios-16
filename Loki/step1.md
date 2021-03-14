@@ -11,7 +11,7 @@ wget https://raw.githubusercontent.com/grafana/loki/v2.2.0/cmd/loki/loki-local-c
 
 
 ```
-docker run -d -v /root/loki-config.yaml:/usr/share/loki-config.yaml --name=loki -p 3100:3100 grafana/loki:2.2.0 -config.file=/usr/share/loki-config.yaml
+docker run -d -v /root/loki-config.yaml:/usr/share/loki-config.yaml --net=host --name=loki -p 3100:3100 grafana/loki:2.2.0 -config.file=/usr/share/loki-config.yaml
 ```{{execute}}
 
 
