@@ -36,3 +36,7 @@ And use this default credentials:
 The initial step will ask you to change the password, you can do it if you want or you can skip this step.
 
 The first step to create a dashboard is to have a datasource. Let's define a datasource with elasticsearch data configured before.
+
+Go to Explore:
+
+https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/explore?orgId=1

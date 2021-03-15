@@ -29,3 +29,8 @@ And access to the kibana using this url:
 https://[[HOST_SUBDOMAIN]]-5601-[[KATACODA_HOST]].environments.katacoda.com/app/home
 
 
+Create index:
+
+https://[[HOST_SUBDOMAIN]]-5601-[[KATACODA_HOST]].environments.katacoda.com/kibana/indexPatterns
+
+Index pattern name=filebeat*
