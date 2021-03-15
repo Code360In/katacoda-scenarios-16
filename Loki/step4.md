@@ -28,7 +28,7 @@ date --rfc-3339=ns | sed 's/ /T/'
 testpayload.json
 
 ```
-echo '{ "streams": [ { "labels": "{source=\"JSON\",job=\"simpleJsonJob\", host=\"SimpleHost\"}", "entries": [{ "ts": "'`date --rfc-3339=ns | sed 's/ /T/'`'", "line": "h2load test performance-'`date --rfc-3339=ns | sed 's/ /T/'`'" }] } ] }' > /root/testpayload.json
+echo '{ "streams": [ { "labels": "{source=\"JSON\",job=\"simpleJsonJob\", host=\"SimpleHost\"}", "entries": [{ "ts": "'`date --rfc-3339=ns | sed 's/ /T/'`'", "line": "h2load test performance  '`date --rfc-3339=ns | sed 's/ /T/'`'" }] } ] }' > /root/testpayload.json
 ```{{execute}}
 
 
