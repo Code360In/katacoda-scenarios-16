@@ -19,12 +19,24 @@ Run traffic with 10 clients and 100k requests:
 
 
 
+
 testpayload.json
 ```
 cat << 'EOF' > /root/testpayload.json
-{"streams": [{ "labels": "{foo=\"bar\"}","line": "fizzbuzz" }] }]}
+{ "streams": [ { "labels": "{source=\"JSON\",job=\"simpleJsonJob\", host=\"SimpleHost\"}", "entries": [{ "ts": "olddate", "line": "TEST!" }] } ] }
 EOF
 ```{{execute}}
+
+newdate:
+```
+date --rfc-3339=ns | sed 's/ /T/'
+```{{execute}}
+
+
+```
+sed -i 's/"olddate"/newdate/' /root/testpayload.json
+```{{execute}}
+
 
 
 

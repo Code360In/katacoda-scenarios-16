@@ -58,8 +58,3 @@ expected:
 `
 
 
-
-```
-curl -i -H "Content-type: application/json" -X POST --data '{ "streams": [ { "labels": "{source=\"JSON\",job=\"simpleJsonJob\", host=\"SimpleHost\"}", "entries": [{ "ts": "```date --rfc-3339=ns | sed 's/ /T/'```", "line": "TEST!" }] } ] }' http://localhost:3100/api/prom/push
-```{{execute}}
-
