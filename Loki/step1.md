@@ -58,3 +58,16 @@ expected:
 `
 
 
+
+And access to the loki using this url:
+
+https://[[HOST_SUBDOMAIN]]-3100-[[KATACODA_HOST]].environments.katacoda.com/
+
+
+Debug:
+
+
+https://[[HOST_SUBDOMAIN]]-3100-[[KATACODA_HOST]].environments.katacoda.com/debug/pprof/
+
+
+https://[[HOST_SUBDOMAIN]]-3100-[[KATACODA_HOST]].environments.katacoda.com/debug/pprof/profile\?seconds\=20

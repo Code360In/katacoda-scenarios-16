@@ -32,11 +32,17 @@ echo '{ "streams": [ { "labels": "{source=\"JSON\",job=\"simpleJsonJob\", host=\
 ```{{execute}}
 
 
+1
+```
+h2load -vvv http://localhost:3100/loki/api/v1/push -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 1 -t 1 -c 1 -T 10
+
+```{{execute}}
 
 
 500
 ```
-h2load -v http://localhost:3100/loki/api/v1/push -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 500 -t 2 -c 4 -T 10
+h2load -vvv http://localhost:3100/loki/api/v1/push -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 500 -t 2 -c 4 -T 10
+
 ```{{execute}}
 
 
@@ -55,6 +61,8 @@ h2load -v http://localhost:3100/loki/api/v1/push -d /root/testpayload.json --h1 
 ```
 h2load -v http://localhost:3100/loki/api/v1/push -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 1000 -t 2 -c 4 -T 10
 ```{{execute}}
+
+
 
 
 
@@ -80,5 +88,6 @@ Run
 ref:
 
 https://nghttp2.org/documentation/h2load-howto.html
+
 
 
