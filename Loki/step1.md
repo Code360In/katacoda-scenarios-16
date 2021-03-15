@@ -50,7 +50,7 @@ curl -G -s  "http://localhost:3100/api/prom/label" | jq
 
 ```
 date --rfc-3339=ns | sed 's/ /T/'
-```
+```{{execute}}
 
 expected:
 `
