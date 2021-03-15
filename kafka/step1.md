@@ -23,3 +23,8 @@ To verify that the services are up and running, run the following command:
 ```
 docker-compose ps
 ```{{execute}}
+
+
+In this step, you create Kafka topics using Confluent Control Center. Confluent Control Center provides the functionality for building and monitoring production data pipelines and event streaming applications.
+
+https://[[HOST_SUBDOMAIN]]-9021-[[KATACODA_HOST]].environments.katacoda.com/
