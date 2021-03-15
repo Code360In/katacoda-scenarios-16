@@ -56,3 +56,9 @@ docker logs promtail
 
 
 
+
+Access to promtail:
+
+https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/debug/pprof/
+
+https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/metrics
