@@ -35,7 +35,7 @@ curl localhost:3100/metrics
 sending data to loki:
 
 ```
-curl -H "Content-Type: application/json" -XPOST -s "http://localhost:3100/api/prom/push" --data-raw   '{"streams": [{ "labels": "{foo=\"bar\"}","line": "fizzbuzz" }] }]}'
+curl -i -H "Content-type: application/json" -X POST --data '{ "streams": [ { "labels": "{source=\"JSON\",job=\"simpleJsonJob\", host=\"SimpleHost\"}", "entries": [{ "ts": "2021-03-15T01:45:48.042084520+00:00", "line": "TEST!" }] } ] }' http://localhost:3100/api/prom/push
 ```{{execute}}
 
 
@@ -43,5 +43,23 @@ Query:
 
 ```
 curl -G -s  "http://localhost:3100/api/prom/label" | jq
+```{{execute}}
+
+
+
+
+```
+date --rfc-3339=ns | sed 's/ /T/'
+```
+
+expected:
+`
+2021-03-15T01:40:42.017393021+00:00
+`
+
+
+
+```
+curl -i -H "Content-type: application/json" -X POST --data '{ "streams": [ { "labels": "{source=\"JSON\",job=\"simpleJsonJob\", host=\"SimpleHost\"}", "entries": [{ "ts": "```date --rfc-3339=ns | sed 's/ /T/'```", "line": "TEST!" }] } ] }' http://localhost:3100/api/prom/push
 ```{{execute}}
 
