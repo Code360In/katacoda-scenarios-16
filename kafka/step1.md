@@ -44,8 +44,10 @@ pip install kafka-python
 
 KafkaProducer
 
+python3
+
 >>> from kafka import KafkaProducer
->>> producer = KafkaProducer(bootstrap_servers='localhost:1234')
+>>> producer = KafkaProducer(bootstrap_servers='localhost:9092')
 >>> for _ in range(100):
 ...     producer.send('foobar', b'some_message_bytes')
 
@@ -54,6 +56,7 @@ KafkaProducer
 
 KafkaConsumer
 
+python3
 >>> from kafka import KafkaConsumer
 >>> consumer = KafkaConsumer('my_favorite_topic')
 >>> for msg in consumer:
