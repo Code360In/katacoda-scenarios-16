@@ -36,24 +36,24 @@ echo '{ "streams": [ { "labels": "{source=\"JSON\",job=\"simpleJsonJob\", host=\
 
 500
 ```
-h2load -v http://localhost:3100/loki/api/v1/push -d testpayload.json --h1 --header 'Content-Type: application/json' -n 500 -t 4 -c 4 -T 10
+h2load -v http://localhost:3100/loki/api/v1/push -d testpayload.json --h1 --header 'Content-Type: application/json' -n 500 -t 2 -c 4 -T 10
 ```{{execute}}
 
 
 
 100k
 ```
-h2load -v http://localhost:3100/loki/api/v1/push -d testpayload.json --h1 --header 'Content-Type: application/json' -n 100000 -t 4 -c 4 -T 10
+h2load -v http://localhost:3100/loki/api/v1/push -d testpayload.json --h1 --header 'Content-Type: application/json' -n 100000 -t 2 -c 4 -T 10
 ```{{execute}}
 
 10k
 ```
-h2load -v http://localhost:3100/loki/api/v1/push -d testpayload.json --h1 --header 'Content-Type: application/json' -n 10000 -t 4 -c 4 -T 10
+h2load -v http://localhost:3100/loki/api/v1/push -d testpayload.json --h1 --header 'Content-Type: application/json' -n 10000 -t 2 -c 4 -T 10
 ```{{execute}}
 
 1k
 ```
-h2load -v http://localhost:3100/loki/api/v1/push -d testpayload.json --h1 --header 'Content-Type: application/json' -n 1000 -t 4 -c 4 -T 10
+h2load -v http://localhost:3100/loki/api/v1/push -d testpayload.json --h1 --header 'Content-Type: application/json' -n 1000 -t 2 -c 4 -T 10
 ```{{execute}}
 
 
