@@ -3,7 +3,7 @@
 https://docs.confluent.io/
 
 
-### Download or copy the contents of the [Confluent Platform all-in-one Docker Compose file](https://docs.confluent.io/platform/current/quickstart/ce-docker-quickstart.html?utm_medium=sem&utm_source=google&utm_campaign=ch.sem_br.nonbrand_tp.prs_tgt.kafka_mt.mbm_rgn.namer_lng.eng_dv.all&utm_term=%2Bkafka%20%2Bdocker&creative=&device=c&placement=&gclid=Cj0KCQjwi7yCBhDJARIsAMWFScOdVPN4G23xe5z_MRhnQ78ZtyC1SADqb7zWLxvTUwMc1S8mvcmM-74aAtAKEALw_wcB), for example:
+Download or copy the contents of the [Confluent Platform all-in-one Docker Compose file](https://docs.confluent.io/platform/current/quickstart/ce-docker-quickstart.html?utm_medium=sem&utm_source=google&utm_campaign=ch.sem_br.nonbrand_tp.prs_tgt.kafka_mt.mbm_rgn.namer_lng.eng_dv.all&utm_term=%2Bkafka%20%2Bdocker&creative=&device=c&placement=&gclid=Cj0KCQjwi7yCBhDJARIsAMWFScOdVPN4G23xe5z_MRhnQ78ZtyC1SADqb7zWLxvTUwMc1S8mvcmM-74aAtAKEALw_wcB), for example:
 
 ```
 curl --silent --output docker-compose.yml \
@@ -11,14 +11,14 @@ curl --silent --output docker-compose.yml \
 ```{{execute}}
 
 
-### Start Confluent Platform with the -d option to run in detached mode:
+Start Confluent Platform with the -d option to run in detached mode:
 
 ```
 docker-compose up -d
 ```{{execute}}
 
 
-### To verify that the services are up and running, run the following command:
+To verify that the services are up and running, run the following command:
 
 ```
 docker-compose ps
