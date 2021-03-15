@@ -17,7 +17,7 @@ Open file:
 
 ```
 /root/promtail-config.yaml
-```{{opem}}
+```{{open}}
 
 
 Add push config for promtail:
@@ -55,3 +55,10 @@ docker logs promtail
 
 
 
+
+sending data to loki:
+
+```
+curl -H "Content-Type: application/json" -XPOST -s "http://localhost:3500/api/prom/push" --data-raw \
+  '{"streams": [{ "labels": "{foo=\"bar\"}", "entries": [{ "ts": "2021-03-13T08:28:06.801064-04:00", "line": "fizzbuzz" }] }]}'
+```{{execute}}
