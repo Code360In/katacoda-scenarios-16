@@ -45,7 +45,11 @@
     },
     "finish": {
       "text": "finish.md"
-    }
+    },
+    "assets": {
+      "host01": [
+        {"file": "metricbeat.yml", "target": "/root/"}
+      ]
   },
   "environment": {
     "hideintro": false,
