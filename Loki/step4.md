@@ -22,7 +22,7 @@ Run traffic with 10 clients and 100k requests:
 testpayload.json
 ```
 cat << 'EOF' > /root/testpayload.json
-{"streams": [{ "labels": "{foo=\"bar\"}", "entries": [{ "ts": "2021-03-13T08:28:06.801064-04:00", "line": "fizzbuzz" }] }]}
+{"streams": [{ "labels": "{foo=\"bar\"}","line": "fizzbuzz" }] }]}
 EOF
 ```{{execute}}
 
