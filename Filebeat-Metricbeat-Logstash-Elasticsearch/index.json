@@ -1,5 +1,5 @@
 {
-  "title": "Verify Filebeat Logstash and Elasticsearch",
+  "title": "Verify Filebeat Metricbeat Logstash and Elasticsearch",
   "description": "Performance",
   "icon": "avatar.png",
   "difficulty": "intermediate",
