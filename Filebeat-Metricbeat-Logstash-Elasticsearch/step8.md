@@ -12,3 +12,13 @@ docker.elastic.co/beats/metricbeat:7.11.2 \
 setup -E setup.kibana.host=localhost:5601 \
 -E output.elasticsearch.hosts=["localhost:9200"]
 ```{{execute}}
+
+
+```
+docker logs metricbeat
+```{{execute}}
+
+
+```
+docker ps -a
+```{{execute}}
