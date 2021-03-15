@@ -35,8 +35,7 @@ date --rfc-3339=ns | sed 's/ /T/'
 
 ```
 sed -i 's/olddate/newdate/' /root/testpayload.json
-```{{execute}}
-
+```
 
 
 
