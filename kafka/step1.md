@@ -71,3 +71,48 @@ create topic:
 ./admin_create_topic localhost:9092 gugu 1 1
 
 ```{{execute}}
+
+
+Producer:
+
+Usage: ./producer_example <broker> <topic>
+
+
+```
+cd /root/confluent-kafka-go/examples/producer_example
+```{{execute}}
+
+
+```
+go build producer_example.go 
+```{{execute}}
+
+```
+./producer_example localhost:9092 1 
+```{{execute}}
+
+
+<pre class="file">
+Created Producer rdkafka#producer-1
+Delivered message to topic 1 [0] at offset 0
+</pre>
+
+
+
+Consumer:
+
+Usage: ./consumer_example <broker> <group> <topics..>
+
+```
+cd /root/confluent-kafka-go/examples/consumer_example
+```{{execute}}
+
+
+```
+go build consumer_example.go 
+```{{execute}}
+
+
+```
+./consumer_example localhost:9092  gugu 1
+```{{execute}}
