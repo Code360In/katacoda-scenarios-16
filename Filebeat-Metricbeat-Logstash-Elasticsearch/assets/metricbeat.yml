@@ -155,17 +155,6 @@ metricbeat.modules:
   #xpack.enabled: false
   #scope: node
 
-#------------------------------ Envoyproxy Module ------------------------------
-- module: envoyproxy
-  metricsets: ["server"]
-  period: 10s
-  hosts: ["localhost:9901"]
-
-#--------------------------------- Etcd Module ---------------------------------
-- module: etcd
-  metricsets: ["leader", "self", "store"]
-  period: 10s
-  hosts: ["localhost:2379"]
 
 
 #-------------------------------- Kibana Module --------------------------------

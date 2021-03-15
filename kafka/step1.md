@@ -28,3 +28,33 @@ docker-compose ps
 In this step, you create Kafka topics using Confluent Control Center. Confluent Control Center provides the functionality for building and monitoring production data pipelines and event streaming applications.
 
 https://[[HOST_SUBDOMAIN]]-9021-[[KATACODA_HOST]].environments.katacoda.com/
+
+Click the controlcenter.cluster tile.
+
+
+# Client python
+
+https://pypi.org/project/kafka-python/
+
+
+``` 
+pip install kafka-python
+
+```{{execute}}
+
+KafkaProducer
+
+>>> from kafka import KafkaProducer
+>>> producer = KafkaProducer(bootstrap_servers='localhost:1234')
+>>> for _ in range(100):
+...     producer.send('foobar', b'some_message_bytes')
+
+
+
+
+KafkaConsumer
+
+>>> from kafka import KafkaConsumer
+>>> consumer = KafkaConsumer('my_favorite_topic')
+>>> for msg in consumer:
+...     print (msg)
