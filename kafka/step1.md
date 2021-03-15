@@ -31,33 +31,43 @@ https://[[HOST_SUBDOMAIN]]-9021-[[KATACODA_HOST]].environments.katacoda.com/
 
 Click the controlcenter.cluster tile.
 
+# Go client
 
-# Client python
+https://github.com/confluentinc/confluent-kafka-go.git
 
-https://pypi.org/project/kafka-python/
-
-
-``` 
-pip install kafka-python
-
+```
+git clone https://github.com/confluentinc/confluent-kafka-go.git
 ```{{execute}}
 
-KafkaProducer
 
-python3
-
->>> from kafka import KafkaProducer
->>> producer = KafkaProducer(bootstrap_servers='localhost:9092')
->>> for _ in range(100):
-...     producer.send('foobar', b'some_message_bytes')
-
+```
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
+mkdir -p $GOPATH/src/github.com/user
+go get -u gopkg.in/confluentinc/confluent-kafka-go.v1/kafka
+```{{execute}}
 
 
+build
+```
+cd /root/confluent-kafka-go/examples/admin_create_topic
+go build admin_create_topic.go 
+```{{execute}}
 
-KafkaConsumer
 
-python3
->>> from kafka import KafkaConsumer
->>> consumer = KafkaConsumer('my_favorite_topic')
->>> for msg in consumer:
-...     print (msg)
+```
+./admin_create_topic 
+```{{execute}}
+
+<pre class="file">
+Usage: ./admin_create_topic <broker> <topic> <partition-count> <replication-factor>
+</pre>
+
+
+
+create topic:
+
+```
+./admin_create_topic localhost:9092 gugu 1 1
+
+```{{execute}}
