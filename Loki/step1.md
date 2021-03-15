@@ -35,8 +35,7 @@ curl localhost:3100/metrics
 sending data to loki:
 
 ```
-curl -H "Content-Type: application/json" -XPOST -s "http://localhost:3100/api/prom/push" --data-raw \
-  '{"streams": [{ "labels": "{foo=\"bar\"}", "entries": [{ "ts": "2021-03-13T08:28:06.801064-04:00", "line": "fizzbuzz" }] }]}'
+curl -H "Content-Type: application/json" -XPOST -s "http://localhost:3100/api/prom/push" --data-raw   '{"streams": [{ "labels": "{foo=\"bar\"}","line": "fizzbuzz" }] }]}'
 ```{{execute}}
 
 
