@@ -24,3 +24,15 @@ docker logs metricbeat
 ```
 docker ps -a
 ```{{execute}}
+
+
+
+go to Kibana:
+
+
+https://[[HOST_SUBDOMAIN]]-5601-[[KATACODA_HOST]].environments.katacoda.com/app/metrics/
+
+
+To Grafana:
+
+https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/explore?orgId=1
