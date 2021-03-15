@@ -39,5 +39,10 @@ curl -H "Content-Type: application/json" -XPOST -s "http://localhost:3100/api/pr
   '{"streams": [{ "labels": "{foo=\"bar\"}", "entries": [{ "ts": "2021-03-13T08:28:06.801064-04:00", "line": "fizzbuzz" }] }]}'
 ```{{execute}}
 
-`date +%s`
+
+Query:
+
+```
+curl -G -s  "http://localhost:3100/api/prom/label" | jq
+```{{execute}}
 
