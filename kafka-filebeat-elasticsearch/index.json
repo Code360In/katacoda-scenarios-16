@@ -2,7 +2,7 @@
   "title": "Kafka filebeat Elasticsearch",
   "description": "http/json -->  filebeat outputt kafka, filebeat input kafka output Elasticsearch",
   "difficulty": "intermediate",
-  "time": "160 minutes",
+  "time": "161 minutes",
   "details": {
     "steps": [
       {
@@ -40,7 +40,7 @@
   },
   "environment": {
     "hideintro": false,
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal-terminal"
   },
   "backend": {
     "imageid": "kubernetes-cluster:1.18"
