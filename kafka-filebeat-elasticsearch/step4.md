@@ -301,7 +301,7 @@ EOF
 Open file filebeat.yml
 
 ```
-/root/filebeat.yml
+/root/filebeat-input-kafka.yml
 ```{{open}}
 
 
