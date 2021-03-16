@@ -1,11 +1,12 @@
 
 
-# Deploy Filebeat
+# Deploy Filebeat output kafka
 
 https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html
+
 https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html
-https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-log.html
-https://www.elastic.co/guide/en/beats/filebeat/current/logstash-output.html
+
+https://www.elastic.co/guide/en/beats/filebeat/current/kafka-output.html
 
 
 Config file /root/filebeat.yml
@@ -198,33 +199,19 @@ setup.template.settings:
 
 # Configure what output to use when sending the data collected by the beat.
 
-# ---------------------------- Elasticsearch Output ----------------------------
-output.elasticsearch:
-  # Array of hosts to connect to.
-  hosts: ["localhost:9200"]
+output.kafka:
+  # initial brokers for reading cluster metadata
+  hosts: ["localhost:9092"]
 
-  # Protocol - either `http` (default) or `https`.
-  #protocol: "https"
+  # message topic selection + partitioning
+  topic: '%{[fields.log_topic]}'
+  partition.round_robin:
+    reachable_only: false
 
-  # Authentication credentials - either API key or username/password.
-  #api_key: "id:api_key"
-  #username: "elastic"
-  #password: "changeme"
-
-# ------------------------------ Logstash Output -------------------------------
-#output.logstash:
-  # The Logstash hosts
-  #hosts: ["localhost:5044"]
-
-  # Optional SSL. By default is off.
-  # List of root certificates for HTTPS server verifications
-  #ssl.certificate_authorities: ["/etc/pki/root/ca.pem"]
-
-  # Certificate for SSL client authentication
-  #ssl.certificate: "/etc/pki/client/cert.pem"
-
-  # Client Certificate Key
-  #ssl.key: "/etc/pki/client/cert.key"
+  required_acks: 1
+  compression: gzip
+  max_message_bytes: 1000000
+  
 
 # ================================= Processors =================================
 processors:
