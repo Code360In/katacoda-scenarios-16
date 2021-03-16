@@ -104,9 +104,6 @@ filebeat.inputs:
   #  level: debug
   #  review: 1
 
-#- type: tcp
-#  max_message_size: 10MiB
-#  host: "localhost:9000"
 
 - type: http_endpoint
   enabled: true

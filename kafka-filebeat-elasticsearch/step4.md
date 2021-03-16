@@ -104,9 +104,6 @@ filebeat.inputs:
   #  level: debug
   #  review: 1
 
-#- type: tcp
-#  max_message_size: 10MiB
-#  host: "localhost:9000"
 
 filebeat.inputs:
 - type: kafka
@@ -311,7 +308,6 @@ Deploy filebeat:
 ```
 docker run -d --net=host --name=filebeat-i \
 --user=root \
--p 9000:9000 \
 -v /root/filebeat-input-kafka.yml:/usr/share/filebeat/filebeat.yml \
 -v /var/log/:/var/log:ro \
 docker.elastic.co/beats/filebeat:7.11.2
