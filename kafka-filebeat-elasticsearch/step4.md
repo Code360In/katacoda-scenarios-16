@@ -406,4 +406,25 @@ netstat -at -n
 
 <pre class="file">
 
+$ netstat -at -n
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:9000          0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN     
+tcp        0      0 172.17.0.18:22          172.17.0.119:59604      ESTABLISHED
+tcp        0      0 172.17.0.18:22          172.17.0.119:59360      ESTABLISHED
+tcp6       0      0 :::8083                 :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+tcp6       0      0 :::8088                 :::*                    LISTEN     
+tcp6       0      0 :::9021                 :::*                    LISTEN     
+tcp6       0      0 :::9092                 :::*                    LISTEN     
+tcp6       0      0 :::2181                 :::*                    LISTEN     
+tcp6       0      0 :::9101                 :::*                    LISTEN     
+tcp6       0      0 :::111                  :::*                    LISTEN     
+tcp6       0      0 :::8081                 :::*                    LISTEN     
+tcp6       0      0 :::8082                 :::*                    LISTEN     
+$ 
+
 </pre>
