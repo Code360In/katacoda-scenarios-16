@@ -295,7 +295,7 @@ Open file filebeat.yml
 Deploy filebeat:
 
 ```
-docker run -d --net=host --name=filebeat \
+docker run -d --net=host --name=filebeat-o \
 --user=root \
 -p 9000:9000 \
 -v /root/filebeat-output-kafka.yml:/usr/share/filebeat/filebeat.yml \

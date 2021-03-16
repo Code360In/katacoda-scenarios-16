@@ -309,7 +309,7 @@ Open file filebeat.yml
 Deploy filebeat:
 
 ```
-docker run -d --net=host --name=filebeat \
+docker run -d --net=host --name=filebeat-i \
 --user=root \
 -p 9000:9000 \
 -v /root/filebeat-input-kafka.yml:/usr/share/filebeat/filebeat.yml \
