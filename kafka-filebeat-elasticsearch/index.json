@@ -40,9 +40,9 @@
   },
   "environment": {
     "hideintro": false,
-    "uilayout": "terminal-terminal"
+    "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "kubernetes-cluster:1.18"
+    "imageid": "ubuntu:2004"
   }
 }
