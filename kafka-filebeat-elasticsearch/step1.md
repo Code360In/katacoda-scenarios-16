@@ -180,6 +180,8 @@ $
 </pre>
 
 
+
+Show all open ports:
 ```
 netstat -at -n
 ```{{execute}}
