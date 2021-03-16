@@ -342,7 +342,7 @@ and
 
 ### tcpdump
 ```
-cnid=`docker ps | grep logstash |awk 'NR==1{print $1}'`
+cnid=`docker ps | grep filebeat-i |awk 'NR==1{print $1}'`
 pid=`docker inspect -f '{{.State.Pid}}' $cnid`
 echo $pid
 nsenter -t $pid --net tcpdump tcp
@@ -352,7 +352,7 @@ nsenter -t $pid --net tcpdump tcp
 
 ### netstat
 ```
-cnid=`docker ps | grep logstash |awk 'NR==1{print $1}'`
+cnid=`docker ps | grep filebeat-i |awk 'NR==1{print $1}'`
 pid=`docker inspect -f '{{.State.Pid}}' $cnid`
 echo $pid
 nsenter -t $pid netstat -s
