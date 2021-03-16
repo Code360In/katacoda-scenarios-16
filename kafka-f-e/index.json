@@ -34,7 +34,7 @@
   },
   "environment": {
     "hideintro": true,
-    "uilayout": "terminal-editor"
+    "uilayout": "editor-terminal"
   },
   "backend": {
     "imageid": "kubernetes-cluster:1.18"
