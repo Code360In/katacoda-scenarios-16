@@ -6,6 +6,7 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html
 
 https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html
 
+https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-kafka.html
 
 
 Config file /root/filebeat.yml
