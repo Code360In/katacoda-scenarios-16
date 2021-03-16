@@ -303,7 +303,7 @@ docker.elastic.co/beats/filebeat:7.11.2
 
 Verify:
 ```
-docker logs filebeat
+docker logs filebeat-0
 ```{{execute}}
 
 Results:
