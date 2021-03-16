@@ -105,7 +105,6 @@ filebeat.inputs:
   #  review: 1
 
 
-filebeat.inputs:
 - type: kafka
   hosts:
     - localhost:9092
