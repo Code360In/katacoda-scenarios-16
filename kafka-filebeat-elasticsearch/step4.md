@@ -384,29 +384,20 @@ yellow open   filebeat-7.11.2-2021.03.13-000001 VQ_UsZkMQ_q36RWXjU3Pdw   1   1  
 
 
 
+
 ### Generate logs:
+
+terminal 1
+
 ```
 logger comment to be added to log
 ```{{execute}}
 
+
+terminal 2
 
 ```
 tail -f /var/log/syslog
 ```{{execute T2}}
 
 
-
-
-### Filebeat output can be Logstash or direct to Elasticsearch
-
-Change the config ```/root/filebeat.yml```{{open}}
-
-and restart the container:
-
-```
-docker restart filebeat
-```{{execute}}
-
-```
-To have full control for all data inserted to Elasticsearch, we can remove input-log from filebeat and have only input-http
-````
