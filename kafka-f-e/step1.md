@@ -9,14 +9,14 @@ Download or copy the contents of the [Confluent Platform all-in-one Docker Compo
 ```
 curl --silent --output docker-compose.yml \
   https://raw.githubusercontent.com/confluentinc/cp-all-in-one/6.1.0-post/cp-all-in-one/docker-compose.yml
-```{{execute}}
+```{{execute host1}}
 
 
 Start Confluent Platform with the -d option to run in detached mode:
 
 ```
 docker-compose up -d
-```{{execute}}
+```{{execute host1}}
 
 results:
 
@@ -44,7 +44,7 @@ To verify that the services are up and running, run the following command:
 
 ```
 docker-compose ps
-```{{execute}}
+```{{execute host1}}
 
 
 In this step, you create Kafka topics using Confluent Control Center. Confluent Control Center provides the functionality for building and monitoring production data pipelines and event streaming applications.
