@@ -118,8 +118,10 @@ go build producer_example.go
 
 
 <pre class="file">
+
 Created Producer rdkafka#producer-1
 Delivered message to topic 1 [0] at offset 0
+
 </pre>
 
 
@@ -141,3 +143,38 @@ go build consumer_example.go
 ```
 ./consumer_example localhost:9092  gugu 1
 ```{{execute}}
+
+
+
+results:
+
+<pre class="file">
+
+terminal 1
+
+$ ./consumer_example localhost:9092  gugu 1
+Created Consumer rdkafka#consumer-1
+% Message on 1[0]@0:
+Hello Go!
+% Headers: [myTestHeader="header values are binary"]
+Ignored OffsetsCommitted (<nil>, [1[0]@1])
+% Message on 1[0]@1:
+Hello Go!
+% Headers: [myTestHeader="header values are binary"]
+Ignored OffsetsCommitted (<nil>, [1[0]@2])
+% Message on 1[0]@2:
+Hello Go!
+% Headers: [myTestHeader="header values are binary"]
+Ignored OffsetsCommitted (<nil>, [1[0]@3])
+
+
+terminal 2
+
+$ ./producer_example localhost:9092 1
+Created Producer rdkafka#producer-1
+Delivered message to topic 1 [0] at offset 1
+$ ./producer_example localhost:9092 1
+Created Producer rdkafka#producer-1
+Delivered message to topic 1 [0] at offset 2
+$ 
+</pre>
