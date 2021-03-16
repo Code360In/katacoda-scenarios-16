@@ -383,3 +383,13 @@ tail -f /var/log/syslog
 ```{{execute T2}}
 
 
+
+Show all open ports:
+```
+netstat -at -n
+```{{execute}}
+
+
+<pre class="file">
+
+</pre>

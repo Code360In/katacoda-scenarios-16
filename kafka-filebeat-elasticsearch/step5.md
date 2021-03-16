@@ -41,3 +41,15 @@ The first step to create a dashboard is to have a datasource. Let's define a dat
 Go to Explore:
 
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/explore?orgId=1
+
+
+
+Show all open ports:
+```
+netstat -at -n
+```{{execute}}
+
+
+<pre class="file">
+
+</pre>
