@@ -1,76 +1,66 @@
-#### Deploy a VM
 
-The command below applies a YAML definition of a virtual machine into our current Kubernetes environment, defining the VM name, the resources required (disk, CPU, memory), etc. You can take a look at the [vm.yaml](https://raw.githubusercontent.com/kubevirt/demo/master/manifests/vm.yaml) file if you have interest in knowing more about a virtual machine definition:
 
-`kubectl apply -f https://raw.githubusercontent.com/kubevirt/demo/master/manifests/vm.yaml`{{execute}}
+# Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/):
 
-We are creating a Virtual Machine in the same way as we would create any other Kubernetes resource thanks to what KubeVirt has enabled in our environment. Now we have a Virtual Machine as a Kubernetes resource.
 
-After the vm resource has been created, you can manage the VMs with standard 'kubectl' commands:
+```       
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```{{execute}}
 
-```
-$ kubectl get vms
-$ kubectl get vms -o yaml testvm
-```
+Change to executable:
+```       
+chmod +x ./kubectl
+```{{execute}}
 
-Check that the VM is defined (using commands above):
+Move to /sbin
+```       
+mv ./kubectl /sbin/kubectl
+```{{execute}}
 
-`kubectl get vms`{{execute}}
 
-Notice from the output that the VM is not running yet.
+Verify cluster:
+```       
+kubectl cluster-info
+```{{execute}}
 
-To start a VM, `virtctl` should be used:
+Display nodes:
+```       
+kubectl get nodes
+```{{execute}}
 
-`./virtctl start testvm`{{execute}}
+Display Pods:
+```       
+kubectl get pods -A
+```{{execute}}
 
-Alternatively you can use `kubectl edit vm testvm` to set `.spec.running: true`.
 
-Now you can check again the VM status:
+ <pre class="file">
+ Pod status running
+ Nodes with status ready
+ </pre>
 
-`kubectl get vms`{{execute}}
 
-A `VirtualMachine` resource contains a VM's definition and status. An [instance](https://kubevirt.io/user-guide/virtual_machines/virtual_machine_instances/) of a running VM has an additional associated resource, a `VirtualMachineInstance`.
+# Install [helm](https://helm.sh/docs/intro/install/):
 
-Once the VM is running you can inspect its status:
 
-```
-$ kubectl get vmis
-$ kubectl get vmis -o yaml testvm
-```
+```       
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+```{{execute}}
 
-`kubectl get vmis`{{execute}}
+```       
+chmod 700 get_helm.sh
+```{{execute}}
 
-Once it's ready, the command above will print something like:
+```       
+./get_helm.sh
+```{{execute}}
 
-~~~
-master $ kubectl get vmis
-NAME      AGE       PHASE     IP           NODENAME
-testvm    1m        Running   10.32.0.11   master
-~~~
+Verify:
+```       
+helm ls```{{execute}}
 
-#### Accessing VMs (serial console & vnc)
 
-Now that a VM is running you can access its serial console:
-
-**WARNING:** in some browser environments you will not be able to escape the serial console on Katacoda.
-
-**NOTE:** `^]` means: press the "CTRL" and "]" keys to escape the console.
-
-~~~sh
-# Connect to the serial console
-$ ./virtctl console testvm
-~~~
-
-If you opened the serial console within Katacoda and you can't escape from it by pressing `^]`, you can click on the `+` close to 'Terminal' to start a new shell there and be able to continue with the following steps in the shutdown and cleanup section.
-
-In environments where VNC client access is available, the graphical console of a VM can be accessed with the [virtctl vnc](https://kubevirt.io/user-guide/virtual_machines/graphical_and_console_access/#accessing-the-graphical-console-vnc) command.
-
-#### Shutdown and cleanup
-
-Shutting down a VM works by either using `virtctl` or editing the VM.
-
-`./virtctl stop testvm`{{execute}}
-
-Finally, the VM can be deleted using:
-
-`kubectl delete vms testvm`{{execute}}
+Remove sh file:
+```       
+rm get_helm.sh
+```{{execute}}

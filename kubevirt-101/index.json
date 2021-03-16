@@ -7,12 +7,20 @@
   "details": {
     "steps": [
       {
-        "title": "Launch cluster and deploy KubeVirt",
-        "text": "step1.md"
+        "title": "Launch cluster kubernetes",
+        "text": "step2.md"
+      },
+      {
+        "title": "Install kubectl and helm",
+        "text": "step2.md"
+      },
+      {
+        "title": "Deploy KubeVirt",
+        "text": "step3.md"
       },
       {
         "title": "Create and use your first VM",
-        "text": "step2.md"
+        "text": "step4.md"
       }
     ],
     "intro": {
