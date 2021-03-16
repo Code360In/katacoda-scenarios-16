@@ -201,7 +201,7 @@ output.kafka:
   hosts: ["localhost:9092"]
 
   # message topic selection + partitioning
-  topic: ["my-topic"]
+  topic: '%{[fields.log_topic]}'
   partition.round_robin:
     reachable_only: false
 
