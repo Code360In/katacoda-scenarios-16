@@ -12,7 +12,7 @@ https://www.elastic.co/guide/en/beats/filebeat/current/kafka-output.html
 Config file /root/filebeat.yml
 
 ```
-cat << 'EOF' > /root/filebeat.yml
+cat << 'EOF' > /root/filebeat-output-kafka.yml
 ###################### Filebeat Configuration Example #########################
 
 # This file is an example configuration file highlighting only the most common
@@ -298,7 +298,7 @@ Deploy filebeat:
 docker run -d --net=host --name=filebeat \
 --user=root \
 -p 9000:9000 \
--v /root/filebeat.yml:/usr/share/filebeat/filebeat.yml \
+-v /root/filebeat-output-kafka.yml:/usr/share/filebeat/filebeat.yml \
 -v /var/log/:/var/log:ro \
 docker.elastic.co/beats/filebeat:7.11.2
 ```{{execute}}
