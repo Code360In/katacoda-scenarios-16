@@ -51,9 +51,11 @@ go get -u gopkg.in/confluentinc/confluent-kafka-go.v1/kafka
 build
 ```
 cd /root/confluent-kafka-go/examples/admin_create_topic
-go build admin_create_topic.go 
 ```{{execute}}
 
+```
+go build admin_create_topic.go 
+```{{execute}}
 
 ```
 ./admin_create_topic 
