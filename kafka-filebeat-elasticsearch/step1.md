@@ -178,3 +178,8 @@ Created Producer rdkafka#producer-1
 Delivered message to topic 1 [0] at offset 2
 $ 
 </pre>
+
+
+```
+netstat -at -n
+```{{execute}}
