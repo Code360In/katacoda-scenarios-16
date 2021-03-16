@@ -1,6 +1,6 @@
 {
   "title": "Kafka filebeat Elasticsearch",
-  "description": "Performance",
+  "description": "Performance filebeat input kafka, filebeat output kafka",
   "difficulty": "intermediate",
   "time": "160 minutes",
   "details": {
