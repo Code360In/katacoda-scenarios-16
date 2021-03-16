@@ -34,7 +34,8 @@
   },
   "environment": {
     "hideintro": true,
-    "uilayout": "terminal-terminal"
+    "showdashboard": true,
+    "uilayout": "terminal-iframe"
   },
   "backend": {
     "imageid": "kubernetes-cluster:1.18"
