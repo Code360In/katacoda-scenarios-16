@@ -17,6 +17,27 @@ Start Confluent Platform with the -d option to run in detached mode:
 docker-compose up -d
 ```{{execute}}
 
+results:
+
+<pre class="file">
+
+$ docker-compose ps
+     Name                    Command               State                       Ports                     
+---------------------------------------------------------------------------------------------------------
+broker            /etc/confluent/docker/run        Up      0.0.0.0:9092->9092/tcp, 0.0.0.0:9101->9101/tcp
+connect           /etc/confluent/docker/run        Up      0.0.0.0:8083->8083/tcp, 9092/tcp              
+control-center    /etc/confluent/docker/run        Up      0.0.0.0:9021->9021/tcp                        
+ksql-datagen      bash -c echo Waiting for K ...   Up                                                    
+ksqldb-cli        /bin/sh                          Up                                                    
+ksqldb-server     /etc/confluent/docker/run        Up      0.0.0.0:8088->8088/tcp                        
+rest-proxy        /etc/confluent/docker/run        Up      0.0.0.0:8082->8082/tcp                        
+schema-registry   /etc/confluent/docker/run        Up      0.0.0.0:8081->8081/tcp                        
+zookeeper         /etc/confluent/docker/run        Up      0.0.0.0:2181->2181/tcp, 2888/tcp, 3888/tcp 
+
+
+</pre>
+
+
 
 To verify that the services are up and running, run the following command:
 
