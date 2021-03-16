@@ -60,7 +60,9 @@ go build admin_create_topic.go
 ```{{execute}}
 
 <pre class="file">
+
 Usage: ./admin_create_topic <broker> <topic> <partition-count> <replication-factor>
+
 </pre>
 
 
