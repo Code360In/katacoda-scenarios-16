@@ -19,11 +19,19 @@ kubectl apply -f https://raw.githubusercontent.com/ansible/awx-operator/devel/de
 Deploy new AWX instance:
 
 ```
-cat <<EOF | kubectl apply  -n elastic-system -f -
+cat <<EOF | kubectl apply -f -
 apiVersion: awx.ansible.com/v1beta1
 kind: AWX
 metadata:
   name: awx
-
 EOF
 ```{{execute}}
+
+
+Results:
+
+<pre class="file">
+
+awx.awx.ansible.com/awx created
+
+</pre>
