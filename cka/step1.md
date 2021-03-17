@@ -13,3 +13,9 @@
 [*] Help connecting containers from different hosts on the same cluster
 [] None of the above
 
+
+>> What is Kubernetes licensed under? <<
+() GPLv2
+() MIT
+() Apache License Version 2.0
+() None of the above
