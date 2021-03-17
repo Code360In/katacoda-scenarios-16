@@ -5,8 +5,12 @@
     "details": {
         "steps": [
             {
-                "title": "Quiz",
+                "title": "step1",
                 "text": "step1.md"
+            },
+            {
+                "title": "step2",
+                "text": "step2.md"
             }
         ],
         "intro": {
