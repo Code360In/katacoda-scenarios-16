@@ -5,6 +5,14 @@ https://github.com/ansible/awx
 
 https://github.com/ansible/awx-operator
 
+
+Verify:
+
+```
+kubectl get nodes -o wide
+```{{execute}}
+
+
 This Kubernetes Operator is meant to be deployed in your Kubernetes cluster(s) and can manage one or more AWX instances in any namespace.
 
 First you need to deploy AWX Operator into your cluster:
