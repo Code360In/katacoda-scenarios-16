@@ -1,6 +1,5 @@
 # Build AWX
 
-https://github.com/ansible/awx/tree/devel/tools/docker-compose
 
 https://github.com/ansible/awx
 
