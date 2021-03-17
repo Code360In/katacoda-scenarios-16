@@ -3,7 +3,7 @@
 
 >>Q3: Multiple Choice <<
 [*] Correct
-[*] Correct
+[ ] Not Correct
 [ ] Incorrect
 
 
