@@ -1,8 +1,8 @@
 {
   "title": "AWX",
-  "description": "build and run AWX",
+  "description": "Deploy AWX",
   "difficulty": "intermediate",
-  "time": "160 minutes",
+  "time": "260 minutes",
   "details": {
     "steps": [
       {
