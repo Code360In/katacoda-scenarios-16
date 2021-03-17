@@ -10,5 +10,5 @@ git clone https://github.com/ansible/awx
 
 ```
 cd awx
-make docker-compose-build
+make docker-compose
 ```{{execute}}
