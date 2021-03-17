@@ -4,11 +4,26 @@ https://github.com/ansible/awx/tree/devel/tools/docker-compose
 
 https://github.com/ansible/awx
 
-```
-git clone https://github.com/ansible/awx
-```{{execute}}
+https://github.com/ansible/awx-operator
+
+This Kubernetes Operator is meant to be deployed in your Kubernetes cluster(s) and can manage one or more AWX instances in any namespace.
+
+First you need to deploy AWX Operator into your cluster:
 
 ```
-cd awx
-make docker-compose
+kubectl apply -f https://raw.githubusercontent.com/ansible/awx-operator/devel/deploy/awx-operator.yaml
+```{{execute}}
+
+
+
+Deploy new AWX instance:
+
+```
+cat <<EOF | kubectl apply  -n elastic-system -f -
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+
+EOF
 ```{{execute}}
