@@ -2,7 +2,7 @@
   "title": "AWX",
   "description": "Deploy AWX",
   "difficulty": "intermediate",
-  "time": "261 minutes",
+  "time": "262 minutes",
   "details": {
     "steps": [
       {
@@ -27,6 +27,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "openshift-4-6"
+    "imageid": "kubernetes-cluster:1.18"
   }
 }
