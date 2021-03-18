@@ -1,44 +1,33 @@
-# Build AWX
+
+[Kind](https://kind.sigs.k8s.io/docs/user/quick-start/)  is a tool for running local [Kubernetes](https://kubernetes.io/) 
+ clusters using Docker container “nodes”.
+kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 
 
-https://github.com/ansible/awx
+# Install kind:
 
-https://github.com/ansible/awx-operator
+```
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.10.0/kind-linux-amd64
+```{{execute}}
 
+
+```
+chmod +x ./kind
+```{{execute}}
+
+
+```
+mv ./kind /sbin/kind
+```{{execute}}
+
+
+# Creating a Kubernetes Cluster:
+```
+kind create cluster --name tx-cluster-k8s
+```{{execute}}
 
 Verify:
-
 ```
-kubectl get nodes -o wide
+kind get clusters
 ```{{execute}}
 
-
-This Kubernetes Operator is meant to be deployed in your Kubernetes cluster(s) and can manage one or more AWX instances in any namespace.
-
-First you need to deploy AWX Operator into your cluster:
-
-```
-kubectl apply -f https://raw.githubusercontent.com/ansible/awx-operator/devel/deploy/awx-operator.yaml
-```{{execute}}
-
-
-
-Deploy new AWX instance:
-
-```
-cat <<EOF | kubectl apply -f -
-apiVersion: awx.ansible.com/v1beta1
-kind: AWX
-metadata:
-  name: awx
-EOF
-```{{execute}}
-
-
-Results:
-
-<pre class="file">
-
-awx.awx.ansible.com/awx created
-
-</pre>
