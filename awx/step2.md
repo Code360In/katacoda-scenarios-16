@@ -18,6 +18,11 @@ mv ./kubectl /sbin/kubectl
 ```{{execute}}
 
 
+```       
+cp ~/.kube/kind-config-tx-cluster-k8s  ~/.kube/config
+```{{execute}}
+
+
 Verify cluster:
 ```       
 kubectl cluster-info
