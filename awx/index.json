@@ -27,6 +27,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "openshift-4-6"
   }
 }
