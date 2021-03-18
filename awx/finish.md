@@ -1,3 +1,0 @@
-
-<pre class="file">
-</pre>
