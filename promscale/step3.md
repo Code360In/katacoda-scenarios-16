@@ -37,7 +37,7 @@ admin\admin
 
 The initial step will ask you to change the password, you can do it if you want or you can skip this step.
 
-![]grafana-datasource.png)
+![](grafana-datasource.png)
 
 
 The first step to create a dashboard is to have a datasource. Let's define a datasource with Prometheus/promscale data configured before:
@@ -58,6 +58,8 @@ Test and save your datasource.
 
 Add datasource for postgres:  ```timescaledb:5432```{{copy}}    ( postgres/secret)
 
+
+![](grafana-datasource-postgres.png)
 
 
 Add datasource for prometheus:  ```http://prometheus:9090```{{copy}}      ( for test only)
