@@ -11,7 +11,7 @@ Start prometheus with command:
 
 
 ```
-docker run --net=host -d -p 9090:9090 \
+docker run  -d -p 9090:9090 \
     -v /root/config:/etc/prometheus \
     --name prometheus \
     --network promscale-timescaledb \
