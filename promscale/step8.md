@@ -47,21 +47,21 @@ echo '{"labels":{"__name__":"foo"},"samples":[[1577836800000, 100]]}' > /root/te
 1:
 
 ```
-h2load -vvv http://localhost:9201/write -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 4 -t 2 -c 4 -T 10
+h2load  http://localhost:9201/write -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 4 -t 2 -c 4 -T 10
 ```{{execute}}
 
 
 
 500
 ```
-h2load -vvv http://localhost:9201/write -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 500 -t 2 -c 4 -T 10
+h2load http://localhost:9201/write -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 500 -t 2 -c 4 -T 10
 
 ```{{execute}}
 
 100k
 
 ```
-h2load -vvv http://localhost:9201/write -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 10000 -t 2 -c 4 -T 10
+h2load  http://localhost:9201/write -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 10000 -t 2 -c 4 -T 10
 
 ```{{execute}}
 
