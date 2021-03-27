@@ -32,7 +32,7 @@ And use this default credentials:
 
 The initial step will ask you to change the password, you can do it if you want or you can skip this step.
 
-The first step to create a dashboard is to have a datasource. Let's define a datasource with promscale data configured before:
+The first step to create a dashboard is to have a datasource. Let's define a datasource with Prometheus/promscale data configured before:
 
 The URL for phometheus should be:
 `http://promscale:9201`{{copy}}  
