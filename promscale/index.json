@@ -20,7 +20,13 @@
     ],
     "finish": {
       "text": "finish.md"
-    }
+    },
+    "assets": {
+      "host01": [
+        {"file": "prometheus.yml", "target": "/root/config/"}
+      ]
+  }
+  
   },
   "environment": {
     "hideintro": false,
