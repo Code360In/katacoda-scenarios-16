@@ -26,7 +26,6 @@ sudo apt install -y nghttp2-client
 
 ### Start h2load
 
-on terminal2
 
 Run traffic with 10 clients and 100k requests:
 
