@@ -35,7 +35,8 @@ curl localhost:3100/metrics
 sending data to loki:
 
 ```
-curl -i -H "Content-type: application/json" -X POST --data '{ "streams": [ { "labels": "{source=\"JSON\",job=\"simpleJsonJob\", host=\"SimpleHost\"}", "entries": [{ "ts": "2021-03-15T01:45:48.042084520+00:00", "line": "TEST!" }] } ] }' http://localhost:3100/api/prom/push
+curl -H "Content-Type: application/json" -XPOST -s "http://localhost:3100/loki/api/v1/push" --data-raw "{\"streams\": [{\"stream\": {\"job\": \"test\"}, \"values\": [[\"$(date +%s)000000000\", \"fizzbuzz\"]]}]}"
+
 ```{{execute}}
 
 
@@ -43,6 +44,9 @@ Query:
 
 ```
 curl -G -s  "http://localhost:3100/api/prom/label" | jq
+
+curl "http://localhost:3100/loki/api/v1/query_range" --data-urlencode 'query={job="test"}' --data-urlencode 'step=300' | jq .data.result
+
 ```{{execute}}
 
 
