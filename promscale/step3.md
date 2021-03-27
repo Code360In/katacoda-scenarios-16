@@ -13,8 +13,11 @@ docker run -d \
 ```{{execute}}
 
 
-```docker logs grafana
+```
+docker logs grafana
+
 ```{{execute}}
+
 
 results:
 ```
