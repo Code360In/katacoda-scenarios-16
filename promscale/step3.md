@@ -58,6 +58,7 @@ Test and save your datasource.
 
 Add datasource for postgres:  ```timescaledb:5432```{{copy}}    ( postgres/secret)
 
+TimescaleDB is checked.
 
 ![](grafana-datasource-postgres.png)
 
