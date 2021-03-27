@@ -43,7 +43,9 @@
     },
     "assets": {
       "host01": [
-        {"file": "prometheus.yml", "target": "/root/config/"}
+        {"file": "prometheus.yml", "target": "/root/config/"},
+        {"file": "grafana-dashboard-psql.json", "target": "/root/grafana/"},
+        
       ]
   }
   
