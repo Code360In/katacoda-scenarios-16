@@ -10,7 +10,7 @@ https://github.com/prometheus/node_exporter
 ```
 docker run -d \
   --net=pnet -p 9100:9100 \
-  --name=node-exporter \
+  --name=nodeexporter \
   prom/node-exporter:latest
 ```{{execute T2}}
 

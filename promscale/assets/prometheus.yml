@@ -28,14 +28,14 @@ scrape_configs:
   - job_name: 'node-exporter'
     metrics_path: /metrics
     static_configs:
-      - targets: ['localhost:9100']
+      - targets: ['nodeexporter:9100']
         labels:
           group: 'linux'
 
   - job_name: 'cadvisor'
     metrics_path: /metrics
     static_configs:
-      - targets: ['localhost:8080']
+      - targets: ['cadvisor:8080']
         labels:
           group: 'cadvisor'
 
