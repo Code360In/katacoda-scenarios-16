@@ -31,9 +31,10 @@ https://[[HOST_SUBDOMAIN]]-9100-[[KATACODA_HOST]].environments.katacoda.com/metr
 In order to build a dashboard you can build one from scratch or you can use an existing one, for example:
 https://grafana.com/grafana/dashboards/1860
 
-Let's use this existing dashboard. Copy the ID, and use the option `Import`.
+Let's use this existing dashboard. Copy json, and use the option `Import`.
 
-`1860`{{copy}}
+`/root/grafana/grafana-nodeexporter.json`{{open}}
+
 
 Select **Promscale** as the data source and Import.
 
