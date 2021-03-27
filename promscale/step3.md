@@ -112,4 +112,11 @@ show all tables:
 Grafana:
 ```
 select * from metric;
-```{{execute}}
+```{{copy}}
+
+```
+SELECT *
+FROM pg_catalog.pg_tables
+WHERE schemaname != 'pg_catalog' AND 
+    schemaname != 'information_schema';
+```{{copy}}
