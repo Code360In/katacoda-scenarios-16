@@ -17,7 +17,7 @@
   "gnetId": 455,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1616859592264,
+  "iteration": 1616859858720,
   "links": [],
   "panels": [
     {
@@ -25,7 +25,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Postgres Overview",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -394,7 +394,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "Postgres Overview",
+      "datasource": null,
       "decimals": 0,
       "editable": true,
       "error": false,
@@ -526,7 +526,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Postgres Overview",
+      "datasource": null,
       "decimals": 1,
       "editable": true,
       "error": false,
@@ -883,7 +883,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Postgres Overview",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1080,7 +1080,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Postgres Overview",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1181,7 +1181,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Postgres Overview",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1297,8 +1297,8 @@
         "definition": "label_values(up{job=\"psql\"},instance)",
         "description": null,
         "error": null,
-        "hide": 0,
-        "includeAll": true,
+        "hide": 2,
+        "includeAll": false,
         "label": null,
         "multi": false,
         "name": "instance",
@@ -1320,12 +1320,12 @@
       {
         "allValue": ".*",
         "current": {
-          "selected": false,
-          "text": "All",
-          "value": "$__all"
+          "selected": true,
+          "text": "template0",
+          "value": "template0"
         },
         "datasource": null,
-        "definition": "label_values(pg_stat_database_tup_fetched{instance=~\"$instance\",datname!~\"template.*|postgres\"},datname)",
+        "definition": "label_values(pg_stat_database_tup_fetched{instance=~\"$instance\"},datname)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -1335,7 +1335,7 @@
         "name": "db",
         "options": [],
         "query": {
-          "query": "label_values(pg_stat_database_tup_fetched{instance=~\"$instance\",datname!~\"template.*|postgres\"},datname)",
+          "query": "label_values(pg_stat_database_tup_fetched{instance=~\"$instance\"},datname)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -1356,7 +1356,7 @@
         },
         "description": null,
         "error": null,
-        "hide": 0,
+        "hide": 2,
         "includeAll": false,
         "label": "datasource",
         "multi": false,
@@ -1380,26 +1380,20 @@
         "definition": "label_values(pg_up, job)",
         "description": null,
         "error": null,
-        "hide": 0,
+        "hide": 2,
         "includeAll": false,
         "label": "job",
         "multi": false,
         "name": "job",
-        "options": [
-          {
-            "selected": true,
-            "text": "psql",
-            "value": "psql"
-          }
-        ],
+        "options": [],
         "query": {
           "query": "label_values(pg_up, job)",
-          "refId": "promscale-job-Variable-Query"
+          "refId": "StandardVariableQuery"
         },
-        "refresh": 0,
+        "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
-        "sort": 0,
+        "sort": 1,
         "tagValuesQuery": "",
         "tags": [],
         "tagsQuery": "",
@@ -1440,5 +1434,5 @@
   "timezone": "browser",
   "title": "Postgres Overview",
   "uid": "psql",
-  "version": 4
+  "version": 12
 }
