@@ -17,6 +17,6 @@ docker run \
 ```{{execute}}
 
 
-Dashboards:
+Import Dashboards:
 https://github.com/prometheus-community/postgres_exporter/tree/master/postgres_mixin
 
