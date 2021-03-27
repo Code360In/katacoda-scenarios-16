@@ -21,6 +21,7 @@ results:
 
 
 And access to the dashboard using this url:
+
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
 
 And use this default credentials:
