@@ -21,6 +21,9 @@ If you're interested in seeing the raw metrics, they can be viewed with
 curl localhost:9100/metrics
 ```{{execute T2}}
 
+or
+
+https://[[HOST_SUBDOMAIN]]-9100-[[KATACODA_HOST]]/metrics
 
 
 ## Build a dashboard

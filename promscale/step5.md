@@ -23,7 +23,13 @@ https://[[HOST_SUBDOMAIN]]-9187-[[KATACODA_HOST]].environments.katacoda.com/metr
 
 
 Import Dashboards:
+
+grafana-dashboard-psql.json
+
+
+original:
 https://github.com/prometheus-community/postgres_exporter/tree/master/postgres_mixin
+
 
 
 More examples to add metrics to application:
