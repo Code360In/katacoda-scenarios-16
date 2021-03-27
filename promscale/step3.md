@@ -95,6 +95,7 @@ Access:
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
 
 
+Test, add one metric to timescaleDB:
 
 ```
 curl --header "Content-Type: application/json" \
@@ -104,6 +105,10 @@ curl --header "Content-Type: application/json" \
 ```{{execute}}
 
 
+Grafana explore:
+```
+select * from foo;
+```
 
 https://docs.timescale.com/latest/tutorials/tutorial-grafana-dashboards
 
