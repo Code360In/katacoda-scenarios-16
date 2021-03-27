@@ -1,5 +1,5 @@
 
-# LOAD
+# LOAD to Promscale
 
 
 Test, add one metric to timescaleDB:
@@ -29,6 +29,18 @@ sudo apt install -y nghttp2-client
 on terminal2
 
 Run traffic with 10 clients and 100k requests:
+
+
+```
+curl -H "Content-Type: application/json" -XPOST -s "http://localhost:3100/loki/api/v1/push" --data-raw "{\"streams\": [{\"stream\": {\"job\": \"test\"}, \"values\": [[\"$(date +%s)000000000\", \"fizzbuzz\"]]}]}"
+
+```{{execute}}
+
+
+```
+curl -H "Content-Type: application/json" -XPOST -s "http://localhost:9201/write" --data-raw "{"labels":{"__name__":"foo"},"samples":[[\"$(date +%s)000000000\", 100]]}"
+
+```{{execute}}
 
 
 
