@@ -3,7 +3,7 @@
 
 ```
 docker run -d \
-  --net=host \
+  --net=pnet \
   --volume=/:/rootfs:ro \
   --volume=/var/run:/var/run:ro \
   --volume=/sys:/sys:ro \

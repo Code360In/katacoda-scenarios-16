@@ -32,6 +32,13 @@ scrape_configs:
         labels:
           group: 'linux'
 
+  - job_name: 'cadvisor'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['localhost:8080']
+        labels:
+          group: 'cadvisor'
+
 
 remote_write:
   - url: "http://promscale:9201/write"
