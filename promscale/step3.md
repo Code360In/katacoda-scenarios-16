@@ -9,7 +9,8 @@ docker run -d \
   --network promscale-timescaledb \
   --name=grafana \
   -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-worldmap-panel,marcusolsson-json-datasource,magnesium-wordcloud-panel" \
-  grafana/grafana:latest-ubuntu```{{execute}}
+  grafana/grafana:latest-ubuntu
+```{{execute}}
 
 
 `docker logs grafana`{{execute}}
@@ -74,3 +75,11 @@ Access:
 
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
 
+
+
+```
+curl --header "Content-Type: application/json" \
+--request POST \
+--data '{"labels":{"__name__":"foo"},"samples":[[1577836800000, 100]]}' \
+"http://localhost:9201/write"
+```{{execute}}
