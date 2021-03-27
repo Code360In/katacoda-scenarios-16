@@ -23,3 +23,11 @@ scrape_configs:
       - targets: ['localhost:3000']
         labels:
           group: 'grafana'
+
+
+
+remote_write:
+  - url: "http://localhost:9201/write"
+remote_read:
+  - url: "http://localhost:9201/read"
+    read_recent: true
