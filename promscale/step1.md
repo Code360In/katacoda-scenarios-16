@@ -51,3 +51,5 @@ curl localhost:9201/metrics
 Promscale Metrics:
 
 https://[[HOST_SUBDOMAIN]]-9201-[[KATACODA_HOST]].environments.katacoda.com/metrics
+
+
