@@ -31,18 +31,6 @@ on terminal2
 Run traffic with 10 clients and 100k requests:
 
 
-```
-curl -H "Content-Type: application/json" -XPOST -s "http://localhost:3100/loki/api/v1/push" --data-raw "{\"streams\": [{\"stream\": {\"job\": \"test\"}, \"values\": [[\"$(date +%s)000000000\", \"fizzbuzz\"]]}]}"
-
-```{{execute}}
-
-
-```
-curl -H "Content-Type: application/json" -XPOST -s "http://localhost:9201/write" --data-raw "{"labels":{"__name__":"foo"},"samples":[[\"$(date +%s)000000000\", 100]]}"
-
-```{{execute}}
-
-
 
 newdate:
 ```
@@ -57,11 +45,12 @@ echo '{"labels":{"__name__":"foo"},"samples":[[1577836800000, 100]]}' > /root/te
 ```{{execute}}
 
 
-1
-```
-h2load -vvv http://localhost:9201/write -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 1 -t 1 -c 1 -T 10
+1:
 
+```
+h2load -vvv http://localhost:9201/write -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 4 -t 2 -c 4 -T 10
 ```{{execute}}
+
 
 
 500
@@ -73,7 +62,7 @@ h2load -vvv http://localhost:9201/write -d /root/testpayload.json --h1 --header 
 100k
 
 ```
-h2load -vvv http://localhost:9201/write -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 100000 -t 2 -c 4 -T 10
+h2load -vvv http://localhost:9201/write -d /root/testpayload.json --h1 --header 'Content-Type: application/json' -n 10000 -t 2 -c 4 -T 10
 
 ```{{execute}}
 
