@@ -35,17 +35,18 @@ The initial step will ask you to change the password, you can do it if you want 
 The first step to create a dashboard is to have a datasource. Let's define a datasource with phometheus data configured before:
 
 The URL for phometheus should be:
-`http://localhost:9090`{{copy}}  
+`http://promscale:9201`{{copy}}  
 
-or
 
-`https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com`{{copy}}
+
 
 For all the other fields you can use the default values
 
-![](prometheus-data-source.png)
 
 Test and save your datasource.
+
+
+Add datasource for postgres:  timescaledb:5432   ( postgres/secret)
 
 
 
