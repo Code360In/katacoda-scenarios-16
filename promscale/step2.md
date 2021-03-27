@@ -14,7 +14,7 @@ Start prometheus with command:
 docker run  -d -p 9090:9090 \
     -v /root/config:/etc/prometheus \
     --name prometheus \
-    --network promscale-timescaledb \
+    --network pnet \
     prom/prometheus
 ```{{execute}}
 
@@ -41,3 +41,4 @@ docker ps -a
 ```
 docker logs prometheus
 ```{{execute}}
+
