@@ -17,6 +17,11 @@ docker run \
 ```{{execute}}
 
 
+Access Metrics:
+
+https://[[HOST_SUBDOMAIN]]-9187-[[KATACODA_HOST]].environments.katacoda.com/metrics
+
+
 Import Dashboards:
 https://github.com/prometheus-community/postgres_exporter/tree/master/postgres_mixin
 
