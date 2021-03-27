@@ -23,7 +23,7 @@ Import Dashboards:
 
 copy and import to grafana
 
-`grafana-dashboard-psql.json`{{open}}
+`/root/grafana/grafana-dashboard-psql.json`{{open}}
 
 original:
 https://github.com/prometheus-community/postgres_exporter/tree/master/postgres_mixin
