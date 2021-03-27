@@ -42,9 +42,10 @@ Select **Promscale** as the data source and Import.
 [View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]])
 
 
-ref:
-https://hub.docker.com/r/prom/node-exporter
-
-
 
 ![](nodeexporter.png)
+
+
+
+ref:
+https://hub.docker.com/r/prom/node-exporter
