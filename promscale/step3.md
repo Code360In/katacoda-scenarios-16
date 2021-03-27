@@ -72,5 +72,5 @@ just click to copy to clipboard:
 
 Access:
 
-https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/d/3gpp/openapi?orgId=1&refresh=5s&from=now-30m&to=now
+https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
 
