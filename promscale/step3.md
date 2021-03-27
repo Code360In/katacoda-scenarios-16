@@ -53,9 +53,9 @@ For all the other fields you can use the default values
 Test and save your datasource.
 
 
-Add datasource for postgres:  `timescaledb:5432`{{copy}}    ( postgres/secret)
+Add datasource for postgres:  ```timescaledb:5432```{{copy}}    ( postgres/secret)
 
-Add datasource for prometheus:  `http://prometheus:9090`{{copy}}      ( for test only)
+Add datasource for prometheus:  ```http://prometheus:9090```{{copy}}      ( for test only)
 
 
 
