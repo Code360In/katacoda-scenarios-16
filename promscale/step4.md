@@ -49,3 +49,5 @@ http_request_duration_milliseconds_sum
 
 
 [Prometheus HA](https://github.com/timescale/promscale/blob/master/docs/high-avaliability/prometheus-HA.md)
+![](https://github.com/timescale/promscale/blob/master/docs/assets/promscale-HA-arch.png)
+
