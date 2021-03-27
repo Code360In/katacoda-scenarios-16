@@ -41,3 +41,7 @@ docker logs timescaledb
 ```
 docker logs promscale
 ```{{execute}}
+
+```
+curl localhost:9201/metrics
+```{{execute}}
