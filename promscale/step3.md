@@ -30,7 +30,9 @@ And access to the dashboard using this url:
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
 
 And use this default credentials:
-`admin`{{copy}} \ `admin`{{copy}}
+```
+admin\admin
+```
 
 
 The initial step will ask you to change the password, you can do it if you want or you can skip this step.
@@ -38,7 +40,9 @@ The initial step will ask you to change the password, you can do it if you want 
 The first step to create a dashboard is to have a datasource. Let's define a datasource with Prometheus/promscale data configured before:
 
 The URL for phometheus should be:
-`http://promscale:9201`{{copy}}  
+```
+http://promscale:9201
+```{{copy}}  
 
 
 
@@ -61,11 +65,9 @@ https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/metr
 
 
 
-
 ### Import Dashboard
 
 + Import --> Import via panel json
-
 
 
 just click to copy to clipboard:
@@ -93,7 +95,8 @@ curl --header "Content-Type: application/json" \
 
 
 
-psql
+psql:
+
 ```
 docker exec -it timescaledb psql -U postgres
 ```{{execute}}
@@ -113,9 +116,11 @@ show all tables:
 
 
 Grafana:
+
 ```
 select * from metric;
 ```{{copy}}
+
 
 ```
 SELECT *
