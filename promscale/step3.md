@@ -107,3 +107,9 @@ show all tables:
 ```
 \dt
 ```{{execute}}
+
+
+Grafana:
+```
+select * from metric;
+```{{execute}}
