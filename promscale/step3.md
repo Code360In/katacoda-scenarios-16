@@ -120,3 +120,9 @@ FROM pg_catalog.pg_tables
 WHERE schemaname != 'pg_catalog' AND 
     schemaname != 'information_schema';
 ```{{copy}}
+
+
+
+```
+http_request_duration_milliseconds_sum
+```{{copy}}
