@@ -51,7 +51,3 @@ http_request_duration_milliseconds_sum
 [Prometheus HA](https://github.com/timescale/promscale/blob/master/docs/high-avaliability/prometheus-HA.md)
 ![](promscale-HA-arch.png)
 
-
-
-https://docs.timescale.com/latest/tutorials/tutorial-howto-monitor-django-prometheus
-

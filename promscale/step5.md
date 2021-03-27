@@ -20,3 +20,8 @@ docker run \
 Import Dashboards:
 https://github.com/prometheus-community/postgres_exporter/tree/master/postgres_mixin
 
+
+More examples:
+
+
+https://docs.timescale.com/latest/tutorials/tutorial-howto-monitor-django-prometheus
