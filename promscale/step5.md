@@ -1,6 +1,3 @@
-# Verification
-
-
 # PostgreSQL Server Exporter
 
 https://github.com/prometheus-community/postgres_exporter
@@ -24,8 +21,9 @@ https://[[HOST_SUBDOMAIN]]-9187-[[KATACODA_HOST]].environments.katacoda.com/metr
 
 Import Dashboards:
 
-grafana-dashboard-psql.json
+copy and import to grafana
 
+`grafana-dashboard-psql.json`{{open}}
 
 original:
 https://github.com/prometheus-community/postgres_exporter/tree/master/postgres_mixin
