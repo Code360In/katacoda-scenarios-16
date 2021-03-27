@@ -44,3 +44,7 @@ Select **Promscale** as the data source and Import.
 
 ref:
 https://hub.docker.com/r/prom/node-exporter
+
+
+
+![](nodeexporter.png)
