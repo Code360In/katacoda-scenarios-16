@@ -12,14 +12,14 @@ docker run -d \
   --net=pnet -p 9100:9100 \
   --name=nodeexporter \
   prom/node-exporter:latest
-```{{execute T2}}
+```{{execute}}
 
 
 If you're interested in seeing the raw metrics, they can be viewed with 
 
 ```
 curl localhost:9100/metrics
-```{{execute T2}}
+```{{execute}}
 
 or
 
