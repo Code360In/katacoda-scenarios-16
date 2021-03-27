@@ -39,8 +39,9 @@ Let's use this existing dashboard. Copy json, and use the option `Import`.
 Select **Promscale** as the data source and Import.
 
 
-[View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]])
+View:
 
+https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/d/nef/node-exporter-full?orgId=1&refresh=1m&from=now-15m&to=now
 
 
 ![](nodeexporter.png)
