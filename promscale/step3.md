@@ -48,7 +48,7 @@ Test and save your datasource.
 
 Add datasource for postgres:  timescaledb:5432   ( postgres/secret)
 
-Add datasource for prometheus:  prometheus:9090    ( for test only)
+Add datasource for prometheus:  http://prometheus:9090    ( for test only)
 
 
 ### Verify Grafana own Metrics:
