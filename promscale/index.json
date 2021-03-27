@@ -53,7 +53,7 @@
       "host01": [
         {"file": "prometheus.yml", "target": "/root/config/"},
         {"file": "grafana-dashboard-psql.json", "target": "/root/grafana/"},
-        {"file": "grafana-dashboard-cnt.json", "target": "/root/grafana/"}
+        {"file": "grafana-dashboard-cnt.json", "target": "/root/grafana/"},
         {"file": "grafana-nodeexporter.json", "target": "/root/grafana/"}
       ]
   }
