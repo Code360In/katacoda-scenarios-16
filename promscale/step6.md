@@ -23,7 +23,7 @@ curl localhost:9100/metrics
 
 or
 
-https://[[HOST_SUBDOMAIN]]-9100-[[KATACODA_HOST]]/metrics
+https://[[HOST_SUBDOMAIN]]-9100-[[KATACODA_HOST]].environments.katacoda.com/metrics
 
 
 ## Build a dashboard
