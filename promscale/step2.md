@@ -30,3 +30,15 @@ https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targ
 Prometheus Metrics:
 
 https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/metrics
+
+
+
+Verify:
+
+```
+docker ps -a
+```{{execute}}
+
+```
+docker logs prometheus
+```{{execute}}

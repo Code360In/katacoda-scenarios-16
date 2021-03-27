@@ -29,4 +29,15 @@ docker run --name promscale -d -p 9201:9201 --network promscale-timescaledb time
 ```{{execute}}
 
 
+Verify:
+```
+docker ps -a
+```{{execute}}
 
+```
+docker logs timescaledb
+```{{execute}}
+
+```
+docker logs promscale
+```{{execute}}

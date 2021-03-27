@@ -13,12 +13,13 @@ docker run -d \
 ```{{execute}}
 
 
-`docker logs grafana`{{execute}}
+```docker logs grafana
+```{{execute}}
 
 results:
-`
+```
 "HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
-`
+```
 
 
 And access to the dashboard using this url:
@@ -64,9 +65,9 @@ https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/metr
 just click to copy to clipboard:
 
 
-`
-
-`{{copy}}
+```
+in progress
+```{{copy}}
 
 
 
