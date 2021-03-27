@@ -16,8 +16,16 @@
       {
         "title": "Step 3",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
       }
     ],
+    "intro": {
+      "courseData": "env-init.sh",
+      "text": "intro.md"
+    },
     "finish": {
       "text": "finish.md"
     },
