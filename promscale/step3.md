@@ -87,3 +87,23 @@ curl --header "Content-Type: application/json" \
 --data '{"labels":{"__name__":"foo"},"samples":[[1577836800000, 100]]}' \
 "http://localhost:9201/write"
 ```{{execute}}
+
+
+
+psql
+```
+docker exec -it timescaledb psql -U postgres
+```{{execute}}
+
+to show all databases: 
+
+```
+\l
+```{{execute}}
+
+
+show all tables:
+
+```
+\dt
+```{{execute}}
