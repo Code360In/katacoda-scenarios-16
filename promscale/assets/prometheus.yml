@@ -45,3 +45,14 @@ remote_write:
 remote_read:
   - url: "http://promscale:9201/read"
     read_recent: true
+
+
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      - alertmanager:9093
+
+
+rule_files:
+  - 'alerts/*.yml'  
