@@ -104,3 +104,5 @@ curl --header "Content-Type: application/json" \
 ```{{execute}}
 
 
+
+https://docs.timescale.com/latest/tutorials/tutorial-grafana-dashboards
