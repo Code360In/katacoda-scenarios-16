@@ -30,9 +30,13 @@ curl localhost:8080/metrics
 In order to build a dashboard you can build one from scratch or you can use an existing one, for example:
 https://grafana.com/grafana/dashboards/893
 
-Let's use this existing dashboard. Copy the ID, and use the option `Import`.
+Let's use this existing dashboard. Copy json , and use the option `Import`.
 
-`893`{{copy}}
+
+`/root/grafana/grafana-dashboard-cnt.json`{{open}}
+
 
 Select **Promscale** as the data source and Import.
 
+
+![](cnt.png)
