@@ -18,6 +18,14 @@ scrape_configs:
         labels:
           group: 'grafana'
 
+  - job_name: 'psql'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['postgresexporter:9187']
+        labels:
+          group: 'psql'
+
+
 
 
 remote_write:
