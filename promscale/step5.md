@@ -6,7 +6,7 @@ https://github.com/prometheus-community/postgres_exporter
 Prometheus exporter for PostgreSQL server metrics.
 
 ```
-docker run \
+docker run -d \
   --net=pnet -p 9187:9187 \
   --name=postgresexporter \
   -e DATA_SOURCE_NAME="postgresql://postgres:secret@timescaledb:5432/postgres?sslmode=disable" \
