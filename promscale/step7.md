@@ -34,8 +34,5 @@ Let's use this existing dashboard. Copy the ID, and use the option `Import`.
 
 `893`{{copy}}
 
-Select **Prometheus** as the data source and Import.
+Select **Promscale** as the data source and Import.
 
-![](import.png)
-
-[View Dashboard for the targetCluster](https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]]
