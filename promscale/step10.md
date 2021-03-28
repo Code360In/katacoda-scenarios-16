@@ -20,6 +20,7 @@ django-admin startproject mysite
 ### Verify that Django is working
 
 ```
+cd mysite/
 python3 manage.py runserver
 ```{{execute}}
 
