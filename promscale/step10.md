@@ -159,3 +159,26 @@ Verify:
 https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/metrics
 
 
+
+add to promethues.yml
+
+```
+  - job_name: 'django'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com']
+        labels:
+          group: 'django'
+```{{copy}}
+
+
+restart prometheus:
+
+```
+docker restart prometheus
+```{{execute}}
+
+
+Verify new target is up:
+
+https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targets
