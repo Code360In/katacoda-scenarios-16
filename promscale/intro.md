@@ -23,6 +23,8 @@
 
 - Deploy AlertManager
 
+- Django with openMetrics
+
 
 ### Promscale
 
