@@ -25,6 +25,13 @@ python3 manage.py runserver
 ```{{execute}}
 
 
+
+In your project settings.py file,set ALLOWED_HOSTS to this (line 28) :
+
+```
+ALLOWED_HOSTS = ['`https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com`', '0.0.0.0']
+```{{copy}}
+
 Verify:
 
 https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com
@@ -104,3 +111,5 @@ Update prometheus.yml. Under scrape_configs:, add:
     - localhost:8000
 
 </pre>
+
+
