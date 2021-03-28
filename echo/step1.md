@@ -154,6 +154,21 @@ EOF
 go run server-jaeger.go
 ```{{execute}}
 
+```
+curl http://localhost:1323
+```{{execute T2}}
+
+```
+curl http://localhost:1323/metrics
+```{{execute T2}}
+
+
+https://[[HOST_SUBDOMAIN]]-1323-[[KATACODA_HOST]].environments.katacoda.com/
+
+
+https://[[HOST_SUBDOMAIN]]-1323-[[KATACODA_HOST]].environments.katacoda.com/metrics
+
+
 
 
 ref:
