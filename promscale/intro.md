@@ -3,9 +3,9 @@
 
 ### Tasks:
 
-- Deploy timescaledb
+- Deploy Timescaledb
 
-- Deploy promscale
+- Deploy Promscale
 
 - Deploy Prometheus
 
@@ -19,7 +19,7 @@
 
 - Deploy cAdvisor
 
-- Load test
+- Load Test
 
 - Deploy AlertManager
 
