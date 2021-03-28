@@ -15,7 +15,7 @@ docker network create --driver bridge pnet
 https://anaconda.org/
 
 ```
-docker run -i -t -d --network=pnet -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --allow-root " 
+docker run -i -t -d --name conta --network=pnet -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --allow-root " 
 ```{{execute}}
 
 ##  timescaledb
@@ -37,7 +37,17 @@ docker exec -it timescaledb  createdb db -U postgres
 
 Connect to Jupyter:
 
+
+```
+curl localhost:8888/test
+```{{execute}}
+
 get token.
+
+```
+docker logs conda
+```
+
 
 https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com/
 
