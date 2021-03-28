@@ -55,4 +55,4 @@ alerting:
 
 
 rule_files:
-  - '/alert/*.yml'  
+  - '/etc/prometheus/alert/*.yml'  
