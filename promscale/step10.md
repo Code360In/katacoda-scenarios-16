@@ -197,3 +197,15 @@ https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targ
 Grafana dashboard:
 
 https://grafana.com/grafana/dashboards/7996
+
+
+
+# Vegeta
+
+```
+go get -u github.com/tsenart/vegeta
+```{{execute}}
+
+```
+echo "GET http://localhost:8000/metrics" | vegeta attack -rate=10 -duration=30s | vegeta report
+```{{execute}}
