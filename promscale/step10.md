@@ -159,6 +159,14 @@ Verify:
 https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/metrics
 
 
+Admin:
+```
+python3 manage.py createsuperuser
+```{{execute}}
+
+https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/admin
+
+
 
 add to promethues.yml
 
