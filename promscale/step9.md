@@ -27,6 +27,10 @@ AlertManager:
 
 https://[[HOST_SUBDOMAIN]]-9093-[[KATACODA_HOST]].environments.katacoda.com
 
+metrics:
+
+https://[[HOST_SUBDOMAIN]]-9093-[[KATACODA_HOST]].environments.katacoda.com/metrics
+
 
 Rules:
 
