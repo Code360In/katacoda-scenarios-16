@@ -113,6 +113,7 @@ There is no need to change function arguments.
 cat << 'EOF' > server-jaeger.go
 package main
 import (
+    "github.com/labstack/echo-contrib/prometheus"
     "github.com/labstack/echo-contrib/jaegertracing"
     "github.com/labstack/echo/v4"
     "net/http"
@@ -120,6 +121,11 @@ import (
 )
 func main() {
     e := echo.New()
+    
+    // Enable metrics middleware
+    p := prometheus.NewPrometheus("echo", nil)
+    p.Use(e)
+    
     // Enable tracing middleware
     c := jaegertracing.New(e, nil)
     defer c.Close()
