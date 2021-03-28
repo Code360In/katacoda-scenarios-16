@@ -50,12 +50,13 @@ https://www.psycopg.org/docs/install.html
 https://www.postgresqltutorial.com/postgresql-python/connect/
 https://anaconda.org/anaconda/psycopg2
 
-```
+
+<pre class="file">
+
 !pip install psycopg2-binary
-```
 
 
-```
+
 import psycopg2
 
 # Connect to an existing database
@@ -87,5 +88,9 @@ import psycopg2
 # Close communication with the database
 >>> cur.close()
 >>> conn.close()
-```
+
+
+</pre>
+
+
 
