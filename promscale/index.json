@@ -2,7 +2,7 @@
   "title": "Promscale",
   "description": "Promscale Prometheus TimescaleDB promQL and SQL",
   "difficulty": "intermediate",
-  "time": "463 minutes",
+  "time": "464 minutes",
   "details": {
     "steps": [
       {
