@@ -15,14 +15,14 @@ docker run -d \
   --privileged \
   --device=/dev/kmsg \
   gcr.io/cadvisor/cadvisor:latest
-```{{execute T2}}
+```{{execute}}
 
 
 If you're interested in seeing the raw metrics, they can be viewed with 
 
 ```
 curl localhost:8080/metrics
-```{{execute T2}}
+```{{execute}}
 
 
 ## Build a dashboard
