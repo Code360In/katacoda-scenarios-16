@@ -18,7 +18,10 @@ Rules:
 
 https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/rules
 
+![](prom-rules.png)
 
 Alerts:
 
 https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/alerts
+
+![](prom-alerts.png)
