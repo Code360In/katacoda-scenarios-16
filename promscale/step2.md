@@ -51,6 +51,9 @@ The remote write and remote read features of Prometheus allow transparently send
 
 https://prometheus.io/docs/operating/integrations/
 
+
+Config to promscale:
+
 <pre class="file">
 remote_write:
   - url: "http://promscale:9201/write"
