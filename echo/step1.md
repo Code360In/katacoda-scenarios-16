@@ -42,6 +42,9 @@ func main() {
 go run server.go
 ```{{execute}}
 
+https://[[HOST_SUBDOMAIN]]-1323-[[KATACODA_HOST]].environments.katacoda.com/
+
+
 https://echo.labstack.com/guide/
 
 
@@ -76,6 +79,7 @@ go run server-prom.go
 curl http://localhost:1323/metrics
 ```{{execute}}
 
+https://[[HOST_SUBDOMAIN]]-1323-[[KATACODA_HOST]].environments.katacoda.com/metrics
 
 
 # jaegertracing
