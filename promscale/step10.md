@@ -165,8 +165,9 @@ add to promethues.yml
 ```
   - job_name: 'django'
     metrics_path: /metrics
+    scheme: https
     static_configs:
-      - targets: ['https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com']
+      - targets: ['[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com']
         labels:
           group: 'django'
 ```{{copy}}
@@ -182,3 +183,9 @@ docker restart prometheus
 Verify new target is up:
 
 https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targets
+
+
+
+Grafana dashboard:
+
+https://grafana.com/grafana/dashboards/7996
