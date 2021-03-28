@@ -15,11 +15,11 @@ echo t2
 
 on terminal2
 
-Run traffic with 10 clients and 10k requests:
+Run traffic with 10 clients and 100 requests:
 
 
 ```
-h2load http://localhost:1323  --h1 -n 10000 -c 100
+h2load http://localhost:1323  --h1 -n 100 -c 10
 ```{{execute T2}}
 
 results:
