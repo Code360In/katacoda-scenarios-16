@@ -5,7 +5,7 @@ https://github.com/prometheus/alertmanager
 https://github.com/timescale/promscale/blob/master/docs/alerting-recording.md
 
 ```
-docker run  --name alertmanager -d  -v /root/alertmanager.yml:/alertmanager.yml  --net=pnet -p 9093:9093 quay.io/prometheus/alertmanager -config.file=/alertmanager.yml
+docker run  --name alertmanager -d  -v /root/alertmanager.yml:/alertmanager.yml  --net=pnet -p 9093:9093 quay.io/prometheus/alertmanager --config.file=/alertmanager.yml
 ```{{execute}}
 
 
