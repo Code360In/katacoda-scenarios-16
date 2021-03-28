@@ -9,6 +9,20 @@ docker run  --name alertmanager -d  -v /root/alertmanager.yml:/alertmanager.yml 
 ```{{execute}}
 
 
+
+Verify:
+
+```
+docker ps -a
+```{{execute}}
+
+```
+docker logs prometheus
+```{{execute}}
+
+
+
+
 AlertManager:
 
 https://[[HOST_SUBDOMAIN]]-9093-[[KATACODA_HOST]].environments.katacoda.com
