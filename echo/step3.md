@@ -15,11 +15,11 @@ echo t2
 
 on terminal2
 
-Run traffic with 10 clients and 100k requests:
+Run traffic with 10 clients and 10k requests:
 
 
 ```
-h2load -v "http://localhost:1323" -H "accept: application/json" -n 100000 -c 10
+h2load http://localhost:1323  --h1 -n 10000 -c 2
 ```{{execute T2}}
 
 
