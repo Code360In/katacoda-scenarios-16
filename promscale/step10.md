@@ -21,7 +21,7 @@ django-admin startproject mysite
 
 ```
 cd mysite/
-python3 manage.py runserver
+python3 manage.py runserver 0:8000
 ```{{execute}}
 
 
@@ -136,7 +136,7 @@ Verify that metrics are being exported
 Restart the application and curl the /metrics endpoint:
 
 ```
-python3 manage.py runserver
+python3 manage.py runserver 0:8000
 ```{{execute}}
 
 ```
