@@ -17,11 +17,7 @@ go get github.com/labstack/echo/v4
 ```{{execute}}
 
 
-```
-vi server.go
-```{{execute}}
-
-```
+cat << 'EOF' > server.go
 package main
 
 import (
@@ -38,7 +34,9 @@ func main() {
 	e.Logger.Fatal(e.Start(":1323"))
 }
 
-```{{copy}}
+EOF
+```{{execute}}
+
 
 
 ```
@@ -66,11 +64,7 @@ https://echo.labstack.com/middleware/prometheus/
 
 
 ```
-vi server-prom.go
-```{{execute}}
-
-
-```
+cat << 'EOF' > server-prom.go
 package main
 import (
     "github.com/labstack/echo/v4"
@@ -84,7 +78,10 @@ func main() {
 
     e.Logger.Fatal(e.Start(":1323"))
 }
-```{{copy}}
+EOF
+```{{execute}}
+
+
 
 ```
 go run server-prom.go
@@ -102,20 +99,12 @@ https://[[HOST_SUBDOMAIN]]-1323-[[KATACODA_HOST]].environments.katacoda.com/metr
 https://echo.labstack.com/middleware/jaegertracing/
 
 
-
-
-
-```
-vi server-jaeger.go
-```{{execute}}
-
-
 TraceFunction
 This is a wrapper function that can be used to seamlessly add a span for the duration of the invoked function. 
 There is no need to change function arguments.
 
 
-```
+cat << 'EOF' > server-jaeger.go
 package main
 import (
     "github.com/labstack/echo-contrib/jaegertracing"
@@ -141,8 +130,8 @@ func slowFunc(s string) {
 	time.Sleep(200 * time.Millisecond)
 	return
 }
-
-```{{copy}}
+EOF
+```{{execute}}
 
 
 
