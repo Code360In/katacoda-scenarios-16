@@ -20,6 +20,9 @@ docker ps -a
 docker logs prometheus
 ```{{execute}}
 
+```
+docker logs alertmanager
+```{{execute}}
 
 
 
