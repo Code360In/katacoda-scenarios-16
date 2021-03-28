@@ -2,7 +2,7 @@
   "title": "Echo",
   "description": "High performance, extensible, minimalist Go web framework",
   "difficulty": "intermediate",
-  "time": "161 minutes",
+  "time": "162 minutes",
   "details": {
     "steps": [
       {
@@ -12,6 +12,10 @@
       {
         "title": "Step 2",
         "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
       }
     ],
     "finish": {
