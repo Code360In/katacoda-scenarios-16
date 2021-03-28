@@ -3,6 +3,7 @@
 https://echo.labstack.com/
 
 
+## server
 ```
 mkdir myapp && cd myapp
 ```{{execute}}
@@ -52,7 +53,7 @@ https://echo.labstack.com/guide/
 
 
 
-# Prometheus
+## Prometheus
 
 https://echo.labstack.com/middleware/prometheus/
 
@@ -90,7 +91,7 @@ curl http://localhost:1323/metrics
 https://[[HOST_SUBDOMAIN]]-1323-[[KATACODA_HOST]].environments.katacoda.com/metrics
 
 
-# jaegertracing
+## jaegertracing
 
 https://echo.labstack.com/middleware/jaegertracing/
 
