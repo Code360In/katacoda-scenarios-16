@@ -209,3 +209,23 @@ go get -u github.com/tsenart/vegeta
 ```
 echo "GET https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targets" | vegeta attack -rate=10 -duration=30s | vegeta report
 ```{{execute}}
+
+
+results:
+
+<pre class="file">
+
+$ echo "GET https://2886795276-8000-simba06b.environments.katacoda.com/metrics" | vegeta attack -rate=10 -duration=30s | vegeta report
+Requests      [total, rate, throughput]         300, 10.03, 10.02
+Duration      [total, attack, wait]             29.935s, 29.9s, 34.928ms
+Latencies     [min, mean, 50, 90, 95, 99, max]  30.376ms, 36.883ms, 36.776ms, 39.625ms, 40.623ms, 43.931ms, 112.719ms
+Bytes In      [total, mean]                     11889724, 39632.41
+Bytes Out     [total, mean]                     0, 0.00
+Success       [ratio]                           100.00%
+Status Codes  [code:count]                      200:300  
+Error Set:
+$ 
+
+
+</pre>
+
