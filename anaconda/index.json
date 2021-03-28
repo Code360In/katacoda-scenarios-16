@@ -1,9 +1,9 @@
 {
   "title": "Anaconda Jupypter TimescaleDB",
-  "description": "",
+  "description": "performance",
   "difficulty": "intermediate",
   "time": "160 minutes",
-  "details": {
+  "details": {   
     "steps": [
       {
         "title": "Step 1",
