@@ -15,12 +15,12 @@
     }
   },
   "environment": {
-    "hideintro": true,
-    "uilayout": "terminal",
     "showdashboard": true,
     "dashboards": [
       {"name": "Jupyter", "href": "https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com"}
     ],
+    "hideintro": false,
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "ubuntu:2004"
