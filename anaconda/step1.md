@@ -102,6 +102,8 @@ import psycopg2
 
 </pre>
 
+# seaborn
+https://seaborn.pydata.org/installing.html
 
 <pre class="file">
 
