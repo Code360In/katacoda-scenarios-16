@@ -13,7 +13,7 @@ docker network create --driver bridge pnet
 ## Anaconda Jupyter
 
 ```
-docker run -i -t --network=pnet -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --allow-root " 
+docker run -i -t -d --network=pnet -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --allow-root " 
 ```{{execute}}
 
 ##  timescaledb
