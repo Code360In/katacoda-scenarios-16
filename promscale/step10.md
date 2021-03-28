@@ -29,8 +29,13 @@ python3 manage.py runserver
 In your project settings.py file,set ALLOWED_HOSTS to this (line 28) :
 
 ```
-ALLOWED_HOSTS = ['`https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com`', '0.0.0.0']
+ALLOWED_HOSTS = ['https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com']
 ```{{copy}}
+
+```
+python3 manage.py migrate
+```{{execute}}
+
 
 Verify:
 
