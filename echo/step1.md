@@ -40,6 +40,7 @@ func main() {
 }
 
 EOF
+
 ```{{execute}}
 
 
@@ -79,6 +80,7 @@ func main() {
     e.Logger.Fatal(e.Start(":1323"))
 }
 EOF
+
 ```{{execute}}
 
 
@@ -125,7 +127,7 @@ func main() {
     // Enable metrics middleware
     p := prometheus.NewPrometheus("echo", nil)
     p.Use(e)
-    
+
     // Enable tracing middleware
     c := jaegertracing.New(e, nil)
     defer c.Close()
@@ -143,6 +145,7 @@ func slowFunc(s string) {
 	return
 }
 EOF
+
 ```{{execute}}
 
 
