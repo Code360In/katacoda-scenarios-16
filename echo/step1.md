@@ -55,11 +55,6 @@ https://[[HOST_SUBDOMAIN]]-1323-[[KATACODA_HOST]].environments.katacoda.com/
 https://echo.labstack.com/guide/
 
 
-https://opentelemetry.io/
-
-https://openmetrics.io/
-
-https://opentracing.io/docs/overview/
 
 ## Prometheus
 
@@ -149,3 +144,16 @@ EOF
 ```
 go run server-jaeger.go
 ```{{execute}}
+
+
+
+ref:
+
+https://opentelemetry.io/
+
+https://openmetrics.io/
+
+https://opentracing.io/docs/overview/
+
+https://prometheus.io/
+
