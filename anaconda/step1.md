@@ -114,12 +114,28 @@ sns.pairplot(df, hue="species")
 </pre>
 
 
+# pandas
 <pre class="file">
 
 import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+
+</pre>
+
+
+#  networkx
+https://networkx.org/documentation/networkx-2.3/auto_examples/drawing/plot_simple_path.html#sphx-glr-auto-examples-drawing-plot-simple-path-py
+
+<pre class="file">
+
+import matplotlib.pyplot as plt
+import networkx as nx
+
+G = nx.path_graph(8)
+nx.draw(G)
+plt.show()
 
 </pre>
 
