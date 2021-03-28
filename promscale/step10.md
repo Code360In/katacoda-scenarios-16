@@ -229,3 +229,9 @@ $
 
 </pre>
 
+
+# H2LOAD 10k
+
+```
+h2load https://2886795276-8000-simba06b.environments.katacoda.com/metrics -n 10000 -t 2 -c4 -T 10
+```{{execute}}
