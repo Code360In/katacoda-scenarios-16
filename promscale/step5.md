@@ -30,7 +30,3 @@ https://github.com/prometheus-community/postgres_exporter/tree/master/postgres_m
 
 
 
-More examples to add metrics to application:
-
-
-https://docs.timescale.com/latest/tutorials/tutorial-howto-monitor-django-prometheus
