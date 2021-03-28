@@ -19,7 +19,7 @@ Run traffic with 10 clients and 10k requests:
 
 
 ```
-h2load http://localhost:1323  --h1 -n 10000 -c 2
+h2load http://localhost:1323  --h1 -n 10000 -c 100
 ```{{execute T2}}
 
 
