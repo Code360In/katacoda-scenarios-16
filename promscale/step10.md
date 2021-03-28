@@ -27,7 +27,7 @@ python3 manage.py runserver
 ### Export prometheus-style monitoring metrics from your Django application
 
 ```
-python -m pip install django-prometheus
+python3 -m pip install django-prometheus
 ```{{execute}}
 
 
@@ -79,7 +79,7 @@ Verify that metrics are being exported
 Restart the application and curl the /metrics endpoint:
 
 ```
-python manage.py runserver
+python3 manage.py runserver
 ```{{execute}}
 
 ```
