@@ -25,6 +25,11 @@ python3 manage.py runserver
 ```{{execute}}
 
 
+Verify:
+
+https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com
+
+
 ### Export prometheus-style monitoring metrics from your Django application
 
 ```
