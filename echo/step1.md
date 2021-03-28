@@ -9,6 +9,11 @@ mkdir myapp && cd myapp
 ```{{execute}}
 
 ```
+pwd;
+ls;
+```{{execute}}
+
+```
 go mod init myapp
 ```{{execute}}
 
