@@ -13,6 +13,7 @@ Start prometheus with command:
 ```
 docker run  -d -p 9090:9090 \
     -v /root/config:/etc/prometheus \
+    -v /root/alert/:/alert \
     --name prometheus \
     --network pnet \
     prom/prometheus

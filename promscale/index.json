@@ -52,6 +52,8 @@
     "assets": {
       "host01": [
         {"file": "prometheus.yml", "target": "/root/config/"},
+        {"file": "alertmanager.yml", "target": "/root/alert/alertmanager.yml"},
+        {"file": "psql-alerts.yml", "target": "/root/alert/psql-alerts.yml"},
         {"file": "grafana-dashboard-psql.json", "target": "/root/grafana/"},
         {"file": "grafana-dashboard-cnt.json", "target": "/root/grafana/"},
         {"file": "grafana-nodeexporter.json", "target": "/root/grafana/"}
