@@ -16,7 +16,7 @@ go mod init myapp
 go get github.com/labstack/echo/v4
 ```{{execute}}
 
-
+```
 cat << 'EOF' > server.go
 package main
 
@@ -103,7 +103,7 @@ TraceFunction
 This is a wrapper function that can be used to seamlessly add a span for the duration of the invoked function. 
 There is no need to change function arguments.
 
-
+```
 cat << 'EOF' > server-jaeger.go
 package main
 import (
