@@ -103,6 +103,13 @@ import psycopg2
 </pre>
 
 
+<pre class="file">
+
+import seaborn as sns
+df = sns.load_dataset("penguins")
+sns.pairplot(df, hue="species")
+
+</pre>
 
 
 ref:
