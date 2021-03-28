@@ -114,6 +114,16 @@ sns.pairplot(df, hue="species")
 </pre>
 
 
+<pre class="file">
+
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+</pre>
+
+
 ref:
 
 https://docs.timescale.com/latest/tutorials/tutorial-forecasting
