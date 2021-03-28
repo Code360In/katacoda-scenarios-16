@@ -92,6 +92,12 @@ EOF
 go run server-prom.go
 ```{{execute}}
 
+
+terminal 2
+```
+echo t2
+```{{execute T2}}
+
 ```
 curl http://localhost:1323/metrics
 ```{{execute T2}}
