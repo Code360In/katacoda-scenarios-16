@@ -47,8 +47,9 @@ https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
 https://www.psycopg.org/docs/install.html
 https://www.postgresqltutorial.com/postgresql-python/connect/
 
+```
 !pip install psycopg2-binary
-
+```
 
 
 ```
