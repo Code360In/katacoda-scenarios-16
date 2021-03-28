@@ -16,8 +16,9 @@ https://[[HOST_SUBDOMAIN]]-9093-[[KATACODA_HOST]].environments.katacoda.com
 
 Rules:
 
-https://2886795305-9090-ollie09.environments.katacoda.com/rules
+https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/rules
+
 
 Alerts:
 
-https://2886795305-9090-ollie09.environments.katacoda.com/alerts
+https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/alerts
