@@ -52,8 +52,14 @@ https://[[HOST_SUBDOMAIN]]-1323-[[KATACODA_HOST]].environments.katacoda.com/
 https://echo.labstack.com/guide/
 
 
+https://opentelemetry.io/
+
+https://openmetrics.io/
+
+https://opentracing.io/docs/overview/
 
 ## Prometheus
+
 
 https://echo.labstack.com/middleware/prometheus/
 
@@ -104,20 +110,38 @@ vi server-jaeger.go
 ```{{execute}}
 
 
+TraceFunction
+This is a wrapper function that can be used to seamlessly add a span for the duration of the invoked function. 
+There is no need to change function arguments.
+
+
 ```
 package main
 import (
     "github.com/labstack/echo-contrib/jaegertracing"
     "github.com/labstack/echo/v4"
+    "net/http"
+    "time"
 )
 func main() {
     e := echo.New()
     // Enable tracing middleware
     c := jaegertracing.New(e, nil)
     defer c.Close()
-
+    e.GET("/", func(c echo.Context) error {
+        // Wrap slowFunc on a new span to trace it's execution passing the function arguments
+		jaegertracing.TraceFunction(c, slowFunc, "Test String")
+        return c.String(http.StatusOK, "Hello, World!")
+    })
     e.Logger.Fatal(e.Start(":1323"))
 }
+
+// A function to be wrapped. No need to change it's arguments due to tracing
+func slowFunc(s string) {
+	time.Sleep(200 * time.Millisecond)
+	return
+}
+
 ```{{copy}}
 
 
