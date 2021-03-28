@@ -207,5 +207,5 @@ go get -u github.com/tsenart/vegeta
 ```{{execute}}
 
 ```
-echo "GET http://localhost:8000/metrics" | vegeta attack -rate=10 -duration=30s | vegeta report
+echo "GET https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targets" | vegeta attack -rate=10 -duration=30s | vegeta report
 ```{{execute}}
