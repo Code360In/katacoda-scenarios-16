@@ -32,6 +32,8 @@ In your project settings.py file,set ALLOWED_HOSTS to this (line 28) :
 ALLOWED_HOSTS = ['https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com']
 ```{{copy}}
 
+
+update:
 ```
 python3 manage.py migrate
 ```{{execute}}
@@ -76,7 +78,7 @@ In urls.py, make sure you have this in the header:
 
 <pre class="file">
 
-from django.conf.urls import url
+from django.conf.urls import include
 
 </pre>
 
@@ -87,7 +89,7 @@ Then add this under urlpatterns:
 
 urlpatterns = [
     ...
-    url('', include('django_prometheus.urls')),
+    path('', include('django_prometheus.urls')),
 ]
 
 </pre>
