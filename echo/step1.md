@@ -16,7 +16,9 @@ go get github.com/labstack/echo/v4
 ```{{execute}}
 
 
-server.go
+```
+vi server.go
+```{{execute}}
 
 ```
 package main
@@ -42,6 +44,7 @@ func main() {
 go run server.go
 ```{{execute}}
 
+
 https://[[HOST_SUBDOMAIN]]-1323-[[KATACODA_HOST]].environments.katacoda.com/
 
 
@@ -54,7 +57,12 @@ https://echo.labstack.com/guide/
 https://echo.labstack.com/middleware/prometheus/
 
 
-server-prom.go
+
+```
+vi server-prom.go
+```{{execute}}
+
+
 ```
 package main
 import (
@@ -77,7 +85,7 @@ go run server-prom.go
 
 ```
 curl http://localhost:1323/metrics
-```{{execute}}
+```{{execute T2}}
 
 https://[[HOST_SUBDOMAIN]]-1323-[[KATACODA_HOST]].environments.katacoda.com/metrics
 
@@ -88,7 +96,13 @@ https://echo.labstack.com/middleware/jaegertracing/
 
 
 
-server-jaeger.go
+
+
+```
+vi server-jaeger.go
+```{{execute}}
+
+
 ```
 package main
 import (
