@@ -12,6 +12,8 @@ docker network create --driver bridge pnet
 
 ## Anaconda Jupyter
 
+https://anaconda.org/
+
 ```
 docker run -i -t -d --network=pnet -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --allow-root " 
 ```{{execute}}
@@ -46,6 +48,7 @@ https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
 
 https://www.psycopg.org/docs/install.html
 https://www.postgresqltutorial.com/postgresql-python/connect/
+https://anaconda.org/anaconda/psycopg2
 
 ```
 !pip install psycopg2-binary
