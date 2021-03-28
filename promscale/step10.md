@@ -29,7 +29,7 @@ python3 manage.py runserver 0:8000
 In your project settings.py file,set ALLOWED_HOSTS to this (line 28) :
 
 ```
-ALLOWED_HOSTS = ['https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com']
+ALLOWED_HOSTS = ['[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com']
 ```{{copy}}
 
 
@@ -38,10 +38,6 @@ update:
 python3 manage.py migrate
 ```{{execute}}
 
-
-Verify:
-
-https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com
 
 
 ### Export prometheus-style monitoring metrics from your Django application
@@ -155,5 +151,11 @@ Update prometheus.yml. Under scrape_configs:, add:
     - localhost:8000
 
 </pre>
+
+
+
+Verify:
+
+https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/metrics
 
 
