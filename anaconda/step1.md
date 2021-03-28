@@ -33,6 +33,15 @@ docker exec -it timescaledb  createdb db -U postgres
 ```{{execute}}
 
 
+Connect to Jupyter:
+
+get token.
+
+https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
+
+
+
+
 ##  Psycopg
 
 https://www.psycopg.org/docs/install.html
