@@ -1,6 +1,8 @@
 
 # Django
 
+https://www.djangoproject.com/
+
 More examples to add metrics to application:
 
 https://docs.timescale.com/latest/tutorials/tutorial-howto-monitor-django-prometheus
