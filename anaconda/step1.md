@@ -139,6 +139,49 @@ plt.show()
 
 </pre>
 
+# bokeh
+
+https://github.com/bokeh/bokeh/blob/2.3.0/examples/howto/notebook_comms/Basic%20Usage.ipynb
+
+<pre class="file">
+
+from bokeh.io import push_notebook, show, output_notebook
+from bokeh.layouts import row
+from bokeh.plotting import figure
+output_notebook()
+opts = dict(plot_width=250, plot_height=250, min_border=0)
+
+p1 = figure(**opts)
+r1 = p1.circle([1,2,3], [4,5,6], size=20)
+
+p2 = figure(**opts)
+r2 = p2.circle([1,2,3], [4,5,6], size=20)
+
+# get a handle to update the shown cell with
+t = show(row(p1, p2), notebook_handle=True)
+
+# this will update the left plot circle color with an explicit handle
+r1.glyph.fill_color = "white"
+push_notebook(handle=t)
+
+# and this will update the right plot circle color because it was in the last shown cell
+r2.glyph.fill_color = "pink"
+push_notebook()
+
+p3 = figure(**opts)
+r3 = p3.circle([1,2,3], [4,5,6], size=20)
+
+# get a handle to update the shown cell with
+t2 = show(p3, notebook_handle=True)
+# show which cell t2 handles
+t2
+
+# this updates the immediately previous cell with an explicit handle
+r3.glyph.fill_color = "orange"
+push_notebook(handle=t2)
+
+
+</pre>
 
 ref:
 
