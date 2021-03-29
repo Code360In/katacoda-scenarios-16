@@ -71,3 +71,5 @@ https://landscape.cncf.io/card-mode?category=observability-and-analysis&grouping
 https://grafana.com/
 
 https://prometheus.io/
+
+https://devstats.cncf.io/
