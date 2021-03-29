@@ -1,6 +1,6 @@
 {
-  "title": "Kind Kubernetes",
-  "description": "Using Kind to install Kubernetes",
+  "title": "Kind Tobs",
+  "description": "Kubernetes and Tobs",
   "difficulty": "intermediate",
   "time": "240 minutes",
   "details": {
