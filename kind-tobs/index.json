@@ -41,6 +41,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "centos7"
+    "imageid": "openshift-4-6"
   }
 }
