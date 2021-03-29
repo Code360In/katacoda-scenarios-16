@@ -39,3 +39,35 @@ Promscale is an open-source long-term store for Prometheus data designed for ana
 ### TimescaleDB
 
 TimescaleDB 2.0: A multi-node, petabyte-scale, completely free relational database for time-series.
+
+
+
+Ref:
+
+
+https://hub.docker.com/r/timescale/promscale/tags?page=1&ordering=last_updated
+
+https://github.com/timescale/promscale
+
+https://github.com/timescale/promscale/blob/master/docs/docker.md
+
+
+https://prometheus.io/docs/prometheus/latest/installation/
+
+https://docs.timescale.com/latest/tutorials/getting-started-with-promscale
+
+https://opentelemetry.io/
+
+https://openmetrics.io/
+
+https://opentracing.io/docs/overview/
+
+https://www.cncf.io/cncf-prometheus-project-journey/
+
+https://www.cncf.io/blog/2020/04/24/prometheus-and-grafana-the-perfect-combo/
+
+https://landscape.cncf.io/card-mode?category=observability-and-analysis&grouping=category
+
+https://grafana.com/
+
+https://prometheus.io/

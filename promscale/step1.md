@@ -1,14 +1,5 @@
 # Promscale
 
-https://hub.docker.com/r/timescale/promscale/tags?page=1&ordering=last_updated
-https://github.com/timescale/promscale
-
-https://github.com/timescale/promscale/blob/master/docs/docker.md
-
-
-https://prometheus.io/docs/prometheus/latest/installation/
-
-https://docs.timescale.com/latest/tutorials/getting-started-with-promscale
 
 
 Create network
