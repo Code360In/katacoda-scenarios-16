@@ -25,9 +25,11 @@ https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 ##  Kubectl autocomplete
 BASH
 
+setup autocomplete in bash into the current shell, bash-completion package should be installed first.
 ```
-source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package should be installed first.
+source <(kubectl completion bash) 
 ```{{execute}}
+
 
 add autocomplete permanently to your bash shell.
 ```
