@@ -3,6 +3,7 @@
     "icon": "fa-kubernetes",
     "title": "k8s Logs",
     "description": "",
+    "time": "60 minutes",
     "details": {
         "steps": [
             {
