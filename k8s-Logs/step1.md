@@ -70,6 +70,9 @@ kubectl get events -n default
 ```{{execute}}
 
 
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+
 <pre class="file">
 
 kubectl logs -f # stream logs
