@@ -10,6 +10,11 @@ This will create a two node Kubernetes cluster using WeaveNet for networking.
 kubectl cluster-info
 `{{execute}}
 
+`
+kubectl get nodes
+`{{execute}}
+
+
 
 # kubectl Cheat Sheet
 
