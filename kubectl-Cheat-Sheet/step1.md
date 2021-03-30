@@ -44,8 +44,9 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc
 Set which Kubernetes cluster kubectl communicates with and modifies configuration information. See Authenticating Across Clusters with kubeconfig documentation for detailed config file information.
 
 
+Show Merged kubeconfig settings.
 ```
-kubectl config view # Show Merged kubeconfig settings.
+kubectl config view
 ```{{execute}}
 
 
