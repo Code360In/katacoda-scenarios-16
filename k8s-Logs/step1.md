@@ -54,6 +54,10 @@ kubectl logs example
 ```{{execute}}
 
 
+```
+kubectl logs example -f
+```{{execute}}
+
 
 Node1:
 
@@ -78,6 +82,10 @@ pwd
 ls -lsart
 ```{{execute T2}}
 
+
+```
+tail -f /var/log/pods/default_example_*/example/0.log
+```{{execute T2}}
 
 
 # k8s events
