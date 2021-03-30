@@ -69,3 +69,17 @@ more /var/log/pods/default_example_*/example/0.log
 kubectl get events -n default
 ```{{execute}}
 
+
+<pre class="file">
+
+kubectl logs -f # stream logs
+kubectl logs --since=1h # return logs newer than a relative duration
+kubectl logs --since-time=2020-08-13T10:46:00.000000000Z # return logs after a specific date (RFC3339)
+kubectl logs --previous # print the logs for the previous instance of the container
+kubectl logs -c # print the logs of this container
+kubectl logs -l #  print logs from all containers in pods defined by label
+kubectl get events --sort-by=’.metadata.creationTimestamp’ # print all events in chronological order
+kubectl describe pod  # print pod details like status or recent events
+
+</pre>
+
