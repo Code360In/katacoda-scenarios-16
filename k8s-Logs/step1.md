@@ -78,7 +78,7 @@ kubectl logs --since-time=2020-08-13T10:46:00.000000000Z # return logs after a s
 kubectl logs --previous # print the logs for the previous instance of the container
 kubectl logs -c # print the logs of this container
 kubectl logs -l #  print logs from all containers in pods defined by label
-kubectl get events --sort-by=’.metadata.creationTimestamp’ # print all events in chronological order
+kubectl get events --sort-by='.metadata.creationTimestamp' # print all events in chronological order
 kubectl describe pod  # print pod details like status or recent events
 
 </pre>
