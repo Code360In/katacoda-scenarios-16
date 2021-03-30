@@ -3,6 +3,8 @@
     "icon": "fa-kubernetes",
     "title": "kubectl Cheat Sheet",
     "description": "",
+    "difficulty": "intermediate",
+    "time": "160 minutes",
     "details": {
         "steps": [
             {
