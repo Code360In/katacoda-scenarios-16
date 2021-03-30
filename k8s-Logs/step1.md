@@ -59,7 +59,7 @@ Node1:
 
 ```
 echo node1 t2
-ssh node1
+ssh node01
 ```{{execute T2}}
 
 
