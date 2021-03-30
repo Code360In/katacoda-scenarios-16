@@ -11,6 +11,11 @@ kubectl cluster-info
 `{{execute}}
 
 
+
+```
+kubectl get nodes -o wide
+```{{execute}}
+
 # Kubernetes logging
 
 
