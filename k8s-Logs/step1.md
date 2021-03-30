@@ -70,9 +70,7 @@ kubectl get events -n default
 ```{{execute}}
 
 
-https://kubernetes.io/docs/reference/kubectl/cheatsheet/
-
-
+More:
 <pre class="file">
 
 kubectl logs -f # stream logs
@@ -85,4 +83,7 @@ kubectl get events --sort-by='.metadata.creationTimestamp' # print all events in
 kubectl describe pod  # print pod details like status or recent events
 
 </pre>
+
+
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
