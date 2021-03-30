@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "k8s Logs",
     "icon": "fa-kubernetes",
-    "title": "Kubernetes",
+    "title": "k8s Logs",
     "description": "",
     "details": {
         "steps": [
