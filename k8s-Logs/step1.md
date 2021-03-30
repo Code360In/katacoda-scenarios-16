@@ -61,6 +61,11 @@ more /var/log/pods/default_example_*/example/0.log
 ```{{execute HOST2}}
 
 
+```
+pwd
+ls -lsart
+```{{execute HOST2}}
+
 
 
 # k8s events
