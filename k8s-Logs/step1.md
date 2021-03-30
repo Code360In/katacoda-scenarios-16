@@ -51,20 +51,26 @@ kubectl logs example
 
 
 Node1:
+
+```
+echo node1 t2
+```{{execute HOST2 T2}}
+
+
 ```
 cd /var/log/containers
-```{{execute HOST2}}
+```{{execute HOST2  T2}}
 
 
 ```
 more /var/log/pods/default_example_*/example/0.log
-```{{execute HOST2}}
+```{{execute HOST2 T2}}
 
 
 ```
 pwd
 ls -lsart
-```{{execute HOST2}}
+```{{execute HOST2 T2}}
 
 
 
