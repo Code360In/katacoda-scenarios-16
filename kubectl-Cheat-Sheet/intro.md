@@ -1,5 +1,6 @@
-This is a Kubernetes playground. From here you can play with a Kubernetes host and explore it's API.
+# kubectl Cheat Sheet
+List of commonly used kubectl commands and flags.
 
-#### Kubernetes and logging
 
-https://kubernetes.io/docs/concepts/cluster-administration/logging/
+
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/

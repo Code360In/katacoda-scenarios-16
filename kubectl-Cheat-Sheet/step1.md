@@ -85,3 +85,10 @@ kubectl config set-context gce --user=cluster-admin --namespace=foo \
 kubectl config unset users.foo                       # delete user foo
 ```{{execute}}
 
+
+Kubectl apply
+apply manages applications through files defining Kubernetes resources. It creates and updates resources in a cluster through running kubectl apply. This is the recommended way of managing Kubernetes applications on production. See Kubectl Book.
+
+Creating objects
+Kubernetes manifests can be defined in YAML or JSON. The file extension .yaml, .yml, and .json can be used.
+
