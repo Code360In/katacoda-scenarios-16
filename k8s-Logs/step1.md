@@ -17,7 +17,7 @@ kubectl cluster-info
 
 
 ```
-cat << 'EOF' > example.go
+cat << 'EOF' > example.yaml
 
 apiVersion: v1
 kind: Pod
