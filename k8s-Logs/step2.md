@@ -56,7 +56,7 @@ more /var/log/myapp.log
 
 
 https://kubernetes.io/docs/concepts/cluster-administration/logging/
-
+https://docs.docker.com/config/containers/logging/configure/
 
 
 # Reliable logging for a disk-intensive application
