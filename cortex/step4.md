@@ -19,7 +19,7 @@ docker-compose -f docker-demo/docker-compose.yaml up
 ```{{execute}}
 
 
-test , go to grafana:
+test , go to grafana explore:
 ```
 up{cluster="one"}
 prometheus_tsdb_head_samples_appended_total{cluster="one"}
