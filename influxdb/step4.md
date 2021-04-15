@@ -17,5 +17,7 @@ http://localhost:9090/federate?match[]={__name__=~"[a-z].*"}
 
 http://localhost:9090/federate?match[]={__name__=~"node.*"}&match[]={__name__=~"mysql.*"}
 
+http://localhost:9090/federate?match[]={__name__=~".*"}
+
 ```
 
