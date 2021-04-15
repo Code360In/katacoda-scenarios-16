@@ -51,3 +51,9 @@ apt install influxdb-client
 access:
 
 https://[[HOST_SUBDOMAIN]]-8086-[[KATACODA_HOST]].environments.katacoda.com/
+
+
+get token
+
+
+https://[[HOST_SUBDOMAIN]]-8086-[[KATACODA_HOST]].environments.katacoda.com/load-data/tokens
