@@ -33,3 +33,25 @@ EOF
 ```
 docker-compose up -d
 ```{{execute}}
+
+
+docker ps
+```
+docker ps
+```{{execute}}
+
+
+install client
+```
+apt install influxdb-client
+```{{execute}}
+
+
+
+```
+```{{execute}}
+
+
+
+```
+```{{execute}}
