@@ -34,8 +34,14 @@
   }
   },
   "environment": {
-    "hideintro": true,
-    "uilayout": "terminal"
+    "hideintro": false,
+    "uilayout": "terminal",
+    "dashboards": [
+      {"name": "InfluxDB", "href": "https://[[HOST_SUBDOMAIN]]-8086-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Chronograf", "href": "https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Prometheus", "href": "https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Grafana", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com"}
+    ]
   },
   "backend": {
     "imageid": "ubuntu:2004"
