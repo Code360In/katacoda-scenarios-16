@@ -2,7 +2,7 @@
   "title": "InfluxDB",
   "description": "Verify InfluxDB",
   "difficulty": "intermediate",
-  "time": "160 minutes",
+  "time": "660 minutes",
   "details": {
     "steps": [
       {
