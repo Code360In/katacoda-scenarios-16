@@ -46,3 +46,8 @@ install client
 apt install influxdb-client
 ```{{execute}}
 
+
+
+access:
+
+https://[[HOST_SUBDOMAIN]]-8086-[[KATACODA_HOST]].environments.katacoda.com/
