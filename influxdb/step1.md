@@ -46,12 +46,3 @@ install client
 apt install influxdb-client
 ```{{execute}}
 
-
-
-```
-```{{execute}}
-
-
-
-```
-```{{execute}}
