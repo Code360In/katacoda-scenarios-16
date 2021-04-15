@@ -13,9 +13,18 @@ cd cortex-demo
 ```{{execute}}
 
 
+
 ``` 
 docker-compose -f docker-demo/docker-compose.yaml up
 ```{{execute}}
+
+
+test , go to grafana:
+```
+up{cluster="one"}
+prometheus_tsdb_head_samples_appended_total{cluster="one"}
+```
+
 
 
 clean-up
