@@ -9,9 +9,6 @@ Now, let's see the prometheus configuration:
 
 Start prometheus with command:
 
-```
-echo t4 
-```{{execute T4}}
 
 
 ```
@@ -19,7 +16,7 @@ docker run --net=host -d -p 9090:9090 \
     -v /root/prometheus.yml:/etc/prometheus/prometheus.yml \
     --name prometheus-server \
     prom/prometheus
-```{{execute T4}}
+```{{execute}}
 
 
 You can access to the prometheus dashboard using this link:
