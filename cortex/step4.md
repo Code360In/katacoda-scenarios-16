@@ -27,7 +27,7 @@ helm install prom-one stable/prometheus \
 expose prometheus
 ``` 
 export POD_NAME=$(kubectl get pods --namespace default -l "app=prometheus,component=server" -o jsonpath="{.items[0].metadata.name}")
-kubectl --namespace default port-forward $POD_NAME 9090  --address 0.0.0.0 &
+kubectl --namespace default port-forward $POD_NAME 9090:9090  --address 0.0.0.0 &
 ```{{execute}}
 
 
@@ -51,7 +51,7 @@ expose grafana
 
 export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=grafana,app.kubernetes.io/instance=grafana" -o jsonpath="{.items[0].metadata.name}")
 
-kubectl --namespace default port-forward $POD_NAME 3000  --address 0.0.0.0 &
+kubectl --namespace default port-forward $POD_NAME 3000:3000  --address 0.0.0.0 &
 
 ```{{execute}}
 
