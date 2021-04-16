@@ -1,66 +1,59 @@
 
+# Install Kubernetes dashboard [dashboard](https://helm.sh/docs/intro/install/):
 
-# Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/):
+[Helm package](https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard)
 
-
-```       
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-```{{execute}}
-
-Change to executable:
-```       
-chmod +x ./kubectl
-```{{execute}}
-
-Move to /sbin
-```       
-mv ./kubectl /sbin/kubectl
+Create a namespace:
+``` 
+kubectl create namespace dashboard
 ```{{execute}}
 
 
-Verify cluster:
-```       
-kubectl cluster-info
+Add kubernetes-dashboard repository
+``` 
+helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
 ```{{execute}}
 
-Display nodes:
-```       
-kubectl get nodes
-```{{execute}}
-
-Display Pods:
-```       
-kubectl get pods -A
+Deploy a Helm Release named "dashboard" using the kubernetes-dashboard chart
+``` 
+helm install dashboard kubernetes-dashboard/kubernetes-dashboard -n dashboard --set=service.externalPort=8080,resources.limits.cpu=200m
 ```{{execute}}
 
 
- <pre class="file">
- Pod status running
- Nodes with status ready
- </pre>
 
-
-# Install [helm](https://helm.sh/docs/intro/install/):
-
-
-```       
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+Create a new account that can be used to authenticate to the dashboard:
+``` 
+kubectl create serviceaccount me -n kube-system
 ```{{execute}}
 
-```       
-chmod 700 get_helm.sh
+ 
+Make that new account have the right permissions:
+``` 
+kubectl create clusterrolebinding me -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:me
+```{{execute}}
+ 
+
+Show the token needed to log in to the dashboard:
+``` 
+kubectl get secret $(kubectl get serviceaccount me -n kube-system -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" -n kube-system | base64 --decode; echo
 ```{{execute}}
 
-```       
-./get_helm.sh
+
+``` 
+export POD_NAME=$(kubectl get pods -n dashboard -l "app.kubernetes.io/name=kubernetes-dashboard,app.kubernetes.io/instance=dashboard" -o jsonpath="{.items[0].metadata.name}")
 ```{{execute}}
 
-Verify:
-```       
-helm ls```{{execute}}
-
-
-Remove sh file:
-```       
-rm get_helm.sh
+wait for running:
+``` 
+kubectl get pods -n dashboard
 ```{{execute}}
+
+
+``` 
+kubectl -n dashboard port-forward $POD_NAME 8443:8443  --address 0.0.0.0 &
+```{{execute}}
+
+
+Acess the kubernetes dashboard, go to the dashboard.
+
+https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com

@@ -3,16 +3,11 @@ Kind Kubernetes
 The following scenario demonstrates how to:
 
 
-- Install [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/).
 
-- Create [Kubernetes](https://kubernetes.io/)  cluster.
-
-- Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
-
-- Install [Helm](https://helm.sh/docs/intro/install/).
+- Launch [Kubernetes](https://kubernetes.io/)  cluster.
 
 - Deploy Kubernetes [Dashboard](https://helm.sh/docs/intro/install/) by Helm.
 
 - Deploy [Cortex](https://www.infracloud.io/blogs/cortex-prometheus-ha/)
 
-- Deploy [Loki](https://grafana.com/oss/loki/) by Helm.
+

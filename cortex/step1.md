@@ -1,33 +1,16 @@
 
-[Kind](https://kind.sigs.k8s.io/docs/user/quick-start/)  is a tool for running local [Kubernetes](https://kubernetes.io/) 
- clusters using Docker container “nodes”.
-kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
+#### Launch  Kubernetes Cluster
+
+`launch.sh`{{execute}}
+
+This will create a two node Kubernetes cluster using WeaveNet for networking.
+
+#### Health Check
+
+`
+kubectl cluster-info
+`{{execute}}
 
 
-# Install kind:
-
-```
-curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.10.0/kind-linux-amd64
-```{{execute}}
-
-
-```
-chmod +x ./kind
-```{{execute}}
-
-
-```
-mv ./kind /sbin/kind
-```{{execute}}
-
-
-# Creating a Kubernetes Cluster:
-```
-kind create cluster --name tx-cluster-k8s
-```{{execute}}
-
-Verify:
-```
-kind get clusters
-```{{execute}}
+Interested in writing your own Kubernetes scenarios and demos? Visit [www.katacoda.com/teach](http://www.katacoda.com/teach)
 
