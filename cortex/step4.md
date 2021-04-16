@@ -9,15 +9,15 @@ kubectl apply -f k8s/
 # Prometheus
 
 ``` 
-helm repo add stable https://charts.helm.sh/stable
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 ```{{execute}}
 
 ``` 
-helm search repo stable/prometheus
+helm search repo prometheus-community
 ```{{execute}}
 
 ``` 
-helm install prom-one stable/prometheus \
+helm install prom-one prometheus-community/prometheus \
  --set server.global.external_labels.cluster=one \
  --set serverFiles."prometheus\.yml".remote_write[0].url=http://nginx.default.svc.cluster.local:80/api/prom/push
 ```{{execute}}
