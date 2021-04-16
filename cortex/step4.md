@@ -2,6 +2,12 @@
 
 
 ``` 
+git clone https://github.com/kanuahs/cortex-demo.git
+cd cortex-demo
+```{{execute}}
+
+
+``` 
 kubectl apply -f k8s/
 ```{{execute}}
 
