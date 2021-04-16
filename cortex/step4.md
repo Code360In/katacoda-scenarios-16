@@ -47,17 +47,6 @@ up{cluster="one"}
 prometheus_tsdb_head_samples_appended_total{cluster="one"}
 ```
 
-``` 
-```{{execute}}
-
-
-
-``` 
-```{{execute}}
-
-
-``` 
-```{{execute}}
 
 
 # HA Prometheus setup with deduplication
@@ -67,19 +56,17 @@ prometheus_tsdb_head_samples_appended_total{cluster="one"}
 
 kubectl apply -f k8s-ha/
 
-helm install stable/prometheus \
---name prom-one \
+helm install prom-one stable/prometheus \
 --set server.global.external_labels.cluster=one \
 --set server.global.external_labels.replica=one \
 --set serverFiles."prometheus\.yml".remote_write[0].url=http://nginx.default.svc.cluster.local:80/api/prom/push
 
-helm install stable/prometheus \
---name prom-two \
+helm install prom-two stable/prometheus \
 --set server.global.external_labels.cluster=one \
 --set server.global.external_labels.replica=two \
 --set serverFiles."prometheus\.yml".remote_write[0].url=http://nginx.default.svc.cluster.local:80/api/prom/push
 
-helm install stable/grafana --name=grafana \
+helm install grafana stable/grafana \
 --set datasources."datasources\.yaml".apiVersion=1 \
 --set datasources."datasources\.yaml".datasources[0].name=cortex \
 --set datasources."datasources\.yaml".datasources[0].type=prometheus \
