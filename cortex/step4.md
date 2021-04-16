@@ -8,8 +8,7 @@ kubectl apply -f k8s/
 
 # Prometheus
 ``` 
-helm install stable/prometheus \
- --name prom-one \
+helm install prom-one stable/prometheus \
  --set server.global.external_labels.cluster=one \
  --set serverFiles."prometheus\.yml".remote_write[0].url=http://nginx.default.svc.cluster.local:80/api/prom/push
 
@@ -19,7 +18,7 @@ helm install stable/prometheus \
 # Grafana
 
 ``` 
-helm install stable/grafana --name=grafana \
+helm install grafana stable/grafana  \
  --set datasources."datasources\.yaml".apiVersion=1 \
  --set datasources."datasources\.yaml".datasources[0].name=cortex \
  --set datasources."datasources\.yaml".datasources[0].type=prometheus \
