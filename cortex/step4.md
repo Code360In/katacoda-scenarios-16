@@ -19,6 +19,14 @@ helm search repo prometheus-community
 
 
 ``` 
+helm install prom-one prometheus-community/prometheus \
+ --set server.global.external_labels.cluster=one \
+ --set serverFiles."prometheus\.yml".remote_write[0].url=http://nginx.default.svc.cluster.local:80/api/prom/push
+```{{execute}}
+
+
+
+``` 
 kubectl get pods 
 ```{{execute}}
 
@@ -29,13 +37,6 @@ prom-one-prometheus-node-exporter-mbj26            1/1     Running            0 
 prom-one-prometheus-pushgateway-966c9dd5d-6g929    1/1     Running            0          44s
 prom-one-prometheus-server-758548f865-kq9pf        0/2     Pending            0          44s
 ```
-
-``` 
-helm install prom-one prometheus-community/prometheus \
- --set server.global.external_labels.cluster=one \
- --set serverFiles."prometheus\.yml".remote_write[0].url=http://nginx.default.svc.cluster.local:80/api/prom/push
-```{{execute}}
-
 
 
 expose prometheus
