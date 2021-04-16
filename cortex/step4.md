@@ -34,7 +34,13 @@ kubectl --namespace default port-forward $POD_NAME 9090:9090  --address 0.0.0.0 
 # Grafana
 
 ``` 
-helm install grafana stable/grafana  \
+helm repo add grafana https://grafana.github.io/helm-charts
+helm search repo grafana
+```{{execute}}
+
+
+``` 
+helm install grafana grafana/grafana  \
  --set datasources."datasources\.yaml".apiVersion=1 \
  --set datasources."datasources\.yaml".datasources[0].name=cortex \
  --set datasources."datasources\.yaml".datasources[0].type=prometheus \
@@ -48,7 +54,6 @@ helm install grafana stable/grafana  \
 
 expose grafana
 ``` 
-
 export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=grafana,app.kubernetes.io/instance=grafana" -o jsonpath="{.items[0].metadata.name}")
 
 kubectl --namespace default port-forward $POD_NAME 3000:3000  --address 0.0.0.0 &
