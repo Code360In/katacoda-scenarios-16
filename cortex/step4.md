@@ -16,6 +16,20 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm search repo prometheus-community
 ```{{execute}}
 
+
+
+``` 
+kubectl get pods 
+```{{execute}}
+
+```
+prom-one-kube-state-metrics-969c784c6-wx6kb        1/1     Running            0          44s
+prom-one-prometheus-alertmanager-df6f44b68-jkn52   0/2     Pending            0          44s
+prom-one-prometheus-node-exporter-mbj26            1/1     Running            0          44s
+prom-one-prometheus-pushgateway-966c9dd5d-6g929    1/1     Running            0          44s
+prom-one-prometheus-server-758548f865-kq9pf        0/2     Pending            0          44s
+```
+
 ``` 
 helm install prom-one prometheus-community/prometheus \
  --set server.global.external_labels.cluster=one \
