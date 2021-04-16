@@ -7,13 +7,29 @@ kubectl apply -f k8s/
 
 
 # Prometheus
+
+``` 
+helm repo add stable https://charts.helm.sh/stable
+```{{execute}}
+
+``` 
+helm search repo stable/prometheus
+```{{execute}}
+
 ``` 
 helm install prom-one stable/prometheus \
  --set server.global.external_labels.cluster=one \
  --set serverFiles."prometheus\.yml".remote_write[0].url=http://nginx.default.svc.cluster.local:80/api/prom/push
-
 ```{{execute}}
 
+```
+ export POD_NAME=$(kubectl get pods --namespace default -l "app=prometheus,component=server" -o jsonpath="{.items[0].metadata.name}")
+  kubectl --namespace default port-forward $POD_NAME 9090
+
+
+The Prometheus alertmanager can be accessed via port 80 on the following DNS name from within your cluster:
+prom-one-prometheus-alertmanager.default.svc.cluster.local
+```
 
 # Grafana
 
