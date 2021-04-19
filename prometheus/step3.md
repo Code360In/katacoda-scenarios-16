@@ -22,6 +22,8 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout prometheus.key 
 ```{{execute}}
 
 
+Deploy Prometheus Federate:
+
 ```
 cd /root/
 docker run -u root --net=host -d -p 9091:9091 \
