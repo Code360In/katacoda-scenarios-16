@@ -28,7 +28,7 @@
     "assets": {
       "host01": [
         {"file": "prometheus.yml", "target": "/root/"},
-        {"file": "telegraf.conf", "target": "/root/"}
+        {"file": "prometheus-federate.yml", "target": "/root/"}
         
       ]
   }
