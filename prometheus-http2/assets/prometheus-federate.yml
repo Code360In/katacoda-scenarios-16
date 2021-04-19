@@ -1,0 +1,26 @@
+scrape_configs:
+  - job_name: 'federate'
+    scrape_interval: 1m
+
+    honor_labels: true
+    metrics_path: '/federate'
+
+    params:
+      'match[]':
+        - '{__name__=~".*"}'
+
+    static_configs:
+      - targets:
+        - 'localhost:9090'
+
+
+  - job_name: 'opentelemetry'
+    metrics_path: /metrics
+    scheme: https
+    tls_config:
+      # Certificate and key files for client cert authentication to the server.
+      ca_file: /certs/prometheus.crt
+    static_configs:
+      - targets: ['localhost:8443']
+        labels:
+          group: 'otel'
