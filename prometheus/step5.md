@@ -19,6 +19,32 @@ Run traffic with 10 clients and 100k requests:
 
 starting benchmark...
 
+verify:
+
+
+<pre class="file">
+
+
+TLS Protocol: TLSv1.3
+Cipher: TLS_AES_128_GCM_SHA256
+Server Temp Key: X25519 253 bits
+Application protocol: h2
+
+
+or
+
+
+TLS Protocol: TLSv1.3
+Cipher: TLS_AES_128_GCM_SHA256
+Server Temp Key: X25519 253 bits
+No protocol negotiated. Fallback behaviour may be activated
+Server does not support NPN/ALPN. Falling back to HTTP/1.1.
+Application protocol: http/1.1
+
+
+</pre>
+
+
 
 ## sending one request
 
@@ -49,4 +75,6 @@ h2load "https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D
 ```
 h2load "https://localhost:8443/metrics" -H "accept: application/json" -n 10000 -c 10
 ```{{execute T2}}
+
+
 
