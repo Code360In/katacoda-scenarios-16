@@ -10,9 +10,24 @@ Now, let's see the prometheus configuration:
 Start prometheus with command:
 
 
+Generate tls keys:
+
+You can generate a self-signed certificate and private key using this command:
+
+```
+mkdir -p /root/certs/localhost && cd /root/certs/localhost
+openssl req \
+  -x509 \
+  -newkey rsa:4096 \
+  -nodes \
+  -keyout tls.key \
+  -out tls.crt
+```{{execute}}
+
 
 ```
 docker run --net=host -d -p 9091:9091 \
+    -v $PWD/certs/localhost:/certs/localhost \
     -v $PWD/prometheus-federate.yml:/etc/prometheus/prometheus.yml \
     --name prometheus-federate \
     prom/prometheus --config.file=/etc/prometheus/prometheus.yml --web.enable-admin-api --web.listen-address=:9091
