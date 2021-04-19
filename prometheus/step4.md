@@ -76,7 +76,7 @@ go build  prom-exporter-http2.go
 
 run:
 ```
-./prom-exporter-http2.go
+./prom-exporter-http2
 ```{{execute T1}}
 
 test by curl:
