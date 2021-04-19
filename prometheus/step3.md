@@ -61,6 +61,6 @@ curl -vso /dev/null --http2-prior-knowledge --cacert /root/certs/prometheus.crt 
 http/2 or fallback to http/1.1
 
 ```
-curl -kvso /dev/null --http2 --cert    client.crt \ /root/certs/prometheus.crt  https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D
+curl -kvso /dev/null --http2 --cacert /root/certs/prometheus.crt  https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D
 
 ```{{execute}}
