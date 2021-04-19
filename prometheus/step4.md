@@ -1,24 +1,38 @@
-# LOAD
-Now, we should generate traffic performing requests to the envoy proxy.
+# GO HTTP2
 
-Install h2load to generate http2 traffic:
-
-```
-echo t2
-```{{execute T2}}
-
-`sudo apt install -y nghttp2-client`{{execute T2}}
-
-
-
-# Start h2load
-
-on terminal2
-
-Run traffic with 10 clients and 100k requests:
 
 
 ```
-h2load -v "https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D" -H "accept: application/json" -n 1000 -c 10
-```{{execute T2}}
+cd /root
+more server-http2.go
+```{{execute}}
+
+```
+go build server-http2.go
+```{{execute}}
+
+run:
+
+```
+./server-http2
+```{{execute}}
+
+
+test:
+
+
+only http2 --http2-prior-knowledge :
+
+```
+curl -vso /dev/null --http2-prior-knowledge --cacert /root/certs/prometheus.crt  https://localhost:8443
+
+```{{execute}}
+
+
+http/2 or fallback to http/1.1
+
+```
+curl -kvso /dev/null --http2 --cert    client.crt \ /root/certs/prometheus.crt  https://localhost:8443
+
+```{{execute}}
 
