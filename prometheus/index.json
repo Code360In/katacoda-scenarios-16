@@ -1,0 +1,49 @@
+{
+  "title": "Prometheus",
+  "description": "Verify Prometheus",
+  "difficulty": "intermediate",
+  "time": "660 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "prometheus.yml", "target": "/root/"},
+        {"file": "telegraf.conf", "target": "/root/"}
+        
+      ]
+  }
+  },
+  "environment": {
+    "hideintro": false,
+    "uilayout": "terminal",
+    "dashboards": [
+      {"name": "InfluxDB", "href": "https://[[HOST_SUBDOMAIN]]-8086-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Chronograf", "href": "https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Prometheus", "href": "https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Grafana", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com"}
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
