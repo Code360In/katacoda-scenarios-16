@@ -14,15 +14,6 @@ Generate tls keys:
 
 You can generate a self-signed certificate and private key using this command:
 
-```
-mkdir -p /root/certs/localhost && cd /root/certs/localhost
-openssl req \
-  -x509 \
-  -newkey rsa:4096 \
-  -nodes \
-  -keyout tls.key \
-  -out tls.crt
-```{{execute}}
 
 ```
 mkdir certs
@@ -62,7 +53,7 @@ federate?match[]={__name__=~".*"}
 only http2 --http2-prior-knowledge :
 
 ```
-curl -kvso /dev/null --http2-prior-knowledge --cacert /root/certs/prometheus  https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D
+curl -vso /dev/null --http2-prior-knowledge --cacert /root/certs/prometheus.crt  https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D
 
 ```{{execute}}
 
@@ -70,6 +61,6 @@ curl -kvso /dev/null --http2-prior-knowledge --cacert /root/certs/prometheus  ht
 http/2 or fallback to http/1.1
 
 ```
-curl -kvso /dev/null --http2-prior-knowledge --cacert /root/certs/prometheus  https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D
+curl -kvso /dev/null --http2 --cert    client.crt \ /root/certs/prometheus.crt  https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D
 
 ```{{execute}}
