@@ -19,7 +19,7 @@ scrape_configs:
     scheme: https
     tls_config:
       # Certificate and key files for client cert authentication to the server.
-      ca_file:: /certs/prometheus.crt
+      ca_file: /certs/prometheus.crt
     static_configs:
       - targets: ['localhost:8443']
         labels:
