@@ -30,8 +30,6 @@
         {"file": "prometheus.yml", "target": "/root/"},
         {"file": "prometheus-federate.yml", "target": "/root/"},
         {"file": "prometheus-federate-tls.yml", "target": "/root/"}
-        
-        
       ]
   }
   },
