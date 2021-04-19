@@ -76,7 +76,7 @@ only http2 --http2-prior-knowledge :
 ```
 curl -vso /dev/null --http2-prior-knowledge --cacert /root/certs/prometheus.crt  https://localhost:8443/metrics
 
-```{{execute}}
+```{{execute T2 }
 
 
 http/2 or fallback to http/1.1
@@ -84,4 +84,4 @@ http/2 or fallback to http/1.1
 ```
 curl -kvso /dev/null --http2 --cacert /root/certs/prometheus.crt  https://localhost:8443/metrics
 
-```{{execute}}
+```{{execute T2}}
