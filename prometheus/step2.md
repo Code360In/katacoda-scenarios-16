@@ -29,14 +29,14 @@ And use this default credentials:
 
 The initial step will ask you to change the password, you can do it if you want or you can skip this step.
 
-The first step to create a dashboard is to have a datasource. Let's define a datasource with influxDB data configured before:
+The first step to create a dashboard is to have a datasource. Let's define a datasource with Prometheus data configured before:
 
 The URL for phometheus should be:
-`http://localhost:8086`{{copy}}  
+`http://localhost:9090`{{copy}}  
 
 or
 
-`https://[[HOST_SUBDOMAIN]]-8086-[[KATACODA_HOST]].environments.katacoda.com`{{copy}}
+`https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com`{{copy}}
 
 For all the other fields you can use the default values
 
