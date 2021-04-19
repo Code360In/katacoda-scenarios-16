@@ -17,8 +17,27 @@ on terminal2
 
 Run traffic with 10 clients and 100k requests:
 
+starting benchmark...
+
+
+## sending one request
 
 ```
-h2load -v "https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D" -H "accept: application/json" -n 1000 -c 10
+h2load "https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D" -H "accept: application/json" -n 1
 ```{{execute T2}}
 
+
+## sending 1k requests
+
+```
+h2load "https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D" -H "accept: application/json" -n 1000 -c 10
+```{{execute T2}}
+
+
+
+
+## sending 10k requests
+
+```
+h2load "https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D" -H "accept: application/json" -n 1 -c 10
+```{{execute T2}}
