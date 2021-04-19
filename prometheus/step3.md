@@ -29,6 +29,7 @@ openssl req \
 docker run --net=host -d -p 9091:9091 \
     -v $PWD/certs/localhost:/certs/localhost \
     -v $PWD/prometheus-federate.yml:/etc/prometheus/prometheus.yml \
+    -v $PWD/prometheus-federate-tls.yml:/etc/prometheus/prometheus-tls.yml \
     --name prometheus-federate \
     prom/prometheus --config.file=/etc/prometheus/prometheus.yml --web.config.file=/etc/prometheus/prometheus-tls.yml --web.enable-admin-api --web.listen-address=:9091
 ```{{execute}}
