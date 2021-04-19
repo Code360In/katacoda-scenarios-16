@@ -59,10 +59,11 @@ close  ./server-http2
 
 # prom-exporter-http2.go
 
+
 ```
 more  prom-exporter-http2.go
-
 ```{{execute T1}}
+
 
 ```
 go mod init prom-exporter-http2
@@ -85,13 +86,11 @@ only http2 --http2-prior-knowledge :
 
 ```
 curl -vso /dev/null --http2-prior-knowledge --cacert /root/certs/prometheus.crt  https://localhost:8443/metrics
-
-```{{execute T2 }
+```{{execute T2 }}
 
 
 http/2 or fallback to http/1.1
 
 ```
 curl -kvso /dev/null --http2 --cacert /root/certs/prometheus.crt  https://localhost:8443/metrics
-
 ```{{execute T2}}

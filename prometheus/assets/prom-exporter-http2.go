@@ -25,22 +25,22 @@ func initMeter() {
 	if err != nil {
 		log.Panicf("failed to initialize prometheus exporter %v", err)
 	}
-	http.HandleFunc("/", exporter.ServeHTTP)
+
+	server := &http.Server{
+		Addr:         ":8443",
+		ReadTimeout:  5 * time.Second,
+		WriteTimeout: 10 * time.Second,
+		TLSConfig:    tlsConfig(),
+		//TLSNextProto: make(map[string]func(*http.Server, *tls.Conn, http.Handler)),
+	}
+
+	http.HandleFunc("/metrics", exporter.ServeHTTP)
+
+	http.HandleFunc("/info", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte(fmt.Sprintf("Protocol: %s", r.Proto)))
+	})
+
 	go func() {
-
-		server := &http.Server{
-			Addr:         ":8443",
-			ReadTimeout:  5 * time.Second,
-			WriteTimeout: 10 * time.Second,
-			TLSConfig:    tlsConfig(),
-			//TLSNextProto: make(map[string]func(*http.Server, *tls.Conn, http.Handler)),
-		}
-
-		http.HandleFunc("/metrics", exporter.ServeHTTP)
-
-		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-			w.Write([]byte(fmt.Sprintf("Protocol: %s", r.Proto)))
-		})
 
 		if err := server.ListenAndServeTLS("", ""); err != nil {
 			log.Fatal(err)
