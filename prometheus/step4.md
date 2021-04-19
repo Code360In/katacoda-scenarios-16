@@ -69,9 +69,7 @@ go build  prom-exporter-http2.go
 ```{{execute T1}}
 
 
-test vy curl:
-
-federate?match[]={__name__=~".*"}
+test by curl:
 
 only http2 --http2-prior-knowledge :
 

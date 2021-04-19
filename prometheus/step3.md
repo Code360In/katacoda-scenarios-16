@@ -46,7 +46,7 @@ Prometheus Metrics:
 https://[[HOST_SUBDOMAIN]]-9091-[[KATACODA_HOST]].environments.katacoda.com/metrics
 
 
-test vy curl:
+test by curl:
 
 federate?match[]={__name__=~".*"}
 
