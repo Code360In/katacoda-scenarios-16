@@ -119,3 +119,8 @@ b) opentelemetry by http/2
 
 
 Add Grafana datasource to http://localhost:9091 , with "Skip TLS Verify"
+
+Explore metrics on Grafana: ex_*
+
+https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/explore?orgId=1&left=%5B%22now-1h%22,%22now%22,%22Prometheus%22,%7B%22exemplar%22:false,%22expr%22:%22ex_com_one%22,%22requestId%22:%22Q-66af286b-c9d6-4220-858f-5a59b4cf845f-0A%22%7D%5D
+
