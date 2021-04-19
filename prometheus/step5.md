@@ -39,5 +39,14 @@ h2load "https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D
 ## sending 10k requests
 
 ```
-h2load "https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D" -H "accept: application/json" -n 1 -c 10
+h2load "https://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D" -H "accept: application/json" -n 10000 -c 10
 ```{{execute T2}}
+
+
+
+### test exporter port 8443
+
+```
+h2load "https://localhost:8443/metrics" -H "accept: application/json" -n 10000 -c 10
+```{{execute T2}}
+
