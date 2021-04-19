@@ -100,3 +100,10 @@ see metrics:
 ```
 curl --http2-prior-knowledge --cacert /root/certs/prometheus.crt  https://localhost:8443/metrics
 ```{{execute T2}}
+
+
+
+# Prometheus have debug enable
+```
+docker logs prometheus-federate
+```{{execute T2}}
