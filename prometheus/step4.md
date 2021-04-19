@@ -65,9 +65,14 @@ more  prom-exporter-http2.go
 ```{{execute T1}}
 
 ```
-go build  prom-exporter-http2.go
-./prom-exporter-http2.go
+go mod init prom-exporter-http2
+go mod verify
 ```{{execute T1}}
+
+```
+go build  prom-exporter-http2.go
+```{{execute T1}}
+
 
 run:
 ```
