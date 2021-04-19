@@ -30,7 +30,7 @@ docker run --net=host -d -p 9091:9091 \
     -v $PWD/certs/localhost:/certs/localhost \
     -v $PWD/prometheus-federate.yml:/etc/prometheus/prometheus.yml \
     --name prometheus-federate \
-    prom/prometheus --config.file=/etc/prometheus/prometheus.yml --web.enable-admin-api --web.listen-address=:9091
+    prom/prometheus --web.config.file=/etc/prometheus/prometheus.yml --web.enable-admin-api --web.listen-address=:9091
 ```{{execute}}
 
 
