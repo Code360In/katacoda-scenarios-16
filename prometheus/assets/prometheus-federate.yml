@@ -12,3 +12,20 @@ scrape_configs:
     static_configs:
       - targets:
         - 'localhost:9090'
+
+
+  - job_name: 'opentelemetry'
+    metrics_path: /metrics
+    scheme: https
+    tls_config:
+      # Certificate and key files for client cert authentication to the server.
+      cert_file: /certs/prometheus.crt
+      key_file:  /certs/prometheus.key
+
+      # ServerName extension to indicate the name of the server.
+      # https://tools.ietf.org/html/rfc4366#section-3.1
+      server_name: localhost
+    static_configs:
+      - targets: ['localhost:8443']
+        labels:
+          group: 'otel'
