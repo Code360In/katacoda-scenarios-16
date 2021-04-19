@@ -115,4 +115,4 @@ https://[[HOST_SUBDOMAIN]]-9091-[[KATACODA_HOST]].environments.katacoda.com/targ
 
 
 a) federate by http/1.1
-b) opentelemetry by http/2.0
+b) opentelemetry by http/2
