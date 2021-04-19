@@ -94,3 +94,9 @@ http/2 or fallback to http/1.1
 ```
 curl -kvso /dev/null --http2 --cacert /root/certs/prometheus.crt  https://localhost:8443/metrics
 ```{{execute T2}}
+
+
+see metrics:
+```
+curl --http2-prior-knowledge --cacert /root/certs/prometheus.crt  https://localhost:8443/metrics
+```{{execute T2}}
