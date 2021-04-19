@@ -15,6 +15,7 @@ func main() {
 		ReadTimeout:  5 * time.Second,
 		WriteTimeout: 10 * time.Second,
 		TLSConfig:    tlsConfig(),
+		//TLSNextProto: make(map[string]func(*http.Server, *tls.Conn, http.Handler)),
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
