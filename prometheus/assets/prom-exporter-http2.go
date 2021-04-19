@@ -16,6 +16,10 @@ import (
 	"go.opentelemetry.io/otel/metric/global"
 )
 
+var (
+	lemonsKey = attribute.Key("ex.com/lemons")
+)
+
 func initMeter() {
 	exporter, err := prometheus.InstallNewPipeline(prometheus.Config{})
 	if err != nil {
