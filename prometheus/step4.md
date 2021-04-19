@@ -69,6 +69,10 @@ go build  prom-exporter-http2.go
 ./prom-exporter-http2.go
 ```{{execute T1}}
 
+run:
+```
+./prom-exporter-http2.go
+```{{execute T1}}
 
 test by curl:
 
