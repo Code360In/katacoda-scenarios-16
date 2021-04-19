@@ -49,3 +49,41 @@ Results:
 `
 < HTTP/2 200 
 `
+
+
+
+close  ./server-http2
+
+
+
+# prom-exporter-http2.go
+
+```
+more  prom-exporter-http2.go
+
+```{{execute T1}}
+
+```
+go build  prom-exporter-http2.go
+./prom-exporter-http2.go
+```{{execute T1}}
+
+
+test vy curl:
+
+federate?match[]={__name__=~".*"}
+
+only http2 --http2-prior-knowledge :
+
+```
+curl -vso /dev/null --http2-prior-knowledge --cacert /root/certs/prometheus.crt  https://localhost:8443/metrics
+
+```{{execute}}
+
+
+http/2 or fallback to http/1.1
+
+```
+curl -kvso /dev/null --http2 --cacert /root/certs/prometheus.crt  https://localhost:8443/metrics
+
+```{{execute}}
