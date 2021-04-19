@@ -43,3 +43,9 @@ curl -kvso /dev/null --http2 --cacert  /root/certs/prometheus.crt  https://local
 
 ```{{execute T1}}
 
+
+Results:
+
+`
+< HTTP/2 200 
+`
