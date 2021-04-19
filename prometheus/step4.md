@@ -107,3 +107,12 @@ curl --http2-prior-knowledge --cacert /root/certs/prometheus.crt  https://localh
 ```
 docker logs prometheus-federate
 ```{{execute T2}}
+
+
+Verify if both target are up and running
+
+https://[[HOST_SUBDOMAIN]]-9091-[[KATACODA_HOST]].environments.katacoda.com/targets
+
+
+a) federate by http/1.1
+b) opentelemetry by http/2.0
