@@ -19,6 +19,6 @@ Run traffic with 10 clients and 100k requests:
 
 
 ```
-h2load -v "http://localhost:9091/federate" -H "accept: application/json" -n 1000 -c 10
+h2load -v "curl http://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D" -H "accept: application/json" -n 1000 -c 10
 ```{{execute T2}}
 

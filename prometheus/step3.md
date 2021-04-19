@@ -15,7 +15,7 @@ Start prometheus with command:
 docker run --net=host -d -p 9091:9091 \
     -v $PWD/prometheus-federate.yml:/etc/prometheus/prometheus.yml \
     --name prometheus-federate \
-    prom/prometheus
+    prom/prometheus --config.file=/etc/prometheus/prometheus.yml --web.enable-admin-api --web.listen-address=:9091
 ```{{execute}}
 
 
@@ -30,3 +30,12 @@ https://[[HOST_SUBDOMAIN]]-9091-[[KATACODA_HOST]].environments.katacoda.com/targ
 Prometheus Metrics:
 
 https://[[HOST_SUBDOMAIN]]-9091-[[KATACODA_HOST]].environments.katacoda.com/metrics
+
+
+test vy curl:
+
+federate?match[]={__name__=~".*"}
+```
+curl http://localhost:9091/federate?match%5B%5D=%7B__name__%3D~%22.%2A%22%7D
+
+```{{execute}}
