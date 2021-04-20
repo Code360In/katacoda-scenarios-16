@@ -1,133 +1,59 @@
-# GO HTTP2 exporter OpenTelemetry
-
-
-# server-http2.go
+# Deploy influxDB + chronograf
 
 ```
-cd /root
-cat server-http2.go
+cat <<EOF >> docker-compose.yml
+version: '3'
+services:
+  influxdb:
+    image: influxdb:latest
+    volumes:
+      # Mount for influxdb data directory
+      - ./influxdb/data:/var/lib/influxdb
+      # Mount for influxdb configuration
+      - ./influxdb/config/:/etc/influxdb/
+    ports:
+      # The API for InfluxDB is served on port 8086
+      - "8086:8086"
+      - "8082:8082"
+
+  chronograf:
+    image: chronograf:latest
+    volumes:
+      # Mount for chronograf database
+      - ./chronograf/data/:/var/lib/chronograf/
+    ports:
+      # The WebUI for Chronograf is served on port 8888
+      - "8888:8888"
+    depends_on:
+      - influxdb
+EOF
 ```{{execute}}
 
+
 ```
-go build server-http2.go
+docker-compose up -d
 ```{{execute}}
 
-run:
 
-
-
+docker ps
 ```
-echo t2
-```{{execute T2}}
+docker ps
+```{{execute}}
 
 
+install client
 ```
-./server-http2
-```{{execute T2}}
-
-
-test:
-
-
-only http2 --http2-prior-knowledge :
-
-```
-curl -vso /dev/null --http2-prior-knowledge --cacert /root/certs/prometheus.crt  https://localhost:8443
-
-```{{execute T1}}
-
-
-http/2 or fallback to http/1.1
-
-```
-curl -kvso /dev/null --http2 --cacert  /root/certs/prometheus.crt  https://localhost:8443
-
-```{{execute T1}}
-
-
-Results:
-
-`
-< HTTP/2 200 
-`
+apt install influxdb-client
+```{{execute}}
 
 
 
-close  ./server-http2
+access:
+
+https://[[HOST_SUBDOMAIN]]-8086-[[KATACODA_HOST]].environments.katacoda.com/
 
 
-
-# prom-exporter-http2.go
-
-
-```
-cat  prom-exporter-http2.go
-```{{execute T1}}
+get token
 
 
-```
-go mod init prom-exporter-http2
-go mod verify
-```{{execute T1}}
-
-```
-go build  prom-exporter-http2.go
-```{{execute T1}}
-
-
-run:
-```
-./prom-exporter-http2
-```{{execute T1}}
-
-test by curl:
-
-only http2 --http2-prior-knowledge :
-
-```
-curl -vso /dev/null --http2-prior-knowledge --cacert /root/certs/prometheus.crt  https://localhost:8443/metrics
-```{{execute T2 }}
-
-
-http/2 or fallback to http/1.1
-
-```
-curl -kvso /dev/null --http2 --cacert /root/certs/prometheus.crt  https://localhost:8443/metrics
-```{{execute T2}}
-
-
-see metrics:
-```
-curl --http2-prior-knowledge --cacert /root/certs/prometheus.crt  https://localhost:8443/metrics
-```{{execute T2}}
-
-
-
-# Prometheus have debug enable
-```
-docker logs prometheus-federate
-```{{execute T2}}
-
-
-Verify if both target are up and running
-
-https://[[HOST_SUBDOMAIN]]-9091-[[KATACODA_HOST]].environments.katacoda.com/targets
-
-
-
-<pre class="file">
-
-a) federate by http/1.1
-
-b) opentelemetry by http/2
-
-</pre>
-
-
-
-Explore metrics on Grafana: ex_*
-
-
-
-https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/explore?orgId=1&left=%5B%22now-1h%22,%22now%22,%22Prometheus%22,%7B%22exemplar%22:false,%22expr%22:%22ex_com_one%22,%22requestId%22:%22Q-66af286b-c9d6-4220-858f-5a59b4cf845f-0A%22%7D%5D
-
+https://[[HOST_SUBDOMAIN]]-8086-[[KATACODA_HOST]].environments.katacoda.com/load-data/tokens

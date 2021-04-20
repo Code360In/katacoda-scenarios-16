@@ -9,10 +9,6 @@
 
 - Deploy Grafana HTTP2
 
-- Deploy Exporter Opentelemetry HTTP2
-
-- Run H2LOAD
-
 - Deploy InfluxDB
 
 Docs:
