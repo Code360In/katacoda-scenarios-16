@@ -39,8 +39,7 @@
         {"file": "prometheus-federate.yml", "target": "/root/"},
         {"file": "prometheus-federate-tls.yml", "target": "/root/"},
         {"file": "server-http2.go", "target": "/root/"},
-        {"file": "prom-exporter-http2.go", "target": "/root/"},
-        {"file": "grafana.ini", "target": "/root/"}
+        {"file": "prom-exporter-http2.go", "target": "/root/"}
       ]
   }
   },
