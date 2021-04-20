@@ -5,7 +5,7 @@
 
 ```
 cd /root
-more server-http2.go
+cat server-http2.go
 ```{{execute}}
 
 ```
@@ -61,7 +61,7 @@ close  ./server-http2
 
 
 ```
-more  prom-exporter-http2.go
+cat  prom-exporter-http2.go
 ```{{execute T1}}
 
 
