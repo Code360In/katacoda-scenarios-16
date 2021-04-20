@@ -77,4 +77,15 @@ h2load "https://localhost:8443/metrics" -H "accept: application/json" -n 10000 -
 ```{{execute T2}}
 
 
+# Test Grafana
 
+
+```
+curl -vso /dev/null --http2-prior-knowledge --cacert /root/certs/prometheus.crt  https://localhost:3000/
+```{{execute T2 }}
+
+results:
+
+`
+< HTTP/2 302 
+`
