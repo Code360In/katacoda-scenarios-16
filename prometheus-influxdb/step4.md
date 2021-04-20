@@ -50,3 +50,26 @@ access:
 
 https://[[HOST_SUBDOMAIN]]-8086-[[KATACODA_HOST]].environments.katacoda.com/
 
+http://localhost:8086/v1/api/prometheus/prometheus/prometheus
+
+influxQL:
+
+```
+curl -G 'http://localhost:8086/query?pretty=true' --data-urlencode "db=prometheus" --data-urlencode "q=SELECT \"value\" FROM \"up\""
+```{{execute}}
+
+
+
+Flux:
+
+```
+curl -XPOST localhost:8086/api/v2/query -sS \
+  -H 'Accept:application/csv' \
+  -H 'Content-type:application/vnd.flux' \
+  -d 'from(bucket:"prometheus")
+        |> range(start:-5m)
+        |> filter(fn:(r) => r._measurement == "up")'  
+```{{execute}}
+
+```
+```{{execute}}
