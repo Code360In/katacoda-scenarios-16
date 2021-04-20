@@ -24,3 +24,10 @@ scrape_configs:
       - targets: ['localhost:8443']
         labels:
           group: 'otel'
+
+
+remote_write:
+  - url: "http://localhost:8086/api/v1/prom/write?db=prometheus"
+
+remote_read:
+  - url: "http://localhost:8086/api/v1/prom/read?db=prometheus"
