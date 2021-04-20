@@ -21,9 +21,16 @@ docker run -d  -u root\
 `docker logs grafana`{{execute}}
 
 results:
-`
-"HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
-`
+
+<pre class="file">
+
+"@level":"debug","@message":"datasource: registering query type fallback handler","@timestamp":"2021-04-20T00:41:55.910891Z"}
+t=2021-04-20T00:41:55+0000 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=h2 subUrl= socket=
+
+
+
+</pre>
+
 
 
 And access to the dashboard using this url:
@@ -40,9 +47,20 @@ The first step to create a dashboard is to have a datasource. Let's define a dat
 The URL for phometheus should be:
 `http://localhost:9090`{{copy}}  
 
-or
+and 
 
-`https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com`{{copy}}
+`https://localhost:9091`{{copy}}  
+
+Auth -> "With CA Cert"
+
+copy content from
+
+
+```
+more /root/certs/prometheus.crt
+```{{execute}}
+
+
 
 For all the other fields you can use the default values
 
