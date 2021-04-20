@@ -18,7 +18,7 @@ docker run -d -p 8086:8086 --name influxdb \
 ```{{execute}}     
 
 ```
-docker run -p 8086:8086 --name influxdb \
+docker run -d -p 8086:8086 --name influxdb \
       -v influxdb:/var/lib/influxdb \
       influxdb:1.8
 ```{{execute}}  
