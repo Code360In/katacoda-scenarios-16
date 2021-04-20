@@ -14,6 +14,13 @@ cat /root/prometheus-federate.yml
 ```{{execute}}
 
 
+```
+ls
+cat /root/prometheus-federate-tls.yml
+```{{execute}}
+
+
+
 Start prometheus with command:
 
 
