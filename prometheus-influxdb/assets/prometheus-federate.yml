@@ -27,7 +27,7 @@ scrape_configs:
 
 
 remote_write:
-  - url: "http://localhost:8086/api/v1/prom/write?db=prometheus"
+  - url: "http://localhost:8086/api/v2/write?org=prometheus&bucket=prometheus"
 
 remote_read:
-  - url: "http://localhost:8086/api/v1/prom/read?db=prometheus"
+  - url: "http://localhost:8086/api/v2/read?org=prometheus&bucket=prometheus"

@@ -6,7 +6,7 @@ docker run -d -p 8086:8086 --name influxdb \
       -v influxdb:/root/influxdb/data \
       -v influxdb2:/root/influxdb2/data \
       -v influxdb2-config:/etc/influxdb2 \
-      -v $PWD/influxdb.conf:/root/influxdb/influxdb.conf \
+      -v $PWD/influxdb2.0.conf:/root/influxdb/influxdb.conf \
       -e DOCKER_INFLUXDB_INIT_MODE=setup \
       -e DOCKER_INFLUXDB_INIT_USERNAME=admin \
       -e DOCKER_INFLUXDB_INIT_PASSWORD=system#1 \
@@ -14,7 +14,7 @@ docker run -d -p 8086:8086 --name influxdb \
       -e DOCKER_INFLUXDB_INIT_BUCKET=prometheus \
       -e DOCKER_INFLUXDB_INIT_RETENTION=1w \
       -e DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=token \
-      influxdb:1.8
+      influxdb:2.0.4
 ```{{execute}}     
 
 ```
