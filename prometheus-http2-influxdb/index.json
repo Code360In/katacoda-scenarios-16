@@ -1,0 +1,62 @@
+{
+  "title": "Prometheus Remote Read/Write to InfluxDB",
+  "description": "Verify Prometheus Read/Write to InfluxDB",
+  "difficulty": "intermediate",
+  "time": "664 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6",
+        "text": "step6.md"
+      }
+    ],
+    "intro": {
+      "courseData": "env-init.sh",
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "prometheus.yml", "target": "/root/"},
+        {"file": "prometheus-federate.yml", "target": "/root/"},
+        {"file": "prometheus-federate-tls.yml", "target": "/root/"},
+        {"file": "server-http2.go", "target": "/root/"},
+        {"file": "prom-exporter-http2.go", "target": "/root/"}
+      ]
+  }
+  },
+  "environment": {
+    "hideintro": false,
+    "uilayout": "terminal",
+    "dashboards": [
+      {"name": "Prometheus", "href": "https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Prometheus-federate", "href": "https://[[HOST_SUBDOMAIN]]-9091-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Grafana", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com"}
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
