@@ -6,13 +6,14 @@ Now, let's run grafana with this command:
 ```
 docker run -d \
   -p 3000:3000 \
-  -v $PWD/grafana.yml:/etc/grafana-ini/grafana.ini \ 
+  -v $PWD/grafana.ini:/etc/grafana-ini/grafana.ini \ 
   -v $PWD/certs:/certs \
   --net=host \
   --name=grafana \
   -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-worldmap-panel,marcusolsson-json-datasource,magnesium-wordcloud-panel" \
   -e "GF_PATHS_CONFIG=/etc/grafana-ini/grafana.ini" \
-  grafana/grafana:latest-ubuntu```{{execute}}
+  grafana/grafana:latest-ubuntu
+  ```{{execute}}
 
 
 `docker logs grafana`{{execute}}
