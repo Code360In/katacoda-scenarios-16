@@ -5,7 +5,7 @@ Now, let's run grafana with this command:
 
 
 ```
-docker run -d \
+docker run -d  -u root\
   --name=grafana \
   -p 3000:3000 \
   -v $PWD/certs:/certs \
