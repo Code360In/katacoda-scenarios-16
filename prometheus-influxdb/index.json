@@ -2,7 +2,7 @@
   "title": "Prometheus Remote Read/Write to InfluxDB",
   "description": "Verify Prometheus Read/Write to InfluxDB",
   "difficulty": "intermediate",
-  "time": "666 minutes",
+  "time": "667 minutes",
   "details": {
     "steps": [
       {
