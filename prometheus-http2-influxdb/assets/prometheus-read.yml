@@ -1,6 +1,6 @@
 global:
-  external_labels:
-    cluster: test
+  evaluation_interval: 1m
+  scrape_interval: 1m
 
 remote_read:
   - url: "http://localhost:8086/api/v1/prom/read?db=prometheus"
