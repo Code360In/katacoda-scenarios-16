@@ -51,7 +51,7 @@ and
 
 `https://localhost:9091`{{copy}}  
 
-Auth -> "With CA Cert"
+Auth -> "With CA Cert" -> true
 
 copy content from
 
