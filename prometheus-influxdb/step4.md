@@ -50,30 +50,3 @@ access:
 
 https://[[HOST_SUBDOMAIN]]-8086-[[KATACODA_HOST]].environments.katacoda.com/
 
-
-get token
-
-
-https://[[HOST_SUBDOMAIN]]-8086-[[KATACODA_HOST]].environments.katacoda.com/load-data/tokens
-
-
-curl --header "Authorization: Token $(bin/$(uname -s | tr '[:upper:]' '[:lower:]')/influx auth list --json | jq -r '.[0].token')" \
---data-raw "m v=2 $(date +%s)" \
-"http://localhost:8086/api/v2/write?org=InfluxData&bucket=telegraf&precision=s"
-
-
-curl --header "Authorization: Token $(bin/$(uname -s | tr '[:upper:]' '[:lower:]')/influx auth list --json | jq -r '.[0].token')" \
---data-raw "m v=2 $(date +%s)" \
-"http://localhost:8086/api/v2/write?org=InfluxData&bucket=telegraf&precision=s"
-
-
-curl -XPOST localhost:8086/api/v2/query -sS \
-  -H 'Accept:application/csv' \
-  -H 'Content-type:application/vnd.flux' \
-  -d 'from(bucket:"telegraf")
-        |> range(start:-5m)
-        |> filter(fn:(r) => r._measurement == "cpu")'
-
-
-
-curl -i -XPOST "http://localhost:8086/api/v1/prom/read?u=admin&p=system#1&db=prometheus"
