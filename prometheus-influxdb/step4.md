@@ -30,10 +30,19 @@ EOF
 ```{{execute}}
 
 
+
 ```
 docker-compose up -d
 ```{{execute}}
 
+```
+docker run -d -p 8086:8086 \
+      -v influxdb:/root/influxdb/data \
+      -v influxdb2:/root/influxdb2/data \
+      -v influxdb2-config:/etc/influxdb2 \
+      -v $PWD/influxdb.conf:/root/influxdb/influxdb.conf \
+      influxdb:2.0
+```{{execute}}     
 
 docker ps
 ```

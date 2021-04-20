@@ -38,7 +38,9 @@
         {"file": "prometheus.yml", "target": "/root/"},
         {"file": "prometheus-federate.yml", "target": "/root/"},
         {"file": "prometheus-federate-tls.yml", "target": "/root/"},
-        {"file": "prometheus-read.yml", "target": "/root/"}
+        {"file": "prometheus-read.yml", "target": "/root/"},
+        {"file": "influxdb.conf", "target": "/root/"}
+        
       ]
   }
   },
