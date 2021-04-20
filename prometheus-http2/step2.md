@@ -4,7 +4,7 @@ Prometheus is an open-source monitoring solution.
 
 Now, let's see the prometheus configuration:
 
-`prometheus.yml`{{open}}
+`prometheus-federate.yml`{{open}}
 
 
 Start prometheus with command:
