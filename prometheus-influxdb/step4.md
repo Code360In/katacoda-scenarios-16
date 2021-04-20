@@ -34,6 +34,16 @@ install client
 apt install influxdb-client
 ```{{execute}}
 
+```
+influx
+```{{execute}}
+
+
+
+```
+CREATE DATABASE "prometheus"
+quit
+```{{execute}}
 
 
 access:
