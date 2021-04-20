@@ -1,4 +1,4 @@
-# Deploy influxDB + chronograf
+# Deploy influxDB 
 
 
 ```
