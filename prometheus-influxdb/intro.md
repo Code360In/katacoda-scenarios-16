@@ -1,4 +1,4 @@
-# Verify Prometheus HTTP2
+# Verify Prometheus Remote-write/read InfluxDB
 
 
 ### Tasks:
@@ -26,6 +26,3 @@ https://openmetrics.io/
 https://devstats.cncf.io/
 
 https://docs.influxdata.com/influxdb/v2.0/query-data/get-started/
-
-HTTP2:
-
