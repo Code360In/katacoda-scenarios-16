@@ -52,3 +52,16 @@ https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/metr
 
 
 
+
+<pre class="file">
+
+
+more grafana.ini
+
+#################################### Server ####################################
+[server]
+# Protocol (http, https, h2, socket)
+protocol = h2
+
+
+</pre>
