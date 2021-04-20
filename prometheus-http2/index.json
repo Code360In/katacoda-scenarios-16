@@ -2,7 +2,7 @@
   "title": "Prometheus",
   "description": "Verify Prometheus HTTP2",
   "difficulty": "intermediate",
-  "time": "663 minutes",
+  "time": "664 minutes",
   "details": {
     "steps": [
       {
