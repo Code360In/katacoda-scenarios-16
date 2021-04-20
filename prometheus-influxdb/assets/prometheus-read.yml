@@ -5,3 +5,4 @@ global:
 
 remote_read:
   - url: "http://localhost:8086/api/v2/read?org=prometheus&bucket=prometheus"
+    bearer_token: "Authorization: Token token"
