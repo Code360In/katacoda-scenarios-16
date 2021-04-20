@@ -21,6 +21,8 @@ docker run -d -p 8086:8086 --name influxdb \
 docker run -d -p 8086:8086 --name influxdb \
       -v influxdb:/var/lib/influxdb \
       -v $PWD/influxdb.conf:/etc/influxdb/influxdb.conf \
+      -e DOCKER_INFLUXDB_INIT_ORG=prometheus \
+      -e DOCKER_INFLUXDB_INIT_BUCKET=prometheus \
       influxdb:1.8
 ```{{execute}}  
 
@@ -45,12 +47,14 @@ CREATE DATABASE "prometheus"
 quit
 ```{{execute}}
 
+influx org create -n prometheus
+
 
 access:
 
 https://[[HOST_SUBDOMAIN]]-8086-[[KATACODA_HOST]].environments.katacoda.com/
 
-http://localhost:8086/v1/api/prometheus/prometheus/prometheus
+http://localhost:8086/v2/api/prometheus/prometheus/prometheus
 
 influxQL:
 
