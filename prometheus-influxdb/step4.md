@@ -14,8 +14,14 @@ docker run -d -p 8086:8086 --name influxdb \
       -e DOCKER_INFLUXDB_INIT_BUCKET=prometheus \
       -e DOCKER_INFLUXDB_INIT_RETENTION=1w \
       -e DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=token \
-      influxdb:2.0
+      influxdb:1.8
 ```{{execute}}     
+
+```
+docker run -p 8086:8086 --name influxdb \
+      -v influxdb:/var/lib/influxdb \
+      influxdb:1.8
+```{{execute}}  
 
 ```
 docker ps
@@ -56,3 +62,7 @@ curl -XPOST localhost:8086/api/v2/query -sS \
   -d 'from(bucket:"telegraf")
         |> range(start:-5m)
         |> filter(fn:(r) => r._measurement == "cpu")'
+
+
+
+curl -i -XPOST "http://localhost:8086/api/v1/prom/read?u=admin&p=system#1&db=prometheus"

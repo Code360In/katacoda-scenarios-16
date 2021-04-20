@@ -28,7 +28,7 @@ docker run -u root --net=host -d -p 9092:9092 \
     -v $PWD/certs:/certs \
     -v $PWD/prometheus-read.yml:/etc/prometheus/prometheus.yml \
     --name prometheus-read \
-    prom/prometheus --config.file=/etc/prometheus/prometheus.yml --web.enable-admin-api --web.listen-address=:9092 --log.level=debug
+    prom/prometheus --config.file=/etc/prometheus/prometheus.yml --web.enable-admin-api --web.listen-address=:9092 --log.level=debug --enable-feature=remote-write-receiver
 ```{{execute}}
 
 
