@@ -7,6 +7,13 @@ Now, let's see the prometheus configuration:
 `prometheus.yml`{{open}}
 
 
+```
+ls
+cat /root/prometheus.yml
+```{{execute}}
+
+
+
 Start prometheus with command:
 
 

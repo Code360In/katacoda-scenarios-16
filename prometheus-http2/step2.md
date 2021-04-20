@@ -7,6 +7,13 @@ Now, let's see the prometheus configuration:
 `prometheus-federate.yml`{{open}}
 
 
+
+```
+ls
+cat /root/prometheus-federate.yml
+```{{execute}}
+
+
 Start prometheus with command:
 
 
