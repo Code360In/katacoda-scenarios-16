@@ -1,2 +1,9 @@
+global:
+  external_labels:
+    cluster: test
+
 remote_read:
   - url: "http://localhost:8086/api/v1/prom/read?db=prometheus"
+    remote_timeout: 30s
+    read_recent: true
+    name: prometheus

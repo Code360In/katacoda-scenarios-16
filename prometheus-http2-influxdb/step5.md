@@ -43,3 +43,10 @@ https://[[HOST_SUBDOMAIN]]-9092-[[KATACODA_HOST]].environments.katacoda.com/targ
 Prometheus Metrics:
 
 https://[[HOST_SUBDOMAIN]]-9092-[[KATACODA_HOST]].environments.katacoda.com/metrics
+
+
+Test
+
+```
+curl -s 'http://localhost:9092/api/v1/query?query=up\{job="prometheus"\}'
+```{{execute}}
