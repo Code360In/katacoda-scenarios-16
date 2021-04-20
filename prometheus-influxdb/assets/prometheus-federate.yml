@@ -14,17 +14,6 @@ scrape_configs:
         - 'localhost:9090'
 
 
-  - job_name: 'opentelemetry'
-    metrics_path: /metrics
-    scheme: https
-    tls_config:
-      # Certificate and key files for client cert authentication to the server.
-      ca_file: /certs/prometheus.crt
-    static_configs:
-      - targets: ['localhost:8443']
-        labels:
-          group: 'otel'
-
 
 remote_write:
   - url: "http://localhost:8086/api/v2/write?org=prometheus&bucket=prometheus"
