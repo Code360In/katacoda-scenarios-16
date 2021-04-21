@@ -3,6 +3,10 @@ global:
     region: eu-west-1
     env: prod
 
+#remote_read:
+#  - url: "http://localhost:8086/api/v2/read?org=prometheus&bucket=prometheus"
+#    bearer_token: "Authorization: Token token"
+
+
 remote_read:
-  - url: "http://localhost:8086/api/v2/read?org=prometheus&bucket=prometheus"
-    bearer_token: "Authorization: Token token"
+  - url: "http://localhost:8086/api/v1/prom/read?db=prometheus"

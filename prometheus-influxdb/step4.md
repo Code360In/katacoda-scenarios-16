@@ -66,7 +66,10 @@ influx auth list
 
 
 
-
+influx auth create -o prometheus \
+  --read-bucket prometheus \
+  --write-bucket prometheus \
+  --read-user
 
 
 access:
@@ -94,5 +97,16 @@ curl -XPOST localhost:8086/api/v2/query -sS \
         |> filter(fn:(r) => r._measurement == "up")'  
 ```{{execute}}
 
+
+
+write data to influxDB
 ```
+curl --request POST "http://localhost:8086/api/v2/write?org=prometheus&bucket=prometheus&precision=s" \
+  --header "Authorization: Token token" \
+  --data-raw "
+mem,host=host1 used_percent=23.43234543 1556896326
+mem,host=host2 used_percent=26.81522361 1556896326
+mem,host=host1 used_percent=22.52984738 1556896336
+mem,host=host2 used_percent=27.18294630 1556896336
+"
 ```{{execute}}
