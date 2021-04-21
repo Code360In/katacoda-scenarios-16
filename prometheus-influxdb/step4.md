@@ -31,6 +31,8 @@ docker ps
 ```{{execute}}
 
 
+influxDB 1.8
+
 install client
 ```
 apt install influxdb-client
@@ -48,6 +50,28 @@ quit
 ```{{execute}}
 
 influx org create -n prometheus
+
+
+influxDB 2.0
+
+```
+docker exec -it influxdb bash
+```{{execute}}
+
+
+find id
+```
+influx auth list
+```{{execute}}
+
+
+inactive
+```
+influx auth inactive --id 076878bcf6ecf000
+```{{execute}}
+
+
+
 
 
 access:
