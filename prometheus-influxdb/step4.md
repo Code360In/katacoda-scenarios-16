@@ -65,11 +65,6 @@ influx auth list
 ```{{execute}}
 
 
-inactive
-```
-influx auth inactive --id 076878bcf6ecf000
-```{{execute}}
-
 
 
 
