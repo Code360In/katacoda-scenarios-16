@@ -86,6 +86,3 @@ db:
 
   tracing:
     backend: jaeger
-    jaeger:
-      reporter:
-        localAgentHostPort: jaeger:6831
