@@ -12,7 +12,9 @@ In order to expose the etcd API to clients outside of the Docker host you’ll n
 
 
 ```
-export NODE1="[[HOST_IP]]"
+echo [[HOST_IP]]
+
+export NODE1="127.0.0.1"
 ```{{execute}}
 
 
@@ -22,10 +24,9 @@ This will run the latest release version of etcd. You can specify version if nee
 
 
 ```
-docker run \
+docker run -d \
   -p 2379:2379 \
   -p 2380:2380 \
-  --volume=${DATA_DIR}:/etcd-data \
   --name etcd quay.io/coreos/etcd:latest \
   /usr/local/bin/etcd \
   --data-dir=/etcd-data --name node1 \
