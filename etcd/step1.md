@@ -179,7 +179,7 @@ X-Raft-Term: 2
 
 GET
 ```
-$ http -v  get http://127.0.0.1:2379/v2/keys/message
+http -v  get http://127.0.0.1:2379/v2/keys/message
 ```{{execute}}
 
 <pre class="file">
