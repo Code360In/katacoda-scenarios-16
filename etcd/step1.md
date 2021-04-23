@@ -9,8 +9,13 @@ https://etcd.io/docs/v2.3/docker_guide/
 In order to expose the etcd API to clients outside of the Docker host you’ll need use the host IP address when configuring etc
 `
 
+<pre>[[HOST_IP]]</pre>
+
+`[[HOST_IP]]`{{execute}}
+
+
 ```
-export HostIP="192.168.12.50"
+export HostIP="[[HOST_IP]]"
 ```{{execute}}
 
 
@@ -45,3 +50,14 @@ or
 
 https://[[HOST_SUBDOMAIN]]-2379-[[KATACODA_HOST]].environments.katacoda.com/metrics
 
+
+# Install etcdctl
+
+```
+apt install etcd-client
+```{{execute}}
+
+
+```
+ETCDCTL_API=3 etcdctl endpoint status --write-out=table --endpoints=https://[[HOST_IP]]:2379
+```{{execute}}
