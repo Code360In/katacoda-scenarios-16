@@ -24,7 +24,7 @@ This will run the latest release version of etcd. You can specify version if nee
 
 
 ```
-docker run -d \
+docker run -d --net=host\
   -p 2379:2379 \
   -p 2380:2380 \
   --name etcd quay.io/coreos/etcd:latest \
