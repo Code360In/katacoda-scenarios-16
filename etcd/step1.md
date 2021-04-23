@@ -57,3 +57,38 @@ apt install etcd-client
 ```
 ETCDCTL_API=3 etcdctl endpoint status --write-out=table --endpoints=https://[[HOST_IP]]:2379
 ```{{execute}}
+
+
+#  benchmark tool
+
+https://etcd.io/docs/v3.2/op-guide/performance/#benchmarks
+
+https://github.com/etcd-io/etcd/tree/master/tools/benchmark
+
+```
+go get go.etcd.io/etcd/tools/benchmark
+```{{execute}}
+
+
+# GOPATH should be set
+
+```
+ls $GOPATH/bin
+benchmark
+```{{execute}}
+
+
+
+
+# write to leader
+```
+benchmark --endpoints=[[HOST_IP]] --target-leader --conns=1 --clients=1 \
+    put --key-size=8 --sequential-keys --total=10000 --val-size=256
+```{{execute}}
+
+
+```
+benchmark --endpoints=[[HOST_IP]] --target-leader  --conns=100 --clients=1000 \
+    put --key-size=8 --sequential-keys --total=100000 --val-size=256
+```{{execute}}
+
