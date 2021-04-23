@@ -66,6 +66,7 @@ docker run -d \
   -v $PWD/m3dbnode.yml:/etc/m3dbnode/m3dbnode.yml \
   --net=np \
   -p 7201:7201 -p 7203:7203 \
+  --name m3db \
   quay.io/m3db/m3dbnode:latest
 ```{{execute}}
 
