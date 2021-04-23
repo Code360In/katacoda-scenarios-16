@@ -68,8 +68,17 @@ etcdctl --endpoints=http://${NODE1}:2379 member list
 status:
 
 ```
-ETCDCTL_API=3 etcdctl endpoint status --write-out=table --endpoints=http://[[HOST_IP]]:2379  --insecure-skip-tls-verify
+ETCDCTL_API=3 etcdctl endpoint status --write-out=table --endpoints=http://${NODE1}:2379  
 ```{{execute}}
+
+
+<pre class="file">
++-----------------------+------------------+---------+---------+-----------+-----------+------------+
+|       ENDPOINT        |        ID        | VERSION | DB SIZE | IS LEADER | RAFT TERM | RAFT INDEX |
++-----------------------+------------------+---------+---------+-----------+-----------+------------+
+| http://127.0.0.1:2379 | b71f75320dc06a6c |   3.3.8 |   20 kB |      true |         2 |          4 |
++-----------------------+------------------+---------+---------+-----------+-----------+------------+
+</pre>
 
 
 Verification:
