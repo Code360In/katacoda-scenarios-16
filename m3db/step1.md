@@ -215,10 +215,15 @@ cd
 Run 
 
 ```
+echo T2
+```{{execute T2}}
+
+
+```
 cd /root
 #!/bin/bash
 ./node_exporter --collector.textfile.directory=/root/node-1/ --web.listen-address 127.0.0.1:8081
-```{{execute}}
+```{{execute T2}}
 
 
 
