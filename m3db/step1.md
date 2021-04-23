@@ -265,7 +265,7 @@ Values above a certain number
 
 ```
 curl -X "POST" -G "http://localhost:7201/api/v1/query_range" \
-  -d "query=third_avenue > 6000" \
+  -d "query=third_avenue" \
   -d "start=$(date "+%s" -d "45 seconds ago")" \
   -d "end=$( date +%s )" \
   -d "step=5s" | jq .
