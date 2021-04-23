@@ -12,7 +12,7 @@ In order to expose the etcd API to clients outside of the Docker host you’ll n
 
 
 ```
-echo [[HOST_IP]]
+host ip [[HOST_IP]]
 
 export NODE1="127.0.0.1"
 ```{{execute}}
