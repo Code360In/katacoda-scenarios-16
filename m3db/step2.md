@@ -10,6 +10,7 @@ Now, let's see the prometheus configuration:
 ```
 ls
 cat /root/prometheus.yml
+echo
 ```{{execute}}
 
 

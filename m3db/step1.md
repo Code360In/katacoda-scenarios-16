@@ -183,6 +183,7 @@ scrape_configs:
 ```
 ls
 cat /root/prometheus.yml
+echo 
 ```{{execute}}
 
 
