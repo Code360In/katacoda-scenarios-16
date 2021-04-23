@@ -6,7 +6,7 @@ Now, let's run grafana with this command:
 
 ```
 docker run -d  -u root\
-  --net=np \
+  --net=host \
   --name=grafana \
   -p 3000:3000 \
   -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-worldmap-panel,marcusolsson-json-datasource,magnesium-wordcloud-panel" \
