@@ -188,6 +188,16 @@ X-Raft-Term: 2
 </pre>
 
 
+Using key TTL
+Keys in etcd can be set to expire after a specified number of seconds. 
+You can do this by setting a TTL (time to live) on the key when sending a PUT request:
+
+```
+curl http://localhost:2379/v2/keys/foo -XPUT -d value=bar -d ttl=5
+```{{execute}}
+
+
+
 #  benchmark tool
 
 https://etcd.io/docs/v3.2/op-guide/performance/#benchmarks
