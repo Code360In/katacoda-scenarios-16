@@ -61,3 +61,7 @@ https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/metr
 
 
 
+Grafana Dashboard for Etcd:
+
+https://etcd.io/docs/v3.1/op-guide/grafana.json
+
