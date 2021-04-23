@@ -42,10 +42,6 @@ The URL for phometheus should be:
 `http://localhost:9090`{{copy}}  
 
 
-```
-more /root/certs/prometheus.crt
-```{{execute}}
-
 
 For all the other fields you can use the default values
 
