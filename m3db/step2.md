@@ -27,6 +27,15 @@ docker run  -d --net=host  -p 9090:9090 \
 ```{{execute}}
 
 
+
+
+Logs:
+```
+docker logs prometheus
+```{{execute}}
+
+
+
 You can access to the prometheus dashboard using this link:
 
 https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targets
