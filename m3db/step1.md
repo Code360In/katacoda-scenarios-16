@@ -13,13 +13,13 @@ docker run -d  -p 7201:7201 -p 7203:7203 --name m3db -v $(pwd)/m3db_data:/var/li
 
 Logs:
 ```
-docker logs etcd
+docker logs m3db
 ```{{execute}}
 
 # Verify Metrics
 
 ```
-curl http://localhost:2379/metrics
+curl http://localhost:7203/metrics
 ```{{execute}}
 
 

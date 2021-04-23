@@ -18,10 +18,10 @@ scrape_configs:
           group: 'grafana'
 
 
-  - job_name: 'test-etcd'
+  - job_name: 'm3db'
     static_configs:
-      - targets: ['localhost:2379']
+      - targets: ['localhost:7203']
         labels:
-          group: 'etcd'
+          group: 'm3db'
 
 
