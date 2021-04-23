@@ -21,6 +21,7 @@ Start prometheus with command:
 
 ```
 docker run  -d -p 9090:9090 \
+    --net=np \
     -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml \
     --name prometheus \
     prom/prometheus
