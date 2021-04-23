@@ -81,11 +81,16 @@ benchmark
 
 
 # write to leader
+
+Number of connections 1:
+
 ```
 benchmark --endpoints=[[HOST_IP]] --target-leader --conns=1 --clients=1 \
     put --key-size=8 --sequential-keys --total=10000 --val-size=256
 ```{{execute}}
 
+
+Number of connections 100:
 
 ```
 benchmark --endpoints=[[HOST_IP]] --target-leader  --conns=100 --clients=1000 \
