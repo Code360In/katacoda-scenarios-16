@@ -83,6 +83,10 @@ apt install httpie
  http POST http://localhost:2379/metrics
 ```{{execute}}
 
+
+https://etcd.io/docs/v2.3/api/
+
+
 ```
 http GET http://127.0.0.1:2379/version
 ```{{execute}}
