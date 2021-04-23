@@ -47,8 +47,10 @@ For all the other fields you can use the default values
 
 
 
-Test and save your datasource.
+Test and save your datasource. ( prometheus type)
 
+
+Add datasource for M3DB  url is  `http://localhost:7201`{{copy}}  
 
 
 ### Verify Grafana own Metrics:
@@ -57,7 +59,8 @@ https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/metr
 
 
 
-Import Grafana Dashboard for Etcd:
+
+Import Grafana Dashboard for M3DB:
 
 
 https://grafana.com/grafana/dashboards/8126
