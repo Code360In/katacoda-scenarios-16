@@ -72,6 +72,7 @@ curl http://localhost:7201/api/v1/services/m3db/placement | jq .
 
 
 ## Ready a Namespace 
+
 Once a namespace has finished bootstrapping, you must mark it as ready before receiving traffic by using the http://localhost:7201/api/v1/services/m3db/namespace/ready.
 
 
@@ -84,7 +85,8 @@ curl -X POST http://localhost:7201/api/v1/services/m3db/namespace/ready -d '{
 
 
 ## View Details of a Namespace 
-You can also view the attributes of all namespaces by calling the http://localhost:7201/api/v1/services/m3db/namespace endpoint
+
+You can also view the attributes of all namespaces by calling the `http://localhost:7201/api/v1/services/m3db/namespace` endpoint
 
 ```
 curl http://localhost:7201/api/v1/services/m3db/namespace | jq .
@@ -103,8 +105,8 @@ This quickstart focuses on Prometheus metrics which consist of a value, a timest
 
 You can write metrics using one of two endpoints:
 
-http://localhost:7201/api/v1/prom/remote/write - Write a Prometheus remote write query to M3DB with a binary snappy compressed Prometheus WriteRequest protobuf message.
-http://localhost:7201/api/v1/json/write - Write a JSON payload of metrics data. This endpoint is quick for testing purposes but is not as performant for production usage.
+`http://localhost:7201/api/v1/prom/remote/write` - Write a Prometheus remote write query to M3DB with a binary snappy compressed Prometheus WriteRequest protobuf message.
+`http://localhost:7201/api/v1/json/write` - Write a JSON payload of metrics data. This endpoint is quick for testing purposes but is not as performant for production usage.
 
 
 
