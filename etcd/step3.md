@@ -58,5 +58,16 @@ https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/metr
 
 Import Grafana Dashboard for Etcd:
 
+Etcd by Prometheus:
 
 https://grafana.com/grafana/dashboards/3070
+
+
+etcd-clusters-as-service:
+
+https://grafana.com/grafana/dashboards/10322
+
+
+Etcd Dashboard for Prometheus metrics scraper:
+
+https://grafana.com/grafana/dashboards/10859
