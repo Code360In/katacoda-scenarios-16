@@ -1,0 +1,37 @@
+{
+  "title": "M3DB",
+  "description": "Verify M3DB",
+  "difficulty": "intermediate",
+  "time": "665 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "prometheus.yml", "target": "/root/"}
+      ]
+  }
+  },
+  "environment": {
+    "hideintro": false,
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
