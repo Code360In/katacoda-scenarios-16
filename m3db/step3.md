@@ -47,7 +47,7 @@ For all the other fields you can use the default values
 
 
 
-Test and save your datasource. ( prometheus type)
+Test and save your datasource. ( prometheus/promQL type)
 
 
 Add datasource for M3DB  url is  `http://localhost:7201`{{copy}}  
