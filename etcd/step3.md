@@ -9,7 +9,7 @@ docker run -d  -u root\
   --name=grafana \
   -p 3000:3000 \
   -v $PWD/certs:/certs \
-  --net=host \
+  --net=np \
   -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-worldmap-panel,marcusolsson-json-datasource,magnesium-wordcloud-panel" \
   grafana/grafana:latest-ubuntu
 ```{{execute}}
