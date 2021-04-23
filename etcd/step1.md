@@ -55,7 +55,7 @@ apt install etcd-client
 
 
 ```
-ETCDCTL_API=3 etcdctl endpoint status --write-out=table --endpoints=https://[[HOST_IP]]:2379
+ETCDCTL_API=3 etcdctl endpoint status --write-out=table --endpoints=http://[[HOST_IP]]:2379  --insecure-skip-tls-verify
 ```{{execute}}
 
 
