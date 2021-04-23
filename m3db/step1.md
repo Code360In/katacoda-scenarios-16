@@ -25,7 +25,7 @@ curl http://localhost:7203/metrics
 
 or
 
-https://[[HOST_SUBDOMAIN]]-2379-[[KATACODA_HOST]].environments.katacoda.com/metrics
+https://[[HOST_SUBDOMAIN]]-7203-[[KATACODA_HOST]].environments.katacoda.com/metrics
 
 
 
