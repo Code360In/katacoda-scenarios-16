@@ -88,4 +88,4 @@ db:
     backend: jaeger
     jaeger:
       reporter:
-        collectorEndpoint: http://jaeger:6831
+        localAgentHostPort: jaeger:6831
