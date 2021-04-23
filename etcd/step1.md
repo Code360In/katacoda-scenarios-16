@@ -9,10 +9,6 @@ https://etcd.io/docs/v2.3/docker_guide/
 In order to expose the etcd API to clients outside of the Docker host you’ll need use the host IP address when configuring etc
 `
 
-<pre>[[HOST_IP]]</pre>
-
-`[[HOST_IP]]`{{execute}}
-
 
 ```
 export HostIP="[[HOST_IP]]"
