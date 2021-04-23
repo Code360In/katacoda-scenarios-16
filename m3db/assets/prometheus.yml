@@ -31,3 +31,7 @@ scrape_configs:
   - job_name: 'm3' 
     static_configs: 
       - targets: ['localhost:7203']
+
+  - job_name: 'trace' 
+    static_configs: 
+      - targets: ['localhost:16686']
