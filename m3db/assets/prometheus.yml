@@ -5,18 +5,18 @@ global:
     monitor: 'codelab-monitor'
 
 remote_read:
-  - url: "http://localhost:7201/api/v1/prom/remote/read"
+  - url: "http://m3db:7201/api/v1/prom/remote/read"
     # To test reading even when local Prometheus has the data
     read_recent: true
 
 remote_write:
-  - url: "http://localhost:7201/api/v1/prom/remote/write"
+  - url: "http://m3db:7201/api/v1/prom/remote/write"
 
 scrape_configs:
   - job_name: 'prometheus'
     scrape_interval: 5s
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: ['prometheus:9090']
 
   - job_name: 'node'
     scrape_interval: 5s
@@ -30,4 +30,4 @@ scrape_configs:
 
   - job_name: 'm3' 
     static_configs: 
-      - targets: ['localhost:7203']
+      - targets: ['m3db:7203']
