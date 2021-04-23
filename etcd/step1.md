@@ -103,6 +103,53 @@ Date: Fri, 23 Apr 2021 16:03:10 GMT
 </pre>
 
 
+```
+http -v PUT http://127.0.0.1:2379/v2/keys/message value="Hello world" 
+```{{execute}}
+
+<pre class="file">
+
+PUT /v2/keys/message HTTP/1.1
+Accept: application/json, */*
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Content-Length: 24
+Content-Type: application/json
+Host: 127.0.0.1:2379
+User-Agent: HTTPie/1.0.3
+
+{
+    "value": "Hello world"
+}
+
+HTTP/1.1 200 OK
+Content-Length: 165
+Content-Type: application/json
+Date: Fri, 23 Apr 2021 16:05:11 GMT
+X-Etcd-Cluster-Id: 77c65fb74b0d401d
+X-Etcd-Index: 6
+X-Raft-Index: 1192
+X-Raft-Term: 2
+
+{
+    "action": "set",
+    "node": {
+        "createdIndex": 6,
+        "key": "/message",
+        "modifiedIndex": 6,
+        "value": ""
+    },
+    "prevNode": {
+        "createdIndex": 5,
+        "key": "/message",
+        "modifiedIndex": 5,
+        "value": ""
+    }
+}
+
+</pre>
+
+
 
 #  benchmark tool
 
