@@ -56,6 +56,16 @@ apt install etcd-client
 ```{{execute}}
 
 
+
+List the cluster member:
+
+```
+etcdctl --endpoints=http://${NODE1}:2379 member list
+```{{execute}}
+
+
+status:
+
 ```
 ETCDCTL_API=3 etcdctl endpoint status --write-out=table --endpoints=http://[[HOST_IP]]:2379  --insecure-skip-tls-verify
 ```{{execute}}
