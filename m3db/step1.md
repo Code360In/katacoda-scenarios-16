@@ -1,5 +1,6 @@
 # [M3DB](https://m3db.io/docs/overview/components/)
 
+![](https://github.com/m3db/m3/blob/master/site/static/images/logo-square.png)
 
 
 <pre class="file">
