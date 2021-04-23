@@ -17,6 +17,14 @@ docker run -d --name jaeger \
   jaegertracing/all-in-one:latest
 ```{{execute}}
 
+
+Logs:
+
+```
+docker logs grafana
+```{{execute}}
+
+
 access:
 
 
