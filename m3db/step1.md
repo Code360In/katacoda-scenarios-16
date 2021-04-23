@@ -56,7 +56,7 @@ The Docker container exposes three ports:
 
 ```
 docker run -d \
-  -v -v $PWD/m3dbnode.yml:/etc/m3dbnode/m3dbnode.yml
+  -v $PWD/m3dbnode.yml:/etc/m3dbnode/m3dbnode.yml
   -p 7201:7201 -p 7203:7203 \
   --name m3db -v $(pwd)/m3db_data:/var/lib/m3db \
   quay.io/m3db/m3dbnode:v1.0.0
