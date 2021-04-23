@@ -1,0 +1,7 @@
+
+coordinator: {}
+db: {}
+
+tracing:
+    backend: jaeger  # enables jaeger with default configs
+    jaeger:
