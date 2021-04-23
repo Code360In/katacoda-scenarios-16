@@ -20,8 +20,7 @@ docker run -d  -u root\
 results:
 
 <pre class="file">
-
-
+up
 
 </pre>
 
