@@ -19,3 +19,7 @@ access:
 
 
 https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/
+
+
+https://m3db.io/docs/operational_guide/monitoring/
+
