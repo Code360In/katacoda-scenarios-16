@@ -29,6 +29,7 @@ Similar to M3DB, M3 Aggregator supports clustering and replication by default. T
 
 
 
+![](http://1fykyq3mdn5r21tpna3wkdyi-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/image4-1.png)
 
 # Deploy M3DB
 
