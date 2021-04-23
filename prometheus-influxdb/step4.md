@@ -2,10 +2,7 @@
 
 
 ```
-docker run -d -p 8086:8086 --name influxdb \
-      -v influxdb:/root/influxdb/data \
-      -v influxdb2:/root/influxdb2/data \
-      -v influxdb2-config:/etc/influxdb2 \
+docker run -d --net=host -p 8086:8086 --name influxdb \
       -v $PWD/influxdb2.0.conf:/root/influxdb/influxdb.conf \
       -e DOCKER_INFLUXDB_INIT_MODE=setup \
       -e DOCKER_INFLUXDB_INIT_USERNAME=admin \
@@ -18,13 +15,18 @@ docker run -d -p 8086:8086 --name influxdb \
 ```{{execute}}     
 
 ```
-docker run -d -p 8086:8086 --name influxdb \
+docker run -d  --net=host  -p 8086:8086 --name influxdb \
       -v influxdb:/var/lib/influxdb \
       -v $PWD/influxdb.conf:/etc/influxdb/influxdb.conf \
       -e DOCKER_INFLUXDB_INIT_ORG=prometheus \
       -e DOCKER_INFLUXDB_INIT_BUCKET=prometheus \
       influxdb:1.8
 ```{{execute}}  
+
+docker run  -d   -p 8888:8888  --name chronograf \
+      --net=np \
+      chronograf --influxdb-url=http://influxdb:8086
+
 
 ```
 docker ps
@@ -110,3 +112,7 @@ mem,host=host1 used_percent=22.52984738 1556896336
 mem,host=host2 used_percent=27.18294630 1556896336
 "
 ```{{execute}}
+
+
+curl --request GET "http://localhost:8086/api/v2/read?org=prometheus&bucket=prometheus&precision=s" \
+  --header "Authorization: Token token" 

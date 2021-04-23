@@ -1,0 +1,24 @@
+{
+  "title": "Etcd",
+  "description": "Verify Etcd",
+  "difficulty": "intermediate",
+  "time": "660 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "hideintro": true,
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}

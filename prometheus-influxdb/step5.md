@@ -24,7 +24,7 @@ Deploy Prometheus Read:
 
 ```
 cd /root/
-docker run -u root --net=host -d -p 9092:9092 \
+docker run -u root --net=np -d -p 9092:9092 \
     -v $PWD/certs:/certs \
     -v $PWD/prometheus-read.yml:/etc/prometheus/prometheus.yml \
     --name prometheus-read \
