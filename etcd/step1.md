@@ -103,6 +103,7 @@ Date: Fri, 23 Apr 2021 16:03:10 GMT
 </pre>
 
 
+Insert:
 ```
 http -v PUT http://127.0.0.1:2379/v2/keys/message value="Hello world" 
 ```{{execute}}
@@ -149,6 +150,42 @@ X-Raft-Term: 2
 
 </pre>
 
+
+GET
+```
+$ http -v  get http://127.0.0.1:2379/v2/keys/message
+```{{execute}}
+
+<pre class="file">
+
+GET /v2/keys/message HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Host: 127.0.0.1:2379
+User-Agent: HTTPie/1.0.3
+
+
+
+HTTP/1.1 200 OK
+Content-Length: 89
+Content-Type: application/json
+Date: Fri, 23 Apr 2021 16:06:59 GMT
+X-Etcd-Cluster-Id: 77c65fb74b0d401d
+X-Etcd-Index: 6
+X-Raft-Index: 1406
+X-Raft-Term: 2
+
+{
+    "action": "get",
+    "node": {
+        "createdIndex": 6,
+        "key": "/message",
+        "modifiedIndex": 6,
+        "value": ""
+    }
+}
+</pre>
 
 
 #  benchmark tool
