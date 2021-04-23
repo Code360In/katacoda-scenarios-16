@@ -17,9 +17,18 @@ export NODE1="127.0.0.1"
 ```{{execute}}
 
 
+create network
+
+```
+docker network create np 
+```{{execute}}
+
+
 `
 This will run the latest release version of etcd. You can specify version if needed (e.g. quay.io/coreos/etcd:v2.2.0).
 `
+
+
 
 
 ```
