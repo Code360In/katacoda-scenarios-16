@@ -40,7 +40,7 @@ apt install httpie
 
 
 ```
-http POST http://localhost:2379/metrics
+http POST http://localhost:7203/metrics
 ```{{execute}}
 
 
