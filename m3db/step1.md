@@ -53,11 +53,6 @@ The Docker container exposes three ports:
 
 </pre>
 
-create network
-```
-docker network create np 
-```{{execute}}
-
 
 
 ```
