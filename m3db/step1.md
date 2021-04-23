@@ -225,6 +225,11 @@ cd /root
 ./node_exporter --collector.textfile.directory=/root/node-1/ --web.listen-address 127.0.0.1:8081
 ```{{execute T2}}
 
+Verify:
+
+```
+curl localhost:8081/metrics
+```{{execute T1}}
 
 
 ## Querying metrics
