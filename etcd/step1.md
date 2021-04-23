@@ -12,7 +12,7 @@ In order to expose the etcd API to clients outside of the Docker host you’ll n
 
 
 ```
-export HostIP="[[HOST_IP]]"
+export NODE1="[[HOST_IP]]"
 ```{{execute}}
 
 
@@ -22,16 +22,17 @@ This will run the latest release version of etcd. You can specify version if nee
 
 
 ```
-docker run -d -v /usr/share/ca-certificates/:/etc/ssl/certs -p 4001:4001 -p 2380:2380 -p 2379:2379 \
- --name etcd quay.io/coreos/etcd:v3.2.32 \
- -name etcd0 \
- -advertise-client-urls http://${HostIP}:2379,http://${HostIP}:4001 \
- -listen-client-urls http://0.0.0.0:2379,http://0.0.0.0:4001 \
- -initial-advertise-peer-urls http://${HostIP}:2380 \
- -listen-peer-urls http://0.0.0.0:2380 \
- -initial-cluster-token etcd-cluster-1 \
- -initial-cluster etcd0=http://${HostIP}:2380 \
- -initial-cluster-state new
+docker run \
+  -p 2379:2379 \
+  -p 2380:2380 \
+  --volume=${DATA_DIR}:/etcd-data \
+  --name etcd quay.io/coreos/etcd:latest \
+  /usr/local/bin/etcd \
+  --data-dir=/etcd-data --name node1 \
+  --initial-advertise-peer-urls http://${NODE1}:2380 --listen-peer-urls http://${NODE1}:2380 \
+  --advertise-client-urls http://${NODE1}:2379 --listen-client-urls http://${NODE1}:2379 \
+  --initial-cluster node1=http://${NODE1}:2380
+
 ```{{execute}}
 
 
