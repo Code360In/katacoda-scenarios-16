@@ -288,3 +288,11 @@ curl -X POST http://localhost:7201/api/v1/json/write -d '{
     "value": 3347.26
 }'
 ```{{execute}}
+
+
+
+docs:
+
+https://eng.uber.com/billion-data-point-challenge/
+
+https://eng.uber.com/m3/
