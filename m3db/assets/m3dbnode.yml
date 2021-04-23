@@ -88,4 +88,4 @@ db:
     backend: jaeger
     jaeger:
       reporter:
-        collectorEndpoint: http://jaeger:16686
+        collectorEndpoint: http://jaeger:6831
