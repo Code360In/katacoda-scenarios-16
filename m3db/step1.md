@@ -1,6 +1,4 @@
-# M3DB
-
-https://m3db.io/docs/overview/components/
+# (M3DB)[https://m3db.io/docs/overview/components/]
 
 
 
