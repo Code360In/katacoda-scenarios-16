@@ -21,7 +21,7 @@ Start prometheus with command:
 ```
 docker run  -d --net=host  -p 9090:9090 \
     -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml \
-    --name prometheus-server \
+    --name prometheus \
     prom/prometheus
 ```{{execute}}
 
