@@ -35,7 +35,10 @@ docker run -d --net=host\
 
 ```{{execute}}
 
-
+Logs:
+```
+docker logs etcd
+```{{execute}}
 
 # Verify Metrics
 
