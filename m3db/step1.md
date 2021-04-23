@@ -59,7 +59,6 @@ docker network create np
 ```{{execute}}
 
 
-  --name m3db -v $(pwd)/m3db_data:/var/lib/m3db \
 
 ```
 docker run -d \

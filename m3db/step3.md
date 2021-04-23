@@ -39,7 +39,7 @@ The initial step will ask you to change the password, you can do it if you want 
 The first step to create a dashboard is to have a datasource. Let's define a datasource with Prometheus data configured before:
 
 The URL for phometheus should be:
-`http://localhost:9090`{{copy}}  
+`http://phometheus:9090`{{copy}}  
 
 
 
@@ -50,7 +50,7 @@ For all the other fields you can use the default values
 Test and save your datasource. ( prometheus/promQL type)
 
 
-Add datasource for M3DB  url is  `http://localhost:7201`{{copy}}  
+Add datasource for M3DB  url is  `http://m3db:7201`{{copy}}  
 
 
 ### Verify Grafana own Metrics:
