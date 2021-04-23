@@ -8,7 +8,6 @@ Now, let's run grafana with this command:
 docker run -d  -u root\
   --name=grafana \
   -p 3000:3000 \
-  --net=host \
   -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-worldmap-panel,marcusolsson-json-datasource,magnesium-wordcloud-panel" \
   grafana/grafana:latest-ubuntu
 ```{{execute}}
