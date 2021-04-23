@@ -50,7 +50,7 @@ For all the other fields you can use the default values
 Test and save your datasource. ( prometheus/promQL type)
 
 
-Add datasource for M3DB  url is  `http://m3db:7201`{{copy}}  
+Add datasource for M3DB  url is  `http://localhost:7201`{{copy}}  
 
 
 ### Verify Grafana own Metrics:
