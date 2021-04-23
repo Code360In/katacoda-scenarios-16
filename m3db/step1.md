@@ -156,6 +156,40 @@ cat /root/prometheus.yml
 
 
 
+
+## Start Node Exporters
+
+copy metrics-1.prom:
+```
+mkdir /root/node-1
+cd /root/node-1
+curl -LO https://m3db.io/docs/includes/quickstart/node-1/metrics-1.prom
+cd 
+```{{execute}}
+
+
+Install:
+
+```
+cd /root/
+curl -LO https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
+tar -xvf node_exporter-1.1.2.linux-amd64.tar.gz
+mv node_exporter-1.1.2.linux-amd64/node_exporter .
+chmod +x node_exporter
+rm  -r -f node_exporter-1.1.2.linux-amd64.tar.gz node_exporter-1.1.2.linux-amd64
+cd
+```{{execute}}
+
+Run 
+
+```
+cd /root
+#!/bin/bash
+./node_exporter --collector.textfile.directory=/root/node-1/ --web.listen-address 127.0.0.1:8081
+```{{execute}}
+
+
+
 ## Querying metrics
 
 ```
@@ -164,30 +198,4 @@ curl -X "POST" -G "http://localhost:7201/api/v1/query_range" \
   -d "start=$(date "+%s" -d "45 seconds ago")" \
   -d "end=$( date +%s )" \
   -d "step=5s" | jq .  
-```{{execute}}
-
-
-## Start Node Exporters
-
-copy metrics-1.prom:
-```
-curl -LO https://m3db.io/docs/includes/quickstart/node-1/metrics-1.prom
-```{{execute}}
-
-
-Install:
-
-```
-curl -LO https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
-tar -xvf node_exporter-1.1.2.linux-amd64.tar.gz
-mv node_exporter-1.1.2.linux-amd64/node_exporter .
-chmod +x node_exporter
-rm  -r -f node_exporter-1.1.2.linux-amd64.tar.gz node_exporter-1.1.2.linux-amd64
-```{{execute}}
-
-Run 
-
-```
-#!/bin/bash
-./node_exporter --collector.textfile.directory=/node-1/ --web.listen-address 127.0.0.1:8081
 ```{{execute}}
