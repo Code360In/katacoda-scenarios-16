@@ -148,6 +148,13 @@ scrape_configs:
 ```{{copy}}
 
 
+```
+ls
+cat /root/prometheus.yml
+```{{execute}}
+
+
+
 
 ## Querying metrics
 
