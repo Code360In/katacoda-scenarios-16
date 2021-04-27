@@ -1,6 +1,6 @@
 {
-  "title": "Prometheus",
-  "description": "Verify Prometheus HTTP2",
+  "title": "Prometheus Pandas",
+  "description": "Verify Prometheus and Pandas",
   "difficulty": "intermediate",
   "time": "664 minutes",
   "details": {

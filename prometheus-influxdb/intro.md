@@ -1,15 +1,17 @@
-# Verify Prometheus Remote-write/read InfluxDB
+# Verify Prometheus HTTP2
 
 
 ### Tasks:
 
 - Deploy Prometheus
 
-- Deploy Grafana
+- Deploy Prometheus-Federate HTTP2
 
-- Deploy Conda
+- Deploy Grafana HTTP2
 
-- Deploy prometheus-pandas
+- Deploy Exporter Opentelemetry HTTP2
+
+- Run H2LOAD
 
 Docs:
 
@@ -25,4 +27,5 @@ https://openmetrics.io/
 
 https://devstats.cncf.io/
 
-https://pypi.org/project/prometheus-pandas/
+HTTP2:
+

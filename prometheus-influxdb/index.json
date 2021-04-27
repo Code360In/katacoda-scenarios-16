@@ -1,6 +1,6 @@
 {
-  "title": "Prometheus Pandas",
-  "description": "Verify Prometheus and Python Pandas",
+  "title": "Prometheus InfluxDB",
+  "description": "Verify Prometheus and influxDB",
   "difficulty": "intermediate",
   "time": "667 minutes",
   "details": {
