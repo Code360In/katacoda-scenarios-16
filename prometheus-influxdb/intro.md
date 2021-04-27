@@ -5,11 +5,11 @@
 
 - Deploy Prometheus
 
-- Deploy Prometheus-Federate HTTP2
+- Deploy Grafana
 
-- Deploy Grafana HTTP2
+- Deploy Conda
 
-- Deploy InfluxDB
+- Deploy prometheus-pandas
 
 Docs:
 
@@ -25,4 +25,4 @@ https://openmetrics.io/
 
 https://devstats.cncf.io/
 
-https://docs.influxdata.com/influxdb/v2.0/query-data/get-started/
+https://pypi.org/project/prometheus-pandas/
