@@ -31,9 +31,6 @@ You can access to the prometheus dashboard using this link:
 https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targets
 
 
-![](prom.png)
-
-
 Prometheus Metrics:
 
 https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/metrics
