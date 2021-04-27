@@ -1,4 +1,4 @@
-# Verify Prometheus Remote-write/read InfluxDB
+# Verify Prometheus and Pandas
 
 
 ### Tasks:
