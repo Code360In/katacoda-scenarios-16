@@ -52,3 +52,8 @@ p.query('process_cpu_seconds_total{}', '2021-05-16T00:00:00Z')
 ```{{copy}}
 
 
+
+copy notebook from:
+
+https://raw.githubusercontent.com/dcoles/prometheus-pandas/master/Prometheus.ipynb
+
