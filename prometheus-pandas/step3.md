@@ -57,3 +57,20 @@ copy notebook from:
 
 https://raw.githubusercontent.com/dcoles/prometheus-pandas/master/Prometheus.ipynb
 
+
+
+```
+%matplotlib inline
+import prometheus_pandas.ipython.magic
+```{{copy}}
+
+
+```
+%%prometheus_query http://localhost:9090 data
+    rate(process_cpu_seconds_total{group="prom"}[1m])
+```{{copy}}
+
+
+```
+data.plot()
+```{{copy}}
