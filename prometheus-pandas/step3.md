@@ -28,14 +28,27 @@ https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com/
 
 
 
-# install python prometheus-pandas
+# prometheus-pandas
 
 https://pypi.org/project/prometheus-pandas/
 
 
 
-```
-pip install prometheus-pandas
+new jupyter notebook python3
 
-```{{execute}}
+new cell , install 
+```
+!pip install prometheus-pandas
+
+```{{copy}}
+
+
+```
+p = query.Prometheus('http://localhost:9090')
+```{{copy}}
+
+```
+p.query('process_cpu_seconds_total{}', '2021-05-16T00:00:00Z')
+```{{copy}}
+
 
