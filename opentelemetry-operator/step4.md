@@ -81,4 +81,7 @@ EOF
 ```{{execute}}
 
 
-
+Verify:
+``` 
+ kubectl get OpenTelemetryCollector
+```{{execute}}
