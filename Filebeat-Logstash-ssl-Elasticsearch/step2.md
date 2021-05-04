@@ -20,7 +20,7 @@ input {
   beats {
     port => 5044
     ssl => true
-    ssl_verify_mode => "force_peer"
+    ssl_verify_mode => "none"
     ssl_certificate => "/usr/share/ssl/logstash.crt"
     ssl_key => "/usr/share/ssl/logstash.key"
 
