@@ -19,8 +19,8 @@ input {
   beats {
     port => 5044
     ssl => true
-    ssl_certificate => "/usr/share/logstash/logstash.crt"
-    ssl_key => "/usr/share/logstash/logstash.key"
+    ssl_certificate => "/usr/share/ssl/logstash.crt"
+    ssl_key => "/usr/share/ssl/logstash.key"
 
   }
 }
@@ -55,7 +55,7 @@ pwd;ls
 
 Deploy logstash
 ```
-docker run -d -it --net=host --name=logstash -p 5044:5044  -v /root:logstash.key:/usr/share/logstash/logstash.key -v /root:logstash.crt:/usr/share/logstash/logstash.crt -v /root/logstash.conf:/usr/share/logstash/pipeline/logstash.conf -v /root/logstash.yml:/usr/share/logstash/config/logstash.yml docker.elastic.co/logstash/logstash:7.11.1
+docker run -d -it --net=host --name=logstash -p 5044:5044  -v /root/logstash.key:/usr/share/ssl/logstash.key -v /root/logstash.crt:/usr/share/ssl/logstash.crt  -v /root/logstash.conf:/usr/share/logstash/pipeline/logstash.conf -v /root/logstash.yml:/usr/share/logstash/config/logstash.yml docker.elastic.co/logstash/logstash:7.11.1
 ```{{execute}}
 
 
