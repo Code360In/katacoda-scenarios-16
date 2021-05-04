@@ -19,7 +19,7 @@ cat << 'EOF' > /root/logstash.conf
 input {
   beats {
     port => 5044
-    ssl => false
+    ssl => true
     ssl_verify_mode => "force_peer"
     ssl_certificate => "/usr/share/ssl/logstash.crt"
     ssl_key => "/usr/share/ssl/logstash.key"
