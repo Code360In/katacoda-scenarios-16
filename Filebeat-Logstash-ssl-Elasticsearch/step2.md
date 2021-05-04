@@ -61,6 +61,13 @@ docker run -d -u root -it --net=host --name=logstash -p 5044:5044  -v /root/logs
 ```{{execute}}
 
 
+verify ssl
+
+```
+curl -v --cacert logstash.crt https://localhost:5044
+```{{execute}}
+
+
 Verify:
 ```
 docker ps -a
