@@ -2,15 +2,6 @@
 # Deploy Logstash
 
 
-
-
-Generate Keys:
-
-```
-openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout logstash.key -out logstash.crt -subj "/C=BE/ST=Antwerp/L=Brasschaat/O=Inuits/CN=localhost" -addext "subjectAltName = DNS:localhost"
-```{{execute}}
-
-
 Copy logstash.conf to /root/
 
 ```
@@ -18,9 +9,7 @@ cat << 'EOF' > /root/logstash.conf
 input {
   beats {
     port => 5044
-    ssl => true
-    ssl_certificate => "/usr/share/ssl/logstash.crt"
-    ssl_key => "/usr/share/ssl/logstash.key"
+    ssl => false
 
   }
 }
@@ -55,7 +44,7 @@ pwd;ls
 
 Deploy logstash
 ```
-docker run -d -it --net=host --name=logstash -p 5044:5044  -v /root/logstash.key:/usr/share/ssl/logstash.key -v /root/logstash.crt:/usr/share/ssl/logstash.crt  -v /root/logstash.conf:/usr/share/logstash/pipeline/logstash.conf -v /root/logstash.yml:/usr/share/logstash/config/logstash.yml docker.elastic.co/logstash/logstash:7.11.1
+docker run -u root -d -it --net=host --name=logstash -p 5044:5044 -v /root/logstash.conf:/usr/share/logstash/pipeline/logstash.conf -v /root/logstash.yml:/usr/share/logstash/config/logstash.yml docker.elastic.co/logstash/logstash:7.11.1
 ```{{execute}}
 
 
