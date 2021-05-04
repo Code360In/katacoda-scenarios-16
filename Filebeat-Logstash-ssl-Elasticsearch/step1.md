@@ -4,8 +4,15 @@
 https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 
 
+create net
 ```
-docker run -d --net=host --name=elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.11.2
+docker network create np 
+```{{execute}}
+
+
+deploy elasticsearch
+```
+docker run -d  -u root --net=np --name=elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.11.2
 ```{{execute}}
 
 

@@ -308,7 +308,7 @@ Open file filebeat.yml
 Deploy filebeat:
 
 ```
-docker run -d --net=host --name=filebeat \
+docker run -d --net=np --name=filebeat \
 --user=root \
 -p 9000:9000 \
 -v /root/logstash.key:/usr/share/ssl/logstash.key -v /root/logstash.crt:/usr/share/ssl/logstash.crt \
