@@ -311,6 +311,7 @@ Deploy filebeat:
 docker run -d --net=host --name=filebeat \
 --user=root \
 -p 9000:9000 \
+-v /root/logstash.key:/usr/share/ssl/logstash.key -v /root/logstash.crt:/usr/share/ssl/logstash.crt \
 -v /root/filebeat.yml:/usr/share/filebeat/filebeat.yml \
 -v /var/log/:/var/log:ro \
 docker.elastic.co/beats/filebeat:7.11.2
