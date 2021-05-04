@@ -1,6 +1,16 @@
 
 # Deploy Logstash
 
+
+
+
+Generate Keys:
+
+```
+openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout logstash.key -out logstash.crt -subj "/C=BE/ST=Antwerp/L=Brasschaat/O=Inuits/CN=localhost" -addext "subjectAltName = DNS:localhost"
+```{{execute}}
+
+
 Copy logstash.conf to /root/
 
 ```
@@ -9,7 +19,9 @@ input {
   beats {
     port => 5044
     ssl => true
-    ssl_verify_mode => "none"
+    ssl_certificate => "/root/logstash.crt"
+    ssl_key => "/root/logstash.key"
+
   }
 }
 
@@ -39,12 +51,6 @@ Verify:
 pwd;ls
 ```{{execute}}
 
-
-Generate Keys:
-
-```
-openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout logstash.key -out logstash.crt -subj "/C=BE/ST=Antwerp/L=Brasschaat/O=Inuits/CN=localhost" -addext "subjectAltName = DNS:localhost"
-```{{execute}}
 
 
 Deploy logstash
