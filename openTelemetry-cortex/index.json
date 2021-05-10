@@ -1,6 +1,6 @@
 {
-  "title": "Cortex",
-  "description": "Verify Cortex",
+  "title": "Cortex Opentelemetry",
+  "description": "Verify Cortex Opentelemetry",
   "difficulty": "intermediate",
   "time": "640 minutes",
   "details": {
