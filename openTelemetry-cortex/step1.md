@@ -31,7 +31,9 @@ https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com
 Add a new Prometheus Data Source
 
 Use http://localhost:9009/api/prom/ as the URL
+
 Optionally, set the scrape interval to 3s to make updates appear quickly
+
 Click Save & Test
 
 
