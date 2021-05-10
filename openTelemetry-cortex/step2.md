@@ -10,3 +10,13 @@ go mod verify
 go build
 ```{{execute}}
 
+
+
+run:
+
+
+``` 
+ ./example 
+```{{execute}}
+
+
