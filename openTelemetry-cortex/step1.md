@@ -16,21 +16,34 @@ docker-compose up -d
 
 
 
-``` 
-docker inspect example_cortex_1 | grep IPAddress
-```{{execute}}
-
-
 Connect to Grafana
 
 
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com
 
 
+Get ipadr from Cortex:
+``` 
+docker inspect example_cortex_1 | grep IPAddress
+```{{execute}}
+
+
+
+
+```
+$ docker inspect example_cortex_1  | grep IPAddress
+            "SecondaryIPAddresses": null,
+            "IPAddress": "",
+                    "IPAddress": "172.19.0.2",
+$ 
+```
+
+
+
 
 Add a new Prometheus Data Source
 
-Use http://localhost:9009/api/prom/ as the URL
+Use http://172.19.0.2:9009/api/prom/ as the URL
 
 Optionally, set the scrape interval to 3s to make updates appear quickly
 
