@@ -1,0 +1,28 @@
+{
+  "title": "Grafana",
+  "description": "Verify Grafana",
+  "difficulty": "intermediate",
+  "time": "677 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+      ]
+  }
+  },
+  "environment": {
+    "hideintro": false,
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
