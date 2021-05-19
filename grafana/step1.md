@@ -16,12 +16,6 @@ docker run -d  -u root\
 
 `docker logs grafana`{{execute}}
 
-results:
-
-<pre class="file">
-up
-
-</pre>
 
 
 
