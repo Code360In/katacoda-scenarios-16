@@ -50,7 +50,7 @@ cortextool --help
 # Generate load
 
 ``` 
-cortextool loadgen --write-url=http://127.0.0.1:9009 --active-series=136805  --series-name="node_cpu_seconds_total"  --parallelism=100  --batch-size=1000
+cortextool loadgen --write-url=http://127.0.0.1:9009 --active-series=136805  --series-name="node_cpu_seconds_total"  --parallelism=100  --batch-size=10000  --write-timeout=5s
 ```{{execute}}
 
 
