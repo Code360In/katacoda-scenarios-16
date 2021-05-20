@@ -20,3 +20,40 @@ run:
 ```{{execute}}
 
 
+
+# Intall Cortex tools
+
+https://github.com/grafana/cortex-tools/releases
+
+
+# download the binary (adapt os and arch as needed)
+
+``` 
+curl -fSL -o "/usr/local/bin/cortextool" "https://github.com/grafana/cortex-tools/releases/download/v0.10.1/cortextool_0.10.1_linux_x86_64"
+```{{execute}}
+
+
+
+# make it executable
+``` 
+chmod a+x "/usr/local/bin/cortextool"
+```{{execute}}
+
+
+# have fun :)
+
+``` 
+cortextool --help
+```{{execute}}
+
+
+# Generate load
+
+``` 
+cortextool loadgen --write-url=http://localhost:9009/api/prom/push --active-series=136805 x
+```{{execute}}
+
+
+# Verify
+https://[[HOST_SUBDOMAIN]]-9009-[[KATACODA_HOST]].environments.katacoda.com/distributor/all_user_stats
+
