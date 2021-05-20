@@ -26,7 +26,7 @@
     "hideintro": false,
     "showdashboard": true,
     "dashboards": [
-      {"name": "Cortex", "href": "https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Cortex", "href": "https://[[HOST_SUBDOMAIN]]-9009-[[KATACODA_HOST]].environments.katacoda.com"},
       {"name": "Grafana", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com"}
     ],
     "uilayout": "terminal"
