@@ -54,3 +54,19 @@ Click Save & Test
 Connect to Cortex:
 
 https://[[HOST_SUBDOMAIN]]-9009-[[KATACODA_HOST]].environments.katacoda.com
+
+
+
+Create network for Cortex Grafana Prometheus
+
+``` 
+docker network create np 
+```{{execute}}
+
+
+
+``` 
+docker network connect np example_grafana_1
+docker network connect np example_cortex_1
+```{{execute}}
+

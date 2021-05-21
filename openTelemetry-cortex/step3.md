@@ -26,6 +26,14 @@ docker run -u root -d -p 9090:9090 \
 ```{{execute}}
 
 
+
+``` 
+docker network connect np prometheus
+```{{execute}}
+
+
+
+
 You can access to the prometheus dashboard using this link:
 
 https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targets
