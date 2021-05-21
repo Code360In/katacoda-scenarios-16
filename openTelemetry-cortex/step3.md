@@ -10,6 +10,7 @@ Now, let's see the prometheus configuration:
 ```
 ls
 cat /root/prometheus.yml
+cd /root/
 ```{{execute}}
 
 
@@ -20,7 +21,7 @@ Start prometheus with command:
 
 ```
 docker run -u root -d -p 9090:9090 \
-    -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml \
+    -v /root/prometheus.yml:/etc/prometheus/prometheus.yml \
     --name prometheus \
     prom/prometheus --config.file=/etc/prometheus/prometheus.yml  --enable-feature=remote-write-receiver --enable-feature=exemplar-storage
 ```{{execute}}
@@ -47,9 +48,9 @@ https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/metr
 
 Add datasource to Grafana
 
-url= http://prometheus:9090
+url  ```http://prometheus:9090```{{copy}}
 
 
 to use Prometheus as remote-write-receiver  on otel.
 
-change config.yam url to url: http://localhost:9090/api/v1/write 
+change config.yam url to url: ```http://localhost:9090/api/v1/write```{{copy}}

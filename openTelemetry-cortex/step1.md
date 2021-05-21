@@ -43,7 +43,7 @@ $
 
 Add a new Prometheus Data Source
 
-Use http://example_cortex_1:9009/api/prom/ as the URL
+Use ```http://example_cortex_1:9009/api/prom/```{{copy}} as the URL
 
 Optionally, set the scrape interval to 3s to make updates appear quickly
 
