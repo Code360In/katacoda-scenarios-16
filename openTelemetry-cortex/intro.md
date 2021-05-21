@@ -8,5 +8,5 @@ Deploy Cortex
 
 Deploy Grafana
 
-
+Deploy Prometheus
 

@@ -43,3 +43,13 @@ https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targ
 Prometheus Metrics:
 
 https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/metrics
+
+
+Add datasource to Grafana
+
+url= http://prometheus:9090
+
+
+to use Prometheus as remote-write-receiver  on otel.
+
+change config.yam url to url: http://localhost:9090/api/v1/write 
