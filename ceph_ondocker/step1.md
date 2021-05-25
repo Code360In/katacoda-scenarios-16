@@ -57,7 +57,7 @@ For more information see:
 
 Enable Telemetry
 ```
-apt install ceph-common
+apt install -y ceph-common
 ```{{execute}}
 
 
