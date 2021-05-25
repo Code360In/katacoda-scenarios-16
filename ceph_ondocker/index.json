@@ -15,7 +15,11 @@
     }
   },
   "environment": {
-    "hideintro": true,
+    "hideintro": false,
+    "showdashboard": true,
+    "dashboards": [
+      {"name": "Ceph Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com"}
+    ],
     "uilayout": "terminal"
   },
   "backend": {

@@ -3,6 +3,15 @@
 
 https://docs.ceph.com/en/latest/cephadm/install/
 
+
+update linux
+```
+apt-get update
+```{{execute}}
+
+
+cephadm
+
 ```
 apt install -y cephadm
 ```{{execute}}
