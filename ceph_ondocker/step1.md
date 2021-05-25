@@ -65,6 +65,10 @@ apt install -y ceph-common
 ceph telemetry on --license sharing-1-0
 ```{{execute}}
 
+```
+docker ps
+```{{execute}}
+
 
 ceph status 
 ```

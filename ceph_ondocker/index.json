@@ -18,7 +18,8 @@
     "hideintro": false,
     "showdashboard": true,
     "dashboards": [
-      {"name": "Ceph Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com"}
+      {"name": "Ceph Dashboard", "href": "https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com"},
+      {"name": "Grafana", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com"}
     ],
     "uilayout": "terminal"
   },
