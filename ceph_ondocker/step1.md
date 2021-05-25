@@ -19,14 +19,14 @@ apt install -y cephadm
 
 Get ipaddr ens3
 ```
-ifconfig
+ip_ens3=`ifconfig ens3 | awk '/inet / {print $2}'`
 ```{{execute}}
 
 
 bootstrap
 
 ```
-cephadm bootstrap --mon-ip  172.17.0.26
+cephadm bootstrap --mon-ip  $ip_ens3
 ```{{execute}}
 
 
