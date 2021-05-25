@@ -64,3 +64,47 @@ apt install -y ceph-common
 ```
 ceph telemetry on --license sharing-1-0
 ```{{execute}}
+
+
+ceph status 
+```
+ceph status  
+```{{execute}}
+
+
+```
+ceph osd create
+```{{execute}}
+
+```
+ceph fs volume create fstest
+```{{execute}}
+
+https://docs.ceph.com/en/latest/cephfs/createfs/
+
+
+```
+ceph fs flag set enable_multiple true --yes-i-really-mean-it
+```{{execute}}
+
+```
+ceph osd pool create cephfs_data
+ceph osd pool create cephfs_metadata
+```{{execute}}
+
+
+```
+ceph fs new cephfs cephfs_metadata cephfs_data
+```{{execute}}
+
+```
+ceph mds stat
+```{{execute}}
+
+```
+ceph health detail
+```{{execute}}
+
+```
+ceph osd tree
+```{{execute}}
