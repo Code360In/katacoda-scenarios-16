@@ -27,7 +27,7 @@
     },
     "assets": {
       "host01": [
-        {"file": "config.ini", "target": "/root/config.ini"}
+        {"file": "config.ini", "target": "/root/"}
       ]
   }
   },
