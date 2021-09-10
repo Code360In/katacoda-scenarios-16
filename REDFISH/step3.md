@@ -26,6 +26,7 @@ pip install http_parser
 ```{{execute  T3}}
 
 
+start server:
 ```
 cd /root/Redfish-Event-Listener
 python RedfishEventListener_v1.py
