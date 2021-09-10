@@ -51,3 +51,33 @@ curl -k -X DELETE http://127.0.0.1:8000/redfish/v1/EventService/Subscriptions/4
 ```{{execute  T4}}
 
 
+Systems
+
+```
+curl -k  -X GET  http://127.0.0.1:8000/redfish/v1/Systems
+```{{execute  T4}}
+
+resutls:
+```
+{
+    "@odata.id": "/redfish/v1/Systems",
+    "@odata.type": "#ComputerSystemCollection.ComputerSystemCollection",
+    "Members": [
+        {
+            "@odata.id": "/redfish/v1/Systems/437XR1138R2"
+        }
+    ],
+    "Members@odata.count": 1,
+    "Name": "Computer System Collection"
+```
+
+
+```
+ curl -k  -X GET  http://127.0.0.1:8000/redfish/v1/Systems/437XR1138R2
+```{{execute  T4}}
+
+
+power on:
+```
+curl -k  -X POST  http://127.0.0.1:8000/redfish/v1/Systems/437XR1138R2/Actions/ComputerSystem.Reset -d '{"ResetType":"On"}'
+```{{execute  T4}}
