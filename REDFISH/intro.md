@@ -8,3 +8,8 @@ REDFISH
 
 4) https://hewlettpackard.github.io/iLOAmpPack-Redfish-API-Docs/
 
+
+
+127.0.0.1:8000 is Redfish-Mockup-Server
+
+127.0.0.1:8443 is Redfish-Event-Listener
