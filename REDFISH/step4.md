@@ -81,3 +81,9 @@ power on:
 ```
 curl -k  -X POST  http://127.0.0.1:8000/redfish/v1/Systems/437XR1138R2/Actions/ComputerSystem.Reset -d '{"ResetType":"On"}'
 ```{{execute  T4}}
+
+
+verify temperature:
+```
+curl -k -X GET http://127.0.0.1:8000/redfish/v1/Chassis/1U/Thermal#/Temperatures/2
+```{{execute  T4}}
