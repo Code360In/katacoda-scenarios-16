@@ -87,3 +87,19 @@ verify temperature:
 ```
 curl -k -X GET http://127.0.0.1:8000/redfish/v1/Chassis/1U/Thermal#/Temperatures/2
 ```{{execute  T4}}
+
+
+
+# httpstat
+```
+go install github.com/davecheney/httpstat@latest
+```{{execute  T4}}
+
+```
+httpstat  http://127.0.0.1:8000/
+```{{execute  T4}}
+
+
+```
+http://127.0.0.1:8443
+```{{execute  T4}}
