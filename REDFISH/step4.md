@@ -90,16 +90,30 @@ curl -k -X GET http://127.0.0.1:8000/redfish/v1/Chassis/1U/Thermal#/Temperatures
 
 
 
+# GO
+
+```
+curl -LO https://golang.org/dl/go1.17.1.linux-amd64.tar.gz
+tar -xvf  go1.17.1.linux-amd64.tar.gz
+```{{execute  T4}}
+
+```
+ /root/go/bin/go version
+```{{execute  T4}}
+
+
 # httpstat
-```
-go install github.com/davecheney/httpstat@latest
-```{{execute  T4}}
 
 ```
-httpstat  http://127.0.0.1:8000/
+/root/go/bin/go install github.com/davecheney/httpstat@latest
 ```{{execute  T4}}
 
 
 ```
-http://127.0.0.1:8443
+/root/go/bin/httpstat  http://127.0.0.1:8000/
+```{{execute  T4}}
+
+
+```
+/root/go/bin/http://127.0.0.1:8443
 ```{{execute  T4}}
