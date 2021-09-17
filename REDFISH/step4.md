@@ -117,3 +117,20 @@ tar -xvf  go1.17.1.linux-amd64.tar.gz
 ```
 /root/go/bin/httpstat http://127.0.0.1:8443/
 ```{{execute  T4}}
+
+
+# httpstat python
+
+```
+pip install httpstat
+```{{execute  T4}}
+
+
+```
+httpstat  http://127.0.0.1:8000/redfish/v1/Chassis/1U/Thermal#/Temperatures/2
+```{{execute  T4}}
+
+
+```
+httpstat http://127.0.0.1:8443/
+```{{execute  T4}}
