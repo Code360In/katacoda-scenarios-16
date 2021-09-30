@@ -134,3 +134,13 @@ httpstat  http://127.0.0.1:8000/redfish/v1/Chassis/1U/Thermal#/Temperatures/2
 ```
 httpstat http://127.0.0.1:8443/
 ```{{execute  T4}}
+
+
+
+We can generate a fake event using IPMI:
+ 
+```
+ ipmitool -I lanplus -H $IP -U <username> -P <password> event 1
+
+```{{execute  T4}}
+ 
