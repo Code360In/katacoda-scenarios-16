@@ -81,3 +81,9 @@ Results:
 docker restart vector
 ```{{execute}}
 
+
+
+```
+curl 'localhost:9200/_cat/indices?v'
+```{{execute}}
+
