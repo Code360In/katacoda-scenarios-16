@@ -5,9 +5,8 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 
 
 ```
-docker run -d --net=host --name=elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.11.2
+docker run -d  --name=elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.15.0
 ```{{execute}}
-
 
 Verify:
 ```
@@ -55,6 +54,13 @@ Results:
 </pre>
 
 
+
+```
+docker network connect np elasticsearch
+docker restart elasticsearch
+```{{execute}}
+
+
 ```
 docker logs elasticsearch
 ```{{execute}}
@@ -66,3 +72,12 @@ Results:
 {"type": "server", "timestamp": "2021-03-13T18:27:30,522Z", "level": "INFO", "component": "o.e.x.s.s.SecurityStatusChangeListener", "cluster.name": "docker-cluster", "node.name": "host01", "message": "Active license is now [BASIC]; Security is disabled", "cluster.uuid": "miGT76pkRB6izijC4CYHUg", "node.id": "pgMNigQWSCy1JK1lNR7caQ"  }
 
 </pre>
+
+
+
+# restart vector
+
+```
+docker restart vector
+```{{execute}}
+
