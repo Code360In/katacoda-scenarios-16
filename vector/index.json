@@ -1,5 +1,5 @@
 {
-  "title": "REDFISH",
+  "title": "VECTOR",
   "description": "For study purpose",
   "difficulty": "intermediate",
   "time": "365 minutes",
@@ -31,7 +31,7 @@
     },
     "assets": {
       "host01": [
-        {"file": "config.ini", "target": "/root/"}
+        {"file": "vector.toml", "target": "/root/"}
       ]
   }
   },
