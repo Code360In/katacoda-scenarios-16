@@ -9,11 +9,10 @@ enabled = false
 
 # Ingest data by tailing one or more files
 [sources.my_source_id]
-type = "docker_logs"
-docker_host = "http://dockersock:1234"
-include_containers = [ "include_" ]
-include_labels = [ "com.example.vendor=Timber Inc." ]
-include_images = [ "httpd" ]
+type = "file"
+ignore_older_secs = 600
+include = [ "/var/log/**/*.log" ]
+read_from = "beginning"
 
 
 # Send structured data to a short-term storage

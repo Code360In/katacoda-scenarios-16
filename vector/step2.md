@@ -87,3 +87,7 @@ docker restart vector
 curl 'localhost:9200/_cat/indices?v'
 ```{{execute}}
 
+
+```
+curl --silent 'http://127.0.0.1:9200/_cat/indices' | cut -d\  -f3
+```{{execute}}
